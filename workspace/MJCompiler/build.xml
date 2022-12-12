@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MJCompiler" default="compile" basedir=".">
+	
+	<target name="delete">
+		<delete file="src/rs/ac/bg/etf/pp1/Yylex.java" />
+		<delete file="src/rs/ac/bg/etf/pp1/Yylex.class" />
+		<delete file="src/rs/ac/bg/etf/pp1/sym.class" />
+	</target>
+	
+	<target name="lexerGen" depends="delete">
+		<java jar="lib/JFlex.jar" fork="true">
+			<arg value="-d"/>
+			<arg value="src/rs/ac/bg/etf/pp1"/>
+			<arg value="spec/mjlexer.flex"/>
+		</java>
+	</target>
+	
+	<target name="compile" depends="lexerGen">
+		<javac srcdir="src/rs/ac/bg/etf/pp1" includeantruntime="false">
+			<exclude name="CodeGenerator.java"/>
+			<exclude name="CounterVisitor.java"/>
+			<exclude name="MJParser.java"/>
+			<exclude name="SemanticPass.java"/>
+			<exclude name="ast/*"/>
+			<exclude name="util/*"/>
+			<classpath>
+				<pathelement path="lib/JFlex.jar"/>
+				<pathelement path="lib/cup_v10k.jar"/>
+			</classpath>
+		</javac>
+	</target>
+</project>
