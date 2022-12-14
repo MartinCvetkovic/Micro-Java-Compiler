@@ -2,8 +2,6 @@ package rs.ac.bg.etf.pp1;
 
 import java_cup.runtime.*;
 import org.apache.log4j.*;
-
-// import java.io.*;
 import rs.ac.bg.etf.pp1.ast.*;
 
 
@@ -52,6 +50,149 @@ scan with {:
 		log.info(s.toString() + " " + s.value.toString());
 	return s;
 :}
+
+terminal PROG, IDENT, LBRACE, RBRACE, CONST, COMMA, ASSIGN, SEMI, NUM, CHAR, BOOL;
+terminal LBRACKET, RBRACKET, CLASS, EXTENDS, LPAREN, RPAREN, VOID, EQ, NEQ, GT, GTE, LT, LTE;
+terminal PLUS, MINUS, MUL, MOD, DIV;
+
+nonterminal Program, DeclarationList, MethodDeclarationList, Declaration, ConstDecl;
+nonterminal VarDecl, ClassDecl, Type, Constant, MultipleConstDecl, SingleVarDecl;
+nonterminal MultipleVarDecl, VarDeclList, ConstructorDeclList, ConstructorDecl;
+nonterminal MethodDeclList, MethodDecl, ClassDeclName, StatementList, Statement;
+nonterminal FormPars, MethodDeclReturn, Label, Assignop, Relop, Addop, Mulop;
+nonterminal ;
+
+Program ::= (Program) PROG IDENT DeclarationList LBRACE MethodDeclarationList RBRACE;
+
+DeclarationList ::= (DeclarationList) DeclarationList Declaration
+					|
+					(NoDeclaration) /* epsilon */
+					;
+					
+Declaration ::= (ConstDeclaration) ConstDecl
+				|
+				(VarDeclaration) VarDecl
+				|
+				(ClassDeclaration) ClassDecl
+				;
+				
+ConstDecl ::= 	(SingleConstDecl) CONST Type IDENT ASSIGN Constant SEMI
+				|
+				(MultipleConstDecl) CONST Type IDENT ASSIGN Constant MultipleConstDecl SEMI
+				;
+				
+MultipleConstDecl ::= 	(LastMultipleConstDecl) COMMA IDENT ASSIGN Constant
+						|
+						(MultipleConstDeclList) COMMA IDENT ASSIGN Constant MultipleConstDecl
+						;
+
+Constant ::= 	(NumConst) NUM
+				|
+				(CharConst) CHAR
+				|
+				(BoolConst) BOOL
+				;
+
+VarDecl ::= 	(VarDecl) SingleVarDecl SEMI
+				|
+				(MultipleVarDecl) SingleVarDecl MultipleVarDecl SEMI
+				;
+				
+SingleVarDecl ::= 	(SingleVarDecl) Type IDENT
+					|
+					(SingleVarArrayDecl) Type IDENT LBRACKET RBRACKET
+					;
+
+MultipleVarDecl ::= (LastMultipleVarDecl) COMMA SingleVarDecl
+					|
+					(MultipleVarDeclList) COMMA SingleVarDecl MultipleVarDecl
+
+ClassDeclName ::= 	(ClassDeclNameExtend) CLASS IDENT EXTENDS Type
+					|
+					(ClassDeclName) CLASS IDENT
+					;
+					
+VarDeclList ::= (VarDeclList) VarDeclList VarDecl
+				|
+				(EmptyVarDeclList) /* epsilon */
+				;
+					
+ClassDecl ::= 	(ClassDecl) ClassDeclName LBRACE VarDeclList RBRACE
+				|
+				(ClassDeclMethods) ClassDeclName LBRACE VarDeclList LBRACE ConstructorDeclList MethodDeclList RBRACE RBRACE
+				;
+
+ConstructorDeclList ::= (ConstructorDeclList) ConstructorDeclList ConstructorDecl
+						|
+						(EmptyConstructorDeclList) /* epsilon */
+						;
+
+MethodDeclList ::= 	(MethodDeclList) MethodDeclList MethodDecl
+					|
+					(EmptyMethodDeclList) /* epsilon */
+					;
+
+ConstructorDecl ::= (ConstructorDecl) IDENT LPAREN RPAREN VarDeclList LBRACE StatementList RBRACE
+					|
+					(ConstructorDeclFormParams) IDENT LPAREN FormPars RPAREN VarDeclList LBRACE StatementList RBRACE
+					;
+
+StatementList ::= 	(StatementList) StatementList Statement
+					|
+					(EmptyStatementList) /* epsilon */
+					;
+
+MethodDeclReturn ::= 	(MethodDeclReturnVoid) VOID
+						|
+						(MethodDeclReturn) Type
+						;
+
+MethodDecl ::= 	(MethodDecl) MethodDeclReturn IDENT LPAREN FormPars RPAREN VarDeclList LBRACE StatementList RBRACE
+				|
+				(MethodDeclFormPars) MethodDeclReturn IDENT LPAREN RPAREN VarDeclList LBRACE StatementList RBRACE
+				;
+
+FormPars ::= 	(FormPar) SingleVarDecl
+				|
+				(FormPars) SingleVarDecl COMMA FormPars
+				
+Type ::= (Type) IDENT;
+
+
+
+Label ::= (Label) IDENT;
+
+Assignop ::= (Assignop) ASSIGN;
+
+Relop ::= 	(Equals) EQ
+			|
+			(NotEquals) NEQ
+			|
+			(Greater) GT
+			|
+			(GreaterEquals) GTE
+			|
+			(Lesser) LT
+			|
+			(LesserEquals) LTE
+			;
+
+Addop ::= 	(Plus) PLUS
+			|
+			(Minus) MINUS
+			;
+			
+Mulop ::=	(Mul) MUL
+			|
+			(Div) DIV
+			|
+			(Mod) MOD
+			;
+
+
+
+
+
 
 
 terminal PROG, LBRACE, RBRACE, SEMI, LPAREN, RPAREN, COMMA, PRINT, RETURN, PLUS, EQUAL, VOID;
