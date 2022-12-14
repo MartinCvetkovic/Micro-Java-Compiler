@@ -29,15 +29,15 @@
 		</java>
 	</target>
 
-	<target name="parserGen" depends="delete">
+	<target name="parserGen" depends="lexerGen">
 		<java jar="lib/cup_v10k.jar" fork="true">
 			<arg value="-destdir"/>
 			<arg value="src/rs/ac/bg/etf/pp1"/>
 			<arg value="-ast"/>
-			<arg value="src.rs.ac.bg.etf.pp1.ast"/>
+			<arg value="rs.ac.bg.etf.pp1.ast"/>
 			<arg value="-parser"/>
 			<arg value="MJParser"/>
-			<!--arg value="-dump_states"/-->
+			<arg value="-dump_states"/>
 			<arg value="-buildtree"/>
 			<arg value="spec/mjparser.cup"/>
 		</java>
@@ -47,13 +47,11 @@
 		<replace dir="src" value="rs.ac.bg.etf.pp1.ast" token="src.rs.ac.bg.etf.pp1.ast" summary="true"/>
 	</target>
 	
-	<target name="compile" depends="lexerGen">
+	<target name="compile" depends="repackage">
 		<javac srcdir="src/rs/ac/bg/etf/pp1" includeantruntime="false">
 			<exclude name="CodeGenerator.java"/>
 			<exclude name="CounterVisitor.java"/>
-			<exclude name="MJParser.java"/>
 			<exclude name="SemanticPass.java"/>
-			<exclude name="ast/*"/>
 			<classpath>
 				<pathelement path="lib/JFlex.jar"/>
 				<pathelement path="lib/cup_v10k.jar"/>
