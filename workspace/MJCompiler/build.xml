@@ -6,7 +6,6 @@
 			<fileset dir="src/rs/ac/bg/etf/pp1">
 				<exclude name="sym_old.java"/>
 				<exclude name="util/Log4JUtils.java"/>
-				<exclude name="Yylex.java"/>
 				<exclude name="RuleVisitor.java"/>
 				<exclude name="CounterVisitor.java"/>
 				<exclude name="CodeGenerator.java"/>
@@ -17,6 +16,8 @@
 			<fileset dir="spec">
 				<exclude name="mjlexer.flex"/>
 				<exclude name="mjparser.cup"/>
+				<exclude name="mjlexer_old.flex"/>
+				<exclude name="mjparser_old.cup"/>
 			</fileset>
 		</delete>
 	</target>
@@ -34,10 +35,10 @@
 			<arg value="-destdir"/>
 			<arg value="src/rs/ac/bg/etf/pp1"/>
 			<arg value="-ast"/>
-			<arg value="rs.ac.bg.etf.pp1.ast"/>
+			<arg value="src.rs.ac.bg.etf.pp1.ast"/>
 			<arg value="-parser"/>
 			<arg value="MJParser"/>
-			<arg value="-dump_states"/>
+			<!--arg value="-dump_states"/-->
 			<arg value="-buildtree"/>
 			<arg value="spec/mjparser.cup"/>
 		</java>
