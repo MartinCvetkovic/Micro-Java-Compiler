@@ -1,15 +1,15 @@
 // generated with ast extension for cup
 // version 0.8
-// 15/11/2022 16:44:41
+// 15/11/2022 17:16:49
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class DesignatorEmptyAssignStmt extends DesignatorStatement {
+public class OptionalDesignatorExists extends OptionalDesignator {
 
     private Designator Designator;
 
-    public DesignatorEmptyAssignStmt (Designator Designator) {
+    public OptionalDesignatorExists (Designator Designator) {
         this.Designator=Designator;
         if(Designator!=null) Designator.setParent(this);
     }
@@ -43,7 +43,7 @@ public class DesignatorEmptyAssignStmt extends DesignatorStatement {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("DesignatorEmptyAssignStmt(\n");
+        buffer.append("OptionalDesignatorExists(\n");
 
         if(Designator!=null)
             buffer.append(Designator.toString("  "+tab));
@@ -52,7 +52,7 @@ public class DesignatorEmptyAssignStmt extends DesignatorStatement {
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [DesignatorEmptyAssignStmt]");
+        buffer.append(") [OptionalDesignatorExists]");
         return buffer.toString();
     }
 }

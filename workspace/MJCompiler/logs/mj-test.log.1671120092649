@@ -1,0 +1,36 @@
+INFO  17:01:24,640 - Compiling source file: C:\Faks\PP1\pp1domaci\workspace\MJCompiler\test\primer.mj
+INFO  17:01:24,794 - #2 program
+INFO  17:01:24,795 - #47 Program
+INFO  17:01:24,795 - #11 class
+INFO  17:01:24,797 - #47 A
+INFO  17:01:24,797 - #3 {
+INFO  17:01:24,798 - #47 int
+INFO  17:01:24,800 - #47 x
+INFO  17:01:24,802 - #9 [
+INFO  17:01:24,802 - #10 ]
+INFO  17:01:24,802 - #6 ,
+INFO  17:01:24,803 - #47 y
+INFO  17:01:24,803 - #8 ;
+ERROR 17:01:24,804 - 
+Sintaksna greska na liniji 2
+ERROR 17:01:24,805 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 2
+INFO  17:01:24,805 - ================Ispis sintaksnog stabla================
+INFO  17:01:24,805 - 
+SingleVarArrayDecl(
+  TypeIdent(
+   int
+  ) [TypeIdent]
+ x
+) [SingleVarArrayDecl]
+INFO  17:01:24,806 - =======================================================
+INFO  17:01:24,807 - ==================SEMANTICKA OBRADA====================
+INFO  17:01:24,807 - ==================SINTAKSNA ANALIZA====================
+INFO  17:01:24,812 - 0	classes
+INFO  17:01:24,813 - 0	methods in the program
+INFO  17:01:24,813 - 0	global variables
+INFO  17:01:24,814 - 0	global constants
+INFO  17:01:24,814 - 0	global arrays
+INFO  17:01:24,814 - 0	local variables in main
+INFO  17:01:24,814 - 0	statements in main
+INFO  17:01:24,815 - 0	function calls in main
+INFO  17:01:24,815 - ==============SADRZAJ TABELE SIMBOLA===================

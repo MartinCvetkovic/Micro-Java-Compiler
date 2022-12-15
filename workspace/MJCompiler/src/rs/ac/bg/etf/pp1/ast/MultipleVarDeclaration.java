@@ -1,20 +1,31 @@
 // generated with ast extension for cup
 // version 0.8
-// 15/11/2022 16:44:41
+// 15/11/2022 17:16:49
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class MultipleVarDeclaration extends VarDecl {
 
+    private Type Type;
     private SingleVarDecl SingleVarDecl;
     private MultipleVarDecl MultipleVarDecl;
 
-    public MultipleVarDeclaration (SingleVarDecl SingleVarDecl, MultipleVarDecl MultipleVarDecl) {
+    public MultipleVarDeclaration (Type Type, SingleVarDecl SingleVarDecl, MultipleVarDecl MultipleVarDecl) {
+        this.Type=Type;
+        if(Type!=null) Type.setParent(this);
         this.SingleVarDecl=SingleVarDecl;
         if(SingleVarDecl!=null) SingleVarDecl.setParent(this);
         this.MultipleVarDecl=MultipleVarDecl;
         if(MultipleVarDecl!=null) MultipleVarDecl.setParent(this);
+    }
+
+    public Type getType() {
+        return Type;
+    }
+
+    public void setType(Type Type) {
+        this.Type=Type;
     }
 
     public SingleVarDecl getSingleVarDecl() {
@@ -38,17 +49,20 @@ public class MultipleVarDeclaration extends VarDecl {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(Type!=null) Type.accept(visitor);
         if(SingleVarDecl!=null) SingleVarDecl.accept(visitor);
         if(MultipleVarDecl!=null) MultipleVarDecl.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(Type!=null) Type.traverseTopDown(visitor);
         if(SingleVarDecl!=null) SingleVarDecl.traverseTopDown(visitor);
         if(MultipleVarDecl!=null) MultipleVarDecl.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(Type!=null) Type.traverseBottomUp(visitor);
         if(SingleVarDecl!=null) SingleVarDecl.traverseBottomUp(visitor);
         if(MultipleVarDecl!=null) MultipleVarDecl.traverseBottomUp(visitor);
         accept(visitor);
@@ -58,6 +72,12 @@ public class MultipleVarDeclaration extends VarDecl {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("MultipleVarDeclaration(\n");
+
+        if(Type!=null)
+            buffer.append(Type.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
 
         if(SingleVarDecl!=null)
             buffer.append(SingleVarDecl.toString("  "+tab));

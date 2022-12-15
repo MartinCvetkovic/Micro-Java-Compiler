@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 15/11/2022 16:44:41
+// 15/11/2022 17:16:49
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,13 +8,13 @@ package rs.ac.bg.etf.pp1.ast;
 public class NoEmptyDesignatorList extends DesignatorList {
 
     private DesignatorList DesignatorList;
-    private Designator Designator;
+    private OptionalDesignator OptionalDesignator;
 
-    public NoEmptyDesignatorList (DesignatorList DesignatorList, Designator Designator) {
+    public NoEmptyDesignatorList (DesignatorList DesignatorList, OptionalDesignator OptionalDesignator) {
         this.DesignatorList=DesignatorList;
         if(DesignatorList!=null) DesignatorList.setParent(this);
-        this.Designator=Designator;
-        if(Designator!=null) Designator.setParent(this);
+        this.OptionalDesignator=OptionalDesignator;
+        if(OptionalDesignator!=null) OptionalDesignator.setParent(this);
     }
 
     public DesignatorList getDesignatorList() {
@@ -25,12 +25,12 @@ public class NoEmptyDesignatorList extends DesignatorList {
         this.DesignatorList=DesignatorList;
     }
 
-    public Designator getDesignator() {
-        return Designator;
+    public OptionalDesignator getOptionalDesignator() {
+        return OptionalDesignator;
     }
 
-    public void setDesignator(Designator Designator) {
-        this.Designator=Designator;
+    public void setOptionalDesignator(OptionalDesignator OptionalDesignator) {
+        this.OptionalDesignator=OptionalDesignator;
     }
 
     public void accept(Visitor visitor) {
@@ -39,18 +39,18 @@ public class NoEmptyDesignatorList extends DesignatorList {
 
     public void childrenAccept(Visitor visitor) {
         if(DesignatorList!=null) DesignatorList.accept(visitor);
-        if(Designator!=null) Designator.accept(visitor);
+        if(OptionalDesignator!=null) OptionalDesignator.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(DesignatorList!=null) DesignatorList.traverseTopDown(visitor);
-        if(Designator!=null) Designator.traverseTopDown(visitor);
+        if(OptionalDesignator!=null) OptionalDesignator.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(DesignatorList!=null) DesignatorList.traverseBottomUp(visitor);
-        if(Designator!=null) Designator.traverseBottomUp(visitor);
+        if(OptionalDesignator!=null) OptionalDesignator.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -65,8 +65,8 @@ public class NoEmptyDesignatorList extends DesignatorList {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(Designator!=null)
-            buffer.append(Designator.toString("  "+tab));
+        if(OptionalDesignator!=null)
+            buffer.append(OptionalDesignator.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

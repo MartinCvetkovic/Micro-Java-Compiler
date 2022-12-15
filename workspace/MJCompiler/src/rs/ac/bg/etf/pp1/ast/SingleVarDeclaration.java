@@ -1,35 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 15/11/2022 16:44:41
+// 15/11/2022 17:16:49
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class SingleVarDeclaration extends SingleVarDecl {
 
-    private Type Type;
-    private String I2;
+    private String I1;
 
-    public SingleVarDeclaration (Type Type, String I2) {
-        this.Type=Type;
-        if(Type!=null) Type.setParent(this);
-        this.I2=I2;
+    public SingleVarDeclaration (String I1) {
+        this.I1=I1;
     }
 
-    public Type getType() {
-        return Type;
+    public String getI1() {
+        return I1;
     }
 
-    public void setType(Type Type) {
-        this.Type=Type;
-    }
-
-    public String getI2() {
-        return I2;
-    }
-
-    public void setI2(String I2) {
-        this.I2=I2;
+    public void setI1(String I1) {
+        this.I1=I1;
     }
 
     public void accept(Visitor visitor) {
@@ -37,16 +26,13 @@ public class SingleVarDeclaration extends SingleVarDecl {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Type!=null) Type.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Type!=null) Type.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Type!=null) Type.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -55,13 +41,7 @@ public class SingleVarDeclaration extends SingleVarDecl {
         buffer.append(tab);
         buffer.append("SingleVarDeclaration(\n");
 
-        if(Type!=null)
-            buffer.append(Type.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        buffer.append(" "+tab+I2);
+        buffer.append(" "+tab+I1);
         buffer.append("\n");
 
         buffer.append(tab);

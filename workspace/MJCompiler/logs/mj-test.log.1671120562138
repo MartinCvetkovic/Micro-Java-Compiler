@@ -1,0 +1,67 @@
+INFO  17:09:04,737 - Compiling source file: C:\Faks\PP1\pp1domaci\workspace\MJCompiler\test\primer.mj
+INFO  17:09:04,806 - #2 program
+INFO  17:09:04,806 - #47 Program
+INFO  17:09:04,806 - #11 class
+INFO  17:09:04,807 - #47 A
+INFO  17:09:04,807 - #3 {
+INFO  17:09:04,807 - #47 int
+INFO  17:09:04,809 - #47 x
+INFO  17:09:04,809 - #9 [
+INFO  17:09:04,809 - #10 ]
+INFO  17:09:04,809 - #6 ,
+INFO  17:09:04,810 - #47 y
+INFO  17:09:04,810 - #9 [
+INFO  17:09:04,810 - #10 ]
+INFO  17:09:04,810 - #8 ;
+INFO  17:09:04,810 - #4 }
+INFO  17:09:04,811 - #5 const
+INFO  17:09:04,811 - #47 int
+INFO  17:09:04,811 - #47 pi
+INFO  17:09:04,812 - #7 =
+INFO  17:09:04,812 - #50 3
+INFO  17:09:04,812 - #6 ,
+INFO  17:09:04,812 - #47 e
+INFO  17:09:04,812 - #7 =
+INFO  17:09:04,813 - #50 2
+INFO  17:09:04,813 - #8 ;
+INFO  17:09:04,813 - #47 int
+INFO  17:09:04,814 - #47 a
+INFO  17:09:04,814 - #6 ,
+INFO  17:09:04,814 - #47 b
+INFO  17:09:04,814 - #8 ;
+INFO  17:09:04,814 - #11 class
+INFO  17:09:04,814 - #47 B
+INFO  17:09:04,814 - #12 extends
+INFO  17:09:04,815 - #47 A
+INFO  17:09:04,815 - #3 {
+INFO  17:09:04,815 - #47 int
+INFO  17:09:04,815 - #47 i
+INFO  17:09:04,815 - #8 ;
+INFO  17:09:04,815 - #3 {
+INFO  17:09:04,815 - #47 int
+INFO  17:09:04,815 - #47 getValue
+INFO  17:09:04,816 - #13 (
+INFO  17:09:04,816 - #47 int
+INFO  17:09:04,816 - #47 a
+ERROR 17:09:04,816 - 
+Sintaksna greska na liniji 8
+ERROR 17:09:04,816 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 8
+INFO  17:09:04,816 - ================Ispis sintaksnog stabla================
+INFO  17:09:04,817 - 
+MethodDeclReturnType(
+  TypeIdent(
+   int
+  ) [TypeIdent]
+) [MethodDeclReturnType]
+INFO  17:09:04,817 - =======================================================
+INFO  17:09:04,817 - ==================SEMANTICKA OBRADA====================
+INFO  17:09:04,817 - ==================SINTAKSNA ANALIZA====================
+INFO  17:09:04,820 - 0	classes
+INFO  17:09:04,820 - 1	methods in the program
+INFO  17:09:04,820 - 0	global variables
+INFO  17:09:04,820 - 0	global constants
+INFO  17:09:04,820 - 0	global arrays
+INFO  17:09:04,820 - 0	local variables in main
+INFO  17:09:04,820 - 0	statements in main
+INFO  17:09:04,820 - 0	function calls in main
+INFO  17:09:04,820 - ==============SADRZAJ TABELE SIMBOLA===================

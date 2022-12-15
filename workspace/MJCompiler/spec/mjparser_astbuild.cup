@@ -99,6 +99,7 @@ nonterminal CondFact CondFact;
 nonterminal Term Term;
 nonterminal AddopTermList AddopTermList;
 nonterminal Factor Factor;
+nonterminal OptionalDesignator OptionalDesignator;
 
 precedence left ELSE;
 
@@ -133,14 +134,14 @@ Constant ::= 	(NumConst) NUM:N1 {: RESULT=new NumConst(N1); RESULT.setLine(N1lef
 				(BoolConst) BOOL:B1 {: RESULT=new BoolConst(B1); RESULT.setLine(B1left); :}
 				;
 
-VarDecl ::= 	(SingleVarDeclarationVarDecl) SingleVarDecl:S1 SEMI {: RESULT=new SingleVarDeclarationVarDecl(S1); RESULT.setLine(S1left); :}
+VarDecl ::= 	(SingleVarDeclarationVarDecl) Type:T1 SingleVarDecl:S2 SEMI {: RESULT=new SingleVarDeclarationVarDecl(T1, S2); RESULT.setLine(T1left); :}
 				|
-				(MultipleVarDeclaration) SingleVarDecl:S1 MultipleVarDecl:M2 SEMI {: RESULT=new MultipleVarDeclaration(S1, M2); RESULT.setLine(S1left); :}
+				(MultipleVarDeclaration) Type:T1 SingleVarDecl:S2 MultipleVarDecl:M3 SEMI {: RESULT=new MultipleVarDeclaration(T1, S2, M3); RESULT.setLine(T1left); :}
 				;
 				
-SingleVarDecl ::= 	(SingleVarDeclaration) Type:T1 IDENT:I2 {: RESULT=new SingleVarDeclaration(T1, I2); RESULT.setLine(T1left); :}
+SingleVarDecl ::= 	(SingleVarDeclaration) IDENT:I1 {: RESULT=new SingleVarDeclaration(I1); RESULT.setLine(I1left); :}
 					|
-					(SingleVarArrayDecl) Type:T1 IDENT:I2 LBRACKET RBRACKET {: RESULT=new SingleVarArrayDecl(T1, I2); RESULT.setLine(T1left); :}
+					(SingleVarArrayDecl) IDENT:I1 LBRACKET RBRACKET {: RESULT=new SingleVarArrayDecl(I1); RESULT.setLine(I1left); :}
 					;
 
 MultipleVarDecl ::= (LastMultipleVarDecl) COMMA SingleVarDecl:S1 {: RESULT=new LastMultipleVarDecl(S1); RESULT.setLine(S1left); :}
@@ -199,9 +200,9 @@ MethodDecl ::= 	(MethodDeclFormPars) MethodDeclReturn:M1 IDENT:I2 LPAREN FormPar
 				(MethodDeclNoFormPars) MethodDeclReturn:M1 IDENT:I2 LPAREN RPAREN VarDeclList:V3 LBRACE StatementList:S4 RBRACE {: RESULT=new MethodDeclNoFormPars(M1, I2, V3, S4); RESULT.setLine(M1left); :}
 				;
 
-FormPars ::= 	(FormPar) SingleVarDecl:S1 {: RESULT=new FormPar(S1); RESULT.setLine(S1left); :}
+FormPars ::= 	(FormPar) Type:T1 SingleVarDecl:S2 {: RESULT=new FormPar(T1, S2); RESULT.setLine(T1left); :}
 				|
-				(MultipleFormPars) SingleVarDecl:S1 COMMA FormPars:F2 {: RESULT=new MultipleFormPars(S1, F2); RESULT.setLine(S1left); :}
+				(MultipleFormPars) Type:T1 SingleVarDecl:S2 COMMA FormPars:F3 {: RESULT=new MultipleFormPars(T1, S2, F3); RESULT.setLine(T1left); :}
 				;
 				
 Type ::= (TypeIdent) IDENT:I1 {: RESULT=new TypeIdent(I1); RESULT.setLine(I1left); :};
@@ -246,15 +247,18 @@ DesignatorStatement ::= (DesignatorAssignStmt) Designator:D1 Assignop:A2 Expr:E3
 						|
 						(DesignatorDecStmt) Designator:D1 DEC {: RESULT=new DesignatorDecStmt(D1); RESULT.setLine(D1left); :}
 						|
-						(DesignatorEmptyAssignStmt) LBRACKET RBRACKET ASSIGN Designator:D1 {: RESULT=new DesignatorEmptyAssignStmt(D1); RESULT.setLine(D1left); :}
-						|
-						(MultipleDesignatorAssignStmt) LBRACKET Designator:D1 DesignatorList:D2 RBRACKET ASSIGN Designator:D3 {: RESULT=new MultipleDesignatorAssignStmt(D1, D2, D3); RESULT.setLine(D1left); :}
+						(MultipleDesignatorAssignStmt) LBRACKET OptionalDesignator:O1 DesignatorList:D2 RBRACKET ASSIGN Designator:D3 {: RESULT=new MultipleDesignatorAssignStmt(O1, D2, D3); RESULT.setLine(O1left); :}
 						;
 
-DesignatorList ::= 	(NoEmptyDesignatorList) DesignatorList:D1 COMMA Designator:D2 {: RESULT=new NoEmptyDesignatorList(D1, D2); RESULT.setLine(D1left); :}
+DesignatorList ::= 	(NoEmptyDesignatorList) DesignatorList:D1 COMMA OptionalDesignator:O2 {: RESULT=new NoEmptyDesignatorList(D1, O2); RESULT.setLine(D1left); :}
 					|
 					(EmptyDesignatorList) {: RESULT=new EmptyDesignatorList(); :} /* epsilon */
 					;
+					
+OptionalDesignator ::= 	(OptionalDesignatorExists) Designator:D1 {: RESULT=new OptionalDesignatorExists(D1); RESULT.setLine(D1left); :}
+						|
+						(OptionalDesignatorNotExists) {: RESULT=new OptionalDesignatorNotExists(); :} /* epsilon */
+						;
 					
 ActPars ::= (ActPar) Expr:E1 {: RESULT=new ActPar(E1); RESULT.setLine(E1left); :}
 			|

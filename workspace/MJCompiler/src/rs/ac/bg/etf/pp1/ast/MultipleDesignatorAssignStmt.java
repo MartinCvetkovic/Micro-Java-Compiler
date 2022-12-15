@@ -1,31 +1,31 @@
 // generated with ast extension for cup
 // version 0.8
-// 15/11/2022 16:44:41
+// 15/11/2022 17:16:49
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class MultipleDesignatorAssignStmt extends DesignatorStatement {
 
-    private Designator Designator;
+    private OptionalDesignator OptionalDesignator;
     private DesignatorList DesignatorList;
-    private Designator Designator1;
+    private Designator Designator;
 
-    public MultipleDesignatorAssignStmt (Designator Designator, DesignatorList DesignatorList, Designator Designator1) {
-        this.Designator=Designator;
-        if(Designator!=null) Designator.setParent(this);
+    public MultipleDesignatorAssignStmt (OptionalDesignator OptionalDesignator, DesignatorList DesignatorList, Designator Designator) {
+        this.OptionalDesignator=OptionalDesignator;
+        if(OptionalDesignator!=null) OptionalDesignator.setParent(this);
         this.DesignatorList=DesignatorList;
         if(DesignatorList!=null) DesignatorList.setParent(this);
-        this.Designator1=Designator1;
-        if(Designator1!=null) Designator1.setParent(this);
-    }
-
-    public Designator getDesignator() {
-        return Designator;
-    }
-
-    public void setDesignator(Designator Designator) {
         this.Designator=Designator;
+        if(Designator!=null) Designator.setParent(this);
+    }
+
+    public OptionalDesignator getOptionalDesignator() {
+        return OptionalDesignator;
+    }
+
+    public void setOptionalDesignator(OptionalDesignator OptionalDesignator) {
+        this.OptionalDesignator=OptionalDesignator;
     }
 
     public DesignatorList getDesignatorList() {
@@ -36,12 +36,12 @@ public class MultipleDesignatorAssignStmt extends DesignatorStatement {
         this.DesignatorList=DesignatorList;
     }
 
-    public Designator getDesignator1() {
-        return Designator1;
+    public Designator getDesignator() {
+        return Designator;
     }
 
-    public void setDesignator1(Designator Designator1) {
-        this.Designator1=Designator1;
+    public void setDesignator(Designator Designator) {
+        this.Designator=Designator;
     }
 
     public void accept(Visitor visitor) {
@@ -49,22 +49,22 @@ public class MultipleDesignatorAssignStmt extends DesignatorStatement {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Designator!=null) Designator.accept(visitor);
+        if(OptionalDesignator!=null) OptionalDesignator.accept(visitor);
         if(DesignatorList!=null) DesignatorList.accept(visitor);
-        if(Designator1!=null) Designator1.accept(visitor);
+        if(Designator!=null) Designator.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Designator!=null) Designator.traverseTopDown(visitor);
+        if(OptionalDesignator!=null) OptionalDesignator.traverseTopDown(visitor);
         if(DesignatorList!=null) DesignatorList.traverseTopDown(visitor);
-        if(Designator1!=null) Designator1.traverseTopDown(visitor);
+        if(Designator!=null) Designator.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Designator!=null) Designator.traverseBottomUp(visitor);
+        if(OptionalDesignator!=null) OptionalDesignator.traverseBottomUp(visitor);
         if(DesignatorList!=null) DesignatorList.traverseBottomUp(visitor);
-        if(Designator1!=null) Designator1.traverseBottomUp(visitor);
+        if(Designator!=null) Designator.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -73,8 +73,8 @@ public class MultipleDesignatorAssignStmt extends DesignatorStatement {
         buffer.append(tab);
         buffer.append("MultipleDesignatorAssignStmt(\n");
 
-        if(Designator!=null)
-            buffer.append(Designator.toString("  "+tab));
+        if(OptionalDesignator!=null)
+            buffer.append(OptionalDesignator.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
@@ -85,8 +85,8 @@ public class MultipleDesignatorAssignStmt extends DesignatorStatement {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(Designator1!=null)
-            buffer.append(Designator1.toString("  "+tab));
+        if(Designator!=null)
+            buffer.append(Designator.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

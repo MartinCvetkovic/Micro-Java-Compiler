@@ -66,7 +66,7 @@ nonterminal MultipleVarDecl, VarDeclList, ConstructorDeclList, ConstructorDecl;
 nonterminal MethodDeclList, MethodDecl, ClassDeclName, StatementList, Statement;
 nonterminal FormPars, MethodDeclReturn, Label, Assignop, Relop, Addop, Mulop;
 nonterminal DesignatorStatement, Expr, Designator, PrintArgs, ActPars, DesignatorList;
-nonterminal Condition, CondTerm, CondFact, Term, AddopTermList, Factor;
+nonterminal Condition, CondTerm, CondFact, Term, AddopTermList, Factor, OptionalDesignator;
 
 precedence left ELSE;
 
@@ -101,14 +101,14 @@ Constant ::= 	(NumConst) NUM
 				(BoolConst) BOOL
 				;
 
-VarDecl ::= 	(SingleVarDeclarationVarDecl) SingleVarDecl SEMI
+VarDecl ::= 	(SingleVarDeclarationVarDecl) Type SingleVarDecl SEMI
 				|
-				(MultipleVarDeclaration) SingleVarDecl MultipleVarDecl SEMI
+				(MultipleVarDeclaration) Type SingleVarDecl MultipleVarDecl SEMI
 				;
 				
-SingleVarDecl ::= 	(SingleVarDeclaration) Type IDENT
+SingleVarDecl ::= 	(SingleVarDeclaration) IDENT
 					|
-					(SingleVarArrayDecl) Type IDENT LBRACKET RBRACKET
+					(SingleVarArrayDecl) IDENT LBRACKET RBRACKET
 					;
 
 MultipleVarDecl ::= (LastMultipleVarDecl) COMMA SingleVarDecl
@@ -167,9 +167,9 @@ MethodDecl ::= 	(MethodDeclFormPars) MethodDeclReturn IDENT LPAREN FormPars RPAR
 				(MethodDeclNoFormPars) MethodDeclReturn IDENT LPAREN RPAREN VarDeclList LBRACE StatementList RBRACE
 				;
 
-FormPars ::= 	(FormPar) SingleVarDecl
+FormPars ::= 	(FormPar) Type SingleVarDecl
 				|
-				(MultipleFormPars) SingleVarDecl COMMA FormPars
+				(MultipleFormPars) Type SingleVarDecl COMMA FormPars
 				;
 				
 Type ::= (TypeIdent) IDENT;
@@ -214,15 +214,18 @@ DesignatorStatement ::= (DesignatorAssignStmt) Designator Assignop Expr
 						|
 						(DesignatorDecStmt) Designator DEC
 						|
-						(DesignatorEmptyAssignStmt) LBRACKET RBRACKET ASSIGN Designator
-						|
-						(MultipleDesignatorAssignStmt) LBRACKET Designator DesignatorList RBRACKET ASSIGN Designator
+						(MultipleDesignatorAssignStmt) LBRACKET OptionalDesignator DesignatorList RBRACKET ASSIGN Designator
 						;
 
-DesignatorList ::= 	(NoEmptyDesignatorList) DesignatorList COMMA Designator
+DesignatorList ::= 	(NoEmptyDesignatorList) DesignatorList COMMA OptionalDesignator
 					|
 					(EmptyDesignatorList) /* epsilon */
 					;
+					
+OptionalDesignator ::= 	(OptionalDesignatorExists) Designator
+						|
+						(OptionalDesignatorNotExists) /* epsilon */
+						;
 					
 ActPars ::= (ActPar) Expr
 			|
