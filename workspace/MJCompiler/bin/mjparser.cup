@@ -54,8 +54,10 @@ scan with {:
 terminal PROG, LBRACE, RBRACE, CONST, COMMA, ASSIGN, SEMI, LBRACKET, RBRACKET;
 terminal CLASS, EXTENDS, LPAREN, RPAREN, VOID, EQ, NEQ, GT, GTE, LT, LTE;
 terminal PLUS, MINUS, MUL, MOD, DIV, IF, ELSE, BREAK, CONTINUE, RETURN, READ, PRINT;
-terminal DOT, FOREACH, OR, AND, NEW;
-terminal String IDENT, CHAR, BOOL;
+terminal DOT, FOREACH, OR, AND, NEW, ARROW, WHILE, INC, DEC, DO, ENUM, COLON, THIS;
+terminal String IDENT;
+terminal Character CHAR;
+terminal Boolean BOOL;
 terminal Integer NUM;
 
 nonterminal Program, DeclarationList, MethodDeclarationList, Declaration, ConstDecl;
@@ -64,11 +66,13 @@ nonterminal MultipleVarDecl, VarDeclList, ConstructorDeclList, ConstructorDecl;
 nonterminal MethodDeclList, MethodDecl, ClassDeclName, StatementList, Statement;
 nonterminal FormPars, MethodDeclReturn, Label, Assignop, Relop, Addop, Mulop;
 nonterminal DesignatorStatement, Expr, Designator, PrintArgs, ActPars, DesignatorList;
-nonterminal Condition, CondTerm, CondFact, DesignatorIdentExprList;
+nonterminal Condition, CondTerm, CondFact, Term, AddopTermList, Factor;
+
+precedence left ELSE;
 
 Program ::= (Program) PROG IDENT DeclarationList LBRACE MethodDeclarationList RBRACE;
 
-DeclarationList ::= (DeclarationList) DeclarationList Declaration
+DeclarationList ::= (DeclarationsList) DeclarationList Declaration
 					|
 					(NoDeclaration) /* epsilon */
 					;
@@ -82,7 +86,7 @@ Declaration ::= (ConstDeclaration) ConstDecl
 				
 ConstDecl ::= 	(SingleConstDecl) CONST Type IDENT ASSIGN Constant SEMI
 				|
-				(MultipleConstDecl) CONST Type IDENT ASSIGN Constant MultipleConstDecl SEMI
+				(MultipleConstDeclaration) CONST Type IDENT ASSIGN Constant MultipleConstDecl SEMI
 				;
 				
 MultipleConstDecl ::= 	(LastMultipleConstDecl) COMMA IDENT ASSIGN Constant
@@ -97,12 +101,12 @@ Constant ::= 	(NumConst) NUM
 				(BoolConst) BOOL
 				;
 
-VarDecl ::= 	(VarDecl) SingleVarDecl SEMI
+VarDecl ::= 	(SingleVarDeclarationVarDecl) SingleVarDecl SEMI
 				|
-				(MultipleVarDecl) SingleVarDecl MultipleVarDecl SEMI
+				(MultipleVarDeclaration) SingleVarDecl MultipleVarDecl SEMI
 				;
 				
-SingleVarDecl ::= 	(SingleVarDecl) Type IDENT
+SingleVarDecl ::= 	(SingleVarDeclaration) Type IDENT
 					|
 					(SingleVarArrayDecl) Type IDENT LBRACKET RBRACKET
 					;
@@ -110,55 +114,62 @@ SingleVarDecl ::= 	(SingleVarDecl) Type IDENT
 MultipleVarDecl ::= (LastMultipleVarDecl) COMMA SingleVarDecl
 					|
 					(MultipleVarDeclList) COMMA SingleVarDecl MultipleVarDecl
+					;
 
 ClassDeclName ::= 	(ClassDeclNameExtend) CLASS IDENT EXTENDS Type
 					|
-					(ClassDeclName) CLASS IDENT
+					(ClassDeclNameNoExtend) CLASS IDENT
 					;
 					
-VarDeclList ::= (VarDeclList) VarDeclList VarDecl
+VarDeclList ::= (NoEmptyVarDeclList) VarDeclList VarDecl
 				|
 				(EmptyVarDeclList) /* epsilon */
 				;
 					
-ClassDecl ::= 	(ClassDecl) ClassDeclName LBRACE VarDeclList RBRACE
+ClassDecl ::= 	(ClassDeclNoMethods) ClassDeclName LBRACE VarDeclList RBRACE
 				|
 				(ClassDeclMethods) ClassDeclName LBRACE VarDeclList LBRACE ConstructorDeclList MethodDeclList RBRACE RBRACE
+				|
+				(ClassDeclCons) ClassDeclName LBRACE VarDeclList LBRACE ConstructorDeclList RBRACE RBRACE
+				|
+				(ClassDeclMethod) ClassDeclName LBRACE VarDeclList LBRACE MethodDeclList RBRACE RBRACE
+				|
+				(ClassDeclEmpty) ClassDeclName LBRACE VarDeclList LBRACE RBRACE RBRACE
 				;
 
-ConstructorDeclList ::= (ConstructorDeclList) ConstructorDeclList ConstructorDecl
+ConstructorDeclList ::= (MultipleConstructorDeclList) ConstructorDeclList ConstructorDecl
 						|
-						(EmptyConstructorDeclList) /* epsilon */
+						(SingleConstructorDeclList) ConstructorDecl
 						;
 
-MethodDeclList ::= 	(MethodDeclList) MethodDeclList MethodDecl
+MethodDeclList ::= 	(MultipleMethodDeclList) MethodDeclList MethodDecl
 					|
-					(EmptyMethodDeclList) /* epsilon */
+					(SingleMethodDeclList) MethodDecl
 					;
 
-ConstructorDecl ::= (ConstructorDecl) IDENT LPAREN RPAREN VarDeclList LBRACE StatementList RBRACE
+ConstructorDecl ::= (ConstructorDeclNoFormParams) IDENT LPAREN RPAREN VarDeclList LBRACE StatementList RBRACE
 					|
 					(ConstructorDeclFormParams) IDENT LPAREN FormPars RPAREN VarDeclList LBRACE StatementList RBRACE
 					;
 
-StatementList ::= 	(StatementList) StatementList Statement
+StatementList ::= 	(NoEmptyStatementList) StatementList Statement
 					|
 					(EmptyStatementList) /* epsilon */
 					;
 
 MethodDeclReturn ::= 	(MethodDeclReturnVoid) VOID
 						|
-						(MethodDeclReturn) Type
+						(MethodDeclReturnType) Type
 						;
 
-MethodDecl ::= 	(MethodDecl) MethodDeclReturn IDENT LPAREN FormPars RPAREN VarDeclList LBRACE StatementList RBRACE
+MethodDecl ::= 	(MethodDeclFormPars) MethodDeclReturn IDENT LPAREN FormPars RPAREN VarDeclList LBRACE StatementList RBRACE
 				|
-				(MethodDeclFormPars) MethodDeclReturn IDENT LPAREN RPAREN VarDeclList LBRACE StatementList RBRACE
+				(MethodDeclNoFormPars) MethodDeclReturn IDENT LPAREN RPAREN VarDeclList LBRACE StatementList RBRACE
 				;
 
 FormPars ::= 	(FormPar) SingleVarDecl
 				|
-				(FormPars) SingleVarDecl COMMA FormPars
+				(MultipleFormPars) SingleVarDecl COMMA FormPars
 				;
 				
 Type ::= (Type) IDENT;
@@ -168,6 +179,8 @@ Statement ::= 	(DesignatorStmt) DesignatorStatement SEMI
 				(IfElseStmt) IF LPAREN Condition RPAREN Statement ELSE Statement
 				|
 				(IfStmt) IF LPAREN Condition RPAREN Statement
+				|
+				(WhileStmt) WHILE LPAREN Condition RPAREN Statement
 				|
 				(BreakStmt) BREAK SEMI
 				|
@@ -186,7 +199,7 @@ Statement ::= 	(DesignatorStmt) DesignatorStatement SEMI
 				(BlockStmt) LBRACE StatementList RBRACE
 				;
 
-PrintArgs ::= 	(PrintArgs) COMMA NUM PrintArgs
+PrintArgs ::= 	(PrintArgsNoEmpty) COMMA NUM PrintArgs
 				|
 				(PrintArgsEmpty) /* epsilon */
 				;
@@ -197,23 +210,23 @@ DesignatorStatement ::= (DesignatorAssignStmt) Designator Assignop Expr
 						|
 						(DesignatorEmptyActParsStmt) Designator LPAREN RPAREN
 						|
-						(DesignatorIncStmt) Designator PLUS PLUS
+						(DesignatorIncStmt) Designator INC
 						|
-						(DesignatorDecStmt) Designator MINUS MINUS
+						(DesignatorDecStmt) Designator DEC
 						|
 						(DesignatorEmptyAssignStmt) LBRACKET RBRACKET ASSIGN Designator
 						|
-						(DesignatorAssignStmt) LBRACKET Designator DesignatorList RBRACKET ASSIGN Designator
+						(MultipleDesignatorAssignStmt) LBRACKET Designator DesignatorList RBRACKET ASSIGN Designator
 						;
 
-DesignatorList ::= 	(DesignatorList) DesignatorList COMMA Designator
+DesignatorList ::= 	(NoEmptyDesignatorList) DesignatorList COMMA Designator
 					|
 					(EmptyDesignatorList) /* epsilon */
 					;
 					
 ActPars ::= (ActPar) Expr
 			|
-			(ActPars) Expr COMMA ActPars
+			(ActParsList) Expr COMMA ActPars
 			;
 			
 Condition ::= 	(SingleCondition) CondTerm
@@ -236,7 +249,7 @@ Expr ::=	(PosExpr) Term AddopTermList
 			(NegExpr) MINUS Term AddopTermList
 			;
 			
-AddopTermList ::= 	(AddopTermList) Addop Term AddopTermList
+AddopTermList ::= 	(NoEmptyAddopTermList) Addop Term AddopTermList
 					|
 					(EmptyAddopTermList) /* epsilon */
 					;
@@ -264,16 +277,13 @@ Factor ::= 	(FactorDesignatorEmpty) Designator
 			|
 			(FactorExpr) LPAREN Expr RPAREN
 			;
-			
 
-Designator ::= 	(DesignatorIdent) IDENT DesignatorIdentExprList;
-
-DesignatorIdentExprList ::= (DesignatorDotIdent) DesignatorIdentExprList DOT IDENT
-							|
-							(DesignatorExpr) DesignatorIdentExprList LBRACKET Expr RBRACKET
-							|
-							(DesignatorIdentExprListEmpty) /* epsilon */
-							;
+Designator ::= 	(DesignatorIdent) IDENT
+				|
+				(DesignatorDotIdent) Designator DOT IDENT
+				|
+				(DesignatorExpr) Designator LBRACKET Expr RBRACKET
+				;
 
 Label ::= (Label) IDENT;
 

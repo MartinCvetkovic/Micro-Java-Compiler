@@ -53,6 +53,7 @@
 			<exclude name="CodeGenerator.java"/>
 			<exclude name="CounterVisitor.java"/>
 			<exclude name="SemanticPass.java"/>
+			<exclude name="sym_old.java"/>
 			<classpath>
 				<pathelement path="lib/JFlex.jar"/>
 				<pathelement path="lib/cup_v10k.jar"/>
