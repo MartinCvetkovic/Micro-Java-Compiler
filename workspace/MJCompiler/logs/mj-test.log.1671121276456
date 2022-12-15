@@ -1,0 +1,50 @@
+INFO  17:21:03,489 - Compiling source file: C:\Faks\PP1\pp1domaci\workspace\MJCompiler\test\primer2.mj
+INFO  17:21:03,584 - #2 program
+INFO  17:21:03,585 - #47 p
+INFO  17:21:03,586 - #5 const
+INFO  17:21:03,588 - #47 int
+INFO  17:21:03,588 - #47 size
+INFO  17:21:03,589 - #7 =
+INFO  17:21:03,589 - #50 10
+INFO  17:21:03,590 - #8 ;
+INFO  17:21:03,590 - #11 class
+INFO  17:21:03,592 - #47 Table
+INFO  17:21:03,592 - #3 {
+INFO  17:21:03,593 - #47 int
+INFO  17:21:03,595 - #47 pos
+INFO  17:21:03,595 - #9 [
+INFO  17:21:03,596 - #10 ]
+INFO  17:21:03,596 - #6 ,
+INFO  17:21:03,597 - #47 neg
+INFO  17:21:03,597 - #9 [
+INFO  17:21:03,597 - #10 ]
+INFO  17:21:03,599 - #6 ,
+INFO  17:21:03,599 - #47 factor
+INFO  17:21:03,599 - #8 ;
+INFO  17:21:03,601 - #3 {
+INFO  17:21:03,601 - #47 Table
+INFO  17:21:03,602 - #13 (
+INFO  17:21:03,602 - #47 int
+INFO  17:21:03,602 - #47 factor
+INFO  17:21:03,603 - #14 )
+INFO  17:21:03,603 - #3 {
+INFO  17:21:03,603 - #46 this
+ERROR 17:21:03,603 - 
+Sintaksna greska na liniji 6
+ERROR 17:21:03,604 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 6
+INFO  17:21:03,604 - ================Ispis sintaksnog stabla================
+INFO  17:21:03,605 - 
+EmptyVarDeclList(
+) [EmptyVarDeclList]
+INFO  17:21:03,606 - =======================================================
+INFO  17:21:03,606 - ==================SEMANTICKA OBRADA====================
+INFO  17:21:03,606 - ==================SINTAKSNA ANALIZA====================
+INFO  17:21:03,613 - 0	classes
+INFO  17:21:03,613 - 0	methods in the program
+INFO  17:21:03,613 - 0	global variables
+INFO  17:21:03,613 - 0	global constants
+INFO  17:21:03,614 - 0	global arrays
+INFO  17:21:03,614 - 0	local variables in main
+INFO  17:21:03,614 - 0	statements in main
+INFO  17:21:03,614 - 0	function calls in main
+INFO  17:21:03,614 - ==============SADRZAJ TABELE SIMBOLA===================
