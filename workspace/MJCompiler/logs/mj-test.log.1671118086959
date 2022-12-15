@@ -1,0 +1,37 @@
+INFO  16:27:33,173 - Compiling source file: C:\Faks\PP1\pp1domaci\workspace\MJCompiler\test\program.mj
+INFO  16:27:33,277 - #2 program
+INFO  16:27:33,278 - #47 MJProgram
+INFO  16:27:33,278 - #11 class
+INFO  16:27:33,279 - #47 A
+INFO  16:27:33,280 - #3 {
+INFO  16:27:33,281 - #4 }
+INFO  16:27:33,283 - #47 int
+INFO  16:27:33,284 - #47 x
+INFO  16:27:33,286 - #8 ;
+INFO  16:27:33,287 - #47 int
+INFO  16:27:33,288 - #47 y
+INFO  16:27:33,288 - #8 ;
+INFO  16:27:33,289 - #11 class
+INFO  16:27:33,289 - #47 B
+INFO  16:27:33,289 - #3 {
+INFO  16:27:33,289 - #15 void
+ERROR 16:27:33,289 - 
+Sintaksna greska na liniji 4
+ERROR 16:27:33,289 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 4
+INFO  16:27:33,290 - ================Ispis sintaksnog stabla================
+INFO  16:27:33,291 - 
+ClassDeclNameNoExtend(
+ B
+) [ClassDeclNameNoExtend]
+INFO  16:27:33,291 - =======================================================
+INFO  16:27:33,291 - ==================SEMANTICKA OBRADA====================
+INFO  16:27:33,291 - ==================SINTAKSNA ANALIZA====================
+INFO  16:27:33,299 - 1	classes
+INFO  16:27:33,299 - 0	methods in the program
+INFO  16:27:33,299 - 0	global variables
+INFO  16:27:33,299 - 0	global constants
+INFO  16:27:33,299 - 0	global arrays
+INFO  16:27:33,299 - 0	local variables in main
+INFO  16:27:33,299 - 0	statements in main
+INFO  16:27:33,299 - 0	function calls in main
+INFO  16:27:33,300 - ==============SADRZAJ TABELE SIMBOLA===================

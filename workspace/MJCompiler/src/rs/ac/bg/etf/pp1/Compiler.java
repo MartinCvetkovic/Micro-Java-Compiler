@@ -36,11 +36,29 @@ public class Compiler {
 		try (BufferedReader br = new BufferedReader(new FileReader(sourceCode))) {
 			Yylex lexer = new Yylex(br);
 			MJParser p = new MJParser(lexer);
-	        Symbol s = p.parse();  //pocetak parsiranja
+	        Symbol s = p.parse();
 	        SyntaxNode prog = (SyntaxNode)(s.value);
-	        log.info("======Ispis sintaksnog stabla======");
+	        log.info("================Ispis sintaksnog stabla================");
 	        log.info("\n" + prog.toString());
-	        log.info("===================================");
+	        log.info("=======================================================");
+	        
+	        
+	        log.info("==================SEMANTICKA OBRADA====================");
+	        
+	        log.info("==================SINTAKSNA ANALIZA====================");
+	        RuleVisitor v = new RuleVisitor();
+			prog.traverseBottomUp(v); 
+
+			log.info(v.classCount + "\tclasses");
+			log.info(v.methodCount + "\tmethods in the program");
+			log.info(v.globalVarCount + "\tglobal variables");
+			log.info(v.globalConstCount + "\tglobal constants");
+			log.info(v.globalArrCount + "\tglobal arrays");
+			log.info(v.localVarInMainCount + "\tlocal variables in main");
+			log.info(v.stmtInMainCount + "\tstatements in main");
+			log.info(v.funcCallsInMainCount + "\tfunction calls in main");
+			
+	        log.info("==============SADRZAJ TABELE SIMBOLA===================");
 		}
 	}
 }

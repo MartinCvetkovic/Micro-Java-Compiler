@@ -7,7 +7,6 @@
 				<exclude name="sym_old.java"/>
 				<exclude name="util/Log4JUtils.java"/>
 				<exclude name="RuleVisitor.java"/>
-				<exclude name="CounterVisitor.java"/>
 				<exclude name="CodeGenerator.java"/>
 				<exclude name="SemanticPass.java"/>
 				<exclude name="Compiler.java"/>

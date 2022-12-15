@@ -1,11 +1,15 @@
 program MJProgram
+	class A{}
 	int x; int y;
+	class B{{void c(){}}}
 {
 	
 	a func (int a) int c; {
 		c = 1;
 		return c+2;
 	}
+	
+	
 
 	int main() {
 		y = 2;
