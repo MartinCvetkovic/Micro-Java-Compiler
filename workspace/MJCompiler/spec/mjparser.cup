@@ -70,7 +70,7 @@ nonterminal Condition, CondTerm, CondFact, Term, AddopTermList, Factor;
 
 precedence left ELSE;
 
-Program ::= (Program) PROG IDENT DeclarationList LBRACE MethodDeclarationList RBRACE;
+Program ::= (PProgram) PROG IDENT DeclarationList LBRACE MethodDeclList RBRACE;
 
 DeclarationList ::= (DeclarationsList) DeclarationList Declaration
 					|
@@ -172,7 +172,7 @@ FormPars ::= 	(FormPar) SingleVarDecl
 				(MultipleFormPars) SingleVarDecl COMMA FormPars
 				;
 				
-Type ::= (Type) IDENT;
+Type ::= (TypeIdent) IDENT;
 
 Statement ::= 	(DesignatorStmt) DesignatorStatement SEMI
 				|
@@ -263,6 +263,8 @@ Factor ::= 	(FactorDesignatorEmpty) Designator
 			|
 			(FactorDesignatorActPars) Designator LPAREN ActPars RPAREN
 			|
+			(FactorDesignatorNoActPars) Designator LPAREN RPAREN
+			|
 			(FactorNum) NUM
 			|
 			(FactorChar) CHAR
@@ -285,9 +287,9 @@ Designator ::= 	(DesignatorIdent) IDENT
 				(DesignatorExpr) Designator LBRACKET Expr RBRACKET
 				;
 
-Label ::= (Label) IDENT;
+Label ::= (LabelIdent) IDENT;
 
-Assignop ::= (Assignop) ASSIGN;
+Assignop ::= (AssignopAssign) ASSIGN;
 
 Relop ::= 	(Equals) EQ
 			|

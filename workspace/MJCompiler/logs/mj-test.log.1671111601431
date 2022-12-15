@@ -1,0 +1,43 @@
+INFO  14:39:42,893 - Compiling source file: C:\Faks\PP1\pp1domaci\workspace\MJCompiler\test\program.mj
+INFO  14:39:42,928 - #2 program
+INFO  14:39:42,928 - #47 MJProgram
+INFO  14:39:42,928 - #47 int
+INFO  14:39:42,929 - #47 x
+INFO  14:39:42,929 - #8 ;
+INFO  14:39:42,929 - #47 int
+INFO  14:39:42,930 - #47 y
+INFO  14:39:42,930 - #8 ;
+INFO  14:39:42,930 - #3 {
+INFO  14:39:42,930 - #13 (
+ERROR 14:39:42,930 - 
+Sintaksna greska na liniji 5
+ERROR 14:39:42,930 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 5
+INFO  14:39:42,930 - ======Ispis sintaksnog stabla======
+INFO  14:39:42,930 - 
+DeclarationsList(
+  DeclarationsList(
+    NoDeclaration(
+    ) [NoDeclaration]
+    VarDeclaration(
+      SingleVarDeclarationVarDecl(
+        SingleVarDeclaration(
+          TypeIdent(
+           int
+          ) [TypeIdent]
+         x
+        ) [SingleVarDeclaration]
+      ) [SingleVarDeclarationVarDecl]
+    ) [VarDeclaration]
+  ) [DeclarationsList]
+  VarDeclaration(
+    SingleVarDeclarationVarDecl(
+      SingleVarDeclaration(
+        TypeIdent(
+         int
+        ) [TypeIdent]
+       y
+      ) [SingleVarDeclaration]
+    ) [SingleVarDeclarationVarDecl]
+  ) [VarDeclaration]
+) [DeclarationsList]
+INFO  14:39:42,935 - ===================================

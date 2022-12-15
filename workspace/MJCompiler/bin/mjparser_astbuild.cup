@@ -102,7 +102,7 @@ nonterminal Factor Factor;
 
 precedence left ELSE;
 
-Program ::= (Program) PROG IDENT:I1 DeclarationList:D2 LBRACE MethodDeclarationList:M3 RBRACE {: RESULT=new Program(I1, D2, M3); RESULT.setLine(I1left); :};
+Program ::= (PProgram) PROG IDENT:I1 DeclarationList:D2 LBRACE MethodDeclList:M3 RBRACE {: RESULT=new PProgram(I1, D2, M3); RESULT.setLine(I1left); :};
 
 DeclarationList ::= (DeclarationsList) DeclarationList:D1 Declaration:D2 {: RESULT=new DeclarationsList(D1, D2); RESULT.setLine(D1left); :}
 					|
@@ -204,7 +204,7 @@ FormPars ::= 	(FormPar) SingleVarDecl:S1 {: RESULT=new FormPar(S1); RESULT.setLi
 				(MultipleFormPars) SingleVarDecl:S1 COMMA FormPars:F2 {: RESULT=new MultipleFormPars(S1, F2); RESULT.setLine(S1left); :}
 				;
 				
-Type ::= (Type) IDENT:I1 {: RESULT=new Type(I1); RESULT.setLine(I1left); :};
+Type ::= (TypeIdent) IDENT:I1 {: RESULT=new TypeIdent(I1); RESULT.setLine(I1left); :};
 
 Statement ::= 	(DesignatorStmt) DesignatorStatement:D1 SEMI {: RESULT=new DesignatorStmt(D1); RESULT.setLine(D1left); :}
 				|
@@ -295,6 +295,8 @@ Factor ::= 	(FactorDesignatorEmpty) Designator:D1 {: RESULT=new FactorDesignator
 			|
 			(FactorDesignatorActPars) Designator:D1 LPAREN ActPars:A2 RPAREN {: RESULT=new FactorDesignatorActPars(D1, A2); RESULT.setLine(D1left); :}
 			|
+			(FactorDesignatorNoActPars) Designator:D1 LPAREN RPAREN {: RESULT=new FactorDesignatorNoActPars(D1); RESULT.setLine(D1left); :}
+			|
 			(FactorNum) NUM:N1 {: RESULT=new FactorNum(N1); RESULT.setLine(N1left); :}
 			|
 			(FactorChar) CHAR:C1 {: RESULT=new FactorChar(C1); RESULT.setLine(C1left); :}
@@ -317,9 +319,9 @@ Designator ::= 	(DesignatorIdent) IDENT:I1 {: RESULT=new DesignatorIdent(I1); RE
 				(DesignatorExpr) Designator:D1 LBRACKET Expr:E2 RBRACKET {: RESULT=new DesignatorExpr(D1, E2); RESULT.setLine(D1left); :}
 				;
 
-Label ::= (Label) IDENT:I1 {: RESULT=new Label(I1); RESULT.setLine(I1left); :};
+Label ::= (LabelIdent) IDENT:I1 {: RESULT=new LabelIdent(I1); RESULT.setLine(I1left); :};
 
-Assignop ::= (Assignop) ASSIGN {: RESULT=new Assignop(); :};
+Assignop ::= (AssignopAssign) ASSIGN {: RESULT=new AssignopAssign(); :};
 
 Relop ::= 	(Equals) EQ {: RESULT=new Equals(); :}
 			|
