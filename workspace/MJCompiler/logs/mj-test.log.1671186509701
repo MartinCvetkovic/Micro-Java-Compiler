@@ -1,0 +1,151 @@
+INFO  18:52:29,084 - Compiling source file: C:\Faks\PP1\pp1domaci\workspace\MJCompiler\test\program.mj
+INFO  18:52:29,209 - #2 program
+INFO  18:52:29,211 - #47 p0_
+INFO  18:52:29,211 - #5 const
+INFO  18:52:29,213 - #47 int
+INFO  18:52:29,214 - #47 br1
+INFO  18:52:29,214 - #7 =
+INFO  18:52:29,214 - #50 1
+INFO  18:52:29,215 - #6 ,
+INFO  18:52:29,215 - #47 br2
+INFO  18:52:29,215 - #7 =
+INFO  18:52:29,216 - #50 2
+INFO  18:52:29,217 - #8 ;
+INFO  18:52:29,217 - #5 const
+INFO  18:52:29,218 - #47 char
+INFO  18:52:29,218 - #47 ch
+INFO  18:52:29,218 - #7 =
+INFO  18:52:29,218 - #48 a
+INFO  18:52:29,219 - #8 ;
+INFO  18:52:29,219 - #5 const
+INFO  18:52:29,220 - #47 bool
+INFO  18:52:29,220 - #47 bl1
+INFO  18:52:29,220 - #7 =
+INFO  18:52:29,221 - #49 true
+INFO  18:52:29,222 - #6 ,
+INFO  18:52:29,222 - #47 bl2
+INFO  18:52:29,222 - #7 =
+INFO  18:52:29,222 - #49 false
+INFO  18:52:29,223 - #6 ,
+INFO  18:52:29,223 - #47 bl3
+INFO  18:52:29,223 - #7 =
+INFO  18:52:29,223 - #49 true
+INFO  18:52:29,223 - #8 ;
+INFO  18:52:29,224 - #47 int
+INFO  18:52:29,224 - #47 var1
+INFO  18:52:29,224 - #8 ;
+INFO  18:52:29,225 - #47 char
+INFO  18:52:29,226 - #47 string1
+INFO  18:52:29,226 - #9 [
+INFO  18:52:29,226 - #10 ]
+INFO  18:52:29,226 - #6 ,
+INFO  18:52:29,227 - #47 string2
+INFO  18:52:29,227 - #9 [
+INFO  18:52:29,227 - #10 ]
+INFO  18:52:29,227 - #8 ;
+INFO  18:52:29,228 - #47 bool
+INFO  18:52:29,228 - #47 bool1
+INFO  18:52:29,228 - #6 ,
+INFO  18:52:29,228 - #47 bool2
+INFO  18:52:29,229 - #9 [
+INFO  18:52:29,229 - #10 ]
+INFO  18:52:29,229 - #6 ,
+INFO  18:52:29,229 - #47 bool3
+INFO  18:52:29,229 - #8 ;
+INFO  18:52:29,230 - #11 class
+INFO  18:52:29,231 - #47 A
+INFO  18:52:29,231 - #3 {
+INFO  18:52:29,231 - #47 int
+INFO  18:52:29,232 - #47 a
+INFO  18:52:29,232 - #8 ;
+INFO  18:52:29,232 - #4 }
+INFO  18:52:29,233 - #11 class
+INFO  18:52:29,233 - #47 B
+INFO  18:52:29,234 - #12 extends
+INFO  18:52:29,234 - #47 A
+INFO  18:52:29,234 - #3 {
+INFO  18:52:29,235 - #3 {
+INFO  18:52:29,235 - #47 B
+INFO  18:52:29,235 - #13 (
+INFO  18:52:29,235 - #14 )
+INFO  18:52:29,235 - #3 {
+INFO  18:52:29,235 - #32 read
+INFO  18:52:29,237 - #13 (
+INFO  18:52:29,237 - #47 var1
+INFO  18:52:29,237 - #14 )
+INFO  18:52:29,237 - #8 ;
+INFO  18:52:29,238 - #4 }
+INFO  18:52:29,239 - #47 B
+INFO  18:52:29,241 - #13 (
+INFO  18:52:29,241 - #47 int
+INFO  18:52:29,241 - #47 c
+INFO  18:52:29,241 - #14 )
+INFO  18:52:29,242 - #3 {
+INFO  18:52:29,242 - #4 }
+INFO  18:52:29,242 - #47 B
+INFO  18:52:29,243 - #13 (
+INFO  18:52:29,243 - #47 int
+INFO  18:52:29,243 - #47 c
+INFO  18:52:29,243 - #6 ,
+INFO  18:52:29,244 - #47 int
+INFO  18:52:29,244 - #47 b
+INFO  18:52:29,244 - #14 )
+INFO  18:52:29,244 - #47 int
+INFO  18:52:29,245 - #47 d
+INFO  18:52:29,246 - #6 ,
+INFO  18:52:29,246 - #47 g
+INFO  18:52:29,246 - #8 ;
+INFO  18:52:29,246 - #47 bool
+INFO  18:52:29,246 - #47 f
+INFO  18:52:29,246 - #8 ;
+INFO  18:52:29,246 - #3 {
+INFO  18:52:29,246 - #32 read
+INFO  18:52:29,246 - #13 (
+INFO  18:52:29,246 - #47 A
+INFO  18:52:29,246 - #34 .
+INFO  18:52:29,246 - #47 a
+INFO  18:52:29,246 - #14 )
+INFO  18:52:29,247 - #8 ;
+INFO  18:52:29,247 - #32 read
+INFO  18:52:29,247 - #13 (
+INFO  18:52:29,247 - #47 string1
+INFO  18:52:29,247 - #9 [
+INFO  18:52:29,247 - #50 1
+INFO  18:52:29,247 - #10 ]
+INFO  18:52:29,249 - #14 )
+INFO  18:52:29,250 - #8 ;
+INFO  18:52:29,250 - #33 print
+INFO  18:52:29,250 - #13 (
+INFO  18:52:29,250 - #47 br1
+INFO  18:52:29,250 - #6 ,
+INFO  18:52:29,250 - #50 2
+INFO  18:52:29,250 - #6 ,
+INFO  18:52:29,250 - #48 a
+ERROR 18:52:29,251 - 
+Sintaksna greska na liniji 19
+ERROR 18:52:29,251 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 19
+INFO  18:52:29,251 - ================Ispis sintaksnog stabla================
+INFO  18:52:29,251 - 
+PosExpr(
+  SingleFactor(
+    FactorDesignatorEmpty(
+      DesignatorIdent(
+       br1
+      ) [DesignatorIdent]
+    ) [FactorDesignatorEmpty]
+  ) [SingleFactor]
+  EmptyAddopTermList(
+  ) [EmptyAddopTermList]
+) [PosExpr]
+INFO  18:52:29,251 - =======================================================
+INFO  18:52:29,252 - ==================SEMANTICKA OBRADA====================
+INFO  18:52:29,253 - ==================SINTAKSNA ANALIZA====================
+INFO  18:52:29,257 - 0	classes
+INFO  18:52:29,257 - 0	methods in the program
+INFO  18:52:29,257 - 0	global variables
+INFO  18:52:29,260 - 0	global constants
+INFO  18:52:29,260 - 0	global arrays
+INFO  18:52:29,260 - 0	local variables in main
+INFO  18:52:29,261 - 0	statements in main
+INFO  18:52:29,261 - 0	function calls in main
+INFO  18:52:29,261 - ==============SADRZAJ TABELE SIMBOLA===================

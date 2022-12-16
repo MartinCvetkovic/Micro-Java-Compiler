@@ -70,7 +70,10 @@ nonterminal Condition, CondTerm, CondFact, Term, AddopTermList, Factor, Optional
 
 precedence left ELSE;
 
-Program ::= (PProgram) PROG IDENT DeclarationList LBRACE MethodDeclList RBRACE;
+Program ::= (PProgram) PROG IDENT DeclarationList LBRACE MethodDeclList RBRACE
+			|
+			(ProgramNoMethods) PROG IDENT DeclarationList LBRACE RBRACE
+			;
 
 DeclarationList ::= (DeclarationsList) DeclarationList Declaration
 					|

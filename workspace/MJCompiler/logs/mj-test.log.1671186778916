@@ -1,0 +1,24 @@
+INFO  11:32:29,869 - Compiling source file: C:\Faks\PP1\pp1domaci\workspace\MJCompiler\test\emptyProgram.mj
+INFO  11:32:29,948 - #2 program
+INFO  11:32:29,948 - #47 p_Empty
+INFO  11:32:29,948 - #3 {
+INFO  11:32:29,949 - #4 }
+ERROR 11:32:29,949 - 
+Sintaksna greska na liniji 2
+ERROR 11:32:29,949 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 2
+INFO  11:32:29,949 - ================Ispis sintaksnog stabla================
+INFO  11:32:29,950 - 
+NoDeclaration(
+) [NoDeclaration]
+INFO  11:32:29,950 - =======================================================
+INFO  11:32:29,950 - ==================SEMANTICKA OBRADA====================
+INFO  11:32:29,950 - ==================SINTAKSNA ANALIZA====================
+INFO  11:32:29,954 - 0	classes
+INFO  11:32:29,954 - 0	methods in the program
+INFO  11:32:29,954 - 0	global variables
+INFO  11:32:29,955 - 0	global constants
+INFO  11:32:29,955 - 0	global arrays
+INFO  11:32:29,955 - 0	local variables in main
+INFO  11:32:29,955 - 0	statements in main
+INFO  11:32:29,955 - 0	function calls in main
+INFO  11:32:29,955 - ==============SADRZAJ TABELE SIMBOLA===================

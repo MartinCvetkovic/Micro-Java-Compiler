@@ -1,0 +1,24 @@
+INFO  11:33:13,001 - Compiling source file: C:\Faks\PP1\pp1domaci\workspace\MJCompiler\test\emptyProgram.mj
+INFO  11:33:13,096 - #2 program
+INFO  11:33:13,096 - #47 p_Empty
+INFO  11:33:13,097 - #3 {
+INFO  11:33:13,098 - #4 }
+INFO  11:33:13,099 - ================Ispis sintaksnog stabla================
+INFO  11:33:13,099 - 
+ProgramNoMethods(
+ p_Empty
+  NoDeclaration(
+  ) [NoDeclaration]
+) [ProgramNoMethods]
+INFO  11:33:13,099 - =======================================================
+INFO  11:33:13,100 - ==================SEMANTICKA OBRADA====================
+INFO  11:33:13,100 - ==================SINTAKSNA ANALIZA====================
+INFO  11:33:13,103 - 0	classes
+INFO  11:33:13,104 - 0	methods in the program
+INFO  11:33:13,104 - 0	global variables
+INFO  11:33:13,104 - 0	global constants
+INFO  11:33:13,104 - 0	global arrays
+INFO  11:33:13,104 - 0	local variables in main
+INFO  11:33:13,104 - 0	statements in main
+INFO  11:33:13,105 - 0	function calls in main
+INFO  11:33:13,105 - ==============SADRZAJ TABELE SIMBOLA===================

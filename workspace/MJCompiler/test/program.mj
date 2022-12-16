@@ -16,7 +16,7 @@ program p0_
 			B(int c, int b) int d, g; bool f; {
 				read(A.a);
 				read(string1[1]);
-				print(br1, 2, 'a', false);
+				print(br1, 2, 3, 4);
 				d = 2;
 				print(d);
 			}
@@ -33,7 +33,7 @@ program p0_
 		int num5(){return 5;}
 		int num6(int e){return 6;}
 		
-		bool sumMoreThan10(int a, int b) char c; B bigB, smB; bool[] arr; {
+		bool sumMoreThan10(int a, int b) char c; B bigB, smB; bool arr[]; {
 			if (a + b > 10)
 				return true;
 			else {
@@ -59,7 +59,7 @@ program p0_
 			}
 		}
 		
-		int main() bool res; int[] arr1;{
+		int main() bool res; int arr1[];{
 			res = sumMoreThan10(2, br2);
 			if(res){
 				if (br1 >= 1 && br1 <= br2){
