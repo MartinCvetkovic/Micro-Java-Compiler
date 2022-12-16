@@ -100,6 +100,8 @@ nonterminal Term Term;
 nonterminal AddopTermList AddopTermList;
 nonterminal Factor Factor;
 nonterminal OptionalDesignator OptionalDesignator;
+nonterminal GlobalVarDecl GlobalVarDecl;
+nonterminal ExprError ExprError;
 
 precedence left ELSE;
 
@@ -115,7 +117,7 @@ DeclarationList ::= (DeclarationsList) DeclarationList:D1 Declaration:D2 {: RESU
 					
 Declaration ::= (ConstDeclaration) ConstDecl:C1 {: RESULT=new ConstDeclaration(C1); RESULT.setLine(C1left); :}
 				|
-				(VarDeclaration) VarDecl:V1 {: RESULT=new VarDeclaration(V1); RESULT.setLine(V1left); :}
+				(GlobalVarDeclaration) GlobalVarDecl:G1 {: RESULT=new GlobalVarDeclaration(G1); RESULT.setLine(G1left); :}
 				|
 				(ClassDeclaration) ClassDecl:C1 {: RESULT=new ClassDeclaration(C1); RESULT.setLine(C1left); :}
 				;
@@ -136,6 +138,18 @@ Constant ::= 	(NumConst) NUM:N1 {: RESULT=new NumConst(N1); RESULT.setLine(N1lef
 				|
 				(BoolConst) BOOL:B1 {: RESULT=new BoolConst(B1); RESULT.setLine(B1left); :}
 				;
+
+
+GlobalVarDecl ::= 	(SingleGlobalVarDeclarationVarDecl) Type:T1 SingleVarDecl:S2 SEMI {: RESULT=new SingleGlobalVarDeclarationVarDecl(T1, S2); RESULT.setLine(T1left); :}
+					|
+					(SingleGlobalVarDeclarationError) error:e SEMI
+					{: parser.report_error("Sintaksna greska prilikom deklaracije globalne promenljive na liniji " + eleft, null); :} {: RESULT=new SingleGlobalVarDeclarationError(); :}
+					|
+					(MultipleGlobalVarDeclaration) Type:T1 SingleVarDecl:S2 MultipleVarDecl:M3 SEMI {: RESULT=new MultipleGlobalVarDeclaration(T1, S2, M3); RESULT.setLine(T1left); :}
+					|
+					(MultipleGlobalVarDeclarationError) error:e COMMA
+					{: parser.report_error("Sintaksna greska prilikom deklaracije globalne promenljive na liniji " + eleft, null); :} {: RESULT=new MultipleGlobalVarDeclarationError(); :}
+					;
 
 VarDecl ::= 	(SingleVarDeclarationVarDecl) Type:T1 SingleVarDecl:S2 SEMI {: RESULT=new SingleVarDeclarationVarDecl(T1, S2); RESULT.setLine(T1left); :}
 				|
@@ -239,8 +253,14 @@ PrintArgs ::= 	(PrintArgsNoEmpty) COMMA NUM:N1 PrintArgs:P2 {: RESULT=new PrintA
 				|
 				(PrintArgsEmpty) {: RESULT=new PrintArgsEmpty(); :} /* epsilon */
 				;
+
+ExprError ::= 	(ExprNoError) Expr:E1 {: RESULT=new ExprNoError(E1); RESULT.setLine(E1left); :}
+				|
+				(ExprWithError) error:e
+				{: parser.report_error("Sintaksna greska prilikom dodele vrednosti na liniji " + eleft, null); :} {: RESULT=new ExprWithError(); :}
+				;
 				
-DesignatorStatement ::= (DesignatorAssignStmt) Designator:D1 Assignop:A2 Expr:E3 {: RESULT=new DesignatorAssignStmt(D1, A2, E3); RESULT.setLine(D1left); :}
+DesignatorStatement ::= (DesignatorAssignStmt) Designator:D1 Assignop:A2 ExprError:E3 {: RESULT=new DesignatorAssignStmt(D1, A2, E3); RESULT.setLine(D1left); :}
 						|
 						(DesignatorActParsStmt) Designator:D1 LPAREN ActPars:A2 RPAREN {: RESULT=new DesignatorActParsStmt(D1, A2); RESULT.setLine(D1left); :}
 						|

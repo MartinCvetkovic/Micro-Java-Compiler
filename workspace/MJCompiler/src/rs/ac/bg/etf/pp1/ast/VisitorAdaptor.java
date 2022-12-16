@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 16/11/2022 11:32:41
+// 16/11/2022 17:58:38
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -14,12 +14,14 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Constant Constant) { }
     public void visit(Relop Relop) { }
     public void visit(Assignop Assignop) { }
+    public void visit(ExprError ExprError) { }
     public void visit(StatementList StatementList) { }
     public void visit(MethodDeclarationList MethodDeclarationList) { }
     public void visit(Addop Addop) { }
     public void visit(MethodDeclReturn MethodDeclReturn) { }
     public void visit(Factor Factor) { }
     public void visit(CondTerm CondTerm) { }
+    public void visit(GlobalVarDecl GlobalVarDecl) { }
     public void visit(Designator Designator) { }
     public void visit(Term Term) { }
     public void visit(Condition Condition) { }
@@ -97,6 +99,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(DesignatorEmptyActParsStmt DesignatorEmptyActParsStmt) { visit(); }
     public void visit(DesignatorActParsStmt DesignatorActParsStmt) { visit(); }
     public void visit(DesignatorAssignStmt DesignatorAssignStmt) { visit(); }
+    public void visit(ExprWithError ExprWithError) { visit(); }
+    public void visit(ExprNoError ExprNoError) { visit(); }
     public void visit(PrintArgsEmpty PrintArgsEmpty) { visit(); }
     public void visit(PrintArgsNoEmpty PrintArgsNoEmpty) { visit(); }
     public void visit(BlockStmt BlockStmt) { visit(); }
@@ -141,6 +145,10 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(SingleVarDeclaration SingleVarDeclaration) { visit(); }
     public void visit(MultipleVarDeclaration MultipleVarDeclaration) { visit(); }
     public void visit(SingleVarDeclarationVarDecl SingleVarDeclarationVarDecl) { visit(); }
+    public void visit(MultipleGlobalVarDeclarationError MultipleGlobalVarDeclarationError) { visit(); }
+    public void visit(MultipleGlobalVarDeclaration MultipleGlobalVarDeclaration) { visit(); }
+    public void visit(SingleGlobalVarDeclarationError SingleGlobalVarDeclarationError) { visit(); }
+    public void visit(SingleGlobalVarDeclarationVarDecl SingleGlobalVarDeclarationVarDecl) { visit(); }
     public void visit(BoolConst BoolConst) { visit(); }
     public void visit(CharConst CharConst) { visit(); }
     public void visit(NumConst NumConst) { visit(); }
@@ -149,7 +157,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(MultipleConstDeclaration MultipleConstDeclaration) { visit(); }
     public void visit(SingleConstDecl SingleConstDecl) { visit(); }
     public void visit(ClassDeclaration ClassDeclaration) { visit(); }
-    public void visit(VarDeclaration VarDeclaration) { visit(); }
+    public void visit(GlobalVarDeclaration GlobalVarDeclaration) { visit(); }
     public void visit(ConstDeclaration ConstDeclaration) { visit(); }
     public void visit(NoDeclaration NoDeclaration) { visit(); }
     public void visit(DeclarationsList DeclarationsList) { visit(); }

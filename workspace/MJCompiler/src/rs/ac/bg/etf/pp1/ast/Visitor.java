@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 16/11/2022 11:32:41
+// 16/11/2022 17:58:38
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -14,12 +14,14 @@ public interface Visitor {
     public void visit(Constant Constant);
     public void visit(Relop Relop);
     public void visit(Assignop Assignop);
+    public void visit(ExprError ExprError);
     public void visit(StatementList StatementList);
     public void visit(MethodDeclarationList MethodDeclarationList);
     public void visit(Addop Addop);
     public void visit(MethodDeclReturn MethodDeclReturn);
     public void visit(Factor Factor);
     public void visit(CondTerm CondTerm);
+    public void visit(GlobalVarDecl GlobalVarDecl);
     public void visit(Designator Designator);
     public void visit(Term Term);
     public void visit(Condition Condition);
@@ -97,6 +99,8 @@ public interface Visitor {
     public void visit(DesignatorEmptyActParsStmt DesignatorEmptyActParsStmt);
     public void visit(DesignatorActParsStmt DesignatorActParsStmt);
     public void visit(DesignatorAssignStmt DesignatorAssignStmt);
+    public void visit(ExprWithError ExprWithError);
+    public void visit(ExprNoError ExprNoError);
     public void visit(PrintArgsEmpty PrintArgsEmpty);
     public void visit(PrintArgsNoEmpty PrintArgsNoEmpty);
     public void visit(BlockStmt BlockStmt);
@@ -141,6 +145,10 @@ public interface Visitor {
     public void visit(SingleVarDeclaration SingleVarDeclaration);
     public void visit(MultipleVarDeclaration MultipleVarDeclaration);
     public void visit(SingleVarDeclarationVarDecl SingleVarDeclarationVarDecl);
+    public void visit(MultipleGlobalVarDeclarationError MultipleGlobalVarDeclarationError);
+    public void visit(MultipleGlobalVarDeclaration MultipleGlobalVarDeclaration);
+    public void visit(SingleGlobalVarDeclarationError SingleGlobalVarDeclarationError);
+    public void visit(SingleGlobalVarDeclarationVarDecl SingleGlobalVarDeclarationVarDecl);
     public void visit(BoolConst BoolConst);
     public void visit(CharConst CharConst);
     public void visit(NumConst NumConst);
@@ -149,7 +157,7 @@ public interface Visitor {
     public void visit(MultipleConstDeclaration MultipleConstDeclaration);
     public void visit(SingleConstDecl SingleConstDecl);
     public void visit(ClassDeclaration ClassDeclaration);
-    public void visit(VarDeclaration VarDeclaration);
+    public void visit(GlobalVarDeclaration GlobalVarDeclaration);
     public void visit(ConstDeclaration ConstDeclaration);
     public void visit(NoDeclaration NoDeclaration);
     public void visit(DeclarationsList DeclarationsList);

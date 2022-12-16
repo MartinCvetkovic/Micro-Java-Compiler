@@ -32,4 +32,11 @@ public class RuleVisitor extends VisitorAdaptor{
 		methodCount++;
 	}
 
+	/*public void visit(SingleGlobalVarDeclarationVarDecl singleGlobalVarDeclarationVarDecl){
+		globalVarCount++;
+	}
+	
+	public void visit(MultipleGlobalVarDeclaration multipleGlobalVarDeclaration){
+		globalVarCount++;
+	}*/
 }

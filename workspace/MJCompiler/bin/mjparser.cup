@@ -67,6 +67,7 @@ nonterminal MethodDeclList, MethodDecl, ClassDeclName, StatementList, Statement;
 nonterminal FormPars, MethodDeclReturn, Label, Assignop, Relop, Addop, Mulop;
 nonterminal DesignatorStatement, Expr, Designator, PrintArgs, ActPars, DesignatorList;
 nonterminal Condition, CondTerm, CondFact, Term, AddopTermList, Factor, OptionalDesignator;
+nonterminal GlobalVarDecl, ExprError;
 
 precedence left ELSE;
 
@@ -82,7 +83,7 @@ DeclarationList ::= (DeclarationsList) DeclarationList Declaration
 					
 Declaration ::= (ConstDeclaration) ConstDecl
 				|
-				(VarDeclaration) VarDecl
+				(GlobalVarDeclaration) GlobalVarDecl
 				|
 				(ClassDeclaration) ClassDecl
 				;
@@ -103,6 +104,18 @@ Constant ::= 	(NumConst) NUM
 				|
 				(BoolConst) BOOL
 				;
+
+
+GlobalVarDecl ::= 	(SingleGlobalVarDeclarationVarDecl) Type SingleVarDecl SEMI
+					|
+					(SingleGlobalVarDeclarationError) error:e SEMI
+					{: parser.report_error("Sintaksna greska prilikom deklaracije globalne promenljive na liniji " + eleft, null); :}
+					|
+					(MultipleGlobalVarDeclaration) Type SingleVarDecl MultipleVarDecl SEMI
+					|
+					(MultipleGlobalVarDeclarationError) error:e COMMA
+					{: parser.report_error("Sintaksna greska prilikom deklaracije globalne promenljive na liniji " + eleft, null); :}
+					;
 
 VarDecl ::= 	(SingleVarDeclarationVarDecl) Type SingleVarDecl SEMI
 				|
@@ -206,8 +219,14 @@ PrintArgs ::= 	(PrintArgsNoEmpty) COMMA NUM PrintArgs
 				|
 				(PrintArgsEmpty) /* epsilon */
 				;
+
+ExprError ::= 	(ExprNoError) Expr
+				|
+				(ExprWithError) error:e
+				{: parser.report_error("Sintaksna greska prilikom dodele vrednosti na liniji " + eleft, null); :}
+				;
 				
-DesignatorStatement ::= (DesignatorAssignStmt) Designator Assignop Expr
+DesignatorStatement ::= (DesignatorAssignStmt) Designator Assignop ExprError
 						|
 						(DesignatorActParsStmt) Designator LPAREN ActPars RPAREN
 						|
