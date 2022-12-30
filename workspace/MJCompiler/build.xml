@@ -10,7 +10,7 @@
 				<exclude name="SemanticPass.java"/>
 				<exclude name="SemanticAnalyzer.java"/>
 				<exclude name="Compiler.java"/>
-				<exclude name="Struct.java"/>
+				<exclude name="extendedsymboltable/Struct.java"/>
 			</fileset>
 		</delete>
 		<delete>
