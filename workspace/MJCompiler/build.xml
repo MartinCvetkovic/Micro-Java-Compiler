@@ -6,18 +6,17 @@
 			<fileset dir="src/rs/ac/bg/etf/pp1">
 				<exclude name="sym_old.java"/>
 				<exclude name="util/Log4JUtils.java"/>
-				<exclude name="RuleVisitor.java"/>
 				<exclude name="CodeGenerator.java"/>
 				<exclude name="SemanticPass.java"/>
+				<exclude name="SemanticAnalyzer.java"/>
 				<exclude name="Compiler.java"/>
+				<exclude name="Struct.java"/>
 			</fileset>
 		</delete>
 		<delete>
 			<fileset dir="spec">
 				<exclude name="mjlexer.flex"/>
 				<exclude name="mjparser.cup"/>
-				<exclude name="mjlexer_old.flex"/>
-				<exclude name="mjparser_old.cup"/>
 			</fileset>
 		</delete>
 	</target>
@@ -58,6 +57,7 @@
 				<pathelement path="lib/JFlex.jar"/>
 				<pathelement path="lib/cup_v10k.jar"/>
 				<pathelement path="lib/log4j-1.2.17.jar"/>
+				<pathelement path="lib/symboltable.jar"/>
 			</classpath>
 		</javac>
 	</target>

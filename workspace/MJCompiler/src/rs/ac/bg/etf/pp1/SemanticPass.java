@@ -50,7 +50,7 @@ public class SemanticPass extends VisitorAdaptor {
 			msg.append (" na liniji ").append(line);
 		log.info(msg.toString());
 	}
-	
+	//
 	public void visit(Program program) {		
 		nVars = Tab.currentScope.getnVars();
 		Tab.chainLocalSymbols(program.getProgName().obj);

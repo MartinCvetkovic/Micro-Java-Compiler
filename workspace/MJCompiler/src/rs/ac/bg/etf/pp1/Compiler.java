@@ -42,21 +42,21 @@ public class Compiler {
 	        log.info("\n" + prog.toString());
 	        log.info("=======================================================");
 	        
+	        SemanticAnalyzer semanticAnalyzer = new SemanticAnalyzer();
 	        
 	        log.info("==================SEMANTICKA OBRADA====================");
 	        
 	        log.info("==================SINTAKSNA ANALIZA====================");
-	        RuleVisitor v = new RuleVisitor();
-			prog.traverseBottomUp(v); 
+			prog.traverseBottomUp(semanticAnalyzer);
 
-			log.info(v.classCount + "\tclasses");
-			log.info(v.methodCount + "\tmethods in the program");
-			log.info(v.globalVarCount + "\tglobal variables");
-			log.info(v.globalConstCount + "\tglobal constants");
-			log.info(v.globalArrCount + "\tglobal arrays");
-			log.info(v.localVarInMainCount + "\tlocal variables in main");
-			log.info(v.stmtInMainCount + "\tstatements in main");
-			log.info(v.funcCallsInMainCount + "\tfunction calls in main");
+			log.info(semanticAnalyzer.classCount + "\tclasses");
+			log.info(semanticAnalyzer.methodCount + "\tmethods in the program");
+			log.info(semanticAnalyzer.globalVarCount + "\tglobal variables");
+			log.info(semanticAnalyzer.globalConstCount + "\tglobal constants");
+			log.info(semanticAnalyzer.globalArrCount + "\tglobal arrays");
+			log.info(semanticAnalyzer.localVarInMainCount + "\tlocal variables in main");
+			log.info(semanticAnalyzer.stmtInMainCount + "\tstatements in main");
+			log.info(semanticAnalyzer.funcCallsInMainCount + "\tfunction calls in main");
 			
 	        log.info("==============SADRZAJ TABELE SIMBOLA===================");
 		}
