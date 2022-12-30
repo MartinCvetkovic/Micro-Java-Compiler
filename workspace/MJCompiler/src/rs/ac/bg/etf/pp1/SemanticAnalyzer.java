@@ -6,8 +6,15 @@ import rs.ac.bg.etf.pp1.ast.ClassDeclNameExtend;
 import rs.ac.bg.etf.pp1.ast.ClassDeclNameNoExtend;
 import rs.ac.bg.etf.pp1.ast.MethodDeclReturnType;
 import rs.ac.bg.etf.pp1.ast.MethodDeclReturnVoid;
+import rs.ac.bg.etf.pp1.ast.PProgram;
 import rs.ac.bg.etf.pp1.ast.SyntaxNode;
 import rs.ac.bg.etf.pp1.ast.VisitorAdaptor;
+
+import rs.etf.pp1.symboltable.Tab;
+import rs.etf.pp1.symboltable.concepts.Obj;
+import rs.etf.pp1.symboltable.concepts.Scope;
+import rs.etf.pp1.symboltable.concepts.Struct;
+import rs.ac.bg.etf.pp1.extendedsymboltable.*;
 
 public class SemanticAnalyzer extends VisitorAdaptor {
 	
@@ -54,6 +61,10 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 
 	public void visit(MethodDeclReturnType methodDeclReturnType){
 		methodCount++;
+	}
+
+	public void visit(PProgram pprogram){
+		//Tab.insert(Obj.Prog, pprogram.getProgName(), Struct.)
 	}
 
 }

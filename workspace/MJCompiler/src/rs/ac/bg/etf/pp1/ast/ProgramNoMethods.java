@@ -1,27 +1,27 @@
 // generated with ast extension for cup
 // version 0.8
-// 16/11/2022 17:58:38
+// 30/11/2022 18:8:6
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class ProgramNoMethods extends Program {
 
-    private String I1;
+    private String progName;
     private DeclarationList DeclarationList;
 
-    public ProgramNoMethods (String I1, DeclarationList DeclarationList) {
-        this.I1=I1;
+    public ProgramNoMethods (String progName, DeclarationList DeclarationList) {
+        this.progName=progName;
         this.DeclarationList=DeclarationList;
         if(DeclarationList!=null) DeclarationList.setParent(this);
     }
 
-    public String getI1() {
-        return I1;
+    public String getProgName() {
+        return progName;
     }
 
-    public void setI1(String I1) {
-        this.I1=I1;
+    public void setProgName(String progName) {
+        this.progName=progName;
     }
 
     public DeclarationList getDeclarationList() {
@@ -55,7 +55,7 @@ public class ProgramNoMethods extends Program {
         buffer.append(tab);
         buffer.append("ProgramNoMethods(\n");
 
-        buffer.append(" "+tab+I1);
+        buffer.append(" "+tab+progName);
         buffer.append("\n");
 
         if(DeclarationList!=null)

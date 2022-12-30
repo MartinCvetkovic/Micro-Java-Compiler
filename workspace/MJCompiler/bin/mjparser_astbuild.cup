@@ -105,9 +105,9 @@ nonterminal ExprError ExprError;
 
 precedence left ELSE;
 
-Program ::= (PProgram) PROG IDENT:I1 DeclarationList:D2 LBRACE MethodDeclList:M3 RBRACE {: RESULT=new PProgram(I1, D2, M3); RESULT.setLine(I1left); :}
+Program ::= (PProgram) PROG IDENT:progName DeclarationList:D1 LBRACE MethodDeclList:M2 RBRACE {: RESULT=new PProgram(progName, D1, M2); RESULT.setLine(progNameleft); :}
 			|
-			(ProgramNoMethods) PROG IDENT:I1 DeclarationList:D2 LBRACE RBRACE {: RESULT=new ProgramNoMethods(I1, D2); RESULT.setLine(I1left); :}
+			(ProgramNoMethods) PROG IDENT:progName DeclarationList:D1 LBRACE RBRACE {: RESULT=new ProgramNoMethods(progName, D1); RESULT.setLine(progNameleft); :}
 			;
 
 DeclarationList ::= (DeclarationsList) DeclarationList:D1 Declaration:D2 {: RESULT=new DeclarationsList(D1, D2); RESULT.setLine(D1left); :}
