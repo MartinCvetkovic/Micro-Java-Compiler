@@ -4,7 +4,6 @@
 	<target name="delete">
 		<delete>
 			<fileset dir="src/rs/ac/bg/etf/pp1">
-				<exclude name="sym_old.java"/>
 				<exclude name="util/Log4JUtils.java"/>
 				<exclude name="CodeGenerator.java"/>
 				<exclude name="SemanticPass.java"/>
@@ -50,9 +49,7 @@
 	<target name="compile" depends="repackage">
 		<javac srcdir="src/rs/ac/bg/etf/pp1" includeantruntime="false">
 			<exclude name="CodeGenerator.java"/>
-			<exclude name="CounterVisitor.java"/>
 			<exclude name="SemanticPass.java"/>
-			<exclude name="sym_old.java"/>
 			<classpath>
 				<pathelement path="lib/JFlex.jar"/>
 				<pathelement path="lib/cup_v10k.jar"/>

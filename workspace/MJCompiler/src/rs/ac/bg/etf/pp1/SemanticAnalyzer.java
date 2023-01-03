@@ -1,9 +1,7 @@
 package rs.ac.bg.etf.pp1;
 
 import org.apache.log4j.Logger;
-
 import rs.ac.bg.etf.pp1.ast.*;
-
 import rs.ac.bg.etf.pp1.extendedsymboltable.*;
 import rs.etf.pp1.symboltable.concepts.*;
 
@@ -37,8 +35,14 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			msg.append (" na liniji ").append(line);
 		log.info(msg.toString());
 	}
+	
+	public void visit(PProgramName programName){
+		programName.obj = Tab.insert(Obj.Prog, programName.getProgName(), new Struct(Struct.None));
+		Tab.openScope();
+	}
 
 	public void visit(PProgram pprogram){
-		//Tab.insert(Obj.Prog, pprogram.getProgName(), new Struct(Struct.None));
+		Tab.chainLocalSymbols(pprogram.getProgramName().obj);
+		Tab.closeScope();
 	}
 }

@@ -1,30 +1,31 @@
 // generated with ast extension for cup
 // version 0.8
-// 3/0/2023 12:21:9
+// 3/0/2023 13:39:16
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class PProgram extends Program {
 
-    private String progName;
+    private ProgramName ProgramName;
     private DeclarationList DeclarationList;
     private MethodDeclList MethodDeclList;
 
-    public PProgram (String progName, DeclarationList DeclarationList, MethodDeclList MethodDeclList) {
-        this.progName=progName;
+    public PProgram (ProgramName ProgramName, DeclarationList DeclarationList, MethodDeclList MethodDeclList) {
+        this.ProgramName=ProgramName;
+        if(ProgramName!=null) ProgramName.setParent(this);
         this.DeclarationList=DeclarationList;
         if(DeclarationList!=null) DeclarationList.setParent(this);
         this.MethodDeclList=MethodDeclList;
         if(MethodDeclList!=null) MethodDeclList.setParent(this);
     }
 
-    public String getProgName() {
-        return progName;
+    public ProgramName getProgramName() {
+        return ProgramName;
     }
 
-    public void setProgName(String progName) {
-        this.progName=progName;
+    public void setProgramName(ProgramName ProgramName) {
+        this.ProgramName=ProgramName;
     }
 
     public DeclarationList getDeclarationList() {
@@ -48,17 +49,20 @@ public class PProgram extends Program {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(ProgramName!=null) ProgramName.accept(visitor);
         if(DeclarationList!=null) DeclarationList.accept(visitor);
         if(MethodDeclList!=null) MethodDeclList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(ProgramName!=null) ProgramName.traverseTopDown(visitor);
         if(DeclarationList!=null) DeclarationList.traverseTopDown(visitor);
         if(MethodDeclList!=null) MethodDeclList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(ProgramName!=null) ProgramName.traverseBottomUp(visitor);
         if(DeclarationList!=null) DeclarationList.traverseBottomUp(visitor);
         if(MethodDeclList!=null) MethodDeclList.traverseBottomUp(visitor);
         accept(visitor);
@@ -69,7 +73,10 @@ public class PProgram extends Program {
         buffer.append(tab);
         buffer.append("PProgram(\n");
 
-        buffer.append(" "+tab+progName);
+        if(ProgramName!=null)
+            buffer.append(ProgramName.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
         if(DeclarationList!=null)

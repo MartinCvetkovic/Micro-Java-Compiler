@@ -60,7 +60,6 @@ terminal Character CHAR;
 terminal Boolean BOOL;
 terminal Integer NUM;
 
-nonterminal Program Program;
 nonterminal DeclarationList DeclarationList;
 nonterminal Declaration Declaration;
 nonterminal ConstDecl ConstDecl;
@@ -100,13 +99,16 @@ nonterminal Factor Factor;
 nonterminal OptionalDesignator OptionalDesignator;
 nonterminal GlobalVarDecl GlobalVarDecl;
 nonterminal ExprError ExprError;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program;
 
 precedence left ELSE;
 
-Program ::= (PProgram) PROG IDENT:progName DeclarationList:D1 LBRACE MethodDeclList:M2 RBRACE {: RESULT=new PProgram(progName, D1, M2); RESULT.setLine(progNameleft); :}
+Program ::= (PProgram) PROG ProgramName:pName DeclarationList:D1 LBRACE MethodDeclList:M2 RBRACE {: RESULT=new PProgram(pName, D1, M2); RESULT.setLine(pNameleft); :}
 			|
-			(ProgramNoMethods) PROG IDENT:progName DeclarationList:D1 LBRACE RBRACE {: RESULT=new ProgramNoMethods(progName, D1); RESULT.setLine(progNameleft); :}
+			(ProgramNoMethods) PROG ProgramName:pName DeclarationList:D1 LBRACE RBRACE {: RESULT=new ProgramNoMethods(pName, D1); RESULT.setLine(pNameleft); :}
 			;
+			
+ProgramName ::= (PProgramName) IDENT:progName {: RESULT=new PProgramName(progName); RESULT.setLine(progNameleft); :};
 
 DeclarationList ::= (DeclarationsList) DeclarationList:D1 Declaration:D2 {: RESULT=new DeclarationsList(D1, D2); RESULT.setLine(D1left); :}
 					|

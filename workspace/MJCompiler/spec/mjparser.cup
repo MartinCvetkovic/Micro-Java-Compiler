@@ -60,7 +60,6 @@ terminal Character CHAR;
 terminal Boolean BOOL;
 terminal Integer NUM;
 
-nonterminal Program;
 nonterminal DeclarationList, Declaration, ConstDecl;
 nonterminal VarDecl, ClassDecl, Type, Constant, MultipleConstDecl, SingleVarDecl;
 nonterminal MultipleVarDecl, VarDeclList, ConstructorDeclList, ConstructorDecl;
@@ -69,13 +68,16 @@ nonterminal FormPars, MethodDeclReturn, Assignop, Relop, Addop, Mulop; // Label
 nonterminal DesignatorStatement, Expr, Designator, PrintArgs, ActPars, DesignatorList;
 nonterminal Condition, CondTerm, CondFact, Term, AddopTermList, Factor, OptionalDesignator;
 nonterminal GlobalVarDecl, ExprError;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program;
 
 precedence left ELSE;
 
-Program ::= (PProgram) PROG IDENT:progName DeclarationList LBRACE MethodDeclList RBRACE
+Program ::= (PProgram) PROG ProgramName:pName DeclarationList LBRACE MethodDeclList RBRACE
 			|
-			(ProgramNoMethods) PROG IDENT:progName DeclarationList LBRACE RBRACE
+			(ProgramNoMethods) PROG ProgramName:pName DeclarationList LBRACE RBRACE
 			;
+			
+ProgramName ::= (PProgramName) IDENT:progName;
 
 DeclarationList ::= (DeclarationsList) DeclarationList Declaration
 					|

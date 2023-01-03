@@ -17,10 +17,11 @@ public class DumpSymbolTableVisitor extends rs.etf.pp1.symboltable.visitors.Dump
 		case Struct.Char:
 			output.append("char");
 			break;
-		case Struct.Array:
-			output.append("Arr of ");
 		case Struct.Bool:
 			output.append("bool");
+			break;
+		case Struct.Array:
+			output.append("Arr of ");
 			
 			switch (structToVisit.getElemType().getKind()) {
 			case Struct.None:
