@@ -39,11 +39,11 @@ import java_cup.runtime.Symbol;
 "program"   { return new_symbol(sym.PROG, yytext()); }
 "break"   	{ return new_symbol(sym.BREAK, yytext()); }
 "class"   	{ return new_symbol(sym.CLASS, yytext()); }
-"enum"   	{ return new_symbol(sym.ENUM, yytext()); }
+// "enum"   	{ return new_symbol(sym.ENUM, yytext()); }
 "else"   	{ return new_symbol(sym.ELSE, yytext()); }
 "const"   	{ return new_symbol(sym.CONST, yytext()); }
 "if"   		{ return new_symbol(sym.IF, yytext()); }
-"do"  	 	{ return new_symbol(sym.DO, yytext()); }
+// "do"  	 	{ return new_symbol(sym.DO, yytext()); }
 "while"   	{ return new_symbol(sym.WHILE, yytext()); }
 "new"   	{ return new_symbol(sym.NEW, yytext()); }
 "print" 	{ return new_symbol(sym.PRINT, yytext()); }
@@ -52,7 +52,7 @@ import java_cup.runtime.Symbol;
 "void" 		{ return new_symbol(sym.VOID, yytext()); }
 "extends"  	{ return new_symbol(sym.EXTENDS, yytext()); }
 "continue"  { return new_symbol(sym.CONTINUE, yytext()); }
-"this"   	{ return new_symbol(sym.THIS, yytext()); }
+// "this"   	{ return new_symbol(sym.THIS, yytext()); }
 "foreach"   { return new_symbol(sym.FOREACH, yytext()); }
 
 "+" 		{ return new_symbol(sym.PLUS, yytext()); }
@@ -72,7 +72,7 @@ import java_cup.runtime.Symbol;
 "++" 		{ return new_symbol(sym.INC, yytext()); }
 "--" 		{ return new_symbol(sym.DEC, yytext()); }
 ";" 		{ return new_symbol(sym.SEMI, yytext()); }
-":" 		{ return new_symbol(sym.COLON, yytext()); }
+// ":" 		{ return new_symbol(sym.COLON, yytext()); }
 "," 		{ return new_symbol(sym.COMMA, yytext()); }
 "." 		{ return new_symbol(sym.DOT, yytext()); }
 "(" 		{ return new_symbol(sym.LPAREN, yytext()); }

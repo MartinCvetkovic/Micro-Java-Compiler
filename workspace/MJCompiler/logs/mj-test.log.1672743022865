@@ -1,0 +1,844 @@
+INFO  11:46:19,762 - Compiling source file: C:\Faks\PP1\pp1domaci\workspace\MJCompiler\test\parserProgramSyntaxErrors.mj
+INFO  11:46:19,846 - #2 program
+INFO  11:46:19,847 - #47 p0_
+INFO  11:46:19,847 - #5 const
+INFO  11:46:19,847 - #47 int
+INFO  11:46:19,848 - #47 br1
+INFO  11:46:19,848 - #7 =
+INFO  11:46:19,848 - #50 1
+INFO  11:46:19,848 - #6 ,
+INFO  11:46:19,848 - #47 br2
+INFO  11:46:19,848 - #7 =
+INFO  11:46:19,849 - #50 2
+INFO  11:46:19,849 - #8 ;
+INFO  11:46:19,849 - #5 const
+INFO  11:46:19,849 - #47 char
+INFO  11:46:19,850 - #47 ch
+INFO  11:46:19,850 - #7 =
+INFO  11:46:19,850 - #48 a
+INFO  11:46:19,850 - #8 ;
+INFO  11:46:19,850 - #5 const
+INFO  11:46:19,850 - #47 bool
+INFO  11:46:19,851 - #47 bl1
+INFO  11:46:19,851 - #7 =
+INFO  11:46:19,851 - #49 true
+INFO  11:46:19,851 - #6 ,
+INFO  11:46:19,851 - #47 bl2
+INFO  11:46:19,852 - #7 =
+INFO  11:46:19,852 - #49 false
+INFO  11:46:19,852 - #6 ,
+INFO  11:46:19,852 - #47 bl3
+INFO  11:46:19,852 - #7 =
+INFO  11:46:19,852 - #49 true
+INFO  11:46:19,852 - #8 ;
+INFO  11:46:19,853 - #47 int
+INFO  11:46:19,853 - #47 var1
+INFO  11:46:19,853 - #8 ;
+INFO  11:46:19,853 - #47 char
+INFO  11:46:19,853 - #47 string1
+INFO  11:46:19,853 - #6 ,
+INFO  11:46:19,854 - #47 string2
+INFO  11:46:19,854 - #9 [
+INFO  11:46:19,854 - #10 ]
+INFO  11:46:19,854 - #8 ;
+INFO  11:46:19,854 - #47 bool
+INFO  11:46:19,854 - #47 bool1
+INFO  11:46:19,855 - #6 ,
+INFO  11:46:19,855 - #47 bool2
+INFO  11:46:19,855 - #9 [
+INFO  11:46:19,855 - #10 ]
+INFO  11:46:19,855 - #6 ,
+INFO  11:46:19,855 - #47 bool3
+INFO  11:46:19,855 - #8 ;
+INFO  11:46:19,856 - #11 class
+INFO  11:46:19,856 - #47 B
+INFO  11:46:19,856 - #12 extends
+INFO  11:46:19,856 - #47 A
+INFO  11:46:19,856 - #3 {
+INFO  11:46:19,857 - #3 {
+INFO  11:46:19,857 - #47 B
+INFO  11:46:19,858 - #13 (
+INFO  11:46:19,858 - #14 )
+INFO  11:46:19,858 - #3 {
+INFO  11:46:19,858 - #32 read
+INFO  11:46:19,859 - #13 (
+INFO  11:46:19,859 - #47 var1
+INFO  11:46:19,859 - #14 )
+INFO  11:46:19,859 - #8 ;
+INFO  11:46:19,859 - #4 }
+INFO  11:46:19,860 - #47 B
+INFO  11:46:19,862 - #13 (
+INFO  11:46:19,862 - #47 int
+INFO  11:46:19,862 - #47 c
+INFO  11:46:19,862 - #14 )
+INFO  11:46:19,863 - #3 {
+INFO  11:46:19,863 - #4 }
+INFO  11:46:19,863 - #47 B
+INFO  11:46:19,863 - #13 (
+INFO  11:46:19,863 - #47 int
+INFO  11:46:19,863 - #47 c
+INFO  11:46:19,864 - #6 ,
+INFO  11:46:19,864 - #47 int
+INFO  11:46:19,864 - #47 b
+INFO  11:46:19,864 - #14 )
+INFO  11:46:19,864 - #47 int
+INFO  11:46:19,864 - #47 d
+INFO  11:46:19,864 - #6 ,
+INFO  11:46:19,864 - #47 g
+INFO  11:46:19,864 - #8 ;
+INFO  11:46:19,865 - #47 bool
+INFO  11:46:19,865 - #47 f
+INFO  11:46:19,865 - #8 ;
+INFO  11:46:19,865 - #3 {
+INFO  11:46:19,865 - #32 read
+INFO  11:46:19,865 - #13 (
+INFO  11:46:19,866 - #47 A
+INFO  11:46:19,866 - #34 .
+INFO  11:46:19,866 - #47 a
+INFO  11:46:19,866 - #14 )
+INFO  11:46:19,866 - #8 ;
+INFO  11:46:19,866 - #32 read
+INFO  11:46:19,866 - #13 (
+INFO  11:46:19,866 - #47 string1
+INFO  11:46:19,867 - #9 [
+INFO  11:46:19,867 - #50 1
+INFO  11:46:19,867 - #10 ]
+INFO  11:46:19,868 - #14 )
+INFO  11:46:19,869 - #8 ;
+INFO  11:46:19,869 - #33 print
+INFO  11:46:19,869 - #13 (
+INFO  11:46:19,869 - #47 br1
+INFO  11:46:19,869 - #6 ,
+INFO  11:46:19,869 - #50 2
+INFO  11:46:19,869 - #6 ,
+INFO  11:46:19,869 - #50 3
+INFO  11:46:19,870 - #6 ,
+INFO  11:46:19,870 - #50 4
+INFO  11:46:19,870 - #14 )
+INFO  11:46:19,871 - #8 ;
+INFO  11:46:19,871 - #47 d
+INFO  11:46:19,871 - #7 =
+INFO  11:46:19,871 - #50 2
+INFO  11:46:19,873 - #8 ;
+INFO  11:46:19,874 - #33 print
+INFO  11:46:19,874 - #13 (
+INFO  11:46:19,874 - #47 d
+INFO  11:46:19,874 - #14 )
+INFO  11:46:19,874 - #8 ;
+INFO  11:46:19,874 - #4 }
+INFO  11:46:19,874 - #15 void
+INFO  11:46:19,875 - #47 Bmethod
+INFO  11:46:19,876 - #13 (
+INFO  11:46:19,876 - #47 int
+INFO  11:46:19,876 - #47 l1
+INFO  11:46:19,876 - #9 [
+INFO  11:46:19,876 - #10 ]
+INFO  11:46:19,876 - #6 ,
+INFO  11:46:19,876 - #47 bool
+INFO  11:46:19,876 - #47 l2
+INFO  11:46:19,876 - #6 ,
+INFO  11:46:19,876 - #47 char
+INFO  11:46:19,876 - #47 str
+INFO  11:46:19,876 - #9 [
+INFO  11:46:19,876 - #10 ]
+INFO  11:46:19,877 - #14 )
+INFO  11:46:19,877 - #47 int
+INFO  11:46:19,877 - #47 a
+INFO  11:46:19,877 - #8 ;
+INFO  11:46:19,877 - #3 {
+INFO  11:46:19,877 - #31 return
+INFO  11:46:19,877 - #8 ;
+INFO  11:46:19,877 - #4 }
+INFO  11:46:19,878 - #15 void
+INFO  11:46:19,879 - #47 noMethod
+INFO  11:46:19,879 - #13 (
+INFO  11:46:19,879 - #14 )
+INFO  11:46:19,879 - #3 {
+INFO  11:46:19,880 - #4 }
+INFO  11:46:19,880 - #4 }
+INFO  11:46:19,880 - #4 }
+INFO  11:46:19,880 - #3 {
+INFO  11:46:19,880 - #15 void
+INFO  11:46:19,881 - #47 empty
+INFO  11:46:19,881 - #13 (
+INFO  11:46:19,881 - #14 )
+INFO  11:46:19,881 - #3 {
+INFO  11:46:19,881 - #4 }
+INFO  11:46:19,881 - #47 int
+INFO  11:46:19,881 - #47 num5
+INFO  11:46:19,881 - #13 (
+INFO  11:46:19,881 - #14 )
+INFO  11:46:19,881 - #3 {
+INFO  11:46:19,881 - #31 return
+INFO  11:46:19,882 - #50 5
+INFO  11:46:19,882 - #8 ;
+INFO  11:46:19,882 - #4 }
+INFO  11:46:19,882 - #47 int
+INFO  11:46:19,882 - #47 num6
+INFO  11:46:19,882 - #13 (
+INFO  11:46:19,882 - #47 int
+INFO  11:46:19,882 - #47 e
+INFO  11:46:19,883 - #14 )
+INFO  11:46:19,883 - #3 {
+INFO  11:46:19,883 - #31 return
+INFO  11:46:19,883 - #50 6
+INFO  11:46:19,883 - #8 ;
+INFO  11:46:19,883 - #4 }
+INFO  11:46:19,883 - #47 bool
+INFO  11:46:19,883 - #47 sumMoreThan10
+INFO  11:46:19,883 - #13 (
+INFO  11:46:19,883 - #47 int
+INFO  11:46:19,883 - #47 a
+INFO  11:46:19,884 - #6 ,
+INFO  11:46:19,884 - #47 int
+INFO  11:46:19,884 - #47 b
+INFO  11:46:19,884 - #14 )
+INFO  11:46:19,884 - #47 char
+INFO  11:46:19,884 - #47 c
+INFO  11:46:19,884 - #8 ;
+INFO  11:46:19,884 - #47 B
+INFO  11:46:19,884 - #47 bigB
+INFO  11:46:19,884 - #6 ,
+INFO  11:46:19,885 - #47 smB
+INFO  11:46:19,885 - #8 ;
+INFO  11:46:19,885 - #47 bool
+INFO  11:46:19,885 - #47 arr
+INFO  11:46:19,885 - #9 [
+INFO  11:46:19,885 - #10 ]
+INFO  11:46:19,885 - #8 ;
+INFO  11:46:19,885 - #3 {
+INFO  11:46:19,885 - #27 if
+INFO  11:46:19,886 - #13 (
+INFO  11:46:19,886 - #47 a
+INFO  11:46:19,886 - #22 +
+INFO  11:46:19,886 - #47 b
+INFO  11:46:19,887 - #18 >
+INFO  11:46:19,888 - #50 10
+INFO  11:46:19,889 - #14 )
+INFO  11:46:19,889 - #31 return
+INFO  11:46:19,889 - #49 true
+INFO  11:46:19,889 - #8 ;
+INFO  11:46:19,890 - #28 else
+INFO  11:46:19,890 - #3 {
+INFO  11:46:19,890 - #47 a
+INFO  11:46:19,890 - #41 ++
+INFO  11:46:19,890 - #8 ;
+INFO  11:46:19,890 - #47 a
+INFO  11:46:19,890 - #42 --
+INFO  11:46:19,890 - #8 ;
+INFO  11:46:19,890 - #47 a
+INFO  11:46:19,890 - #7 =
+INFO  11:46:19,890 - #23 -
+INFO  11:46:19,890 - #47 a
+INFO  11:46:19,890 - #8 ;
+INFO  11:46:19,891 - #47 c
+INFO  11:46:19,891 - #7 =
+INFO  11:46:19,891 - #24 *
+ERROR 11:46:19,891 - 
+Sintaksna greska na liniji 41
+INFO  11:46:19,891 - #8 ;
+INFO  11:46:19,891 - #47 empty
+INFO  11:46:19,891 - #13 (
+INFO  11:46:19,892 - #14 )
+INFO  11:46:19,892 - #8 ;
+INFO  11:46:19,892 - #47 smB
+INFO  11:46:19,892 - #7 =
+INFO  11:46:19,892 - #38 new
+INFO  11:46:19,892 - #47 B
+INFO  11:46:19,892 - #13 (
+INFO  11:46:19,893 - #14 )
+INFO  11:46:19,893 - #8 ;
+INFO  11:46:19,893 - #40 while
+INFO  11:46:19,893 - #13 (
+INFO  11:46:19,893 - #48 a
+INFO  11:46:19,893 - #17 !=
+INFO  11:46:19,893 - #48 b
+INFO  11:46:19,893 - #14 )
+INFO  11:46:19,893 - #29 break
+INFO  11:46:19,893 - #8 ;
+INFO  11:46:19,893 - #47 bigB
+INFO  11:46:19,893 - #7 =
+INFO  11:46:19,893 - #38 new
+INFO  11:46:19,894 - #47 B
+INFO  11:46:19,894 - #13 (
+INFO  11:46:19,894 - #50 2
+INFO  11:46:19,894 - #14 )
+INFO  11:46:19,894 - #8 ;
+INFO  11:46:19,894 - #47 bigB
+INFO  11:46:19,894 - #34 .
+INFO  11:46:19,894 - #47 noMethod
+INFO  11:46:19,894 - #13 (
+INFO  11:46:19,894 - #14 )
+INFO  11:46:19,894 - #8 ;
+INFO  11:46:19,894 - #27 if
+INFO  11:46:19,895 - #13 (
+INFO  11:46:19,895 - #47 a
+INFO  11:46:19,895 - #16 ==
+INFO  11:46:19,895 - #47 b
+INFO  11:46:19,895 - #36 ||
+INFO  11:46:19,895 - #47 a
+INFO  11:46:19,895 - #17 !=
+INFO  11:46:19,895 - #47 b
+INFO  11:46:19,895 - #37 &&
+INFO  11:46:19,895 - #47 a
+INFO  11:46:19,896 - #20 <
+INFO  11:46:19,896 - #47 b
+INFO  11:46:19,896 - #14 )
+INFO  11:46:19,896 - #3 {
+INFO  11:46:19,896 - #47 c
+INFO  11:46:19,896 - #7 =
+INFO  11:46:19,896 - #48 g
+INFO  11:46:19,896 - #8 ;
+INFO  11:46:19,896 - #4 }
+INFO  11:46:19,896 - #47 arr
+INFO  11:46:19,896 - #7 =
+INFO  11:46:19,896 - #38 new
+INFO  11:46:19,896 - #47 int
+INFO  11:46:19,896 - #9 [
+INFO  11:46:19,896 - #50 2
+INFO  11:46:19,896 - #10 ]
+INFO  11:46:19,896 - #8 ;
+INFO  11:46:19,896 - #9 [
+INFO  11:46:19,896 - #47 b
+INFO  11:46:19,896 - #10 ]
+INFO  11:46:19,896 - #7 =
+INFO  11:46:19,896 - #47 a
+INFO  11:46:19,896 - #8 ;
+INFO  11:46:19,897 - #9 [
+INFO  11:46:19,897 - #10 ]
+INFO  11:46:19,897 - #7 =
+INFO  11:46:19,897 - #47 a
+INFO  11:46:19,897 - #8 ;
+INFO  11:46:19,897 - #9 [
+INFO  11:46:19,897 - #47 b
+INFO  11:46:19,897 - #6 ,
+INFO  11:46:19,897 - #47 br1
+INFO  11:46:19,897 - #6 ,
+INFO  11:46:19,897 - #6 ,
+INFO  11:46:19,898 - #10 ]
+INFO  11:46:19,898 - #7 =
+INFO  11:46:19,898 - #47 a
+INFO  11:46:19,898 - #8 ;
+INFO  11:46:19,898 - #47 b
+INFO  11:46:19,898 - #7 =
+INFO  11:46:19,898 - #13 (
+INFO  11:46:19,898 - #47 num5
+INFO  11:46:19,898 - #13 (
+INFO  11:46:19,898 - #14 )
+INFO  11:46:19,898 - #22 +
+INFO  11:46:19,899 - #47 num6
+INFO  11:46:19,899 - #13 (
+INFO  11:46:19,899 - #50 1
+INFO  11:46:19,899 - #14 )
+INFO  11:46:19,899 - #14 )
+INFO  11:46:19,899 - #22 +
+INFO  11:46:19,899 - #50 20
+INFO  11:46:19,899 - #23 -
+INFO  11:46:19,899 - #50 40
+INFO  11:46:19,899 - #26 /
+INFO  11:46:19,899 - #50 10
+INFO  11:46:19,899 - #25 %
+INFO  11:46:19,900 - #50 4
+INFO  11:46:19,900 - #24 *
+INFO  11:46:19,900 - #50 2
+INFO  11:46:19,900 - #8 ;
+INFO  11:46:19,900 - #31 return
+INFO  11:46:19,900 - #49 false
+INFO  11:46:19,900 - #8 ;
+INFO  11:46:19,901 - #4 }
+INFO  11:46:19,901 - #4 }
+INFO  11:46:19,901 - #47 int
+INFO  11:46:19,901 - #47 main
+INFO  11:46:19,901 - #13 (
+INFO  11:46:19,901 - #14 )
+INFO  11:46:19,901 - #47 bool
+INFO  11:46:19,901 - #47 res
+INFO  11:46:19,901 - #8 ;
+INFO  11:46:19,901 - #47 int
+INFO  11:46:19,901 - #47 arr1
+INFO  11:46:19,901 - #9 [
+ERROR 11:46:19,901 - Sintaksna greska prilikom deklaracije globalne promenljive na liniji 8
+INFO  11:46:19,902 - #10 ]
+INFO  11:46:19,903 - #8 ;
+INFO  11:46:19,903 - #3 {
+INFO  11:46:19,903 - #27 if
+ERROR 11:46:19,903 - 
+Sintaksna greska na liniji 62
+INFO  11:46:19,903 - #13 (
+INFO  11:46:19,903 - #47 res
+INFO  11:46:19,903 - #14 )
+INFO  11:46:19,904 - #3 {
+INFO  11:46:19,904 - #27 if
+INFO  11:46:19,904 - #13 (
+INFO  11:46:19,904 - #47 br1
+INFO  11:46:19,904 - #19 >=
+INFO  11:46:19,904 - #50 1
+INFO  11:46:19,904 - #37 &&
+INFO  11:46:19,904 - #47 br1
+INFO  11:46:19,904 - #21 <=
+INFO  11:46:19,904 - #47 br2
+INFO  11:46:19,904 - #14 )
+INFO  11:46:19,904 - #3 {
+INFO  11:46:19,904 - #47 arr1
+INFO  11:46:19,904 - #7 =
+INFO  11:46:19,904 - #38 new
+INFO  11:46:19,904 - #47 int
+INFO  11:46:19,904 - #9 [
+INFO  11:46:19,905 - #50 2
+INFO  11:46:19,905 - #10 ]
+INFO  11:46:19,905 - #8 ;
+INFO  11:46:19,905 - #47 arr
+INFO  11:46:19,905 - #9 [
+INFO  11:46:19,905 - #50 0
+INFO  11:46:19,905 - #10 ]
+INFO  11:46:19,905 - #7 =
+INFO  11:46:19,905 - #50 0
+INFO  11:46:19,905 - #8 ;
+INFO  11:46:19,905 - #47 arr
+INFO  11:46:19,905 - #9 [
+INFO  11:46:19,906 - #50 1
+INFO  11:46:19,906 - #10 ]
+INFO  11:46:19,906 - #7 =
+INFO  11:46:19,906 - #50 2
+INFO  11:46:19,907 - #8 ;
+INFO  11:46:19,907 - #40 while
+INFO  11:46:19,907 - #13 (
+INFO  11:46:19,907 - #47 arr1
+INFO  11:46:19,907 - #9 [
+INFO  11:46:19,907 - #50 0
+INFO  11:46:19,907 - #10 ]
+INFO  11:46:19,907 - #19 >=
+INFO  11:46:19,907 - #47 arr
+INFO  11:46:19,907 - #9 [
+INFO  11:46:19,907 - #50 1
+INFO  11:46:19,907 - #10 ]
+INFO  11:46:19,907 - #14 )
+INFO  11:46:19,907 - #3 {
+INFO  11:46:19,907 - #47 arr
+INFO  11:46:19,908 - #34 .
+INFO  11:46:19,908 - #35 foreach
+INFO  11:46:19,908 - #13 (
+INFO  11:46:19,908 - #47 num
+INFO  11:46:19,908 - #39 =>
+INFO  11:46:19,908 - #33 print
+INFO  11:46:19,908 - #13 (
+INFO  11:46:19,908 - #47 num
+INFO  11:46:19,908 - #14 )
+INFO  11:46:19,908 - #8 ;
+INFO  11:46:19,908 - #14 )
+INFO  11:46:19,908 - #8 ;
+INFO  11:46:19,908 - #47 arr
+INFO  11:46:19,909 - #9 [
+INFO  11:46:19,909 - #50 0
+INFO  11:46:19,909 - #10 ]
+INFO  11:46:19,909 - #41 ++
+INFO  11:46:19,909 - #8 ;
+INFO  11:46:19,909 - #27 if
+INFO  11:46:19,909 - #13 (
+INFO  11:46:19,909 - #47 arr
+INFO  11:46:19,909 - #9 [
+INFO  11:46:19,909 - #50 0
+INFO  11:46:19,909 - #10 ]
+INFO  11:46:19,909 - #16 ==
+INFO  11:46:19,909 - #50 1
+INFO  11:46:19,909 - #14 )
+INFO  11:46:19,910 - #30 continue
+INFO  11:46:19,910 - #8 ;
+INFO  11:46:19,910 - #4 }
+INFO  11:46:19,910 - #4 }
+INFO  11:46:19,910 - #4 }
+INFO  11:46:19,910 - #4 }
+INFO  11:46:19,910 - #4 }
+ERROR 11:46:19,910 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 76
+INFO  11:46:19,910 - ================Ispis sintaksnog stabla================
+INFO  11:46:19,913 - 
+DeclarationsList(
+  DeclarationsList(
+    DeclarationsList(
+      DeclarationsList(
+        DeclarationsList(
+          DeclarationsList(
+            DeclarationsList(
+              DeclarationsList(
+                DeclarationsList(
+                  NoDeclaration(
+                  ) [NoDeclaration]
+                  ConstDeclaration(
+                    MultipleConstDeclaration(
+                      TypeIdent(
+                       int
+                      ) [TypeIdent]
+                     br1
+                      NumConst(
+                       1
+                      ) [NumConst]
+                      LastMultipleConstDecl(
+                       br2
+                        NumConst(
+                         2
+                        ) [NumConst]
+                      ) [LastMultipleConstDecl]
+                    ) [MultipleConstDeclaration]
+                  ) [ConstDeclaration]
+                ) [DeclarationsList]
+                ConstDeclaration(
+                  SingleConstDecl(
+                    TypeIdent(
+                     char
+                    ) [TypeIdent]
+                   ch
+                    CharConst(
+                     a
+                    ) [CharConst]
+                  ) [SingleConstDecl]
+                ) [ConstDeclaration]
+              ) [DeclarationsList]
+              ConstDeclaration(
+                MultipleConstDeclaration(
+                  TypeIdent(
+                   bool
+                  ) [TypeIdent]
+                 bl1
+                  BoolConst(
+                   true
+                  ) [BoolConst]
+                  MultipleConstDeclList(
+                   bl2
+                    BoolConst(
+                     false
+                    ) [BoolConst]
+                    LastMultipleConstDecl(
+                     bl3
+                      BoolConst(
+                       true
+                      ) [BoolConst]
+                    ) [LastMultipleConstDecl]
+                  ) [MultipleConstDeclList]
+                ) [MultipleConstDeclaration]
+              ) [ConstDeclaration]
+            ) [DeclarationsList]
+            GlobalVarDeclaration(
+              SingleGlobalVarDeclarationVarDecl(
+                TypeIdent(
+                 int
+                ) [TypeIdent]
+                SingleVarDeclaration(
+                 var1
+                ) [SingleVarDeclaration]
+              ) [SingleGlobalVarDeclarationVarDecl]
+            ) [GlobalVarDeclaration]
+          ) [DeclarationsList]
+          GlobalVarDeclaration(
+            MultipleGlobalVarDeclaration(
+              TypeIdent(
+               char
+              ) [TypeIdent]
+              SingleVarDeclaration(
+               string1
+              ) [SingleVarDeclaration]
+              LastMultipleVarDecl(
+                SingleVarArrayDecl(
+                 string2
+                ) [SingleVarArrayDecl]
+              ) [LastMultipleVarDecl]
+            ) [MultipleGlobalVarDeclaration]
+          ) [GlobalVarDeclaration]
+        ) [DeclarationsList]
+        GlobalVarDeclaration(
+          MultipleGlobalVarDeclaration(
+            TypeIdent(
+             bool
+            ) [TypeIdent]
+            SingleVarDeclaration(
+             bool1
+            ) [SingleVarDeclaration]
+            MultipleVarDeclList(
+              SingleVarArrayDecl(
+               bool2
+              ) [SingleVarArrayDecl]
+              LastMultipleVarDecl(
+                SingleVarDeclaration(
+                 bool3
+                ) [SingleVarDeclaration]
+              ) [LastMultipleVarDecl]
+            ) [MultipleVarDeclList]
+          ) [MultipleGlobalVarDeclaration]
+        ) [GlobalVarDeclaration]
+      ) [DeclarationsList]
+      ClassDeclaration(
+        ClassDeclMethods(
+          ClassDeclNameExtend(
+           B
+            TypeIdent(
+             A
+            ) [TypeIdent]
+          ) [ClassDeclNameExtend]
+          EmptyVarDeclList(
+          ) [EmptyVarDeclList]
+          MultipleConstructorDeclList(
+            MultipleConstructorDeclList(
+              SingleConstructorDeclList(
+                ConstructorDeclNoFormParams(
+                 B
+                  EmptyVarDeclList(
+                  ) [EmptyVarDeclList]
+                  NoEmptyStatementList(
+                    EmptyStatementList(
+                    ) [EmptyStatementList]
+                    ReadStmt(
+                      DesignatorIdent(
+                       var1
+                      ) [DesignatorIdent]
+                    ) [ReadStmt]
+                  ) [NoEmptyStatementList]
+                ) [ConstructorDeclNoFormParams]
+              ) [SingleConstructorDeclList]
+              ConstructorDeclFormParams(
+               B
+                FormPar(
+                  TypeIdent(
+                   int
+                  ) [TypeIdent]
+                  SingleVarDeclaration(
+                   c
+                  ) [SingleVarDeclaration]
+                ) [FormPar]
+                EmptyVarDeclList(
+                ) [EmptyVarDeclList]
+                EmptyStatementList(
+                ) [EmptyStatementList]
+              ) [ConstructorDeclFormParams]
+            ) [MultipleConstructorDeclList]
+            ConstructorDeclFormParams(
+             B
+              MultipleFormPars(
+                TypeIdent(
+                 int
+                ) [TypeIdent]
+                SingleVarDeclaration(
+                 c
+                ) [SingleVarDeclaration]
+                FormPar(
+                  TypeIdent(
+                   int
+                  ) [TypeIdent]
+                  SingleVarDeclaration(
+                   b
+                  ) [SingleVarDeclaration]
+                ) [FormPar]
+              ) [MultipleFormPars]
+              NoEmptyVarDeclList(
+                NoEmptyVarDeclList(
+                  EmptyVarDeclList(
+                  ) [EmptyVarDeclList]
+                  MultipleVarDeclaration(
+                    TypeIdent(
+                     int
+                    ) [TypeIdent]
+                    SingleVarDeclaration(
+                     d
+                    ) [SingleVarDeclaration]
+                    LastMultipleVarDecl(
+                      SingleVarDeclaration(
+                       g
+                      ) [SingleVarDeclaration]
+                    ) [LastMultipleVarDecl]
+                  ) [MultipleVarDeclaration]
+                ) [NoEmptyVarDeclList]
+                SingleVarDeclarationVarDecl(
+                  TypeIdent(
+                   bool
+                  ) [TypeIdent]
+                  SingleVarDeclaration(
+                   f
+                  ) [SingleVarDeclaration]
+                ) [SingleVarDeclarationVarDecl]
+              ) [NoEmptyVarDeclList]
+              NoEmptyStatementList(
+                NoEmptyStatementList(
+                  NoEmptyStatementList(
+                    NoEmptyStatementList(
+                      NoEmptyStatementList(
+                        EmptyStatementList(
+                        ) [EmptyStatementList]
+                        ReadStmt(
+                          DesignatorDotIdent(
+                            DesignatorIdent(
+                             A
+                            ) [DesignatorIdent]
+                           a
+                          ) [DesignatorDotIdent]
+                        ) [ReadStmt]
+                      ) [NoEmptyStatementList]
+                      ReadStmt(
+                        DesignatorExpr(
+                          DesignatorIdent(
+                           string1
+                          ) [DesignatorIdent]
+                          PosExpr(
+                            SingleFactor(
+                              FactorNum(
+                               1
+                              ) [FactorNum]
+                            ) [SingleFactor]
+                            EmptyAddopTermList(
+                            ) [EmptyAddopTermList]
+                          ) [PosExpr]
+                        ) [DesignatorExpr]
+                      ) [ReadStmt]
+                    ) [NoEmptyStatementList]
+                    PrintStmt(
+                      PosExpr(
+                        SingleFactor(
+                          FactorDesignatorEmpty(
+                            DesignatorIdent(
+                             br1
+                            ) [DesignatorIdent]
+                          ) [FactorDesignatorEmpty]
+                        ) [SingleFactor]
+                        EmptyAddopTermList(
+                        ) [EmptyAddopTermList]
+                      ) [PosExpr]
+                      PrintArgsNoEmpty(
+                       2
+                        PrintArgsNoEmpty(
+                         3
+                          PrintArgsNoEmpty(
+                           4
+                            PrintArgsEmpty(
+                            ) [PrintArgsEmpty]
+                          ) [PrintArgsNoEmpty]
+                        ) [PrintArgsNoEmpty]
+                      ) [PrintArgsNoEmpty]
+                    ) [PrintStmt]
+                  ) [NoEmptyStatementList]
+                  DesignatorStmt(
+                    DesignatorAssignStmt(
+                      DesignatorIdent(
+                       d
+                      ) [DesignatorIdent]
+                      AssignopAssign(
+                      ) [AssignopAssign]
+                      ExprNoError(
+                        PosExpr(
+                          SingleFactor(
+                            FactorNum(
+                             2
+                            ) [FactorNum]
+                          ) [SingleFactor]
+                          EmptyAddopTermList(
+                          ) [EmptyAddopTermList]
+                        ) [PosExpr]
+                      ) [ExprNoError]
+                    ) [DesignatorAssignStmt]
+                  ) [DesignatorStmt]
+                ) [NoEmptyStatementList]
+                PrintStmt(
+                  PosExpr(
+                    SingleFactor(
+                      FactorDesignatorEmpty(
+                        DesignatorIdent(
+                         d
+                        ) [DesignatorIdent]
+                      ) [FactorDesignatorEmpty]
+                    ) [SingleFactor]
+                    EmptyAddopTermList(
+                    ) [EmptyAddopTermList]
+                  ) [PosExpr]
+                  PrintArgsEmpty(
+                  ) [PrintArgsEmpty]
+                ) [PrintStmt]
+              ) [NoEmptyStatementList]
+            ) [ConstructorDeclFormParams]
+          ) [MultipleConstructorDeclList]
+          MultipleMethodDeclList(
+            SingleMethodDeclList(
+              MethodDeclFormPars(
+                MethodDeclReturnVoid(
+                ) [MethodDeclReturnVoid]
+               Bmethod
+                MultipleFormPars(
+                  TypeIdent(
+                   int
+                  ) [TypeIdent]
+                  SingleVarArrayDecl(
+                   l1
+                  ) [SingleVarArrayDecl]
+                  MultipleFormPars(
+                    TypeIdent(
+                     bool
+                    ) [TypeIdent]
+                    SingleVarDeclaration(
+                     l2
+                    ) [SingleVarDeclaration]
+                    FormPar(
+                      TypeIdent(
+                       char
+                      ) [TypeIdent]
+                      SingleVarArrayDecl(
+                       str
+                      ) [SingleVarArrayDecl]
+                    ) [FormPar]
+                  ) [MultipleFormPars]
+                ) [MultipleFormPars]
+                NoEmptyVarDeclList(
+                  EmptyVarDeclList(
+                  ) [EmptyVarDeclList]
+                  SingleVarDeclarationVarDecl(
+                    TypeIdent(
+                     int
+                    ) [TypeIdent]
+                    SingleVarDeclaration(
+                     a
+                    ) [SingleVarDeclaration]
+                  ) [SingleVarDeclarationVarDecl]
+                ) [NoEmptyVarDeclList]
+                NoEmptyStatementList(
+                  EmptyStatementList(
+                  ) [EmptyStatementList]
+                  ReturnEmptyStmt(
+                  ) [ReturnEmptyStmt]
+                ) [NoEmptyStatementList]
+              ) [MethodDeclFormPars]
+            ) [SingleMethodDeclList]
+            MethodDeclNoFormPars(
+              MethodDeclReturnVoid(
+              ) [MethodDeclReturnVoid]
+             noMethod
+              EmptyVarDeclList(
+              ) [EmptyVarDeclList]
+              EmptyStatementList(
+              ) [EmptyStatementList]
+            ) [MethodDeclNoFormPars]
+          ) [MultipleMethodDeclList]
+        ) [ClassDeclMethods]
+      ) [ClassDeclaration]
+    ) [DeclarationsList]
+    GlobalVarDeclaration(
+      SingleGlobalVarDeclarationError(
+      ) [SingleGlobalVarDeclarationError]
+    ) [GlobalVarDeclaration]
+  ) [DeclarationsList]
+  GlobalVarDeclaration(
+    SingleGlobalVarDeclarationVarDecl(
+      TypeIdent(
+       int
+      ) [TypeIdent]
+      SingleVarArrayDecl(
+       arr1
+      ) [SingleVarArrayDecl]
+    ) [SingleGlobalVarDeclarationVarDecl]
+  ) [GlobalVarDeclaration]
+) [DeclarationsList]
+INFO  11:46:19,914 - =======================================================
+INFO  11:46:19,917 - ==================SEMANTICKA OBRADA====================
+INFO  11:46:19,917 - ==================SINTAKSNA ANALIZA====================
+INFO  11:46:19,918 - 1	classes
+INFO  11:46:19,918 - 2	methods in the program
+INFO  11:46:19,918 - 0	global variables
+INFO  11:46:19,918 - 0	global constants
+INFO  11:46:19,918 - 0	global arrays
+INFO  11:46:19,918 - 0	local variables in main
+INFO  11:46:19,918 - 0	statements in main
+INFO  11:46:19,918 - 0	function calls in main
+INFO  11:46:19,918 - ==============SADRZAJ TABELE SIMBOLA===================

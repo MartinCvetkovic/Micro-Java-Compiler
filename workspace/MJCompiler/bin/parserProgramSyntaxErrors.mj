@@ -1,14 +1,13 @@
 program p0_
-	// Testirati i bez globalnih promenljivih
 	const int br1 = 1, br2 = 2;
 	const char ch = 'a';
 	const bool bl1 = true, bl2 = false, bl3 = true;
 	int var1;
 	char string1, string2[];
 	bool bool1, bool2[], bool3;
-	class A {
-		int a;
-	}
+	//class A {
+	//	int a;
+	//}
 	class B extends A{
 		{
 			B(){read(var1);}
@@ -28,7 +27,6 @@ program p0_
 	}
 	
 	{
-		// Testirati i bez metoda
 		void empty(){}
 		int num5(){return 5;}
 		int num6(int e){return 6;}

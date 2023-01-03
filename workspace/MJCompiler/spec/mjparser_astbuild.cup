@@ -54,7 +54,7 @@ scan with {:
 terminal PROG, LBRACE, RBRACE, CONST, COMMA, ASSIGN, SEMI, LBRACKET, RBRACKET;
 terminal CLASS, EXTENDS, LPAREN, RPAREN, VOID, EQ, NEQ, GT, GTE, LT, LTE;
 terminal PLUS, MINUS, MUL, MOD, DIV, IF, ELSE, BREAK, CONTINUE, RETURN, READ, PRINT;
-terminal DOT, FOREACH, OR, AND, NEW, ARROW, WHILE, INC, DEC, DO, ENUM, COLON, THIS;
+terminal DOT, FOREACH, OR, AND, NEW, ARROW, WHILE, INC, DEC; // DO, ENUM, COLON, THIS;
 terminal String IDENT;
 terminal Character CHAR;
 terminal Boolean BOOL;
@@ -62,7 +62,6 @@ terminal Integer NUM;
 
 nonterminal Program Program;
 nonterminal DeclarationList DeclarationList;
-nonterminal MethodDeclarationList MethodDeclarationList;
 nonterminal Declaration Declaration;
 nonterminal ConstDecl ConstDecl;
 nonterminal VarDecl VarDecl;
@@ -82,11 +81,10 @@ nonterminal StatementList StatementList;
 nonterminal Statement Statement;
 nonterminal FormPars FormPars;
 nonterminal MethodDeclReturn MethodDeclReturn;
-nonterminal Label Label;
 nonterminal Assignop Assignop;
 nonterminal Relop Relop;
 nonterminal Addop Addop;
-nonterminal Mulop Mulop;
+nonterminal Mulop Mulop; // Label
 nonterminal DesignatorStatement DesignatorStatement;
 nonterminal Expr Expr;
 nonterminal Designator Designator;
@@ -346,7 +344,7 @@ Designator ::= 	(DesignatorIdent) IDENT:I1 {: RESULT=new DesignatorIdent(I1); RE
 				(DesignatorExpr) Designator:D1 LBRACKET Expr:E2 RBRACKET {: RESULT=new DesignatorExpr(D1, E2); RESULT.setLine(D1left); :}
 				;
 
-Label ::= (LabelIdent) IDENT:I1 {: RESULT=new LabelIdent(I1); RESULT.setLine(I1left); :};
+//Label ::= (LabelIdent) IDENT;
 
 Assignop ::= (AssignopAssign) ASSIGN {: RESULT=new AssignopAssign(); :};
 

@@ -2,19 +2,10 @@ package rs.ac.bg.etf.pp1;
 
 import org.apache.log4j.Logger;
 
-import rs.ac.bg.etf.pp1.ast.ClassDeclNameExtend;
-import rs.ac.bg.etf.pp1.ast.ClassDeclNameNoExtend;
-import rs.ac.bg.etf.pp1.ast.MethodDeclReturnType;
-import rs.ac.bg.etf.pp1.ast.MethodDeclReturnVoid;
-import rs.ac.bg.etf.pp1.ast.PProgram;
-import rs.ac.bg.etf.pp1.ast.SyntaxNode;
-import rs.ac.bg.etf.pp1.ast.VisitorAdaptor;
+import rs.ac.bg.etf.pp1.ast.*;
 
-import rs.etf.pp1.symboltable.Tab;
-import rs.etf.pp1.symboltable.concepts.Obj;
-import rs.etf.pp1.symboltable.concepts.Scope;
-import rs.etf.pp1.symboltable.concepts.Struct;
 import rs.ac.bg.etf.pp1.extendedsymboltable.*;
+import rs.etf.pp1.symboltable.concepts.*;
 
 public class SemanticAnalyzer extends VisitorAdaptor {
 	
@@ -47,24 +38,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		log.info(msg.toString());
 	}
 
-	public void visit(ClassDeclNameExtend classDeclNameExtend){
-		classCount++;
-	}
-
-	public void visit(ClassDeclNameNoExtend classDeclNameNoExtend){
-		classCount++;
-	}
-
-	public void visit(MethodDeclReturnVoid methodDeclReturnVoid){
-		methodCount++;
-	}
-
-	public void visit(MethodDeclReturnType methodDeclReturnType){
-		methodCount++;
-	}
-
 	public void visit(PProgram pprogram){
-		//Tab.insert(Obj.Prog, pprogram.getProgName(), Struct.)
+		//Tab.insert(Obj.Prog, pprogram.getProgName(), new Struct(Struct.None));
 	}
-
 }
