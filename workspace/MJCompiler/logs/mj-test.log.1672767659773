@@ -1,0 +1,182 @@
+INFO  18:37:40,460 - Compiling source file: C:\Faks\PP1\pp1domaci\workspace\MJCompiler\test\semanticProgramA.mj
+INFO  18:37:40,602 - #2 program
+INFO  18:37:40,603 - #43 p0_
+INFO  18:37:40,603 - #5 const
+INFO  18:37:40,605 - #43 int
+INFO  18:37:40,606 - #43 br1
+INFO  18:37:40,607 - #7 =
+INFO  18:37:40,607 - #46 1
+INFO  18:37:40,608 - #6 ,
+INFO  18:37:40,608 - #43 br2
+INFO  18:37:40,608 - #7 =
+INFO  18:37:40,608 - #46 2
+INFO  18:37:40,609 - #8 ;
+INFO  18:37:40,609 - #5 const
+INFO  18:37:40,611 - #43 char
+INFO  18:37:40,612 - #43 ch
+INFO  18:37:40,612 - #7 =
+INFO  18:37:40,612 - #44 a
+INFO  18:37:40,612 - #8 ;
+INFO  18:37:40,614 - #5 const
+INFO  18:37:40,615 - #43 bool
+INFO  18:37:40,615 - #43 bl1
+INFO  18:37:40,616 - #7 =
+INFO  18:37:40,616 - #45 true
+INFO  18:37:40,616 - #6 ,
+INFO  18:37:40,618 - #43 bl2
+INFO  18:37:40,618 - #7 =
+INFO  18:37:40,618 - #45 false
+INFO  18:37:40,618 - #6 ,
+INFO  18:37:40,618 - #43 bl3
+INFO  18:37:40,618 - #7 =
+INFO  18:37:40,619 - #45 true
+INFO  18:37:40,620 - #8 ;
+INFO  18:37:40,621 - #43 int
+INFO  18:37:40,622 - #43 var1
+INFO  18:37:40,623 - #8 ;
+INFO  18:37:40,624 - #43 char
+INFO  18:37:40,625 - #43 string1
+INFO  18:37:40,625 - #6 ,
+INFO  18:37:40,626 - #43 string2
+INFO  18:37:40,626 - #9 [
+INFO  18:37:40,626 - #10 ]
+INFO  18:37:40,626 - #8 ;
+INFO  18:37:40,628 - #43 bool
+INFO  18:37:40,629 - #43 bool1
+INFO  18:37:40,629 - #6 ,
+INFO  18:37:40,630 - #43 bool2
+INFO  18:37:40,630 - #9 [
+INFO  18:37:40,631 - #10 ]
+INFO  18:37:40,631 - #6 ,
+INFO  18:37:40,631 - #43 bool3
+INFO  18:37:40,631 - #8 ;
+INFO  18:37:40,632 - #3 {
+INFO  18:37:40,632 - #15 void
+INFO  18:37:40,632 - #43 main
+INFO  18:37:40,634 - #13 (
+INFO  18:37:40,635 - #14 )
+INFO  18:37:40,635 - #43 char
+INFO  18:37:40,636 - #43 res
+INFO  18:37:40,636 - #8 ;
+INFO  18:37:40,637 - #43 int
+INFO  18:37:40,638 - #43 arr1
+INFO  18:37:40,638 - #9 [
+INFO  18:37:40,640 - #10 ]
+INFO  18:37:40,640 - #8 ;
+INFO  18:37:40,640 - #3 {
+INFO  18:37:40,641 - #43 arr1
+INFO  18:37:40,642 - #7 =
+INFO  18:37:40,642 - #38 new
+INFO  18:37:40,650 - #43 int
+INFO  18:37:40,650 - #9 [
+INFO  18:37:40,650 - #46 2
+INFO  18:37:40,650 - #10 ]
+INFO  18:37:40,652 - #8 ;
+INFO  18:37:40,654 - #43 arr
+INFO  18:37:40,656 - #9 [
+INFO  18:37:40,656 - #46 0
+INFO  18:37:40,656 - #10 ]
+INFO  18:37:40,657 - #7 =
+INFO  18:37:40,658 - #46 0
+INFO  18:37:40,658 - #8 ;
+INFO  18:37:40,659 - #43 arr
+INFO  18:37:40,659 - #9 [
+INFO  18:37:40,659 - #46 1
+INFO  18:37:40,659 - #10 ]
+INFO  18:37:40,659 - #7 =
+INFO  18:37:40,659 - #46 2
+INFO  18:37:40,660 - #8 ;
+INFO  18:37:40,660 - #43 a
+INFO  18:37:40,660 - #41 ++
+INFO  18:37:40,660 - #8 ;
+INFO  18:37:40,660 - #43 a
+INFO  18:37:40,661 - #42 --
+INFO  18:37:40,662 - #8 ;
+INFO  18:37:40,662 - #43 a
+INFO  18:37:40,662 - #7 =
+INFO  18:37:40,662 - #23 -
+INFO  18:37:40,662 - #43 a
+INFO  18:37:40,662 - #8 ;
+INFO  18:37:40,664 - #5 const
+ERROR 18:37:40,664 - 
+Sintaksna greska na liniji 16
+INFO  18:37:40,665 - #43 c
+INFO  18:37:40,665 - #7 =
+INFO  18:37:40,665 - #44 e
+INFO  18:37:40,667 - #8 ;
+INFO  18:37:40,667 - #43 arr
+INFO  18:37:40,668 - #7 =
+INFO  18:37:40,668 - #38 new
+INFO  18:37:40,668 - #43 int
+INFO  18:37:40,668 - #9 [
+INFO  18:37:40,670 - #46 2
+INFO  18:37:40,670 - #10 ]
+INFO  18:37:40,670 - #8 ;
+INFO  18:37:40,670 - #9 [
+INFO  18:37:40,670 - #43 b
+INFO  18:37:40,670 - #10 ]
+INFO  18:37:40,670 - #7 =
+INFO  18:37:40,671 - #43 a
+INFO  18:37:40,671 - #8 ;
+INFO  18:37:40,671 - #9 [
+INFO  18:37:40,671 - #10 ]
+INFO  18:37:40,671 - #7 =
+INFO  18:37:40,672 - #43 a
+INFO  18:37:40,672 - #8 ;
+INFO  18:37:40,673 - #9 [
+INFO  18:37:40,673 - #43 b
+INFO  18:37:40,673 - #6 ,
+INFO  18:37:40,673 - #43 br1
+INFO  18:37:40,674 - #6 ,
+INFO  18:37:40,675 - #6 ,
+INFO  18:37:40,675 - #10 ]
+INFO  18:37:40,675 - #7 =
+INFO  18:37:40,675 - #43 a
+INFO  18:37:40,675 - #8 ;
+INFO  18:37:40,676 - #43 b
+INFO  18:37:40,676 - #7 =
+INFO  18:37:40,676 - #46 20
+INFO  18:37:40,676 - #23 -
+INFO  18:37:40,676 - #46 40
+INFO  18:37:40,677 - #26 /
+INFO  18:37:40,677 - #46 10
+INFO  18:37:40,677 - #25 %
+INFO  18:37:40,677 - #46 4
+INFO  18:37:40,677 - #24 *
+INFO  18:37:40,679 - #46 2
+INFO  18:37:40,679 - #8 ;
+INFO  18:37:40,679 - #4 }
+INFO  18:37:40,679 - #4 }
+ERROR 18:37:40,679 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 24
+INFO  18:37:40,679 - ================Ispis sintaksnog stabla================
+INFO  18:37:40,680 - 
+DesignatorAssignStmt(
+  DesignatorIdent(
+   a
+  ) [DesignatorIdent]
+  AssignopAssign(
+  ) [AssignopAssign]
+  ExprNoError(
+    NegExpr(
+      SingleFactor(
+        FactorDesignatorEmpty(
+          DesignatorIdent(
+           a
+          ) [DesignatorIdent]
+        ) [FactorDesignatorEmpty]
+      ) [SingleFactor]
+      EmptyAddopTermList(
+      ) [EmptyAddopTermList]
+    ) [NegExpr]
+  ) [ExprNoError]
+) [DesignatorAssignStmt]
+INFO  18:37:40,680 - ==================SEMANTICKA OBRADA====================
+INFO  18:37:40,714 - ==================SINTAKSNA ANALIZA====================
+INFO  18:37:40,715 - 0	classes
+INFO  18:37:40,715 - 0	methods in the program
+INFO  18:37:40,715 - 0	global variables
+INFO  18:37:40,715 - 0	global constants
+INFO  18:37:40,716 - 0	global arrays
+INFO  18:37:40,716 - 0	local variables in main
+INFO  18:37:40,716 - 0	statements in main
+INFO  18:37:40,716 - 0	function calls in main

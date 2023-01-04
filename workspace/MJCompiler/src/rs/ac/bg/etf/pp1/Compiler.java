@@ -45,12 +45,10 @@ public class Compiler {
 	        SyntaxNode prog = (SyntaxNode)(s.value);
 	        log.info("================Ispis sintaksnog stabla================");
 	        log.info("\n" + prog.toString());
-	        log.info("=======================================================");
-	        
-	        Tab.init();
-	        SemanticAnalyzer semanticAnalyzer = new SemanticAnalyzer();
 	        
 	        log.info("==================SEMANTICKA OBRADA====================");
+	        Tab.init();
+	        SemanticAnalyzer semanticAnalyzer = new SemanticAnalyzer();
 			prog.traverseBottomUp(semanticAnalyzer);
 			
 	        log.info("==================SINTAKSNA ANALIZA====================");
@@ -63,7 +61,7 @@ public class Compiler {
 			log.info(semanticAnalyzer.stmtInMainCount + "\tstatements in main");
 			log.info(semanticAnalyzer.funcCallsInMainCount + "\tfunction calls in main");
 			
-	        log.info("==============SADRZAJ TABELE SIMBOLA===================");
+	        //log.info("==============SADRZAJ TABELE SIMBOLA===================");
 	        tsdump();
 	        
 		}

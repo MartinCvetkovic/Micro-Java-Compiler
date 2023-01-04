@@ -60,15 +60,18 @@ terminal Character CHAR;
 terminal Boolean BOOL;
 terminal Integer NUM;
 
-nonterminal DeclarationList, Declaration, ConstDecl;
-nonterminal VarDecl, ClassDecl, Type, Constant, MultipleConstDecl, SingleVarDecl;
+nonterminal DeclarationList, Declaration;
+nonterminal VarDecl, ClassDecl;
 nonterminal MultipleVarDecl, VarDeclList, ConstructorDeclList, ConstructorDecl;
 nonterminal MethodDeclList, MethodDecl, ClassDeclName, StatementList, Statement;
 nonterminal FormPars, MethodDeclReturn, Assignop, Relop, Addop, Mulop; // Label
 nonterminal DesignatorStatement, Expr, Designator, PrintArgs, ActPars, DesignatorList;
 nonterminal Condition, CondTerm, CondFact, Term, AddopTermList, Factor, OptionalDesignator;
 nonterminal GlobalVarDecl, ExprError;
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, SingleVarDecl;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Constant, ConstDecl, MultipleConstDecl, ConstantAssignement;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type;
 
 precedence left ELSE;
 
@@ -91,21 +94,23 @@ Declaration ::= (ConstDeclaration) ConstDecl
 				(ClassDeclaration) ClassDecl
 				;
 				
-ConstDecl ::= 	(SingleConstDecl) CONST Type IDENT ASSIGN Constant SEMI
+ConstDecl ::= 	(SingleConstDecl) CONST Type ConstantAssignement SEMI
 				|
-				(MultipleConstDeclaration) CONST Type IDENT ASSIGN Constant MultipleConstDecl SEMI
+				(MultipleConstDeclaration) CONST Type ConstantAssignement MultipleConstDecl SEMI
 				;
 				
-MultipleConstDecl ::= 	(LastMultipleConstDecl) COMMA IDENT ASSIGN Constant
+MultipleConstDecl ::= 	(LastMultipleConstDecl) COMMA ConstantAssignement
 						|
-						(MultipleConstDeclList) COMMA IDENT ASSIGN Constant MultipleConstDecl
+						(MultipleConstDeclList) COMMA ConstantAssignement MultipleConstDecl
 						;
 
-Constant ::= 	(NumConst) NUM
+ConstantAssignement ::= (ConstantAssign) IDENT:constName ASSIGN Constant;
+
+Constant ::= 	(NumConst) NUM:numVal
 				|
-				(CharConst) CHAR
+				(CharConst) CHAR:charVal
 				|
-				(BoolConst) BOOL
+				(BoolConst) BOOL:boolVal
 				;
 
 
@@ -125,9 +130,9 @@ VarDecl ::= 	(SingleVarDeclarationVarDecl) Type SingleVarDecl SEMI
 				(MultipleVarDeclaration) Type SingleVarDecl MultipleVarDecl SEMI
 				;
 				
-SingleVarDecl ::= 	(SingleVarDeclaration) IDENT
+SingleVarDecl ::= 	(SingleVarDeclaration) IDENT:varName
 					|
-					(SingleVarArrayDecl) IDENT LBRACKET RBRACKET
+					(SingleVarArrayDecl) IDENT:varName LBRACKET RBRACKET
 					;
 
 MultipleVarDecl ::= (LastMultipleVarDecl) COMMA SingleVarDecl
@@ -191,7 +196,7 @@ FormPars ::= 	(FormPar) Type SingleVarDecl
 				(MultipleFormPars) Type SingleVarDecl COMMA FormPars
 				;
 				
-Type ::= (TypeIdent) IDENT;
+Type ::= (TypeIdent) IDENT:typeName;
 
 Statement ::= 	(DesignatorStmt) DesignatorStatement SEMI
 				|

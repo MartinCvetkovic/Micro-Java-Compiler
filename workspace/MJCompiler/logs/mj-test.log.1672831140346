@@ -1,0 +1,302 @@
+INFO  12:18:02,497 - Compiling source file: C:\Faks\PP1\pp1domaci\workspace\MJCompiler\test\semanticProgramA.mj
+INFO  12:18:02,582 - #2 program
+INFO  12:18:02,582 - #43 p0_
+INFO  12:18:02,582 - #5 const
+INFO  12:18:02,583 - #43 int
+INFO  12:18:02,583 - #43 br1
+INFO  12:18:02,584 - #7 =
+INFO  12:18:02,584 - #46 1
+INFO  12:18:02,584 - #6 ,
+INFO  12:18:02,584 - #43 br2
+INFO  12:18:02,584 - #7 =
+INFO  12:18:02,585 - #46 2
+INFO  12:18:02,585 - #8 ;
+INFO  12:18:02,585 - #5 const
+INFO  12:18:02,586 - #43 char
+INFO  12:18:02,586 - #43 ch
+INFO  12:18:02,586 - #7 =
+INFO  12:18:02,587 - #44 a
+INFO  12:18:02,587 - #8 ;
+INFO  12:18:02,587 - #5 const
+INFO  12:18:02,587 - #43 bool
+INFO  12:18:02,588 - #43 bl1
+INFO  12:18:02,588 - #7 =
+INFO  12:18:02,589 - #45 true
+INFO  12:18:02,589 - #6 ,
+INFO  12:18:02,590 - #43 bl2
+INFO  12:18:02,590 - #7 =
+INFO  12:18:02,590 - #45 false
+INFO  12:18:02,590 - #6 ,
+INFO  12:18:02,590 - #43 bl3
+INFO  12:18:02,590 - #7 =
+INFO  12:18:02,590 - #45 true
+INFO  12:18:02,591 - #8 ;
+INFO  12:18:02,591 - #43 int
+INFO  12:18:02,591 - #43 var1
+INFO  12:18:02,592 - #8 ;
+INFO  12:18:02,592 - #43 char
+INFO  12:18:02,593 - #43 string1
+INFO  12:18:02,593 - #6 ,
+INFO  12:18:02,594 - #43 string2
+INFO  12:18:02,594 - #9 [
+INFO  12:18:02,594 - #10 ]
+INFO  12:18:02,594 - #8 ;
+INFO  12:18:02,594 - #43 bool
+INFO  12:18:02,595 - #43 bool1
+INFO  12:18:02,595 - #6 ,
+INFO  12:18:02,595 - #43 bool2
+INFO  12:18:02,596 - #9 [
+INFO  12:18:02,596 - #10 ]
+INFO  12:18:02,596 - #6 ,
+INFO  12:18:02,596 - #43 bool3
+INFO  12:18:02,596 - #8 ;
+INFO  12:18:02,597 - #3 {
+INFO  12:18:02,597 - #15 void
+INFO  12:18:02,597 - #43 main
+INFO  12:18:02,598 - #13 (
+INFO  12:18:02,598 - #14 )
+INFO  12:18:02,599 - #43 char
+INFO  12:18:02,599 - #43 res
+INFO  12:18:02,599 - #7 =
+ERROR 12:18:02,599 - 
+Sintaksna greska na liniji 9
+INFO  12:18:02,600 - #46 2
+INFO  12:18:02,600 - #8 ;
+INFO  12:18:02,600 - #43 int
+INFO  12:18:02,601 - #43 arr1
+INFO  12:18:02,601 - #9 [
+ERROR 12:18:02,602 - Sintaksna greska prilikom deklaracije globalne promenljive na liniji 8
+INFO  12:18:02,603 - #10 ]
+INFO  12:18:02,603 - #8 ;
+INFO  12:18:02,605 - #3 {
+INFO  12:18:02,605 - #43 arr1
+INFO  12:18:02,606 - #7 =
+ERROR 12:18:02,606 - 
+Sintaksna greska na liniji 10
+INFO  12:18:02,606 - #38 new
+INFO  12:18:02,606 - #43 int
+INFO  12:18:02,606 - #9 [
+INFO  12:18:02,606 - #46 2
+INFO  12:18:02,606 - #10 ]
+INFO  12:18:02,606 - #8 ;
+INFO  12:18:02,606 - #43 arr
+INFO  12:18:02,606 - #9 [
+INFO  12:18:02,606 - #46 0
+INFO  12:18:02,607 - #10 ]
+INFO  12:18:02,607 - #7 =
+INFO  12:18:02,607 - #46 0
+INFO  12:18:02,607 - #8 ;
+INFO  12:18:02,607 - #43 arr
+INFO  12:18:02,607 - #9 [
+INFO  12:18:02,607 - #46 1
+INFO  12:18:02,607 - #10 ]
+INFO  12:18:02,607 - #7 =
+INFO  12:18:02,607 - #46 2
+INFO  12:18:02,607 - #8 ;
+INFO  12:18:02,607 - #43 a
+INFO  12:18:02,607 - #41 ++
+INFO  12:18:02,607 - #8 ;
+INFO  12:18:02,608 - #43 a
+INFO  12:18:02,608 - #42 --
+INFO  12:18:02,608 - #8 ;
+INFO  12:18:02,608 - #43 a
+INFO  12:18:02,608 - #7 =
+INFO  12:18:02,608 - #23 -
+INFO  12:18:02,608 - #43 a
+INFO  12:18:02,608 - #8 ;
+INFO  12:18:02,609 - #43 c
+INFO  12:18:02,609 - #7 =
+INFO  12:18:02,609 - #44 e
+INFO  12:18:02,609 - #8 ;
+INFO  12:18:02,609 - #43 arr
+INFO  12:18:02,609 - #7 =
+INFO  12:18:02,609 - #38 new
+INFO  12:18:02,609 - #43 int
+INFO  12:18:02,609 - #9 [
+INFO  12:18:02,610 - #46 2
+INFO  12:18:02,610 - #10 ]
+INFO  12:18:02,610 - #8 ;
+INFO  12:18:02,610 - #9 [
+INFO  12:18:02,610 - #43 b
+INFO  12:18:02,610 - #10 ]
+INFO  12:18:02,610 - #7 =
+INFO  12:18:02,611 - #43 a
+INFO  12:18:02,611 - #8 ;
+INFO  12:18:02,611 - #9 [
+INFO  12:18:02,611 - #10 ]
+INFO  12:18:02,611 - #7 =
+INFO  12:18:02,611 - #43 a
+INFO  12:18:02,611 - #8 ;
+INFO  12:18:02,612 - #9 [
+INFO  12:18:02,612 - #43 b
+INFO  12:18:02,612 - #6 ,
+INFO  12:18:02,612 - #43 br1
+INFO  12:18:02,612 - #6 ,
+INFO  12:18:02,613 - #6 ,
+INFO  12:18:02,613 - #10 ]
+INFO  12:18:02,613 - #7 =
+INFO  12:18:02,613 - #43 a
+INFO  12:18:02,613 - #8 ;
+INFO  12:18:02,613 - #43 b
+INFO  12:18:02,614 - #7 =
+INFO  12:18:02,614 - #46 20
+INFO  12:18:02,614 - #23 -
+INFO  12:18:02,614 - #46 40
+INFO  12:18:02,614 - #26 /
+INFO  12:18:02,614 - #46 10
+INFO  12:18:02,615 - #25 %
+INFO  12:18:02,615 - #46 4
+INFO  12:18:02,615 - #24 *
+INFO  12:18:02,615 - #46 2
+INFO  12:18:02,615 - #8 ;
+INFO  12:18:02,615 - #4 }
+INFO  12:18:02,615 - #4 }
+ERROR 12:18:02,616 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 24
+INFO  12:18:02,616 - ================Ispis sintaksnog stabla================
+INFO  12:18:02,617 - 
+DeclarationsList(
+  DeclarationsList(
+    DeclarationsList(
+      DeclarationsList(
+        DeclarationsList(
+          DeclarationsList(
+            DeclarationsList(
+              DeclarationsList(
+                NoDeclaration(
+                ) [NoDeclaration]
+                ConstDeclaration(
+                  MultipleConstDeclaration(
+                    TypeIdent(
+                     int
+                    ) [TypeIdent]
+                   br1
+                    NumConst(
+                     1
+                    ) [NumConst]
+                    LastMultipleConstDecl(
+                     br2
+                      NumConst(
+                       2
+                      ) [NumConst]
+                    ) [LastMultipleConstDecl]
+                  ) [MultipleConstDeclaration]
+                ) [ConstDeclaration]
+              ) [DeclarationsList]
+              ConstDeclaration(
+                SingleConstDecl(
+                  TypeIdent(
+                   char
+                  ) [TypeIdent]
+                 ch
+                  CharConst(
+                   a
+                  ) [CharConst]
+                ) [SingleConstDecl]
+              ) [ConstDeclaration]
+            ) [DeclarationsList]
+            ConstDeclaration(
+              MultipleConstDeclaration(
+                TypeIdent(
+                 bool
+                ) [TypeIdent]
+               bl1
+                BoolConst(
+                 true
+                ) [BoolConst]
+                MultipleConstDeclList(
+                 bl2
+                  BoolConst(
+                   false
+                  ) [BoolConst]
+                  LastMultipleConstDecl(
+                   bl3
+                    BoolConst(
+                     true
+                    ) [BoolConst]
+                  ) [LastMultipleConstDecl]
+                ) [MultipleConstDeclList]
+              ) [MultipleConstDeclaration]
+            ) [ConstDeclaration]
+          ) [DeclarationsList]
+          GlobalVarDeclaration(
+            SingleGlobalVarDeclarationVarDecl(
+              TypeIdent(
+               int
+              ) [TypeIdent]
+              SingleVarDeclaration(
+               var1
+              ) [SingleVarDeclaration]
+            ) [SingleGlobalVarDeclarationVarDecl]
+          ) [GlobalVarDeclaration]
+        ) [DeclarationsList]
+        GlobalVarDeclaration(
+          MultipleGlobalVarDeclaration(
+            TypeIdent(
+             char
+            ) [TypeIdent]
+            SingleVarDeclaration(
+             string1
+            ) [SingleVarDeclaration]
+            LastMultipleVarDecl(
+              SingleVarArrayDecl(
+               string2
+              ) [SingleVarArrayDecl]
+            ) [LastMultipleVarDecl]
+          ) [MultipleGlobalVarDeclaration]
+        ) [GlobalVarDeclaration]
+      ) [DeclarationsList]
+      GlobalVarDeclaration(
+        MultipleGlobalVarDeclaration(
+          TypeIdent(
+           bool
+          ) [TypeIdent]
+          SingleVarDeclaration(
+           bool1
+          ) [SingleVarDeclaration]
+          MultipleVarDeclList(
+            SingleVarArrayDecl(
+             bool2
+            ) [SingleVarArrayDecl]
+            LastMultipleVarDecl(
+              SingleVarDeclaration(
+               bool3
+              ) [SingleVarDeclaration]
+            ) [LastMultipleVarDecl]
+          ) [MultipleVarDeclList]
+        ) [MultipleGlobalVarDeclaration]
+      ) [GlobalVarDeclaration]
+    ) [DeclarationsList]
+    GlobalVarDeclaration(
+      SingleGlobalVarDeclarationError(
+      ) [SingleGlobalVarDeclarationError]
+    ) [GlobalVarDeclaration]
+  ) [DeclarationsList]
+  GlobalVarDeclaration(
+    SingleGlobalVarDeclarationVarDecl(
+      TypeIdent(
+       int
+      ) [TypeIdent]
+      SingleVarArrayDecl(
+       arr1
+      ) [SingleVarArrayDecl]
+    ) [SingleGlobalVarDeclarationVarDecl]
+  ) [GlobalVarDeclaration]
+) [DeclarationsList]
+INFO  12:18:02,617 - ==================SEMANTICKA OBRADA====================
+INFO  12:18:02,632 - Deklarisana promenljiva ch na liniji 3, objektni cvor: Con ch: char, 97, 1 
+INFO  12:18:02,633 - Deklarisana promenljiva var1 na liniji 5, objektni cvor: Var var1: int, 0, 1 
+INFO  12:18:02,633 - Deklarisana promenljiva string1 na liniji 6, objektni cvor: Var string1: char, 1, 1 
+INFO  12:18:02,634 - Deklarisana promenljiva string2 na liniji 6, objektni cvor: Var string2: Arr of char, 2, 1 
+INFO  12:18:02,634 - Deklarisana promenljiva bool1 na liniji 7, objektni cvor: Var bool1: bool, 3, 1 
+INFO  12:18:02,634 - Deklarisana promenljiva bool2 na liniji 7, objektni cvor: Var bool2: Arr of bool, 4, 1 
+INFO  12:18:02,634 - Deklarisana promenljiva bool3 na liniji 7, objektni cvor: Var bool3: bool, 5, 1 
+INFO  12:18:02,634 - Deklarisana promenljiva arr1 na liniji 9, objektni cvor: Var arr1: Arr of int, 6, 1 
+INFO  12:18:02,634 - ==================SINTAKSNA ANALIZA====================
+INFO  12:18:02,634 - 0	classes
+INFO  12:18:02,634 - 0	methods in the program
+INFO  12:18:02,635 - 0	global variables
+INFO  12:18:02,635 - 0	global constants
+INFO  12:18:02,635 - 0	global arrays
+INFO  12:18:02,635 - 0	local variables in main
+INFO  12:18:02,635 - 0	statements in main
+INFO  12:18:02,635 - 0	function calls in main

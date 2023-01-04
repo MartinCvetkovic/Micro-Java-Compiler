@@ -1,38 +1,28 @@
 // generated with ast extension for cup
 // version 0.8
-// 3/0/2023 13:39:16
+// 4/0/2023 14:1:52
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class MultipleConstDeclList extends MultipleConstDecl {
 
-    private String I1;
-    private Constant Constant;
+    private ConstantAssignement ConstantAssignement;
     private MultipleConstDecl MultipleConstDecl;
 
-    public MultipleConstDeclList (String I1, Constant Constant, MultipleConstDecl MultipleConstDecl) {
-        this.I1=I1;
-        this.Constant=Constant;
-        if(Constant!=null) Constant.setParent(this);
+    public MultipleConstDeclList (ConstantAssignement ConstantAssignement, MultipleConstDecl MultipleConstDecl) {
+        this.ConstantAssignement=ConstantAssignement;
+        if(ConstantAssignement!=null) ConstantAssignement.setParent(this);
         this.MultipleConstDecl=MultipleConstDecl;
         if(MultipleConstDecl!=null) MultipleConstDecl.setParent(this);
     }
 
-    public String getI1() {
-        return I1;
+    public ConstantAssignement getConstantAssignement() {
+        return ConstantAssignement;
     }
 
-    public void setI1(String I1) {
-        this.I1=I1;
-    }
-
-    public Constant getConstant() {
-        return Constant;
-    }
-
-    public void setConstant(Constant Constant) {
-        this.Constant=Constant;
+    public void setConstantAssignement(ConstantAssignement ConstantAssignement) {
+        this.ConstantAssignement=ConstantAssignement;
     }
 
     public MultipleConstDecl getMultipleConstDecl() {
@@ -48,18 +38,18 @@ public class MultipleConstDeclList extends MultipleConstDecl {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Constant!=null) Constant.accept(visitor);
+        if(ConstantAssignement!=null) ConstantAssignement.accept(visitor);
         if(MultipleConstDecl!=null) MultipleConstDecl.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Constant!=null) Constant.traverseTopDown(visitor);
+        if(ConstantAssignement!=null) ConstantAssignement.traverseTopDown(visitor);
         if(MultipleConstDecl!=null) MultipleConstDecl.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Constant!=null) Constant.traverseBottomUp(visitor);
+        if(ConstantAssignement!=null) ConstantAssignement.traverseBottomUp(visitor);
         if(MultipleConstDecl!=null) MultipleConstDecl.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -69,11 +59,8 @@ public class MultipleConstDeclList extends MultipleConstDecl {
         buffer.append(tab);
         buffer.append("MultipleConstDeclList(\n");
 
-        buffer.append(" "+tab+I1);
-        buffer.append("\n");
-
-        if(Constant!=null)
-            buffer.append(Constant.toString("  "+tab));
+        if(ConstantAssignement!=null)
+            buffer.append(ConstantAssignement.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 3/0/2023 13:39:16
+// 4/0/2023 14:1:52
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -10,8 +10,8 @@ public interface Visitor {
     public void visit(DeclarationList DeclarationList);
     public void visit(Mulop Mulop);
     public void visit(MethodDecl MethodDecl);
-    public void visit(ConstructorDecl ConstructorDecl);
     public void visit(Constant Constant);
+    public void visit(ConstructorDecl ConstructorDecl);
     public void visit(Relop Relop);
     public void visit(Assignop Assignop);
     public void visit(ExprError ExprError);
@@ -26,6 +26,7 @@ public interface Visitor {
     public void visit(Condition Condition);
     public void visit(OptionalDesignator OptionalDesignator);
     public void visit(MultipleVarDecl MultipleVarDecl);
+    public void visit(ConstantAssignement ConstantAssignement);
     public void visit(ConstructorDeclList ConstructorDeclList);
     public void visit(ProgramName ProgramName);
     public void visit(ClassDeclName ClassDeclName);
@@ -38,8 +39,8 @@ public interface Visitor {
     public void visit(Statement Statement);
     public void visit(VarDecl VarDecl);
     public void visit(Type Type);
-    public void visit(ClassDecl ClassDecl);
     public void visit(ConstDecl ConstDecl);
+    public void visit(ClassDecl ClassDecl);
     public void visit(CondFact CondFact);
     public void visit(Declaration Declaration);
     public void visit(MethodDeclList MethodDeclList);
@@ -150,6 +151,7 @@ public interface Visitor {
     public void visit(BoolConst BoolConst);
     public void visit(CharConst CharConst);
     public void visit(NumConst NumConst);
+    public void visit(ConstantAssign ConstantAssign);
     public void visit(MultipleConstDeclList MultipleConstDeclList);
     public void visit(LastMultipleConstDecl LastMultipleConstDecl);
     public void visit(MultipleConstDeclaration MultipleConstDeclaration);

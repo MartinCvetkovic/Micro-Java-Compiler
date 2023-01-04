@@ -62,13 +62,8 @@ terminal Integer NUM;
 
 nonterminal DeclarationList DeclarationList;
 nonterminal Declaration Declaration;
-nonterminal ConstDecl ConstDecl;
 nonterminal VarDecl VarDecl;
 nonterminal ClassDecl ClassDecl;
-nonterminal Type Type;
-nonterminal Constant Constant;
-nonterminal MultipleConstDecl MultipleConstDecl;
-nonterminal SingleVarDecl SingleVarDecl;
 nonterminal MultipleVarDecl MultipleVarDecl;
 nonterminal VarDeclList VarDeclList;
 nonterminal ConstructorDeclList ConstructorDeclList;
@@ -99,7 +94,10 @@ nonterminal Factor Factor;
 nonterminal OptionalDesignator OptionalDesignator;
 nonterminal GlobalVarDecl GlobalVarDecl;
 nonterminal ExprError ExprError;
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, SingleVarDecl;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Constant, ConstDecl, MultipleConstDecl, ConstantAssignement;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type;
 
 precedence left ELSE;
 
@@ -122,21 +120,23 @@ Declaration ::= (ConstDeclaration) ConstDecl:C1 {: RESULT=new ConstDeclaration(C
 				(ClassDeclaration) ClassDecl:C1 {: RESULT=new ClassDeclaration(C1); RESULT.setLine(C1left); :}
 				;
 				
-ConstDecl ::= 	(SingleConstDecl) CONST Type:T1 IDENT:I2 ASSIGN Constant:C3 SEMI {: RESULT=new SingleConstDecl(T1, I2, C3); RESULT.setLine(T1left); :}
+ConstDecl ::= 	(SingleConstDecl) CONST Type:T1 ConstantAssignement:C2 SEMI {: RESULT=new SingleConstDecl(T1, C2); RESULT.setLine(T1left); :}
 				|
-				(MultipleConstDeclaration) CONST Type:T1 IDENT:I2 ASSIGN Constant:C3 MultipleConstDecl:M4 SEMI {: RESULT=new MultipleConstDeclaration(T1, I2, C3, M4); RESULT.setLine(T1left); :}
+				(MultipleConstDeclaration) CONST Type:T1 ConstantAssignement:C2 MultipleConstDecl:M3 SEMI {: RESULT=new MultipleConstDeclaration(T1, C2, M3); RESULT.setLine(T1left); :}
 				;
 				
-MultipleConstDecl ::= 	(LastMultipleConstDecl) COMMA IDENT:I1 ASSIGN Constant:C2 {: RESULT=new LastMultipleConstDecl(I1, C2); RESULT.setLine(I1left); :}
+MultipleConstDecl ::= 	(LastMultipleConstDecl) COMMA ConstantAssignement:C1 {: RESULT=new LastMultipleConstDecl(C1); RESULT.setLine(C1left); :}
 						|
-						(MultipleConstDeclList) COMMA IDENT:I1 ASSIGN Constant:C2 MultipleConstDecl:M3 {: RESULT=new MultipleConstDeclList(I1, C2, M3); RESULT.setLine(I1left); :}
+						(MultipleConstDeclList) COMMA ConstantAssignement:C1 MultipleConstDecl:M2 {: RESULT=new MultipleConstDeclList(C1, M2); RESULT.setLine(C1left); :}
 						;
 
-Constant ::= 	(NumConst) NUM:N1 {: RESULT=new NumConst(N1); RESULT.setLine(N1left); :}
+ConstantAssignement ::= (ConstantAssign) IDENT:constName ASSIGN Constant:C1 {: RESULT=new ConstantAssign(constName, C1); RESULT.setLine(constNameleft); :};
+
+Constant ::= 	(NumConst) NUM:numVal {: RESULT=new NumConst(numVal); RESULT.setLine(numValleft); :}
 				|
-				(CharConst) CHAR:C1 {: RESULT=new CharConst(C1); RESULT.setLine(C1left); :}
+				(CharConst) CHAR:charVal {: RESULT=new CharConst(charVal); RESULT.setLine(charValleft); :}
 				|
-				(BoolConst) BOOL:B1 {: RESULT=new BoolConst(B1); RESULT.setLine(B1left); :}
+				(BoolConst) BOOL:boolVal {: RESULT=new BoolConst(boolVal); RESULT.setLine(boolValleft); :}
 				;
 
 
@@ -156,9 +156,9 @@ VarDecl ::= 	(SingleVarDeclarationVarDecl) Type:T1 SingleVarDecl:S2 SEMI {: RESU
 				(MultipleVarDeclaration) Type:T1 SingleVarDecl:S2 MultipleVarDecl:M3 SEMI {: RESULT=new MultipleVarDeclaration(T1, S2, M3); RESULT.setLine(T1left); :}
 				;
 				
-SingleVarDecl ::= 	(SingleVarDeclaration) IDENT:I1 {: RESULT=new SingleVarDeclaration(I1); RESULT.setLine(I1left); :}
+SingleVarDecl ::= 	(SingleVarDeclaration) IDENT:varName {: RESULT=new SingleVarDeclaration(varName); RESULT.setLine(varNameleft); :}
 					|
-					(SingleVarArrayDecl) IDENT:I1 LBRACKET RBRACKET {: RESULT=new SingleVarArrayDecl(I1); RESULT.setLine(I1left); :}
+					(SingleVarArrayDecl) IDENT:varName LBRACKET RBRACKET {: RESULT=new SingleVarArrayDecl(varName); RESULT.setLine(varNameleft); :}
 					;
 
 MultipleVarDecl ::= (LastMultipleVarDecl) COMMA SingleVarDecl:S1 {: RESULT=new LastMultipleVarDecl(S1); RESULT.setLine(S1left); :}
@@ -222,7 +222,7 @@ FormPars ::= 	(FormPar) Type:T1 SingleVarDecl:S2 {: RESULT=new FormPar(T1, S2); 
 				(MultipleFormPars) Type:T1 SingleVarDecl:S2 COMMA FormPars:F3 {: RESULT=new MultipleFormPars(T1, S2, F3); RESULT.setLine(T1left); :}
 				;
 				
-Type ::= (TypeIdent) IDENT:I1 {: RESULT=new TypeIdent(I1); RESULT.setLine(I1left); :};
+Type ::= (TypeIdent) IDENT:typeName {: RESULT=new TypeIdent(typeName); RESULT.setLine(typeNameleft); :};
 
 Statement ::= 	(DesignatorStmt) DesignatorStatement:D1 SEMI {: RESULT=new DesignatorStmt(D1); RESULT.setLine(D1left); :}
 				|

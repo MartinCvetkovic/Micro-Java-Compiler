@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 3/0/2023 13:39:16
+// 4/0/2023 14:1:52
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,16 +8,14 @@ package rs.ac.bg.etf.pp1.ast;
 public class MultipleConstDeclaration extends ConstDecl {
 
     private Type Type;
-    private String I2;
-    private Constant Constant;
+    private ConstantAssignement ConstantAssignement;
     private MultipleConstDecl MultipleConstDecl;
 
-    public MultipleConstDeclaration (Type Type, String I2, Constant Constant, MultipleConstDecl MultipleConstDecl) {
+    public MultipleConstDeclaration (Type Type, ConstantAssignement ConstantAssignement, MultipleConstDecl MultipleConstDecl) {
         this.Type=Type;
         if(Type!=null) Type.setParent(this);
-        this.I2=I2;
-        this.Constant=Constant;
-        if(Constant!=null) Constant.setParent(this);
+        this.ConstantAssignement=ConstantAssignement;
+        if(ConstantAssignement!=null) ConstantAssignement.setParent(this);
         this.MultipleConstDecl=MultipleConstDecl;
         if(MultipleConstDecl!=null) MultipleConstDecl.setParent(this);
     }
@@ -30,20 +28,12 @@ public class MultipleConstDeclaration extends ConstDecl {
         this.Type=Type;
     }
 
-    public String getI2() {
-        return I2;
+    public ConstantAssignement getConstantAssignement() {
+        return ConstantAssignement;
     }
 
-    public void setI2(String I2) {
-        this.I2=I2;
-    }
-
-    public Constant getConstant() {
-        return Constant;
-    }
-
-    public void setConstant(Constant Constant) {
-        this.Constant=Constant;
+    public void setConstantAssignement(ConstantAssignement ConstantAssignement) {
+        this.ConstantAssignement=ConstantAssignement;
     }
 
     public MultipleConstDecl getMultipleConstDecl() {
@@ -60,20 +50,20 @@ public class MultipleConstDeclaration extends ConstDecl {
 
     public void childrenAccept(Visitor visitor) {
         if(Type!=null) Type.accept(visitor);
-        if(Constant!=null) Constant.accept(visitor);
+        if(ConstantAssignement!=null) ConstantAssignement.accept(visitor);
         if(MultipleConstDecl!=null) MultipleConstDecl.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Type!=null) Type.traverseTopDown(visitor);
-        if(Constant!=null) Constant.traverseTopDown(visitor);
+        if(ConstantAssignement!=null) ConstantAssignement.traverseTopDown(visitor);
         if(MultipleConstDecl!=null) MultipleConstDecl.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Type!=null) Type.traverseBottomUp(visitor);
-        if(Constant!=null) Constant.traverseBottomUp(visitor);
+        if(ConstantAssignement!=null) ConstantAssignement.traverseBottomUp(visitor);
         if(MultipleConstDecl!=null) MultipleConstDecl.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -89,11 +79,8 @@ public class MultipleConstDeclaration extends ConstDecl {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+I2);
-        buffer.append("\n");
-
-        if(Constant!=null)
-            buffer.append(Constant.toString("  "+tab));
+        if(ConstantAssignement!=null)
+            buffer.append(ConstantAssignement.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

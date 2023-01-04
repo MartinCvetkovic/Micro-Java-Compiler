@@ -3,10 +3,10 @@ program p0_
 	const char ch = 'a';
 	const bool bl1 = true, bl2 = false, bl3 = true;
 	int var1;
-	char string1[], string2[];
+	char string1, string2[];
 	bool bool1, bool2[], bool3;
 	{
-		void main() bool res; int arr1[];{
+		void main() char res; int arr1[];{
 			arr1 = new int[2];
 			arr[0] = 0;
 			arr[1] = 2;
