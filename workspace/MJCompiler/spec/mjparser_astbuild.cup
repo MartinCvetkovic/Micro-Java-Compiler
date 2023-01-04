@@ -62,6 +62,7 @@ terminal Integer NUM;
 
 nonterminal DeclarationList DeclarationList;
 nonterminal Declaration Declaration;
+nonterminal NullableFormPars NullableFormPars;
 nonterminal VarDecl VarDecl;
 nonterminal ClassDecl ClassDecl;
 nonterminal MultipleVarDecl MultipleVarDecl;
@@ -69,7 +70,6 @@ nonterminal VarDeclList VarDeclList;
 nonterminal ConstructorDeclList ConstructorDeclList;
 nonterminal ConstructorDecl ConstructorDecl;
 nonterminal MethodDeclList MethodDeclList;
-nonterminal MethodDecl MethodDecl;
 nonterminal ClassDeclName ClassDeclName;
 nonterminal StatementList StatementList;
 nonterminal Statement Statement;
@@ -95,7 +95,7 @@ nonterminal OptionalDesignator OptionalDesignator;
 nonterminal GlobalVarDecl GlobalVarDecl;
 nonterminal ExprError ExprError;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, SingleVarDecl;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, SingleVarDecl, MethodName, MethodDecl;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Constant, ConstDecl, MultipleConstDecl, ConstantAssignement;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type;
 
@@ -212,10 +212,14 @@ MethodDeclReturn ::= 	(MethodDeclReturnVoid) VOID {: RESULT=new MethodDeclReturn
 						(MethodDeclReturnType) Type:T1 {: RESULT=new MethodDeclReturnType(T1); RESULT.setLine(T1left); :}
 						;
 
-MethodDecl ::= 	(MethodDeclFormPars) MethodDeclReturn:M1 IDENT:I2 LPAREN FormPars:F3 RPAREN VarDeclList:V4 LBRACE StatementList:S5 RBRACE {: RESULT=new MethodDeclFormPars(M1, I2, F3, V4, S5); RESULT.setLine(M1left); :}
-				|
-				(MethodDeclNoFormPars) MethodDeclReturn:M1 IDENT:I2 LPAREN RPAREN VarDeclList:V3 LBRACE StatementList:S4 RBRACE {: RESULT=new MethodDeclNoFormPars(M1, I2, V3, S4); RESULT.setLine(M1left); :}
-				;
+MethodDecl ::= 	(MethodDeclaration) MethodDeclReturn:M1 MethodName:M2 LPAREN NullableFormPars:N3 RPAREN VarDeclList:V4 LBRACE StatementList:S5 RBRACE {: RESULT=new MethodDeclaration(M1, M2, N3, V4, S5); RESULT.setLine(M1left); :};
+
+MethodName ::= 	(MethodNameIdent) IDENT:methName {: RESULT=new MethodNameIdent(methName); RESULT.setLine(methNameleft); :};
+
+NullableFormPars ::= 	(NullableFormParsExist) FormPars:F1 {: RESULT=new NullableFormParsExist(F1); RESULT.setLine(F1left); :}
+						|
+						(NullableFormParsEmpty) {: RESULT=new NullableFormParsEmpty(); :} /* epsilon */
+						;
 
 FormPars ::= 	(FormPar) Type:T1 SingleVarDecl:S2 {: RESULT=new FormPar(T1, S2); RESULT.setLine(T1left); :}
 				|

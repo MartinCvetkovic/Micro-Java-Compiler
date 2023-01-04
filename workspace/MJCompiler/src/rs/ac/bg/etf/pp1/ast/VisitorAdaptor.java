@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 4/0/2023 14:1:52
+// 4/0/2023 14:58:15
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,8 +8,8 @@ package rs.ac.bg.etf.pp1.ast;
 public abstract class VisitorAdaptor implements Visitor { 
 
     public void visit(DeclarationList DeclarationList) { }
-    public void visit(Mulop Mulop) { }
     public void visit(MethodDecl MethodDecl) { }
+    public void visit(Mulop Mulop) { }
     public void visit(Constant Constant) { }
     public void visit(ConstructorDecl ConstructorDecl) { }
     public void visit(Relop Relop) { }
@@ -22,8 +22,10 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(CondTerm CondTerm) { }
     public void visit(GlobalVarDecl GlobalVarDecl) { }
     public void visit(Designator Designator) { }
+    public void visit(MethodName MethodName) { }
     public void visit(Term Term) { }
     public void visit(Condition Condition) { }
+    public void visit(NullableFormPars NullableFormPars) { }
     public void visit(OptionalDesignator OptionalDesignator) { }
     public void visit(MultipleVarDecl MultipleVarDecl) { }
     public void visit(ConstantAssignement ConstantAssignement) { }
@@ -117,8 +119,10 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(TypeIdent TypeIdent) { visit(); }
     public void visit(MultipleFormPars MultipleFormPars) { visit(); }
     public void visit(FormPar FormPar) { visit(); }
-    public void visit(MethodDeclNoFormPars MethodDeclNoFormPars) { visit(); }
-    public void visit(MethodDeclFormPars MethodDeclFormPars) { visit(); }
+    public void visit(NullableFormParsEmpty NullableFormParsEmpty) { visit(); }
+    public void visit(NullableFormParsExist NullableFormParsExist) { visit(); }
+    public void visit(MethodNameIdent MethodNameIdent) { visit(); }
+    public void visit(MethodDeclaration MethodDeclaration) { visit(); }
     public void visit(MethodDeclReturnType MethodDeclReturnType) { visit(); }
     public void visit(MethodDeclReturnVoid MethodDeclReturnVoid) { visit(); }
     public void visit(EmptyStatementList EmptyStatementList) { visit(); }

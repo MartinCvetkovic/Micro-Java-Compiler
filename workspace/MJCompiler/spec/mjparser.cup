@@ -60,16 +60,16 @@ terminal Character CHAR;
 terminal Boolean BOOL;
 terminal Integer NUM;
 
-nonterminal DeclarationList, Declaration;
+nonterminal DeclarationList, Declaration, NullableFormPars;
 nonterminal VarDecl, ClassDecl;
 nonterminal MultipleVarDecl, VarDeclList, ConstructorDeclList, ConstructorDecl;
-nonterminal MethodDeclList, MethodDecl, ClassDeclName, StatementList, Statement;
+nonterminal MethodDeclList, ClassDeclName, StatementList, Statement;
 nonterminal FormPars, MethodDeclReturn, Assignop, Relop, Addop, Mulop; // Label
 nonterminal DesignatorStatement, Expr, Designator, PrintArgs, ActPars, DesignatorList;
 nonterminal Condition, CondTerm, CondFact, Term, AddopTermList, Factor, OptionalDesignator;
 nonterminal GlobalVarDecl, ExprError;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, SingleVarDecl;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, SingleVarDecl, MethodName, MethodDecl;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Constant, ConstDecl, MultipleConstDecl, ConstantAssignement;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type;
 
@@ -186,10 +186,14 @@ MethodDeclReturn ::= 	(MethodDeclReturnVoid) VOID
 						(MethodDeclReturnType) Type
 						;
 
-MethodDecl ::= 	(MethodDeclFormPars) MethodDeclReturn IDENT LPAREN FormPars RPAREN VarDeclList LBRACE StatementList RBRACE
-				|
-				(MethodDeclNoFormPars) MethodDeclReturn IDENT LPAREN RPAREN VarDeclList LBRACE StatementList RBRACE
-				;
+MethodDecl ::= 	(MethodDeclaration) MethodDeclReturn MethodName LPAREN NullableFormPars RPAREN VarDeclList LBRACE StatementList RBRACE;
+
+MethodName ::= 	(MethodNameIdent) IDENT:methName;
+
+NullableFormPars ::= 	(NullableFormParsExist) FormPars
+						|
+						(NullableFormParsEmpty) /* epsilon */
+						;
 
 FormPars ::= 	(FormPar) Type SingleVarDecl
 				|

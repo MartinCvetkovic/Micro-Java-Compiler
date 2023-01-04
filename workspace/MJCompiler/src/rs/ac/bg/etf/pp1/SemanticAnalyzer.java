@@ -19,6 +19,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	Struct currentType = null;
 	int currentConstantValue;
 	boolean constantTypeError;
+	Obj currentMethod;
 
 	Logger log = Logger.getLogger(getClass());
 
@@ -125,5 +126,22 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		if (!Tab.boolType.equals(currentType)) {
 			constantTypeError = true;
 		}
+	}
+	
+	public void visit(MethodDeclReturnVoid methodDeclReturnVoid) {
+		currentType = Tab.noType;
+	}
+	
+	public void visit(MethodDeclaration methodDeclaration) {
+    	Tab.chainLocalSymbols(currentMethod);
+		Tab.closeScope();
+    	currentMethod = null;
+	}
+	
+	public void visit(MethodNameIdent methodNameIdent) {
+		currentMethod = Tab.insert(Obj.Meth, methodNameIdent.getMethName(), currentType);
+		methodNameIdent.obj = currentMethod;
+    	Tab.openScope();
+		report_info("Deklarisana funkcija " + methodNameIdent.getMethName(), methodNameIdent, methodNameIdent.obj);
 	}
 }

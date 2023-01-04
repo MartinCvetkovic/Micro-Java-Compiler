@@ -1,151 +1,151 @@
-INFO  14:02:43,602 - Compiling source file: C:\Faks\PP1\pp1domaci\workspace\MJCompiler\test\semanticProgramA.mj
-INFO  14:02:43,676 - #2 program
-INFO  14:02:43,676 - #43 p0_
-INFO  14:02:43,676 - #5 const
-INFO  14:02:43,677 - #43 int
-INFO  14:02:43,678 - #43 br1
-INFO  14:02:43,678 - #7 =
-INFO  14:02:43,678 - #46 1
-INFO  14:02:43,678 - #6 ,
-INFO  14:02:43,679 - #43 br2
-INFO  14:02:43,679 - #7 =
-INFO  14:02:43,679 - #46 2
-INFO  14:02:43,679 - #8 ;
-INFO  14:02:43,680 - #5 const
-INFO  14:02:43,680 - #43 char
-INFO  14:02:43,680 - #43 ch
-INFO  14:02:43,681 - #7 =
-INFO  14:02:43,681 - #44 a
-INFO  14:02:43,681 - #8 ;
-INFO  14:02:43,681 - #5 const
-INFO  14:02:43,682 - #43 bool
-INFO  14:02:43,682 - #43 bl1
-INFO  14:02:43,682 - #7 =
-INFO  14:02:43,682 - #45 true
-INFO  14:02:43,683 - #6 ,
-INFO  14:02:43,683 - #43 bl2
-INFO  14:02:43,683 - #7 =
-INFO  14:02:43,683 - #45 false
-INFO  14:02:43,683 - #6 ,
-INFO  14:02:43,683 - #43 bl3
-INFO  14:02:43,683 - #7 =
-INFO  14:02:43,684 - #45 true
-INFO  14:02:43,684 - #8 ;
-INFO  14:02:43,684 - #43 int
-INFO  14:02:43,684 - #43 var1
-INFO  14:02:43,684 - #8 ;
-INFO  14:02:43,684 - #43 char
-INFO  14:02:43,685 - #43 string1
-INFO  14:02:43,685 - #6 ,
-INFO  14:02:43,685 - #43 string2
-INFO  14:02:43,685 - #9 [
-INFO  14:02:43,685 - #10 ]
-INFO  14:02:43,686 - #8 ;
-INFO  14:02:43,686 - #43 bool
-INFO  14:02:43,686 - #43 bool1
-INFO  14:02:43,686 - #6 ,
-INFO  14:02:43,687 - #43 bool2
-INFO  14:02:43,687 - #9 [
-INFO  14:02:43,687 - #10 ]
-INFO  14:02:43,687 - #6 ,
-INFO  14:02:43,687 - #43 bool3
-INFO  14:02:43,687 - #8 ;
-INFO  14:02:43,688 - #3 {
-INFO  14:02:43,688 - #15 void
-INFO  14:02:43,688 - #43 main
-INFO  14:02:43,689 - #13 (
-INFO  14:02:43,689 - #14 )
-INFO  14:02:43,690 - #43 char
-INFO  14:02:43,691 - #43 res
-INFO  14:02:43,691 - #8 ;
-INFO  14:02:43,691 - #43 int
-INFO  14:02:43,692 - #43 arr1
-INFO  14:02:43,692 - #9 [
-INFO  14:02:43,692 - #10 ]
-INFO  14:02:43,692 - #8 ;
-INFO  14:02:43,692 - #3 {
-INFO  14:02:43,692 - #43 arr1
-INFO  14:02:43,693 - #7 =
-INFO  14:02:43,694 - #38 new
-INFO  14:02:43,697 - #43 int
-INFO  14:02:43,697 - #9 [
-INFO  14:02:43,697 - #46 2
-INFO  14:02:43,698 - #10 ]
-INFO  14:02:43,699 - #8 ;
-INFO  14:02:43,699 - #43 arr
-INFO  14:02:43,700 - #9 [
-INFO  14:02:43,700 - #46 0
-INFO  14:02:43,700 - #10 ]
-INFO  14:02:43,700 - #7 =
-INFO  14:02:43,701 - #46 0
-INFO  14:02:43,701 - #8 ;
-INFO  14:02:43,701 - #43 arr
-INFO  14:02:43,701 - #9 [
-INFO  14:02:43,701 - #46 1
-INFO  14:02:43,701 - #10 ]
-INFO  14:02:43,701 - #7 =
-INFO  14:02:43,701 - #46 2
-INFO  14:02:43,702 - #8 ;
-INFO  14:02:43,702 - #43 a
-INFO  14:02:43,702 - #41 ++
-INFO  14:02:43,702 - #8 ;
-INFO  14:02:43,702 - #43 a
-INFO  14:02:43,702 - #42 --
-INFO  14:02:43,702 - #8 ;
-INFO  14:02:43,703 - #43 a
-INFO  14:02:43,703 - #7 =
-INFO  14:02:43,703 - #23 -
-INFO  14:02:43,703 - #43 a
-INFO  14:02:43,703 - #8 ;
-INFO  14:02:43,704 - #43 c
-INFO  14:02:43,704 - #7 =
-INFO  14:02:43,704 - #44 e
-INFO  14:02:43,704 - #8 ;
-INFO  14:02:43,705 - #43 arr
-INFO  14:02:43,705 - #7 =
-INFO  14:02:43,705 - #38 new
-INFO  14:02:43,705 - #43 int
-INFO  14:02:43,705 - #9 [
-INFO  14:02:43,706 - #46 2
-INFO  14:02:43,706 - #10 ]
-INFO  14:02:43,706 - #8 ;
-INFO  14:02:43,706 - #9 [
-INFO  14:02:43,706 - #43 b
-INFO  14:02:43,706 - #10 ]
-INFO  14:02:43,708 - #7 =
-INFO  14:02:43,708 - #43 a
-INFO  14:02:43,708 - #8 ;
-INFO  14:02:43,708 - #9 [
-INFO  14:02:43,708 - #10 ]
-INFO  14:02:43,709 - #7 =
-INFO  14:02:43,709 - #43 a
-INFO  14:02:43,710 - #8 ;
-INFO  14:02:43,710 - #9 [
-INFO  14:02:43,710 - #43 b
-INFO  14:02:43,710 - #6 ,
-INFO  14:02:43,710 - #43 br1
-INFO  14:02:43,710 - #6 ,
-INFO  14:02:43,710 - #6 ,
-INFO  14:02:43,710 - #10 ]
-INFO  14:02:43,710 - #7 =
-INFO  14:02:43,711 - #43 a
-INFO  14:02:43,711 - #8 ;
-INFO  14:02:43,711 - #43 b
-INFO  14:02:43,711 - #7 =
-INFO  14:02:43,711 - #46 20
-INFO  14:02:43,711 - #23 -
-INFO  14:02:43,711 - #46 40
-INFO  14:02:43,712 - #26 /
-INFO  14:02:43,713 - #46 10
-INFO  14:02:43,714 - #25 %
-INFO  14:02:43,714 - #46 4
-INFO  14:02:43,715 - #24 *
-INFO  14:02:43,715 - #46 2
-INFO  14:02:43,716 - #8 ;
-INFO  14:02:43,716 - #4 }
-INFO  14:02:43,716 - #4 }
-INFO  14:02:43,717 - ================Ispis sintaksnog stabla================
-INFO  14:02:43,721 - 
+INFO  15:09:25,801 - Compiling source file: C:\Faks\PP1\pp1domaci\workspace\MJCompiler\test\semanticProgramA.mj
+INFO  15:09:25,844 - #2 program
+INFO  15:09:25,844 - #43 p0_
+INFO  15:09:25,844 - #5 const
+INFO  15:09:25,845 - #43 int
+INFO  15:09:25,845 - #43 br1
+INFO  15:09:25,845 - #7 =
+INFO  15:09:25,845 - #46 1
+INFO  15:09:25,845 - #6 ,
+INFO  15:09:25,845 - #43 br2
+INFO  15:09:25,845 - #7 =
+INFO  15:09:25,845 - #46 2
+INFO  15:09:25,845 - #8 ;
+INFO  15:09:25,845 - #5 const
+INFO  15:09:25,846 - #43 char
+INFO  15:09:25,846 - #43 ch
+INFO  15:09:25,846 - #7 =
+INFO  15:09:25,846 - #44 a
+INFO  15:09:25,846 - #8 ;
+INFO  15:09:25,846 - #5 const
+INFO  15:09:25,846 - #43 bool
+INFO  15:09:25,846 - #43 bl1
+INFO  15:09:25,846 - #7 =
+INFO  15:09:25,850 - #45 true
+INFO  15:09:25,850 - #6 ,
+INFO  15:09:25,850 - #43 bl2
+INFO  15:09:25,850 - #7 =
+INFO  15:09:25,850 - #45 false
+INFO  15:09:25,850 - #6 ,
+INFO  15:09:25,851 - #43 bl3
+INFO  15:09:25,851 - #7 =
+INFO  15:09:25,851 - #45 true
+INFO  15:09:25,851 - #8 ;
+INFO  15:09:25,851 - #43 int
+INFO  15:09:25,851 - #43 var1
+INFO  15:09:25,851 - #8 ;
+INFO  15:09:25,851 - #43 char
+INFO  15:09:25,852 - #43 string1
+INFO  15:09:25,852 - #6 ,
+INFO  15:09:25,852 - #43 string2
+INFO  15:09:25,852 - #9 [
+INFO  15:09:25,852 - #10 ]
+INFO  15:09:25,852 - #8 ;
+INFO  15:09:25,852 - #43 bool
+INFO  15:09:25,852 - #43 bool1
+INFO  15:09:25,852 - #6 ,
+INFO  15:09:25,852 - #43 bool2
+INFO  15:09:25,853 - #9 [
+INFO  15:09:25,853 - #10 ]
+INFO  15:09:25,853 - #6 ,
+INFO  15:09:25,853 - #43 bool3
+INFO  15:09:25,853 - #8 ;
+INFO  15:09:25,853 - #3 {
+INFO  15:09:25,853 - #15 void
+INFO  15:09:25,853 - #43 main
+INFO  15:09:25,854 - #13 (
+INFO  15:09:25,854 - #14 )
+INFO  15:09:25,854 - #43 char
+INFO  15:09:25,854 - #43 res
+INFO  15:09:25,854 - #8 ;
+INFO  15:09:25,855 - #43 int
+INFO  15:09:25,855 - #43 arr1
+INFO  15:09:25,855 - #9 [
+INFO  15:09:25,855 - #10 ]
+INFO  15:09:25,855 - #8 ;
+INFO  15:09:25,855 - #3 {
+INFO  15:09:25,855 - #43 arr1
+INFO  15:09:25,856 - #7 =
+INFO  15:09:25,856 - #38 new
+INFO  15:09:25,856 - #43 int
+INFO  15:09:25,856 - #9 [
+INFO  15:09:25,856 - #46 2
+INFO  15:09:25,856 - #10 ]
+INFO  15:09:25,857 - #8 ;
+INFO  15:09:25,857 - #43 arr
+INFO  15:09:25,858 - #9 [
+INFO  15:09:25,858 - #46 0
+INFO  15:09:25,858 - #10 ]
+INFO  15:09:25,859 - #7 =
+INFO  15:09:25,859 - #46 0
+INFO  15:09:25,859 - #8 ;
+INFO  15:09:25,859 - #43 arr
+INFO  15:09:25,859 - #9 [
+INFO  15:09:25,859 - #46 1
+INFO  15:09:25,859 - #10 ]
+INFO  15:09:25,859 - #7 =
+INFO  15:09:25,859 - #46 2
+INFO  15:09:25,859 - #8 ;
+INFO  15:09:25,859 - #43 a
+INFO  15:09:25,859 - #41 ++
+INFO  15:09:25,859 - #8 ;
+INFO  15:09:25,859 - #43 a
+INFO  15:09:25,859 - #42 --
+INFO  15:09:25,859 - #8 ;
+INFO  15:09:25,859 - #43 a
+INFO  15:09:25,859 - #7 =
+INFO  15:09:25,859 - #23 -
+INFO  15:09:25,859 - #43 a
+INFO  15:09:25,859 - #8 ;
+INFO  15:09:25,860 - #43 c
+INFO  15:09:25,860 - #7 =
+INFO  15:09:25,860 - #44 e
+INFO  15:09:25,860 - #8 ;
+INFO  15:09:25,860 - #43 arr
+INFO  15:09:25,860 - #7 =
+INFO  15:09:25,860 - #38 new
+INFO  15:09:25,860 - #43 int
+INFO  15:09:25,860 - #9 [
+INFO  15:09:25,860 - #46 2
+INFO  15:09:25,860 - #10 ]
+INFO  15:09:25,860 - #8 ;
+INFO  15:09:25,861 - #9 [
+INFO  15:09:25,861 - #43 b
+INFO  15:09:25,861 - #10 ]
+INFO  15:09:25,861 - #7 =
+INFO  15:09:25,861 - #43 a
+INFO  15:09:25,861 - #8 ;
+INFO  15:09:25,861 - #9 [
+INFO  15:09:25,861 - #10 ]
+INFO  15:09:25,862 - #7 =
+INFO  15:09:25,862 - #43 a
+INFO  15:09:25,863 - #8 ;
+INFO  15:09:25,863 - #9 [
+INFO  15:09:25,863 - #43 b
+INFO  15:09:25,863 - #6 ,
+INFO  15:09:25,863 - #43 br1
+INFO  15:09:25,863 - #6 ,
+INFO  15:09:25,863 - #6 ,
+INFO  15:09:25,863 - #10 ]
+INFO  15:09:25,863 - #7 =
+INFO  15:09:25,863 - #43 a
+INFO  15:09:25,863 - #8 ;
+INFO  15:09:25,863 - #43 b
+INFO  15:09:25,863 - #7 =
+INFO  15:09:25,863 - #46 20
+INFO  15:09:25,864 - #23 -
+INFO  15:09:25,864 - #46 40
+INFO  15:09:25,864 - #26 /
+INFO  15:09:25,864 - #46 10
+INFO  15:09:25,865 - #25 %
+INFO  15:09:25,865 - #46 4
+INFO  15:09:25,865 - #24 *
+INFO  15:09:25,865 - #46 2
+INFO  15:09:25,866 - #8 ;
+INFO  15:09:25,866 - #4 }
+INFO  15:09:25,866 - #4 }
+INFO  15:09:25,866 - ================Ispis sintaksnog stabla================
+INFO  15:09:25,868 - 
 PProgram(
   PProgramName(
    p0_
@@ -273,10 +273,14 @@ PProgram(
     ) [GlobalVarDeclaration]
   ) [DeclarationsList]
   SingleMethodDeclList(
-    MethodDeclNoFormPars(
+    MethodDeclaration(
       MethodDeclReturnVoid(
       ) [MethodDeclReturnVoid]
-     main
+      MethodNameIdent(
+       main
+      ) [MethodNameIdent]
+      NullableFormParsEmpty(
+      ) [NullableFormParsEmpty]
       NoEmptyVarDeclList(
         NoEmptyVarDeclList(
           EmptyVarDeclList(
@@ -609,30 +613,32 @@ PProgram(
           ) [DesignatorAssignStmt]
         ) [DesignatorStmt]
       ) [NoEmptyStatementList]
-    ) [MethodDeclNoFormPars]
+    ) [MethodDeclaration]
   ) [SingleMethodDeclList]
 ) [PProgram]
-INFO  14:02:43,722 - ==================SEMANTICKA OBRADA====================
-INFO  14:02:43,739 - Deklarisana konstanta br1 na liniji 2, objektni cvor: Con br1: int, 1, 0 
-INFO  14:02:43,739 - Deklarisana konstanta br2 na liniji 2, objektni cvor: Con br2: int, 2, 0 
-INFO  14:02:43,739 - Deklarisana konstanta ch na liniji 3, objektni cvor: Con ch: char, 97, 0 
-INFO  14:02:43,739 - Deklarisana konstanta bl1 na liniji 4, objektni cvor: Con bl1: bool, 1, 0 
-INFO  14:02:43,740 - Deklarisana konstanta bl2 na liniji 4, objektni cvor: Con bl2: bool, 0, 0 
-INFO  14:02:43,740 - Deklarisana konstanta bl3 na liniji 4, objektni cvor: Con bl3: bool, 1, 0 
-INFO  14:02:43,740 - Deklarisana promenljiva var1 na liniji 5, objektni cvor: Var var1: int, 0, 0 
-INFO  14:02:43,740 - Deklarisana promenljiva string1 na liniji 6, objektni cvor: Var string1: char, 1, 0 
-INFO  14:02:43,740 - Deklarisana promenljiva string2 na liniji 6, objektni cvor: Var string2: Arr of char, 2, 0 
-INFO  14:02:43,740 - Deklarisana promenljiva bool1 na liniji 7, objektni cvor: Var bool1: bool, 3, 0 
-INFO  14:02:43,740 - Deklarisana promenljiva bool2 na liniji 7, objektni cvor: Var bool2: Arr of bool, 4, 0 
-INFO  14:02:43,740 - Deklarisana promenljiva bool3 na liniji 7, objektni cvor: Var bool3: bool, 5, 0 
-INFO  14:02:43,741 - Deklarisana promenljiva res na liniji 9, objektni cvor: Var res: char, 6, 0 
-INFO  14:02:43,741 - Deklarisana promenljiva arr1 na liniji 9, objektni cvor: Var arr1: Arr of int, 7, 0 
-INFO  14:02:43,742 - ==================SINTAKSNA ANALIZA====================
-INFO  14:02:43,742 - 0	classes
-INFO  14:02:43,742 - 0	methods in the program
-INFO  14:02:43,742 - 0	global variables
-INFO  14:02:43,742 - 0	global constants
-INFO  14:02:43,742 - 0	global arrays
-INFO  14:02:43,742 - 0	local variables in main
-INFO  14:02:43,742 - 0	statements in main
-INFO  14:02:43,742 - 0	function calls in main
+INFO  15:09:25,868 - ==================SEMANTICKA OBRADA====================
+INFO  15:09:25,874 - Deklarisana konstanta br1 na liniji 2, objektni cvor: Con br1: int, 1, 0 
+INFO  15:09:25,874 - Deklarisana konstanta br2 na liniji 2, objektni cvor: Con br2: int, 2, 0 
+INFO  15:09:25,875 - Deklarisana konstanta ch na liniji 3, objektni cvor: Con ch: char, 97, 0 
+INFO  15:09:25,875 - Deklarisana konstanta bl1 na liniji 4, objektni cvor: Con bl1: bool, 1, 0 
+INFO  15:09:25,875 - Deklarisana konstanta bl2 na liniji 4, objektni cvor: Con bl2: bool, 0, 0 
+INFO  15:09:25,876 - Deklarisana konstanta bl3 na liniji 4, objektni cvor: Con bl3: bool, 1, 0 
+INFO  15:09:25,876 - Deklarisana promenljiva var1 na liniji 5, objektni cvor: Var var1: int, 0, 0 
+INFO  15:09:25,876 - Deklarisana promenljiva string1 na liniji 6, objektni cvor: Var string1: char, 1, 0 
+INFO  15:09:25,876 - Deklarisana promenljiva string2 na liniji 6, objektni cvor: Var string2: Arr of char, 2, 0 
+INFO  15:09:25,876 - Deklarisana promenljiva bool1 na liniji 7, objektni cvor: Var bool1: bool, 3, 0 
+INFO  15:09:25,876 - Deklarisana promenljiva bool2 na liniji 7, objektni cvor: Var bool2: Arr of bool, 4, 0 
+INFO  15:09:25,876 - Deklarisana promenljiva bool3 na liniji 7, objektni cvor: Var bool3: bool, 5, 0 
+INFO  15:09:25,876 - Deklarisana funkcija main na liniji 9, objektni cvor: Meth main: notype, 0, 0 
+
+INFO  15:09:25,876 - Deklarisana promenljiva res na liniji 9, objektni cvor: Var res: char, 0, 1 
+INFO  15:09:25,876 - Deklarisana promenljiva arr1 na liniji 9, objektni cvor: Var arr1: Arr of int, 1, 1 
+INFO  15:09:25,876 - ==================SINTAKSNA ANALIZA====================
+INFO  15:09:25,876 - 0	classes
+INFO  15:09:25,876 - 0	methods in the program
+INFO  15:09:25,876 - 0	global variables
+INFO  15:09:25,876 - 0	global constants
+INFO  15:09:25,876 - 0	global arrays
+INFO  15:09:25,876 - 0	local variables in main
+INFO  15:09:25,876 - 0	statements in main
+INFO  15:09:25,876 - 0	function calls in main
