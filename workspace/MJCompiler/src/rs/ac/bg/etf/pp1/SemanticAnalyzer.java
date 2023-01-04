@@ -7,19 +7,15 @@ import rs.etf.pp1.symboltable.concepts.*;
 
 public class SemanticAnalyzer extends VisitorAdaptor {
 
-	int classCount = 0;
-	int methodCount = 0;
+	int constCount = 0;
 	int globalVarCount = 0;
-	int globalConstCount = 0;
-	int globalArrCount = 0;
-	int localVarInMainCount = 0;
-	int stmtInMainCount = 0;
-	int funcCallsInMainCount = 0;
+	int localVarCount = 0;
 	boolean errorDetected = false;
 	Struct currentType = null;
 	int currentConstantValue;
 	boolean constantTypeError;
 	Obj currentMethod;
+	boolean mainExists = false;
 
 	Logger log = Logger.getLogger(getClass());
 
@@ -45,6 +41,12 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 
 	public boolean passed() {
 		return !errorDetected;
+	}
+	
+	public void mainMethCheck() {
+		if (!mainExists) {
+			report_error("Metoda void main() ne postoji", null);
+		}
 	}
 
 	public void visit(PProgramName programName) {
@@ -79,18 +81,36 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		if (currentType == null) {
 			return;
 		}
+		if (Tab.currentScope().findSymbol(singleVarDeclaration.getVarName()) != null) {
+			report_error("Promenljiva " + singleVarDeclaration.getVarName() + " ponovo deklarisana", singleVarDeclaration);
+			return;
+		}
 		singleVarDeclaration.obj = Tab.insert(Obj.Var, singleVarDeclaration.getVarName(), currentType);
 		report_info("Deklarisana promenljiva " + singleVarDeclaration.getVarName(), singleVarDeclaration, singleVarDeclaration.obj);
+		if (singleVarDeclaration.obj.getLevel() == 0) {
+			globalVarCount++;
+		} else {
+			localVarCount++;
+		}
 	}
 
 	public void visit(SingleVarArrayDecl singleVarArrayDecl) {
 		if (currentType == null) {
 			return;
 		}
+		if (Tab.currentScope().findSymbol(singleVarArrayDecl.getVarName()) != null) {
+			report_error("Promenljiva " + singleVarArrayDecl.getVarName() + " ponovo deklarisana", singleVarArrayDecl);
+			return;
+		}
 		Struct arr = new Struct(Struct.Array);
 		arr.setElementType(currentType);
 		singleVarArrayDecl.obj = Tab.insert(Obj.Var, singleVarArrayDecl.getVarName(), arr);
 		report_info("Deklarisana promenljiva " + singleVarArrayDecl.getVarName(), singleVarArrayDecl, singleVarArrayDecl.obj);
+		if (singleVarArrayDecl.obj.getLevel() == 0) {
+			globalVarCount++;
+		} else {
+			localVarCount++;
+		}
 	}
 	
 	public void visit(ConstantAssign constantAssign) {
@@ -102,9 +122,14 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			report_error("Pogresan tip vrednosti koja se dodeljuje konstanti " + constantAssign.getConstName(), constantAssign);
 			return;
 		}
+		if (Tab.currentScope().findSymbol(constantAssign.getConstName()) != null) {
+			report_error("Konstanta " + constantAssign.getConstName() + " ponovo deklarisana", constantAssign);
+			return;
+		}
 		constantAssign.obj = Tab.insert(Obj.Con, constantAssign.getConstName(), currentType);
 		constantAssign.obj.setAdr(currentConstantValue);
 		report_info("Deklarisana konstanta " + constantAssign.getConstName(), constantAssign, constantAssign.obj);
+		constCount++;
 	}
 
 	public void visit(NumConst numConst) {
@@ -143,5 +168,8 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		methodNameIdent.obj = currentMethod;
     	Tab.openScope();
 		report_info("Deklarisana funkcija " + methodNameIdent.getMethName(), methodNameIdent, methodNameIdent.obj);
+		if (methodNameIdent.getMethName().equals("main") && methodNameIdent.obj.getLevel() == 0 && currentType == Tab.noType) {
+			mainExists = true;
+		}
 	}
 }

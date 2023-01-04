@@ -50,16 +50,12 @@ public class Compiler {
 	        Tab.init();
 	        SemanticAnalyzer semanticAnalyzer = new SemanticAnalyzer();
 			prog.traverseBottomUp(semanticAnalyzer);
+			semanticAnalyzer.mainMethCheck();
 			
 	        log.info("==================SINTAKSNA ANALIZA====================");
-			log.info(semanticAnalyzer.classCount + "\tclasses");
-			log.info(semanticAnalyzer.methodCount + "\tmethods in the program");
+			log.info(semanticAnalyzer.constCount + "\tsymbolic constants");
 			log.info(semanticAnalyzer.globalVarCount + "\tglobal variables");
-			log.info(semanticAnalyzer.globalConstCount + "\tglobal constants");
-			log.info(semanticAnalyzer.globalArrCount + "\tglobal arrays");
-			log.info(semanticAnalyzer.localVarInMainCount + "\tlocal variables in main");
-			log.info(semanticAnalyzer.stmtInMainCount + "\tstatements in main");
-			log.info(semanticAnalyzer.funcCallsInMainCount + "\tfunction calls in main");
+			log.info(semanticAnalyzer.localVarCount + "\tlocal variables");
 			
 	        //log.info("==============SADRZAJ TABELE SIMBOLA===================");
 	        tsdump();

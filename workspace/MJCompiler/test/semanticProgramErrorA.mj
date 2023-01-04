@@ -1,12 +1,12 @@
 program p0_
-	const int br1 = 1, br2 = 2;
+	const int br1 = 1, br2 = 2, br1 = 3;
 	const int ch = 'a';
 	const bool bl1 = true, bl2 = false, bl3 = true;
 	A var1;
 	char string1, string2[];
 	bool bool1, bool2[], bool3;
 	{
-		void main() char res; int arr1[];{
+		int main() char res, string1; int arr1[]; int res;{
 			arr1 = new int[2];
 			arr[0] = 0;
 			arr[1] = 2;
