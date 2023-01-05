@@ -82,7 +82,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			return;
 		}
 		if (Tab.currentScope().findSymbol(singleVarDeclaration.getVarName()) != null) {
-			report_error("Promenljiva " + singleVarDeclaration.getVarName() + " ponovo deklarisana", singleVarDeclaration);
+			report_error("Promenljiva " + singleVarDeclaration.getVarName() + " vec deklarisana u opsegu", singleVarDeclaration);
 			return;
 		}
 		singleVarDeclaration.obj = Tab.insert(Obj.Var, singleVarDeclaration.getVarName(), currentType);
@@ -171,5 +171,73 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		if (methodNameIdent.getMethName().equals("main") && methodNameIdent.obj.getLevel() == 0 && currentType == Tab.noType) {
 			mainExists = true;
 		}
+	}
+	
+	public void visit(DesignatorIdent designatorIdent) {
+    	Obj obj = Tab.find(designatorIdent.getName());
+    	if(obj == Tab.noObj){
+			report_error("Ime " + designatorIdent.getName() + " nije deklarisano", designatorIdent);
+    	}
+    	designatorIdent.obj = obj;
+	}
+	
+	public void visit(FactorNum factorNum) {
+		factorNum.struct = Tab.intType;
+	}
+	
+	public void visit(FactorBool factorBool) {
+		factorBool.struct = Tab.boolType;
+	}
+	
+	public void visit(FactorChar factorChar) {
+		factorChar.struct = Tab.charType;
+	}
+	
+	public void visit(FactorDesignatorEmpty factorDesignatorEmpty) {
+		factorDesignatorEmpty.struct = factorDesignatorEmpty.getDesignator().obj.getType();
+	}
+	
+	public void visit(FactorExpr factorExpr) {
+		factorExpr.struct = factorExpr.getExpr().struct;
+	}
+	
+	public void visit(FactorNewExpr factorNewExpr) {
+		if (!factorNewExpr.getExpr().struct.equals(Tab.intType)) {
+			report_error("Izraz izmedju zagrada prilikom alokacije mora biti tipa int", factorNewExpr);
+			factorNewExpr.struct = Tab.noType;
+			return;
+		}
+		factorNewExpr.struct = currentType;
+	}
+	
+	public void visit(SingleFactor singleFactor) {
+		singleFactor.struct = singleFactor.getFactor().struct;
+	}
+	
+	public void visit(MultipleFactors multipleFactors) {
+		if (multipleFactors.getTerm().struct.equals(multipleFactors.getFactor().struct) && multipleFactors.getTerm().struct.equals(Tab.intType)) {
+			multipleFactors.struct = multipleFactors.getFactor().struct;
+			return;
+		}
+		report_error("Mnozenje je moguce samo izmedju int tipova", multipleFactors);
+		multipleFactors.struct = Tab.noType;
+	}
+	
+	public void visit(PosExpr posExpr) {
+		if (!posExpr.getTerm().struct.equals(Tab.intType) || !posExpr.getAddopTermList().struct.equals(Tab.intType)) {
+			report_error("Izraz mora biti int tipa", posExpr);
+			posExpr.struct = Tab.noType;
+			return;
+		}
+		posExpr.struct = posExpr.getTerm().struct;
+	}
+	
+	public void visit(NoEmptyAddopTermList noEmptyAddopTermList) {
+		if (!noEmptyAddopTermList.getTerm().struct.equals(Tab.intType)) {
+			report_error("Mnozenje je moguce samo izmedju int tipova", noEmptyAddopTermList);
+			noEmptyAddopTermList.struct = Tab.noType;
+			return;
+		}
+		noEmptyAddopTermList.struct = noEmptyAddopTermList.getTerm().struct;
 	}
 }

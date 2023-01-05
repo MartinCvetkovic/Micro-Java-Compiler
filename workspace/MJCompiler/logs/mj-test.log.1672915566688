@@ -1,0 +1,469 @@
+INFO  11:46:02,293 - Compiling source file: C:\Faks\PP1\pp1domaci\workspace\MJCompiler\test\semanticProgramErrorA.mj
+INFO  11:46:02,390 - #2 program
+INFO  11:46:02,390 - #43 p0_
+INFO  11:46:02,390 - #5 const
+INFO  11:46:02,391 - #43 int
+INFO  11:46:02,392 - #43 br1
+INFO  11:46:02,392 - #7 =
+INFO  11:46:02,392 - #46 1
+INFO  11:46:02,392 - #6 ,
+INFO  11:46:02,393 - #43 br2
+INFO  11:46:02,393 - #7 =
+INFO  11:46:02,393 - #46 2
+INFO  11:46:02,393 - #6 ,
+INFO  11:46:02,393 - #43 br1
+INFO  11:46:02,394 - #7 =
+INFO  11:46:02,394 - #46 3
+INFO  11:46:02,394 - #8 ;
+INFO  11:46:02,394 - #5 const
+INFO  11:46:02,395 - #43 int
+INFO  11:46:02,395 - #43 ch
+INFO  11:46:02,396 - #7 =
+INFO  11:46:02,396 - #44 a
+INFO  11:46:02,396 - #8 ;
+INFO  11:46:02,397 - #5 const
+INFO  11:46:02,397 - #43 bool
+INFO  11:46:02,397 - #43 bl1
+INFO  11:46:02,397 - #7 =
+INFO  11:46:02,398 - #45 true
+INFO  11:46:02,398 - #6 ,
+INFO  11:46:02,398 - #43 bl2
+INFO  11:46:02,398 - #7 =
+INFO  11:46:02,398 - #45 false
+INFO  11:46:02,399 - #6 ,
+INFO  11:46:02,399 - #43 bl3
+INFO  11:46:02,399 - #7 =
+INFO  11:46:02,399 - #45 true
+INFO  11:46:02,399 - #8 ;
+INFO  11:46:02,399 - #43 A
+INFO  11:46:02,399 - #43 var1
+INFO  11:46:02,399 - #8 ;
+INFO  11:46:02,400 - #43 char
+INFO  11:46:02,400 - #43 string1
+INFO  11:46:02,400 - #6 ,
+INFO  11:46:02,401 - #43 string2
+INFO  11:46:02,401 - #9 [
+INFO  11:46:02,401 - #10 ]
+INFO  11:46:02,401 - #8 ;
+INFO  11:46:02,401 - #43 bool
+INFO  11:46:02,402 - #43 bool1
+INFO  11:46:02,402 - #6 ,
+INFO  11:46:02,402 - #43 bool2
+INFO  11:46:02,402 - #9 [
+INFO  11:46:02,402 - #10 ]
+INFO  11:46:02,402 - #6 ,
+INFO  11:46:02,402 - #43 bool3
+INFO  11:46:02,402 - #8 ;
+INFO  11:46:02,403 - #3 {
+INFO  11:46:02,403 - #43 int
+INFO  11:46:02,403 - #43 main
+INFO  11:46:02,403 - #13 (
+INFO  11:46:02,404 - #14 )
+INFO  11:46:02,405 - #43 char
+INFO  11:46:02,406 - #43 res
+INFO  11:46:02,406 - #6 ,
+INFO  11:46:02,406 - #43 string1
+INFO  11:46:02,406 - #8 ;
+INFO  11:46:02,406 - #43 int
+INFO  11:46:02,407 - #43 arr1
+INFO  11:46:02,407 - #9 [
+INFO  11:46:02,409 - #10 ]
+INFO  11:46:02,409 - #8 ;
+INFO  11:46:02,410 - #43 int
+INFO  11:46:02,410 - #43 res
+INFO  11:46:02,410 - #8 ;
+INFO  11:46:02,410 - #3 {
+INFO  11:46:02,410 - #43 arr1
+INFO  11:46:02,411 - #7 =
+INFO  11:46:02,411 - #38 new
+INFO  11:46:02,413 - #43 int
+INFO  11:46:02,413 - #9 [
+INFO  11:46:02,413 - #46 2
+INFO  11:46:02,413 - #10 ]
+INFO  11:46:02,414 - #8 ;
+INFO  11:46:02,415 - #43 arr
+INFO  11:46:02,416 - #9 [
+INFO  11:46:02,416 - #46 0
+INFO  11:46:02,416 - #10 ]
+INFO  11:46:02,416 - #7 =
+INFO  11:46:02,416 - #46 0
+INFO  11:46:02,416 - #8 ;
+INFO  11:46:02,417 - #43 arr1
+INFO  11:46:02,417 - #9 [
+INFO  11:46:02,417 - #46 1
+INFO  11:46:02,417 - #10 ]
+INFO  11:46:02,417 - #7 =
+INFO  11:46:02,417 - #46 2
+INFO  11:46:02,417 - #8 ;
+INFO  11:46:02,417 - #43 a
+INFO  11:46:02,417 - #7 =
+INFO  11:46:02,418 - #46 1
+INFO  11:46:02,418 - #8 ;
+INFO  11:46:02,418 - #43 var1
+INFO  11:46:02,418 - #7 =
+INFO  11:46:02,418 - #46 5
+INFO  11:46:02,418 - #8 ;
+INFO  11:46:02,418 - #4 }
+INFO  11:46:02,419 - #4 }
+INFO  11:46:02,420 - ================Ispis sintaksnog stabla================
+INFO  11:46:02,422 - 
+PProgram(
+  PProgramName(
+   p0_
+  ) [PProgramName]
+  DeclarationsList(
+    DeclarationsList(
+      DeclarationsList(
+        DeclarationsList(
+          DeclarationsList(
+            DeclarationsList(
+              NoDeclaration(
+              ) [NoDeclaration]
+              ConstDeclaration(
+                MultipleConstDeclaration(
+                  TypeIdent(
+                   int
+                  ) [TypeIdent]
+                  ConstantAssign(
+                   br1
+                    NumConst(
+                     1
+                    ) [NumConst]
+                  ) [ConstantAssign]
+                  MultipleConstDeclList(
+                    ConstantAssign(
+                     br2
+                      NumConst(
+                       2
+                      ) [NumConst]
+                    ) [ConstantAssign]
+                    LastMultipleConstDecl(
+                      ConstantAssign(
+                       br1
+                        NumConst(
+                         3
+                        ) [NumConst]
+                      ) [ConstantAssign]
+                    ) [LastMultipleConstDecl]
+                  ) [MultipleConstDeclList]
+                ) [MultipleConstDeclaration]
+              ) [ConstDeclaration]
+            ) [DeclarationsList]
+            ConstDeclaration(
+              SingleConstDecl(
+                TypeIdent(
+                 int
+                ) [TypeIdent]
+                ConstantAssign(
+                 ch
+                  CharConst(
+                   a
+                  ) [CharConst]
+                ) [ConstantAssign]
+              ) [SingleConstDecl]
+            ) [ConstDeclaration]
+          ) [DeclarationsList]
+          ConstDeclaration(
+            MultipleConstDeclaration(
+              TypeIdent(
+               bool
+              ) [TypeIdent]
+              ConstantAssign(
+               bl1
+                BoolConst(
+                 true
+                ) [BoolConst]
+              ) [ConstantAssign]
+              MultipleConstDeclList(
+                ConstantAssign(
+                 bl2
+                  BoolConst(
+                   false
+                  ) [BoolConst]
+                ) [ConstantAssign]
+                LastMultipleConstDecl(
+                  ConstantAssign(
+                   bl3
+                    BoolConst(
+                     true
+                    ) [BoolConst]
+                  ) [ConstantAssign]
+                ) [LastMultipleConstDecl]
+              ) [MultipleConstDeclList]
+            ) [MultipleConstDeclaration]
+          ) [ConstDeclaration]
+        ) [DeclarationsList]
+        GlobalVarDeclaration(
+          SingleGlobalVarDeclarationVarDecl(
+            TypeIdent(
+             A
+            ) [TypeIdent]
+            SingleVarDeclaration(
+             var1
+            ) [SingleVarDeclaration]
+          ) [SingleGlobalVarDeclarationVarDecl]
+        ) [GlobalVarDeclaration]
+      ) [DeclarationsList]
+      GlobalVarDeclaration(
+        MultipleGlobalVarDeclaration(
+          TypeIdent(
+           char
+          ) [TypeIdent]
+          SingleVarDeclaration(
+           string1
+          ) [SingleVarDeclaration]
+          LastMultipleVarDecl(
+            SingleVarArrayDecl(
+             string2
+            ) [SingleVarArrayDecl]
+          ) [LastMultipleVarDecl]
+        ) [MultipleGlobalVarDeclaration]
+      ) [GlobalVarDeclaration]
+    ) [DeclarationsList]
+    GlobalVarDeclaration(
+      MultipleGlobalVarDeclaration(
+        TypeIdent(
+         bool
+        ) [TypeIdent]
+        SingleVarDeclaration(
+         bool1
+        ) [SingleVarDeclaration]
+        MultipleVarDeclList(
+          SingleVarArrayDecl(
+           bool2
+          ) [SingleVarArrayDecl]
+          LastMultipleVarDecl(
+            SingleVarDeclaration(
+             bool3
+            ) [SingleVarDeclaration]
+          ) [LastMultipleVarDecl]
+        ) [MultipleVarDeclList]
+      ) [MultipleGlobalVarDeclaration]
+    ) [GlobalVarDeclaration]
+  ) [DeclarationsList]
+  SingleMethodDeclList(
+    MethodDeclaration(
+      MethodDeclReturnType(
+        TypeIdent(
+         int
+        ) [TypeIdent]
+      ) [MethodDeclReturnType]
+      MethodNameIdent(
+       main
+      ) [MethodNameIdent]
+      NullableFormParsEmpty(
+      ) [NullableFormParsEmpty]
+      NoEmptyVarDeclList(
+        NoEmptyVarDeclList(
+          NoEmptyVarDeclList(
+            EmptyVarDeclList(
+            ) [EmptyVarDeclList]
+            MultipleVarDeclaration(
+              TypeIdent(
+               char
+              ) [TypeIdent]
+              SingleVarDeclaration(
+               res
+              ) [SingleVarDeclaration]
+              LastMultipleVarDecl(
+                SingleVarDeclaration(
+                 string1
+                ) [SingleVarDeclaration]
+              ) [LastMultipleVarDecl]
+            ) [MultipleVarDeclaration]
+          ) [NoEmptyVarDeclList]
+          SingleVarDeclarationVarDecl(
+            TypeIdent(
+             int
+            ) [TypeIdent]
+            SingleVarArrayDecl(
+             arr1
+            ) [SingleVarArrayDecl]
+          ) [SingleVarDeclarationVarDecl]
+        ) [NoEmptyVarDeclList]
+        SingleVarDeclarationVarDecl(
+          TypeIdent(
+           int
+          ) [TypeIdent]
+          SingleVarDeclaration(
+           res
+          ) [SingleVarDeclaration]
+        ) [SingleVarDeclarationVarDecl]
+      ) [NoEmptyVarDeclList]
+      NoEmptyStatementList(
+        NoEmptyStatementList(
+          NoEmptyStatementList(
+            NoEmptyStatementList(
+              NoEmptyStatementList(
+                EmptyStatementList(
+                ) [EmptyStatementList]
+                DesignatorStmt(
+                  DesignatorAssignStmt(
+                    DesignatorIdent(
+                     arr1
+                    ) [DesignatorIdent]
+                    AssignopAssign(
+                    ) [AssignopAssign]
+                    ExprNoError(
+                      PosExpr(
+                        SingleFactor(
+                          FactorNewExpr(
+                            TypeIdent(
+                             int
+                            ) [TypeIdent]
+                            PosExpr(
+                              SingleFactor(
+                                FactorNum(
+                                 2
+                                ) [FactorNum]
+                              ) [SingleFactor]
+                              EmptyAddopTermList(
+                              ) [EmptyAddopTermList]
+                            ) [PosExpr]
+                          ) [FactorNewExpr]
+                        ) [SingleFactor]
+                        EmptyAddopTermList(
+                        ) [EmptyAddopTermList]
+                      ) [PosExpr]
+                    ) [ExprNoError]
+                  ) [DesignatorAssignStmt]
+                ) [DesignatorStmt]
+              ) [NoEmptyStatementList]
+              DesignatorStmt(
+                DesignatorAssignStmt(
+                  DesignatorArr(
+                    DesignatorIdent(
+                     arr
+                    ) [DesignatorIdent]
+                    PosExpr(
+                      SingleFactor(
+                        FactorNum(
+                         0
+                        ) [FactorNum]
+                      ) [SingleFactor]
+                      EmptyAddopTermList(
+                      ) [EmptyAddopTermList]
+                    ) [PosExpr]
+                  ) [DesignatorArr]
+                  AssignopAssign(
+                  ) [AssignopAssign]
+                  ExprNoError(
+                    PosExpr(
+                      SingleFactor(
+                        FactorNum(
+                         0
+                        ) [FactorNum]
+                      ) [SingleFactor]
+                      EmptyAddopTermList(
+                      ) [EmptyAddopTermList]
+                    ) [PosExpr]
+                  ) [ExprNoError]
+                ) [DesignatorAssignStmt]
+              ) [DesignatorStmt]
+            ) [NoEmptyStatementList]
+            DesignatorStmt(
+              DesignatorAssignStmt(
+                DesignatorArr(
+                  DesignatorIdent(
+                   arr1
+                  ) [DesignatorIdent]
+                  PosExpr(
+                    SingleFactor(
+                      FactorNum(
+                       1
+                      ) [FactorNum]
+                    ) [SingleFactor]
+                    EmptyAddopTermList(
+                    ) [EmptyAddopTermList]
+                  ) [PosExpr]
+                ) [DesignatorArr]
+                AssignopAssign(
+                ) [AssignopAssign]
+                ExprNoError(
+                  PosExpr(
+                    SingleFactor(
+                      FactorNum(
+                       2
+                      ) [FactorNum]
+                    ) [SingleFactor]
+                    EmptyAddopTermList(
+                    ) [EmptyAddopTermList]
+                  ) [PosExpr]
+                ) [ExprNoError]
+              ) [DesignatorAssignStmt]
+            ) [DesignatorStmt]
+          ) [NoEmptyStatementList]
+          DesignatorStmt(
+            DesignatorAssignStmt(
+              DesignatorIdent(
+               a
+              ) [DesignatorIdent]
+              AssignopAssign(
+              ) [AssignopAssign]
+              ExprNoError(
+                PosExpr(
+                  SingleFactor(
+                    FactorNum(
+                     1
+                    ) [FactorNum]
+                  ) [SingleFactor]
+                  EmptyAddopTermList(
+                  ) [EmptyAddopTermList]
+                ) [PosExpr]
+              ) [ExprNoError]
+            ) [DesignatorAssignStmt]
+          ) [DesignatorStmt]
+        ) [NoEmptyStatementList]
+        DesignatorStmt(
+          DesignatorAssignStmt(
+            DesignatorIdent(
+             var1
+            ) [DesignatorIdent]
+            AssignopAssign(
+            ) [AssignopAssign]
+            ExprNoError(
+              PosExpr(
+                SingleFactor(
+                  FactorNum(
+                   5
+                  ) [FactorNum]
+                ) [SingleFactor]
+                EmptyAddopTermList(
+                ) [EmptyAddopTermList]
+              ) [PosExpr]
+            ) [ExprNoError]
+          ) [DesignatorAssignStmt]
+        ) [DesignatorStmt]
+      ) [NoEmptyStatementList]
+    ) [MethodDeclaration]
+  ) [SingleMethodDeclList]
+) [PProgram]
+INFO  11:46:02,423 - ==================SEMANTICKA OBRADA====================
+INFO  11:46:02,438 - Deklarisana konstanta br1 na liniji 2, objektni cvor: Con br1: int, 1, 0 
+INFO  11:46:02,438 - Deklarisana konstanta br2 na liniji 2, objektni cvor: Con br2: int, 2, 0 
+ERROR 11:46:02,438 - Konstanta br1 ponovo deklarisana na liniji 2
+ERROR 11:46:02,439 - Pogresan tip vrednosti koja se dodeljuje konstanti ch na liniji 3
+INFO  11:46:02,439 - Deklarisana konstanta bl1 na liniji 4, objektni cvor: Con bl1: bool, 1, 0 
+INFO  11:46:02,439 - Deklarisana konstanta bl2 na liniji 4, objektni cvor: Con bl2: bool, 0, 0 
+INFO  11:46:02,439 - Deklarisana konstanta bl3 na liniji 4, objektni cvor: Con bl3: bool, 1, 0 
+ERROR 11:46:02,439 - Nije pronadjen tip A u tabeli simbola! 
+INFO  11:46:02,439 - Deklarisana promenljiva string1 na liniji 6, objektni cvor: Var string1: char, 0, 0 
+INFO  11:46:02,439 - Deklarisana promenljiva string2 na liniji 6, objektni cvor: Var string2: Arr of char, 1, 0 
+INFO  11:46:02,439 - Deklarisana promenljiva bool1 na liniji 7, objektni cvor: Var bool1: bool, 2, 0 
+INFO  11:46:02,440 - Deklarisana promenljiva bool2 na liniji 7, objektni cvor: Var bool2: Arr of bool, 3, 0 
+INFO  11:46:02,440 - Deklarisana promenljiva bool3 na liniji 7, objektni cvor: Var bool3: bool, 4, 0 
+INFO  11:46:02,440 - Deklarisana funkcija main na liniji 9, objektni cvor: Meth main: int, 0, 0 
+
+INFO  11:46:02,440 - Deklarisana promenljiva res na liniji 9, objektni cvor: Var res: char, 0, 1 
+INFO  11:46:02,440 - Deklarisana promenljiva string1 na liniji 9, objektni cvor: Var string1: char, 1, 1 
+INFO  11:46:02,440 - Deklarisana promenljiva arr1 na liniji 9, objektni cvor: Var arr1: Arr of int, 2, 1 
+ERROR 11:46:02,440 - Promenljiva res vec deklarisana u opsegu na liniji 9
+ERROR 11:46:02,441 - Ime arr nije deklarisano na liniji 11
+ERROR 11:46:02,441 - Ime a nije deklarisano na liniji 13
+ERROR 11:46:02,441 - Ime var1 nije deklarisano na liniji 14
+ERROR 11:46:02,441 - Metoda void main() ne postoji
+INFO  11:46:02,441 - ==================SINTAKSNA ANALIZA====================
+INFO  11:46:02,441 - 5	symbolic constants
+INFO  11:46:02,441 - 5	global variables
+INFO  11:46:02,441 - 3	local variables
+INFO  11:46:02,442 - Parsiranje nije uspesno zavrseno

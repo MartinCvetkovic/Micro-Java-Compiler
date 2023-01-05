@@ -6,18 +6,20 @@ program p0_
 	char string1, string2[];
 	bool bool1, bool2[], bool3;
 	{
-		void main() char res, string1; int arr1[];{
+		void main() char res, string1; int arr1[], a;{
 			arr1 = new int[2];
-			arr[0] = 0;
-			arr[1] = 2;
-			a++;
-			a--;
-			a = -a;
-			c = 'e';
-			arr = new int[2];
-			[b] = a;
-			[] = a;
-			[b, br1,,] = a;
-			b = 20 - 40 / 10 % 4 * 2;
+			arr1[0] = 0;
+			arr1[1] = 2;
+			a = 1;
+			var1 = 5;
+			//a++;
+			//a--;
+			//a = -a;
+			//c = 'e';
+			//arr = new int[2];
+			//[b] = a;
+			//[] = a;
+			//[b, br1,,] = a;
+			//b = 20 - 40 / 10 % 4 * 2;
 		}
 	}

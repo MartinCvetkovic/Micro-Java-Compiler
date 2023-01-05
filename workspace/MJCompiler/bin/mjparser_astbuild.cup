@@ -65,6 +65,7 @@ nonterminal Declaration Declaration;
 nonterminal NullableFormPars NullableFormPars;
 nonterminal VarDecl VarDecl;
 nonterminal ClassDecl ClassDecl;
+nonterminal OptionalMinus OptionalMinus;
 nonterminal MultipleVarDecl MultipleVarDecl;
 nonterminal VarDeclList VarDeclList;
 nonterminal ConstructorDeclList ConstructorDeclList;
@@ -80,24 +81,21 @@ nonterminal Relop Relop;
 nonterminal Addop Addop;
 nonterminal Mulop Mulop; // Label
 nonterminal DesignatorStatement DesignatorStatement;
-nonterminal Expr Expr;
-nonterminal Designator Designator;
 nonterminal PrintArgs PrintArgs;
 nonterminal ActPars ActPars;
 nonterminal DesignatorList DesignatorList;
 nonterminal Condition Condition;
 nonterminal CondTerm CondTerm;
 nonterminal CondFact CondFact;
-nonterminal Term Term;
-nonterminal AddopTermList AddopTermList;
-nonterminal Factor Factor;
 nonterminal OptionalDesignator OptionalDesignator;
 nonterminal GlobalVarDecl GlobalVarDecl;
 nonterminal ExprError ExprError;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, SingleVarDecl, MethodName, MethodDecl;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Constant, ConstDecl, MultipleConstDecl, ConstantAssignement;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Factor, Term, Expr, AddopTermList;
 
 precedence left ELSE;
 
@@ -307,10 +305,12 @@ CondFact ::= 	(SingleExpr) Expr:E1 {: RESULT=new SingleExpr(E1); RESULT.setLine(
 				(MultipleExpr) Expr:E1 Relop:R2 Expr:E3 {: RESULT=new MultipleExpr(E1, R2, E3); RESULT.setLine(E1left); :}
 				;
 				
-Expr ::=	(PosExpr) Term:T1 AddopTermList:A2 {: RESULT=new PosExpr(T1, A2); RESULT.setLine(T1left); :}
-			|
-			(NegExpr) MINUS Term:T1 AddopTermList:A2 {: RESULT=new NegExpr(T1, A2); RESULT.setLine(T1left); :}
-			;
+OptionalMinus ::=	(WithMinus) MINUS {: RESULT=new WithMinus(); :}
+					|
+					(NoMinus) {: RESULT=new NoMinus(); :} /* epsilon */
+					;
+				
+Expr ::= (PosExpr) OptionalMinus:O1 Term:T2 AddopTermList:A3 {: RESULT=new PosExpr(O1, T2, A3); RESULT.setLine(O1left); :};
 			
 AddopTermList ::= 	(NoEmptyAddopTermList) Addop:A1 Term:T2 AddopTermList:A3 {: RESULT=new NoEmptyAddopTermList(A1, T2, A3); RESULT.setLine(A1left); :}
 					|
@@ -343,11 +343,11 @@ Factor ::= 	(FactorDesignatorEmpty) Designator:D1 {: RESULT=new FactorDesignator
 			(FactorExpr) LPAREN Expr:E1 RPAREN {: RESULT=new FactorExpr(E1); RESULT.setLine(E1left); :}
 			;
 
-Designator ::= 	(DesignatorIdent) IDENT:I1 {: RESULT=new DesignatorIdent(I1); RESULT.setLine(I1left); :}
+Designator ::= 	(DesignatorIdent) IDENT:name {: RESULT=new DesignatorIdent(name); RESULT.setLine(nameleft); :}
 				|
 				(DesignatorDotIdent) Designator:D1 DOT IDENT:I2 {: RESULT=new DesignatorDotIdent(D1, I2); RESULT.setLine(D1left); :}
 				|
-				(DesignatorExpr) Designator:D1 LBRACKET Expr:E2 RBRACKET {: RESULT=new DesignatorExpr(D1, E2); RESULT.setLine(D1left); :}
+				(DesignatorArr) Designator:D1 LBRACKET Expr:E2 RBRACKET {: RESULT=new DesignatorArr(D1, E2); RESULT.setLine(D1left); :}
 				;
 
 //Label ::= (LabelIdent) IDENT;

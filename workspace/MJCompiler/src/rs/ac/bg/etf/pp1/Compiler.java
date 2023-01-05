@@ -40,8 +40,8 @@ public class Compiler {
 		
 		try (BufferedReader br = new BufferedReader(new FileReader(sourceCode))) {
 			Yylex lexer = new Yylex(br);
-			MJParser p = new MJParser(lexer);
-	        Symbol s = p.parse();
+			MJParser parser = new MJParser(lexer);
+	        Symbol s = parser.parse();
 	        SyntaxNode prog = (SyntaxNode)(s.value);
 	        log.info("================Ispis sintaksnog stabla================");
 	        log.info("\n" + prog.toString());
@@ -59,6 +59,13 @@ public class Compiler {
 			
 	        //log.info("==============SADRZAJ TABELE SIMBOLA===================");
 	        tsdump();
+	        
+	        if (parser.errorDetected || !semanticAnalyzer.passed()) {
+	        	log.info("Parsiranje nije uspesno zavrseno");
+	        	return;
+	        } else {
+	        	log.info("Parsiranje je uspesno zavrseno");
+	        }
 	        
 		}
 	}

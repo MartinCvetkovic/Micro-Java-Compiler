@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 4/0/2023 14:58:15
+// 5/0/2023 13:45:49
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -48,6 +48,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(MethodDeclList MethodDeclList) { }
     public void visit(Program Program) { }
     public void visit(SingleVarDecl SingleVarDecl) { }
+    public void visit(OptionalMinus OptionalMinus) { }
     public void visit(PrintArgs PrintArgs) { }
     public void visit(FormPars FormPars) { }
     public void visit(AddopTermList AddopTermList) { }
@@ -63,7 +64,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(NotEquals NotEquals) { visit(); }
     public void visit(Equals Equals) { visit(); }
     public void visit(AssignopAssign AssignopAssign) { visit(); }
-    public void visit(DesignatorExpr DesignatorExpr) { visit(); }
+    public void visit(DesignatorArr DesignatorArr) { visit(); }
     public void visit(DesignatorDotIdent DesignatorDotIdent) { visit(); }
     public void visit(DesignatorIdent DesignatorIdent) { visit(); }
     public void visit(FactorExpr FactorExpr) { visit(); }
@@ -80,8 +81,9 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(SingleFactor SingleFactor) { visit(); }
     public void visit(EmptyAddopTermList EmptyAddopTermList) { visit(); }
     public void visit(NoEmptyAddopTermList NoEmptyAddopTermList) { visit(); }
-    public void visit(NegExpr NegExpr) { visit(); }
     public void visit(PosExpr PosExpr) { visit(); }
+    public void visit(NoMinus NoMinus) { visit(); }
+    public void visit(WithMinus WithMinus) { visit(); }
     public void visit(MultipleExpr MultipleExpr) { visit(); }
     public void visit(SingleExpr SingleExpr) { visit(); }
     public void visit(MultipleCondTerm MultipleCondTerm) { visit(); }

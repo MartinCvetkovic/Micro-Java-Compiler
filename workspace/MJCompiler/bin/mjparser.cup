@@ -61,17 +61,19 @@ terminal Boolean BOOL;
 terminal Integer NUM;
 
 nonterminal DeclarationList, Declaration, NullableFormPars;
-nonterminal VarDecl, ClassDecl;
+nonterminal VarDecl, ClassDecl, OptionalMinus;
 nonterminal MultipleVarDecl, VarDeclList, ConstructorDeclList, ConstructorDecl;
 nonterminal MethodDeclList, ClassDeclName, StatementList, Statement;
 nonterminal FormPars, MethodDeclReturn, Assignop, Relop, Addop, Mulop; // Label
-nonterminal DesignatorStatement, Expr, Designator, PrintArgs, ActPars, DesignatorList;
-nonterminal Condition, CondTerm, CondFact, Term, AddopTermList, Factor, OptionalDesignator;
+nonterminal DesignatorStatement, PrintArgs, ActPars, DesignatorList;
+nonterminal Condition, CondTerm, CondFact, OptionalDesignator;
 nonterminal GlobalVarDecl, ExprError;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, SingleVarDecl, MethodName, MethodDecl;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Constant, ConstDecl, MultipleConstDecl, ConstantAssignement;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Factor, Term, Expr, AddopTermList;
 
 precedence left ELSE;
 
@@ -281,10 +283,12 @@ CondFact ::= 	(SingleExpr) Expr
 				(MultipleExpr) Expr Relop Expr
 				;
 				
-Expr ::=	(PosExpr) Term AddopTermList
-			|
-			(NegExpr) MINUS Term AddopTermList
-			;
+OptionalMinus ::=	(WithMinus) MINUS
+					|
+					(NoMinus) /* epsilon */
+					;
+				
+Expr ::= (PosExpr) OptionalMinus Term AddopTermList;
 			
 AddopTermList ::= 	(NoEmptyAddopTermList) Addop Term AddopTermList
 					|
@@ -317,11 +321,11 @@ Factor ::= 	(FactorDesignatorEmpty) Designator
 			(FactorExpr) LPAREN Expr RPAREN
 			;
 
-Designator ::= 	(DesignatorIdent) IDENT
+Designator ::= 	(DesignatorIdent) IDENT:name
 				|
 				(DesignatorDotIdent) Designator DOT IDENT
 				|
-				(DesignatorExpr) Designator LBRACKET Expr RBRACKET
+				(DesignatorArr) Designator LBRACKET Expr RBRACKET
 				;
 
 //Label ::= (LabelIdent) IDENT;
