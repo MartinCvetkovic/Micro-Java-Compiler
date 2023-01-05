@@ -67,7 +67,7 @@ nonterminal MethodDeclList, ClassDeclName, StatementList, Statement;
 nonterminal FormPars, MethodDeclReturn, Assignop, Relop, Addop, Mulop; // Label
 nonterminal DesignatorStatement, PrintArgs, ActPars, DesignatorList;
 nonterminal Condition, CondTerm, CondFact, OptionalDesignator;
-nonterminal GlobalVarDecl, ExprError;
+nonterminal GlobalVarDecl;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, SingleVarDecl, MethodName, MethodDecl;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Constant, ConstDecl, MultipleConstDecl, ConstantAssignement;
@@ -234,13 +234,10 @@ PrintArgs ::= 	(PrintArgsNoEmpty) COMMA NUM PrintArgs
 				(PrintArgsEmpty) /* epsilon */
 				;
 
-ExprError ::= 	(ExprNoError) Expr
-				|
-				(ExprWithError) error:e
-				{: parser.report_error("Sintaksna greska prilikom dodele vrednosti na liniji " + eleft, null); :}
-				;
-				
-DesignatorStatement ::= (DesignatorAssignStmt) Designator Assignop ExprError
+DesignatorStatement ::= (DesignatorAssignStmt) Designator Assignop Expr
+						|
+						(DesignatorAssignStmtError) Designator Assignop error:e
+						{: parser.report_error("Sintaksna greska prilikom dodele vrednosti na liniji " + eleft, null); :}
 						|
 						(DesignatorActParsStmt) Designator LPAREN ActPars RPAREN
 						|

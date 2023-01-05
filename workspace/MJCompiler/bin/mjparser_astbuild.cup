@@ -89,7 +89,6 @@ nonterminal CondTerm CondTerm;
 nonterminal CondFact CondFact;
 nonterminal OptionalDesignator OptionalDesignator;
 nonterminal GlobalVarDecl GlobalVarDecl;
-nonterminal ExprError ExprError;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, SingleVarDecl, MethodName, MethodDecl;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Constant, ConstDecl, MultipleConstDecl, ConstantAssignement;
@@ -256,13 +255,10 @@ PrintArgs ::= 	(PrintArgsNoEmpty) COMMA NUM:N1 PrintArgs:P2 {: RESULT=new PrintA
 				(PrintArgsEmpty) {: RESULT=new PrintArgsEmpty(); :} /* epsilon */
 				;
 
-ExprError ::= 	(ExprNoError) Expr:E1 {: RESULT=new ExprNoError(E1); RESULT.setLine(E1left); :}
-				|
-				(ExprWithError) error:e
-				{: parser.report_error("Sintaksna greska prilikom dodele vrednosti na liniji " + eleft, null); :} {: RESULT=new ExprWithError(); :}
-				;
-				
-DesignatorStatement ::= (DesignatorAssignStmt) Designator:D1 Assignop:A2 ExprError:E3 {: RESULT=new DesignatorAssignStmt(D1, A2, E3); RESULT.setLine(D1left); :}
+DesignatorStatement ::= (DesignatorAssignStmt) Designator:D1 Assignop:A2 Expr:E3 {: RESULT=new DesignatorAssignStmt(D1, A2, E3); RESULT.setLine(D1left); :}
+						|
+						(DesignatorAssignStmtError) Designator:D1 Assignop:A2 error:e
+						{: parser.report_error("Sintaksna greska prilikom dodele vrednosti na liniji " + eleft, null); :} {: RESULT=new DesignatorAssignStmtError(D1, A2); RESULT.setLine(D1left); :}
 						|
 						(DesignatorActParsStmt) Designator:D1 LPAREN ActPars:A2 RPAREN {: RESULT=new DesignatorActParsStmt(D1, A2); RESULT.setLine(D1left); :}
 						|

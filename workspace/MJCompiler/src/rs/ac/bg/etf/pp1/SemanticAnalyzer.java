@@ -175,7 +175,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	
 	public void visit(DesignatorIdent designatorIdent) {
     	Obj obj = Tab.find(designatorIdent.getName());
-    	if(obj == Tab.noObj){
+    	if(obj.equals(Tab.noObj)){
 			report_error("Ime " + designatorIdent.getName() + " nije deklarisano", designatorIdent);
     	}
     	designatorIdent.obj = obj;
@@ -224,8 +224,15 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 	
 	public void visit(PosExpr posExpr) {
-		if (!posExpr.getTerm().struct.equals(Tab.intType) || !posExpr.getAddopTermList().struct.equals(Tab.intType)) {
+		if ((posExpr.getOptionalMinus() instanceof WithMinus) && !posExpr.getTerm().struct.equals(Tab.intType)) {
 			report_error("Izraz mora biti int tipa", posExpr);
+			posExpr.struct = Tab.noType;
+			return;
+		}
+		if (!(posExpr.getAddopTermList() instanceof EmptyAddopTermList)
+				&& (!posExpr.getTerm().struct.equals(Tab.intType) || !posExpr.getAddopTermList().struct.equals(Tab.intType))
+		) {
+			//report_error("Izraz mora biti int tipa", posExpr);
 			posExpr.struct = Tab.noType;
 			return;
 		}
@@ -234,10 +241,25 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	
 	public void visit(NoEmptyAddopTermList noEmptyAddopTermList) {
 		if (!noEmptyAddopTermList.getTerm().struct.equals(Tab.intType)) {
-			report_error("Mnozenje je moguce samo izmedju int tipova", noEmptyAddopTermList);
+			report_error("Sabiranje je moguce samo izmedju int tipova", noEmptyAddopTermList);
 			noEmptyAddopTermList.struct = Tab.noType;
 			return;
 		}
 		noEmptyAddopTermList.struct = noEmptyAddopTermList.getTerm().struct;
+	}
+	
+	public void visit(DesignatorAssignStmt designatorAssignStmt) {
+    	Obj designatorObj = Tab.find(designatorAssignStmt.getDesignator().obj.getName());
+    	if (designatorObj.equals(Tab.noObj)) {
+    		return;
+    	}
+    	if (designatorObj.getKind() != Obj.Var && designatorObj.getKind() != Obj.Elem) {
+			report_error("Nemoguca dodela vrednosti nepromenljivoj " + designatorObj.getName(), designatorAssignStmt);
+			return;
+    	}
+    	if (!designatorObj.getType().equals(designatorAssignStmt.getExpr().struct)) {
+			report_error("Nekompatibilni tipovi prilikom dodele vrednosti", designatorAssignStmt);
+			return;
+    	}
 	}
 }

@@ -1,17 +1,29 @@
 program p0_
 	const int br1 = 1, br2 = 2, br1 = 3;
-	const int ch = 'a';
+	const char ch = 'a';
+	const int ch2 = 'a';
 	const bool bl1 = true, bl2 = false, bl3 = true;
-	A var1;
+	int var1;
+	A var2;
 	char string1, string2[];
 	bool bool1, bool2[], bool3;
 	{
-		int main() char res, string1; int arr1[]; int res;{
-			arr1 = new int[2];
-			arr[0] = 0;
-			arr1[1] = 2;
+		int main() char res, string1; int arr1[], a; int res;{
+			//arr1 = new int[2];
+			//arr1[0] = 0;
+			//arr1[1] = 2;
+			var2 = 2;
+			b = 1;
 			a = 1;
-			var1 = 5;
+			br1 = 3;
+			string1 = 'a' + 1;
+			var1 = - ch;
+			var1 = ch;
+			var1 = var1 + true;
+			var1 = var1 * true;
+			var1 = (2 * (a + false));
+			bool1 = 1;
+			string1 = 1;
 			//a++;
 			//a--;
 			//a = -a;

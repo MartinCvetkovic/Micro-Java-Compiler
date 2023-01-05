@@ -6,7 +6,6 @@
 			<fileset dir="src/rs/ac/bg/etf/pp1">
 				<exclude name="util/Log4JUtils.java"/>
 				<exclude name="CodeGenerator.java"/>
-				<exclude name="SemanticPass.java"/>
 				<exclude name="SemanticAnalyzer.java"/>
 				<exclude name="Compiler.java"/>
 				<exclude name="extendedsymboltable/*.java"/>
@@ -49,7 +48,6 @@
 	<target name="compile" depends="repackage">
 		<javac srcdir="src/rs/ac/bg/etf/pp1" includeantruntime="false">
 			<exclude name="CodeGenerator.java"/>
-			<exclude name="SemanticPass.java"/>
 			<classpath>
 				<pathelement path="lib/JFlex.jar"/>
 				<pathelement path="lib/cup_v10k.jar"/>
