@@ -17,6 +17,7 @@ program p0_
 			arr1[1] = string1[1];
 			var2 = 2;
 			b = 1;
+			a = arr1;
 			a = 1;
 			br1 = 3;
 			string1 = 'a' + 1;
@@ -27,8 +28,10 @@ program p0_
 			var1 = (2 * (a + false));
 			bool1 = 1;
 			string1 = 1;
-			//a++;
-			//a--;
+			string1++;
+			br1++;
+			string1--;
+			br1--;
 			//a = -a;
 			//c = 'e';
 			//arr = new int[2];

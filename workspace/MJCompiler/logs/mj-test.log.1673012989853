@@ -1,0 +1,1139 @@
+INFO  14:49:39,721 - Compiling source file: C:\Faks\PP1\pp1domaci\workspace\MJCompiler\test\semanticProgramErrorA.mj
+INFO  14:49:39,770 - #2 program
+INFO  14:49:39,770 - #43 p0_
+INFO  14:49:39,770 - #5 const
+INFO  14:49:39,770 - #43 int
+INFO  14:49:39,771 - #43 br1
+INFO  14:49:39,771 - #7 =
+INFO  14:49:39,771 - #46 1
+INFO  14:49:39,771 - #6 ,
+INFO  14:49:39,771 - #43 br2
+INFO  14:49:39,771 - #7 =
+INFO  14:49:39,771 - #46 2
+INFO  14:49:39,771 - #6 ,
+INFO  14:49:39,771 - #43 br1
+INFO  14:49:39,771 - #7 =
+INFO  14:49:39,771 - #46 3
+INFO  14:49:39,771 - #8 ;
+INFO  14:49:39,772 - #5 const
+INFO  14:49:39,772 - #43 char
+INFO  14:49:39,772 - #43 ch
+INFO  14:49:39,772 - #7 =
+INFO  14:49:39,772 - #44 a
+INFO  14:49:39,772 - #8 ;
+INFO  14:49:39,776 - #5 const
+INFO  14:49:39,776 - #43 int
+INFO  14:49:39,776 - #43 ch2
+INFO  14:49:39,776 - #7 =
+INFO  14:49:39,776 - #44 a
+INFO  14:49:39,776 - #8 ;
+INFO  14:49:39,776 - #5 const
+INFO  14:49:39,777 - #43 bool
+INFO  14:49:39,777 - #43 bl1
+INFO  14:49:39,777 - #7 =
+INFO  14:49:39,777 - #45 true
+INFO  14:49:39,777 - #6 ,
+INFO  14:49:39,777 - #43 bl2
+INFO  14:49:39,777 - #7 =
+INFO  14:49:39,777 - #45 false
+INFO  14:49:39,777 - #6 ,
+INFO  14:49:39,777 - #43 bl3
+INFO  14:49:39,777 - #7 =
+INFO  14:49:39,777 - #45 true
+INFO  14:49:39,777 - #8 ;
+INFO  14:49:39,777 - #43 int
+INFO  14:49:39,778 - #43 var1
+INFO  14:49:39,778 - #8 ;
+INFO  14:49:39,778 - #43 A
+INFO  14:49:39,779 - #43 var2
+INFO  14:49:39,779 - #8 ;
+INFO  14:49:39,779 - #43 char
+INFO  14:49:39,779 - #43 string1
+INFO  14:49:39,779 - #6 ,
+INFO  14:49:39,779 - #43 string2
+INFO  14:49:39,779 - #9 [
+INFO  14:49:39,779 - #10 ]
+INFO  14:49:39,779 - #8 ;
+INFO  14:49:39,779 - #43 bool
+INFO  14:49:39,779 - #43 bool1
+INFO  14:49:39,779 - #6 ,
+INFO  14:49:39,779 - #43 bool2
+INFO  14:49:39,779 - #9 [
+INFO  14:49:39,779 - #10 ]
+INFO  14:49:39,779 - #6 ,
+INFO  14:49:39,779 - #43 bool3
+INFO  14:49:39,779 - #8 ;
+INFO  14:49:39,780 - #3 {
+INFO  14:49:39,780 - #43 int
+INFO  14:49:39,780 - #43 main
+INFO  14:49:39,780 - #13 (
+INFO  14:49:39,780 - #14 )
+INFO  14:49:39,782 - #43 char
+INFO  14:49:39,783 - #43 res
+INFO  14:49:39,783 - #6 ,
+INFO  14:49:39,783 - #43 string1
+INFO  14:49:39,783 - #8 ;
+INFO  14:49:39,783 - #43 int
+INFO  14:49:39,784 - #43 arr1
+INFO  14:49:39,784 - #9 [
+INFO  14:49:39,784 - #10 ]
+INFO  14:49:39,784 - #6 ,
+INFO  14:49:39,784 - #43 arr2
+INFO  14:49:39,785 - #9 [
+INFO  14:49:39,785 - #10 ]
+INFO  14:49:39,785 - #6 ,
+INFO  14:49:39,785 - #43 a
+INFO  14:49:39,785 - #8 ;
+INFO  14:49:39,785 - #43 int
+INFO  14:49:39,785 - #43 res
+INFO  14:49:39,785 - #8 ;
+INFO  14:49:39,785 - #3 {
+INFO  14:49:39,785 - #43 arr1
+INFO  14:49:39,785 - #7 =
+INFO  14:49:39,785 - #38 new
+INFO  14:49:39,787 - #43 int
+INFO  14:49:39,787 - #9 [
+INFO  14:49:39,787 - #46 2
+INFO  14:49:39,787 - #10 ]
+INFO  14:49:39,787 - #8 ;
+INFO  14:49:39,788 - #43 arr2
+INFO  14:49:39,788 - #7 =
+INFO  14:49:39,788 - #38 new
+INFO  14:49:39,788 - #43 char
+INFO  14:49:39,788 - #9 [
+INFO  14:49:39,788 - #46 2
+INFO  14:49:39,788 - #10 ]
+INFO  14:49:39,788 - #8 ;
+INFO  14:49:39,788 - #43 arr1
+INFO  14:49:39,788 - #9 [
+INFO  14:49:39,788 - #44 a
+INFO  14:49:39,788 - #10 ]
+INFO  14:49:39,788 - #7 =
+INFO  14:49:39,789 - #46 0
+INFO  14:49:39,789 - #8 ;
+INFO  14:49:39,789 - #43 arr1
+INFO  14:49:39,789 - #9 [
+INFO  14:49:39,789 - #46 1
+INFO  14:49:39,789 - #10 ]
+INFO  14:49:39,789 - #7 =
+INFO  14:49:39,789 - #46 2
+INFO  14:49:39,789 - #8 ;
+INFO  14:49:39,789 - #43 arr1
+INFO  14:49:39,790 - #9 [
+INFO  14:49:39,790 - #46 1
+INFO  14:49:39,790 - #10 ]
+INFO  14:49:39,790 - #7 =
+INFO  14:49:39,790 - #43 string2
+INFO  14:49:39,790 - #9 [
+INFO  14:49:39,790 - #46 1
+INFO  14:49:39,790 - #10 ]
+INFO  14:49:39,790 - #8 ;
+INFO  14:49:39,790 - #43 arr1
+INFO  14:49:39,790 - #9 [
+INFO  14:49:39,790 - #46 1
+INFO  14:49:39,791 - #10 ]
+INFO  14:49:39,791 - #7 =
+INFO  14:49:39,791 - #43 string1
+INFO  14:49:39,792 - #9 [
+INFO  14:49:39,792 - #46 1
+INFO  14:49:39,792 - #10 ]
+INFO  14:49:39,792 - #8 ;
+INFO  14:49:39,792 - #43 var2
+INFO  14:49:39,792 - #7 =
+INFO  14:49:39,792 - #46 2
+INFO  14:49:39,792 - #8 ;
+INFO  14:49:39,792 - #43 b
+INFO  14:49:39,792 - #7 =
+INFO  14:49:39,792 - #46 1
+INFO  14:49:39,792 - #8 ;
+INFO  14:49:39,792 - #43 a
+INFO  14:49:39,792 - #7 =
+INFO  14:49:39,792 - #43 arr1
+INFO  14:49:39,792 - #8 ;
+INFO  14:49:39,792 - #43 a
+INFO  14:49:39,792 - #7 =
+INFO  14:49:39,792 - #46 1
+INFO  14:49:39,792 - #8 ;
+INFO  14:49:39,792 - #43 br1
+INFO  14:49:39,792 - #7 =
+INFO  14:49:39,793 - #46 3
+INFO  14:49:39,793 - #8 ;
+INFO  14:49:39,793 - #43 string1
+INFO  14:49:39,793 - #7 =
+INFO  14:49:39,793 - #44 a
+INFO  14:49:39,793 - #22 +
+INFO  14:49:39,793 - #46 1
+INFO  14:49:39,794 - #8 ;
+INFO  14:49:39,794 - #43 var1
+INFO  14:49:39,794 - #7 =
+INFO  14:49:39,794 - #23 -
+INFO  14:49:39,794 - #43 ch
+INFO  14:49:39,794 - #8 ;
+INFO  14:49:39,794 - #43 var1
+INFO  14:49:39,794 - #7 =
+INFO  14:49:39,794 - #43 ch
+INFO  14:49:39,794 - #8 ;
+INFO  14:49:39,794 - #43 var1
+INFO  14:49:39,795 - #7 =
+INFO  14:49:39,795 - #43 var1
+INFO  14:49:39,795 - #22 +
+INFO  14:49:39,795 - #45 true
+INFO  14:49:39,795 - #8 ;
+INFO  14:49:39,795 - #43 var1
+INFO  14:49:39,795 - #7 =
+INFO  14:49:39,795 - #43 var1
+INFO  14:49:39,795 - #24 *
+INFO  14:49:39,795 - #45 true
+INFO  14:49:39,796 - #8 ;
+INFO  14:49:39,797 - #43 var1
+INFO  14:49:39,797 - #7 =
+INFO  14:49:39,797 - #13 (
+INFO  14:49:39,797 - #46 2
+INFO  14:49:39,797 - #24 *
+INFO  14:49:39,797 - #13 (
+INFO  14:49:39,797 - #43 a
+INFO  14:49:39,797 - #22 +
+INFO  14:49:39,797 - #45 false
+INFO  14:49:39,797 - #14 )
+INFO  14:49:39,797 - #14 )
+INFO  14:49:39,797 - #8 ;
+INFO  14:49:39,797 - #43 bool1
+INFO  14:49:39,797 - #7 =
+INFO  14:49:39,797 - #46 1
+INFO  14:49:39,797 - #8 ;
+INFO  14:49:39,797 - #43 string1
+INFO  14:49:39,797 - #7 =
+INFO  14:49:39,797 - #46 1
+INFO  14:49:39,797 - #8 ;
+INFO  14:49:39,797 - #43 string1
+INFO  14:49:39,797 - #41 ++
+INFO  14:49:39,797 - #8 ;
+INFO  14:49:39,798 - #43 br1
+INFO  14:49:39,798 - #41 ++
+INFO  14:49:39,798 - #8 ;
+INFO  14:49:39,798 - #43 string1
+INFO  14:49:39,798 - #42 --
+INFO  14:49:39,798 - #8 ;
+INFO  14:49:39,798 - #43 br1
+INFO  14:49:39,798 - #42 --
+INFO  14:49:39,798 - #8 ;
+INFO  14:49:39,799 - #4 }
+INFO  14:49:39,799 - #4 }
+INFO  14:49:39,799 - ================Ispis sintaksnog stabla================
+INFO  14:49:39,802 - 
+PProgram(
+  PProgramName(
+   p0_
+  ) [PProgramName]
+  DeclarationsList(
+    DeclarationsList(
+      DeclarationsList(
+        DeclarationsList(
+          DeclarationsList(
+            DeclarationsList(
+              DeclarationsList(
+                DeclarationsList(
+                  NoDeclaration(
+                  ) [NoDeclaration]
+                  ConstDeclaration(
+                    MultipleConstDeclaration(
+                      TypeIdent(
+                       int
+                      ) [TypeIdent]
+                      ConstantAssign(
+                       br1
+                        NumConst(
+                         1
+                        ) [NumConst]
+                      ) [ConstantAssign]
+                      MultipleConstDeclList(
+                        ConstantAssign(
+                         br2
+                          NumConst(
+                           2
+                          ) [NumConst]
+                        ) [ConstantAssign]
+                        LastMultipleConstDecl(
+                          ConstantAssign(
+                           br1
+                            NumConst(
+                             3
+                            ) [NumConst]
+                          ) [ConstantAssign]
+                        ) [LastMultipleConstDecl]
+                      ) [MultipleConstDeclList]
+                    ) [MultipleConstDeclaration]
+                  ) [ConstDeclaration]
+                ) [DeclarationsList]
+                ConstDeclaration(
+                  SingleConstDecl(
+                    TypeIdent(
+                     char
+                    ) [TypeIdent]
+                    ConstantAssign(
+                     ch
+                      CharConst(
+                       a
+                      ) [CharConst]
+                    ) [ConstantAssign]
+                  ) [SingleConstDecl]
+                ) [ConstDeclaration]
+              ) [DeclarationsList]
+              ConstDeclaration(
+                SingleConstDecl(
+                  TypeIdent(
+                   int
+                  ) [TypeIdent]
+                  ConstantAssign(
+                   ch2
+                    CharConst(
+                     a
+                    ) [CharConst]
+                  ) [ConstantAssign]
+                ) [SingleConstDecl]
+              ) [ConstDeclaration]
+            ) [DeclarationsList]
+            ConstDeclaration(
+              MultipleConstDeclaration(
+                TypeIdent(
+                 bool
+                ) [TypeIdent]
+                ConstantAssign(
+                 bl1
+                  BoolConst(
+                   true
+                  ) [BoolConst]
+                ) [ConstantAssign]
+                MultipleConstDeclList(
+                  ConstantAssign(
+                   bl2
+                    BoolConst(
+                     false
+                    ) [BoolConst]
+                  ) [ConstantAssign]
+                  LastMultipleConstDecl(
+                    ConstantAssign(
+                     bl3
+                      BoolConst(
+                       true
+                      ) [BoolConst]
+                    ) [ConstantAssign]
+                  ) [LastMultipleConstDecl]
+                ) [MultipleConstDeclList]
+              ) [MultipleConstDeclaration]
+            ) [ConstDeclaration]
+          ) [DeclarationsList]
+          GlobalVarDeclaration(
+            SingleGlobalVarDeclarationVarDecl(
+              TypeIdent(
+               int
+              ) [TypeIdent]
+              SingleVarDeclaration(
+               var1
+              ) [SingleVarDeclaration]
+            ) [SingleGlobalVarDeclarationVarDecl]
+          ) [GlobalVarDeclaration]
+        ) [DeclarationsList]
+        GlobalVarDeclaration(
+          SingleGlobalVarDeclarationVarDecl(
+            TypeIdent(
+             A
+            ) [TypeIdent]
+            SingleVarDeclaration(
+             var2
+            ) [SingleVarDeclaration]
+          ) [SingleGlobalVarDeclarationVarDecl]
+        ) [GlobalVarDeclaration]
+      ) [DeclarationsList]
+      GlobalVarDeclaration(
+        MultipleGlobalVarDeclaration(
+          TypeIdent(
+           char
+          ) [TypeIdent]
+          SingleVarDeclaration(
+           string1
+          ) [SingleVarDeclaration]
+          LastMultipleVarDecl(
+            SingleVarArrayDecl(
+             string2
+            ) [SingleVarArrayDecl]
+          ) [LastMultipleVarDecl]
+        ) [MultipleGlobalVarDeclaration]
+      ) [GlobalVarDeclaration]
+    ) [DeclarationsList]
+    GlobalVarDeclaration(
+      MultipleGlobalVarDeclaration(
+        TypeIdent(
+         bool
+        ) [TypeIdent]
+        SingleVarDeclaration(
+         bool1
+        ) [SingleVarDeclaration]
+        MultipleVarDeclList(
+          SingleVarArrayDecl(
+           bool2
+          ) [SingleVarArrayDecl]
+          LastMultipleVarDecl(
+            SingleVarDeclaration(
+             bool3
+            ) [SingleVarDeclaration]
+          ) [LastMultipleVarDecl]
+        ) [MultipleVarDeclList]
+      ) [MultipleGlobalVarDeclaration]
+    ) [GlobalVarDeclaration]
+  ) [DeclarationsList]
+  SingleMethodDeclList(
+    MethodDeclaration(
+      MethodDeclReturnType(
+        TypeIdent(
+         int
+        ) [TypeIdent]
+      ) [MethodDeclReturnType]
+      MethodNameIdent(
+       main
+      ) [MethodNameIdent]
+      NullableFormParsEmpty(
+      ) [NullableFormParsEmpty]
+      NoEmptyVarDeclList(
+        NoEmptyVarDeclList(
+          NoEmptyVarDeclList(
+            EmptyVarDeclList(
+            ) [EmptyVarDeclList]
+            MultipleVarDeclaration(
+              TypeIdent(
+               char
+              ) [TypeIdent]
+              SingleVarDeclaration(
+               res
+              ) [SingleVarDeclaration]
+              LastMultipleVarDecl(
+                SingleVarDeclaration(
+                 string1
+                ) [SingleVarDeclaration]
+              ) [LastMultipleVarDecl]
+            ) [MultipleVarDeclaration]
+          ) [NoEmptyVarDeclList]
+          MultipleVarDeclaration(
+            TypeIdent(
+             int
+            ) [TypeIdent]
+            SingleVarArrayDecl(
+             arr1
+            ) [SingleVarArrayDecl]
+            MultipleVarDeclList(
+              SingleVarArrayDecl(
+               arr2
+              ) [SingleVarArrayDecl]
+              LastMultipleVarDecl(
+                SingleVarDeclaration(
+                 a
+                ) [SingleVarDeclaration]
+              ) [LastMultipleVarDecl]
+            ) [MultipleVarDeclList]
+          ) [MultipleVarDeclaration]
+        ) [NoEmptyVarDeclList]
+        SingleVarDeclarationVarDecl(
+          TypeIdent(
+           int
+          ) [TypeIdent]
+          SingleVarDeclaration(
+           res
+          ) [SingleVarDeclaration]
+        ) [SingleVarDeclarationVarDecl]
+      ) [NoEmptyVarDeclList]
+      NoEmptyStatementList(
+        NoEmptyStatementList(
+          NoEmptyStatementList(
+            NoEmptyStatementList(
+              NoEmptyStatementList(
+                NoEmptyStatementList(
+                  NoEmptyStatementList(
+                    NoEmptyStatementList(
+                      NoEmptyStatementList(
+                        NoEmptyStatementList(
+                          NoEmptyStatementList(
+                            NoEmptyStatementList(
+                              NoEmptyStatementList(
+                                NoEmptyStatementList(
+                                  NoEmptyStatementList(
+                                    NoEmptyStatementList(
+                                      NoEmptyStatementList(
+                                        NoEmptyStatementList(
+                                          NoEmptyStatementList(
+                                            NoEmptyStatementList(
+                                              NoEmptyStatementList(
+                                                NoEmptyStatementList(
+                                                  NoEmptyStatementList(
+                                                    EmptyStatementList(
+                                                    ) [EmptyStatementList]
+                                                    DesignatorStmt(
+                                                      DesignatorAssignStmt(
+                                                        DesignatorIdent(
+                                                         arr1
+                                                        ) [DesignatorIdent]
+                                                        AssignopAssign(
+                                                        ) [AssignopAssign]
+                                                        PosExpr(
+                                                          NoMinus(
+                                                          ) [NoMinus]
+                                                          SingleFactor(
+                                                            FactorNewExpr(
+                                                              TypeIdent(
+                                                               int
+                                                              ) [TypeIdent]
+                                                              PosExpr(
+                                                                NoMinus(
+                                                                ) [NoMinus]
+                                                                SingleFactor(
+                                                                  FactorNum(
+                                                                   2
+                                                                  ) [FactorNum]
+                                                                ) [SingleFactor]
+                                                                EmptyAddopTermList(
+                                                                ) [EmptyAddopTermList]
+                                                              ) [PosExpr]
+                                                            ) [FactorNewExpr]
+                                                          ) [SingleFactor]
+                                                          EmptyAddopTermList(
+                                                          ) [EmptyAddopTermList]
+                                                        ) [PosExpr]
+                                                      ) [DesignatorAssignStmt]
+                                                    ) [DesignatorStmt]
+                                                  ) [NoEmptyStatementList]
+                                                  DesignatorStmt(
+                                                    DesignatorAssignStmt(
+                                                      DesignatorIdent(
+                                                       arr2
+                                                      ) [DesignatorIdent]
+                                                      AssignopAssign(
+                                                      ) [AssignopAssign]
+                                                      PosExpr(
+                                                        NoMinus(
+                                                        ) [NoMinus]
+                                                        SingleFactor(
+                                                          FactorNewExpr(
+                                                            TypeIdent(
+                                                             char
+                                                            ) [TypeIdent]
+                                                            PosExpr(
+                                                              NoMinus(
+                                                              ) [NoMinus]
+                                                              SingleFactor(
+                                                                FactorNum(
+                                                                 2
+                                                                ) [FactorNum]
+                                                              ) [SingleFactor]
+                                                              EmptyAddopTermList(
+                                                              ) [EmptyAddopTermList]
+                                                            ) [PosExpr]
+                                                          ) [FactorNewExpr]
+                                                        ) [SingleFactor]
+                                                        EmptyAddopTermList(
+                                                        ) [EmptyAddopTermList]
+                                                      ) [PosExpr]
+                                                    ) [DesignatorAssignStmt]
+                                                  ) [DesignatorStmt]
+                                                ) [NoEmptyStatementList]
+                                                DesignatorStmt(
+                                                  DesignatorAssignStmt(
+                                                    DesignatorArr(
+                                                      DesignatorIdent(
+                                                       arr1
+                                                      ) [DesignatorIdent]
+                                                      PosExpr(
+                                                        NoMinus(
+                                                        ) [NoMinus]
+                                                        SingleFactor(
+                                                          FactorChar(
+                                                           a
+                                                          ) [FactorChar]
+                                                        ) [SingleFactor]
+                                                        EmptyAddopTermList(
+                                                        ) [EmptyAddopTermList]
+                                                      ) [PosExpr]
+                                                    ) [DesignatorArr]
+                                                    AssignopAssign(
+                                                    ) [AssignopAssign]
+                                                    PosExpr(
+                                                      NoMinus(
+                                                      ) [NoMinus]
+                                                      SingleFactor(
+                                                        FactorNum(
+                                                         0
+                                                        ) [FactorNum]
+                                                      ) [SingleFactor]
+                                                      EmptyAddopTermList(
+                                                      ) [EmptyAddopTermList]
+                                                    ) [PosExpr]
+                                                  ) [DesignatorAssignStmt]
+                                                ) [DesignatorStmt]
+                                              ) [NoEmptyStatementList]
+                                              DesignatorStmt(
+                                                DesignatorAssignStmt(
+                                                  DesignatorArr(
+                                                    DesignatorIdent(
+                                                     arr1
+                                                    ) [DesignatorIdent]
+                                                    PosExpr(
+                                                      NoMinus(
+                                                      ) [NoMinus]
+                                                      SingleFactor(
+                                                        FactorNum(
+                                                         1
+                                                        ) [FactorNum]
+                                                      ) [SingleFactor]
+                                                      EmptyAddopTermList(
+                                                      ) [EmptyAddopTermList]
+                                                    ) [PosExpr]
+                                                  ) [DesignatorArr]
+                                                  AssignopAssign(
+                                                  ) [AssignopAssign]
+                                                  PosExpr(
+                                                    NoMinus(
+                                                    ) [NoMinus]
+                                                    SingleFactor(
+                                                      FactorNum(
+                                                       2
+                                                      ) [FactorNum]
+                                                    ) [SingleFactor]
+                                                    EmptyAddopTermList(
+                                                    ) [EmptyAddopTermList]
+                                                  ) [PosExpr]
+                                                ) [DesignatorAssignStmt]
+                                              ) [DesignatorStmt]
+                                            ) [NoEmptyStatementList]
+                                            DesignatorStmt(
+                                              DesignatorAssignStmt(
+                                                DesignatorArr(
+                                                  DesignatorIdent(
+                                                   arr1
+                                                  ) [DesignatorIdent]
+                                                  PosExpr(
+                                                    NoMinus(
+                                                    ) [NoMinus]
+                                                    SingleFactor(
+                                                      FactorNum(
+                                                       1
+                                                      ) [FactorNum]
+                                                    ) [SingleFactor]
+                                                    EmptyAddopTermList(
+                                                    ) [EmptyAddopTermList]
+                                                  ) [PosExpr]
+                                                ) [DesignatorArr]
+                                                AssignopAssign(
+                                                ) [AssignopAssign]
+                                                PosExpr(
+                                                  NoMinus(
+                                                  ) [NoMinus]
+                                                  SingleFactor(
+                                                    FactorDesignatorEmpty(
+                                                      DesignatorArr(
+                                                        DesignatorIdent(
+                                                         string2
+                                                        ) [DesignatorIdent]
+                                                        PosExpr(
+                                                          NoMinus(
+                                                          ) [NoMinus]
+                                                          SingleFactor(
+                                                            FactorNum(
+                                                             1
+                                                            ) [FactorNum]
+                                                          ) [SingleFactor]
+                                                          EmptyAddopTermList(
+                                                          ) [EmptyAddopTermList]
+                                                        ) [PosExpr]
+                                                      ) [DesignatorArr]
+                                                    ) [FactorDesignatorEmpty]
+                                                  ) [SingleFactor]
+                                                  EmptyAddopTermList(
+                                                  ) [EmptyAddopTermList]
+                                                ) [PosExpr]
+                                              ) [DesignatorAssignStmt]
+                                            ) [DesignatorStmt]
+                                          ) [NoEmptyStatementList]
+                                          DesignatorStmt(
+                                            DesignatorAssignStmt(
+                                              DesignatorArr(
+                                                DesignatorIdent(
+                                                 arr1
+                                                ) [DesignatorIdent]
+                                                PosExpr(
+                                                  NoMinus(
+                                                  ) [NoMinus]
+                                                  SingleFactor(
+                                                    FactorNum(
+                                                     1
+                                                    ) [FactorNum]
+                                                  ) [SingleFactor]
+                                                  EmptyAddopTermList(
+                                                  ) [EmptyAddopTermList]
+                                                ) [PosExpr]
+                                              ) [DesignatorArr]
+                                              AssignopAssign(
+                                              ) [AssignopAssign]
+                                              PosExpr(
+                                                NoMinus(
+                                                ) [NoMinus]
+                                                SingleFactor(
+                                                  FactorDesignatorEmpty(
+                                                    DesignatorArr(
+                                                      DesignatorIdent(
+                                                       string1
+                                                      ) [DesignatorIdent]
+                                                      PosExpr(
+                                                        NoMinus(
+                                                        ) [NoMinus]
+                                                        SingleFactor(
+                                                          FactorNum(
+                                                           1
+                                                          ) [FactorNum]
+                                                        ) [SingleFactor]
+                                                        EmptyAddopTermList(
+                                                        ) [EmptyAddopTermList]
+                                                      ) [PosExpr]
+                                                    ) [DesignatorArr]
+                                                  ) [FactorDesignatorEmpty]
+                                                ) [SingleFactor]
+                                                EmptyAddopTermList(
+                                                ) [EmptyAddopTermList]
+                                              ) [PosExpr]
+                                            ) [DesignatorAssignStmt]
+                                          ) [DesignatorStmt]
+                                        ) [NoEmptyStatementList]
+                                        DesignatorStmt(
+                                          DesignatorAssignStmt(
+                                            DesignatorIdent(
+                                             var2
+                                            ) [DesignatorIdent]
+                                            AssignopAssign(
+                                            ) [AssignopAssign]
+                                            PosExpr(
+                                              NoMinus(
+                                              ) [NoMinus]
+                                              SingleFactor(
+                                                FactorNum(
+                                                 2
+                                                ) [FactorNum]
+                                              ) [SingleFactor]
+                                              EmptyAddopTermList(
+                                              ) [EmptyAddopTermList]
+                                            ) [PosExpr]
+                                          ) [DesignatorAssignStmt]
+                                        ) [DesignatorStmt]
+                                      ) [NoEmptyStatementList]
+                                      DesignatorStmt(
+                                        DesignatorAssignStmt(
+                                          DesignatorIdent(
+                                           b
+                                          ) [DesignatorIdent]
+                                          AssignopAssign(
+                                          ) [AssignopAssign]
+                                          PosExpr(
+                                            NoMinus(
+                                            ) [NoMinus]
+                                            SingleFactor(
+                                              FactorNum(
+                                               1
+                                              ) [FactorNum]
+                                            ) [SingleFactor]
+                                            EmptyAddopTermList(
+                                            ) [EmptyAddopTermList]
+                                          ) [PosExpr]
+                                        ) [DesignatorAssignStmt]
+                                      ) [DesignatorStmt]
+                                    ) [NoEmptyStatementList]
+                                    DesignatorStmt(
+                                      DesignatorAssignStmt(
+                                        DesignatorIdent(
+                                         a
+                                        ) [DesignatorIdent]
+                                        AssignopAssign(
+                                        ) [AssignopAssign]
+                                        PosExpr(
+                                          NoMinus(
+                                          ) [NoMinus]
+                                          SingleFactor(
+                                            FactorDesignatorEmpty(
+                                              DesignatorIdent(
+                                               arr1
+                                              ) [DesignatorIdent]
+                                            ) [FactorDesignatorEmpty]
+                                          ) [SingleFactor]
+                                          EmptyAddopTermList(
+                                          ) [EmptyAddopTermList]
+                                        ) [PosExpr]
+                                      ) [DesignatorAssignStmt]
+                                    ) [DesignatorStmt]
+                                  ) [NoEmptyStatementList]
+                                  DesignatorStmt(
+                                    DesignatorAssignStmt(
+                                      DesignatorIdent(
+                                       a
+                                      ) [DesignatorIdent]
+                                      AssignopAssign(
+                                      ) [AssignopAssign]
+                                      PosExpr(
+                                        NoMinus(
+                                        ) [NoMinus]
+                                        SingleFactor(
+                                          FactorNum(
+                                           1
+                                          ) [FactorNum]
+                                        ) [SingleFactor]
+                                        EmptyAddopTermList(
+                                        ) [EmptyAddopTermList]
+                                      ) [PosExpr]
+                                    ) [DesignatorAssignStmt]
+                                  ) [DesignatorStmt]
+                                ) [NoEmptyStatementList]
+                                DesignatorStmt(
+                                  DesignatorAssignStmt(
+                                    DesignatorIdent(
+                                     br1
+                                    ) [DesignatorIdent]
+                                    AssignopAssign(
+                                    ) [AssignopAssign]
+                                    PosExpr(
+                                      NoMinus(
+                                      ) [NoMinus]
+                                      SingleFactor(
+                                        FactorNum(
+                                         3
+                                        ) [FactorNum]
+                                      ) [SingleFactor]
+                                      EmptyAddopTermList(
+                                      ) [EmptyAddopTermList]
+                                    ) [PosExpr]
+                                  ) [DesignatorAssignStmt]
+                                ) [DesignatorStmt]
+                              ) [NoEmptyStatementList]
+                              DesignatorStmt(
+                                DesignatorAssignStmt(
+                                  DesignatorIdent(
+                                   string1
+                                  ) [DesignatorIdent]
+                                  AssignopAssign(
+                                  ) [AssignopAssign]
+                                  PosExpr(
+                                    NoMinus(
+                                    ) [NoMinus]
+                                    SingleFactor(
+                                      FactorChar(
+                                       a
+                                      ) [FactorChar]
+                                    ) [SingleFactor]
+                                    NoEmptyAddopTermList(
+                                      Plus(
+                                      ) [Plus]
+                                      SingleFactor(
+                                        FactorNum(
+                                         1
+                                        ) [FactorNum]
+                                      ) [SingleFactor]
+                                      EmptyAddopTermList(
+                                      ) [EmptyAddopTermList]
+                                    ) [NoEmptyAddopTermList]
+                                  ) [PosExpr]
+                                ) [DesignatorAssignStmt]
+                              ) [DesignatorStmt]
+                            ) [NoEmptyStatementList]
+                            DesignatorStmt(
+                              DesignatorAssignStmt(
+                                DesignatorIdent(
+                                 var1
+                                ) [DesignatorIdent]
+                                AssignopAssign(
+                                ) [AssignopAssign]
+                                PosExpr(
+                                  WithMinus(
+                                  ) [WithMinus]
+                                  SingleFactor(
+                                    FactorDesignatorEmpty(
+                                      DesignatorIdent(
+                                       ch
+                                      ) [DesignatorIdent]
+                                    ) [FactorDesignatorEmpty]
+                                  ) [SingleFactor]
+                                  EmptyAddopTermList(
+                                  ) [EmptyAddopTermList]
+                                ) [PosExpr]
+                              ) [DesignatorAssignStmt]
+                            ) [DesignatorStmt]
+                          ) [NoEmptyStatementList]
+                          DesignatorStmt(
+                            DesignatorAssignStmt(
+                              DesignatorIdent(
+                               var1
+                              ) [DesignatorIdent]
+                              AssignopAssign(
+                              ) [AssignopAssign]
+                              PosExpr(
+                                NoMinus(
+                                ) [NoMinus]
+                                SingleFactor(
+                                  FactorDesignatorEmpty(
+                                    DesignatorIdent(
+                                     ch
+                                    ) [DesignatorIdent]
+                                  ) [FactorDesignatorEmpty]
+                                ) [SingleFactor]
+                                EmptyAddopTermList(
+                                ) [EmptyAddopTermList]
+                              ) [PosExpr]
+                            ) [DesignatorAssignStmt]
+                          ) [DesignatorStmt]
+                        ) [NoEmptyStatementList]
+                        DesignatorStmt(
+                          DesignatorAssignStmt(
+                            DesignatorIdent(
+                             var1
+                            ) [DesignatorIdent]
+                            AssignopAssign(
+                            ) [AssignopAssign]
+                            PosExpr(
+                              NoMinus(
+                              ) [NoMinus]
+                              SingleFactor(
+                                FactorDesignatorEmpty(
+                                  DesignatorIdent(
+                                   var1
+                                  ) [DesignatorIdent]
+                                ) [FactorDesignatorEmpty]
+                              ) [SingleFactor]
+                              NoEmptyAddopTermList(
+                                Plus(
+                                ) [Plus]
+                                SingleFactor(
+                                  FactorBool(
+                                   true
+                                  ) [FactorBool]
+                                ) [SingleFactor]
+                                EmptyAddopTermList(
+                                ) [EmptyAddopTermList]
+                              ) [NoEmptyAddopTermList]
+                            ) [PosExpr]
+                          ) [DesignatorAssignStmt]
+                        ) [DesignatorStmt]
+                      ) [NoEmptyStatementList]
+                      DesignatorStmt(
+                        DesignatorAssignStmt(
+                          DesignatorIdent(
+                           var1
+                          ) [DesignatorIdent]
+                          AssignopAssign(
+                          ) [AssignopAssign]
+                          PosExpr(
+                            NoMinus(
+                            ) [NoMinus]
+                            MultipleFactors(
+                              SingleFactor(
+                                FactorDesignatorEmpty(
+                                  DesignatorIdent(
+                                   var1
+                                  ) [DesignatorIdent]
+                                ) [FactorDesignatorEmpty]
+                              ) [SingleFactor]
+                              Mul(
+                              ) [Mul]
+                              FactorBool(
+                               true
+                              ) [FactorBool]
+                            ) [MultipleFactors]
+                            EmptyAddopTermList(
+                            ) [EmptyAddopTermList]
+                          ) [PosExpr]
+                        ) [DesignatorAssignStmt]
+                      ) [DesignatorStmt]
+                    ) [NoEmptyStatementList]
+                    DesignatorStmt(
+                      DesignatorAssignStmt(
+                        DesignatorIdent(
+                         var1
+                        ) [DesignatorIdent]
+                        AssignopAssign(
+                        ) [AssignopAssign]
+                        PosExpr(
+                          NoMinus(
+                          ) [NoMinus]
+                          SingleFactor(
+                            FactorExpr(
+                              PosExpr(
+                                NoMinus(
+                                ) [NoMinus]
+                                MultipleFactors(
+                                  SingleFactor(
+                                    FactorNum(
+                                     2
+                                    ) [FactorNum]
+                                  ) [SingleFactor]
+                                  Mul(
+                                  ) [Mul]
+                                  FactorExpr(
+                                    PosExpr(
+                                      NoMinus(
+                                      ) [NoMinus]
+                                      SingleFactor(
+                                        FactorDesignatorEmpty(
+                                          DesignatorIdent(
+                                           a
+                                          ) [DesignatorIdent]
+                                        ) [FactorDesignatorEmpty]
+                                      ) [SingleFactor]
+                                      NoEmptyAddopTermList(
+                                        Plus(
+                                        ) [Plus]
+                                        SingleFactor(
+                                          FactorBool(
+                                           false
+                                          ) [FactorBool]
+                                        ) [SingleFactor]
+                                        EmptyAddopTermList(
+                                        ) [EmptyAddopTermList]
+                                      ) [NoEmptyAddopTermList]
+                                    ) [PosExpr]
+                                  ) [FactorExpr]
+                                ) [MultipleFactors]
+                                EmptyAddopTermList(
+                                ) [EmptyAddopTermList]
+                              ) [PosExpr]
+                            ) [FactorExpr]
+                          ) [SingleFactor]
+                          EmptyAddopTermList(
+                          ) [EmptyAddopTermList]
+                        ) [PosExpr]
+                      ) [DesignatorAssignStmt]
+                    ) [DesignatorStmt]
+                  ) [NoEmptyStatementList]
+                  DesignatorStmt(
+                    DesignatorAssignStmt(
+                      DesignatorIdent(
+                       bool1
+                      ) [DesignatorIdent]
+                      AssignopAssign(
+                      ) [AssignopAssign]
+                      PosExpr(
+                        NoMinus(
+                        ) [NoMinus]
+                        SingleFactor(
+                          FactorNum(
+                           1
+                          ) [FactorNum]
+                        ) [SingleFactor]
+                        EmptyAddopTermList(
+                        ) [EmptyAddopTermList]
+                      ) [PosExpr]
+                    ) [DesignatorAssignStmt]
+                  ) [DesignatorStmt]
+                ) [NoEmptyStatementList]
+                DesignatorStmt(
+                  DesignatorAssignStmt(
+                    DesignatorIdent(
+                     string1
+                    ) [DesignatorIdent]
+                    AssignopAssign(
+                    ) [AssignopAssign]
+                    PosExpr(
+                      NoMinus(
+                      ) [NoMinus]
+                      SingleFactor(
+                        FactorNum(
+                         1
+                        ) [FactorNum]
+                      ) [SingleFactor]
+                      EmptyAddopTermList(
+                      ) [EmptyAddopTermList]
+                    ) [PosExpr]
+                  ) [DesignatorAssignStmt]
+                ) [DesignatorStmt]
+              ) [NoEmptyStatementList]
+              DesignatorStmt(
+                DesignatorIncStmt(
+                  DesignatorIdent(
+                   string1
+                  ) [DesignatorIdent]
+                ) [DesignatorIncStmt]
+              ) [DesignatorStmt]
+            ) [NoEmptyStatementList]
+            DesignatorStmt(
+              DesignatorIncStmt(
+                DesignatorIdent(
+                 br1
+                ) [DesignatorIdent]
+              ) [DesignatorIncStmt]
+            ) [DesignatorStmt]
+          ) [NoEmptyStatementList]
+          DesignatorStmt(
+            DesignatorDecStmt(
+              DesignatorIdent(
+               string1
+              ) [DesignatorIdent]
+            ) [DesignatorDecStmt]
+          ) [DesignatorStmt]
+        ) [NoEmptyStatementList]
+        DesignatorStmt(
+          DesignatorDecStmt(
+            DesignatorIdent(
+             br1
+            ) [DesignatorIdent]
+          ) [DesignatorDecStmt]
+        ) [DesignatorStmt]
+      ) [NoEmptyStatementList]
+    ) [MethodDeclaration]
+  ) [SingleMethodDeclList]
+) [PProgram]
+INFO  14:49:39,804 - ==================SEMANTICKA OBRADA====================
+INFO  14:49:39,812 - Deklarisana konstanta br1 na liniji 2, objektni cvor: Con br1: int, 1, 0 
+INFO  14:49:39,812 - Deklarisana konstanta br2 na liniji 2, objektni cvor: Con br2: int, 2, 0 
+ERROR 14:49:39,812 - Konstanta br1 ponovo deklarisana na liniji 2
+INFO  14:49:39,812 - Deklarisana konstanta ch na liniji 3, objektni cvor: Con ch: char, 97, 0 
+ERROR 14:49:39,812 - Pogresan tip vrednosti koja se dodeljuje konstanti ch2 na liniji 4
+INFO  14:49:39,812 - Deklarisana konstanta bl1 na liniji 5, objektni cvor: Con bl1: bool, 1, 0 
+INFO  14:49:39,812 - Deklarisana konstanta bl2 na liniji 5, objektni cvor: Con bl2: bool, 0, 0 
+INFO  14:49:39,812 - Deklarisana konstanta bl3 na liniji 5, objektni cvor: Con bl3: bool, 1, 0 
+INFO  14:49:39,812 - Deklarisana promenljiva var1 na liniji 6, objektni cvor: Var var1: int, 0, 0 
+ERROR 14:49:39,812 - Nije pronadjen tip A u tabeli simbola! 
+INFO  14:49:39,813 - Deklarisana promenljiva string1 na liniji 8, objektni cvor: Var string1: char, 1, 0 
+INFO  14:49:39,813 - Deklarisana promenljiva string2 na liniji 8, objektni cvor: Var string2: Arr of char, 2, 0 
+INFO  14:49:39,813 - Deklarisana promenljiva bool1 na liniji 9, objektni cvor: Var bool1: bool, 3, 0 
+INFO  14:49:39,813 - Deklarisana promenljiva bool2 na liniji 9, objektni cvor: Var bool2: Arr of bool, 4, 0 
+INFO  14:49:39,813 - Deklarisana promenljiva bool3 na liniji 9, objektni cvor: Var bool3: bool, 5, 0 
+INFO  14:49:39,813 - Deklarisana funkcija main na liniji 11, objektni cvor: Meth main: int, 0, 0 
+
+INFO  14:49:39,813 - Deklarisana promenljiva res na liniji 11, objektni cvor: Var res: char, 0, 1 
+INFO  14:49:39,813 - Deklarisana promenljiva string1 na liniji 11, objektni cvor: Var string1: char, 1, 1 
+INFO  14:49:39,813 - Deklarisana promenljiva arr1 na liniji 11, objektni cvor: Var arr1: Arr of int, 2, 1 
+INFO  14:49:39,813 - Deklarisana promenljiva arr2 na liniji 11, objektni cvor: Var arr2: Arr of int, 3, 1 
+INFO  14:49:39,813 - Deklarisana promenljiva a na liniji 11, objektni cvor: Var a: int, 4, 1 
+ERROR 14:49:39,813 - Promenljiva res vec deklarisana u opsegu na liniji 11
+ERROR 14:49:39,813 - Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj na liniji 13
+ERROR 14:49:39,814 - Indeks niza mora biti int tipa na liniji 14
+ERROR 14:49:39,814 - Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj na liniji 16
+ERROR 14:49:39,814 - Simbol string1 nije niz na liniji 17
+ERROR 14:49:39,814 - Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj na liniji 17
+ERROR 14:49:39,814 - Ime var2 nije deklarisano na liniji 18
+ERROR 14:49:39,814 - Ime b nije deklarisano na liniji 19
+ERROR 14:49:39,814 - Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj na liniji 20
+ERROR 14:49:39,814 - Nemoguca dodela vrednosti nepromenljivoj br1 na liniji 22
+ERROR 14:49:39,814 - Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj na liniji 23
+ERROR 14:49:39,815 - Izraz mora biti int tipa na liniji 24
+ERROR 14:49:39,815 - Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj na liniji 24
+ERROR 14:49:39,815 - Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj na liniji 25
+ERROR 14:49:39,815 - Operacije sabiranja i oduzimanja su moguce samo izmedju int tipova na liniji 26
+ERROR 14:49:39,815 - Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj na liniji 26
+ERROR 14:49:39,815 - Operacije (*, /, %) su moguce samo izmedju int tipova na liniji 27
+ERROR 14:49:39,815 - Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj na liniji 27
+ERROR 14:49:39,815 - Operacije sabiranja i oduzimanja su moguce samo izmedju int tipova na liniji 28
+ERROR 14:49:39,815 - Operacije (*, /, %) su moguce samo izmedju int tipova na liniji 28
+ERROR 14:49:39,815 - Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj na liniji 28
+ERROR 14:49:39,815 - Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj na liniji 29
+ERROR 14:49:39,815 - Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj na liniji 30
+ERROR 14:49:39,815 - Inkrementiranje je moguce samo za tip int na liniji 31
+ERROR 14:49:39,815 - Nemoguce inkrementirati nepromenljivu br1 na liniji 32
+ERROR 14:49:39,815 - Dekrementiranje je moguce samo za tip int na liniji 33
+ERROR 14:49:39,815 - Nemoguce dekrementirati nepromenljivu br1 na liniji 34
+ERROR 14:49:39,815 - Metoda void main() ne postoji
+INFO  14:49:39,815 - ==================SINTAKSNA ANALIZA====================
+INFO  14:49:39,816 - 6	symbolic constants
+INFO  14:49:39,816 - 6	global variables
+INFO  14:49:39,816 - 5	local variables
+INFO  14:49:39,817 - Parsiranje nije uspesno zavrseno

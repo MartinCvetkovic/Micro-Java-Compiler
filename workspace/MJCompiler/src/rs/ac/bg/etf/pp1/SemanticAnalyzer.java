@@ -225,16 +225,8 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	
 	public void visit(MultipleFactors multipleFactors) {
 		Struct lstruct, rstruct;
-		if (multipleFactors.getTerm().struct.getKind() == Struct.Array) {
-			lstruct = multipleFactors.getTerm().struct.getElemType();
-		} else {
-			lstruct = multipleFactors.getTerm().struct;
-		}
-		if (multipleFactors.getFactor().struct.getKind() == Struct.Array) {
-			rstruct = multipleFactors.getFactor().struct.getElemType();
-		} else {
-			rstruct = multipleFactors.getFactor().struct;
-		}
+		lstruct = multipleFactors.getTerm().struct;
+		rstruct = multipleFactors.getFactor().struct;
 		if (lstruct.equals(rstruct) && lstruct.equals(Tab.intType)) {
 			multipleFactors.struct = lstruct;
 			return;
@@ -245,16 +237,8 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	
 	public void visit(PosExpr posExpr) {
 		Struct lstruct, rstruct;
-		if (posExpr.getTerm().struct.getKind() == Struct.Array) {
-			lstruct = posExpr.getTerm().struct.getElemType();
-		} else {
-			lstruct = posExpr.getTerm().struct;
-		}
-		if (!(posExpr.getAddopTermList() instanceof EmptyAddopTermList) && posExpr.getAddopTermList().struct.getKind() == Struct.Array) {
-			rstruct = posExpr.getAddopTermList().struct.getElemType();
-		} else {
-			rstruct = posExpr.getAddopTermList().struct;
-		}
+		lstruct = posExpr.getTerm().struct;
+		rstruct = posExpr.getAddopTermList().struct;
 		if ((posExpr.getOptionalMinus() instanceof WithMinus) && !lstruct.equals(Tab.intType)) {
 			report_error("Izraz mora biti int tipa", posExpr);
 			posExpr.struct = Tab.noType;
@@ -271,12 +255,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 	
 	public void visit(NoEmptyAddopTermList noEmptyAddopTermList) {
-		Struct lstruct;
-		if (noEmptyAddopTermList.getTerm().struct.getKind() == Struct.Array) {
-			lstruct = noEmptyAddopTermList.getTerm().struct.getElemType();
-		} else {
-			lstruct = noEmptyAddopTermList.getTerm().struct;
-		}
+		Struct lstruct = noEmptyAddopTermList.getTerm().struct;
 		if (!lstruct.equals(Tab.intType)) {
 			report_error("Operacije sabiranja i oduzimanja su moguce samo izmedju int tipova", noEmptyAddopTermList);
 			noEmptyAddopTermList.struct = Tab.noType;
@@ -286,49 +265,66 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 	
 	public void visit(DesignatorAssignStmt designatorAssignStmt) {
-		if (designatorAssignStmt.getDesignator().obj == null) {
-			return;
-		}
-    	Obj designatorObj = Tab.find(designatorAssignStmt.getDesignator().obj.getName());
-    	if (designatorObj.equals(Tab.noObj) || designatorObj.getType().getKind() == Struct.None) {
+    	Obj designatorObj = designatorAssignStmt.getDesignator().obj;
+    	if (designatorAssignStmt.getDesignator().obj == null || designatorObj.equals(Tab.noObj) || designatorObj.getType().getKind() == Struct.None) {
     		return;
     	}
     	if (designatorObj.getKind() != Obj.Var && designatorObj.getKind() != Obj.Elem) {
 			report_error("Nemoguca dodela vrednosti nepromenljivoj " + designatorObj.getName(), designatorAssignStmt);
 			return;
     	}
-    	if (designatorObj.getType().getKind() == Struct.Array) {
-    		if (designatorAssignStmt.getExpr().struct.getKind() == Struct.Array) {
-    			if (!designatorObj.getType().equals(designatorAssignStmt.getExpr().struct)){
-        			report_error("Nekompatibilan tip alociranog niza", designatorAssignStmt);
-    				return;
-    			}
-    		}
-    		else if (!designatorObj.getType().getElemType().equals(designatorAssignStmt.getExpr().struct)) {
-    			report_error("Nekompatibilni tipovi prilikom dodele vrednosti elementu niza", designatorAssignStmt);
-    			return;
-        	}
-    	} else {
-    		if (!designatorObj.getType().equals(designatorAssignStmt.getExpr().struct)) {
-    			report_error("Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj", designatorAssignStmt);
-    			return;
-        	}
+    	if (!designatorObj.getType().equals(designatorAssignStmt.getExpr().struct)) {
+			report_error("Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj", designatorAssignStmt);
+			return;
     	}
 	}
 	
 	public void visit(DesignatorArr designatorArr) {
     	Obj designatorObj = Tab.find(designatorArr.getDesignator().obj.getName());
     	if (designatorObj.equals(Tab.noObj)) {
+			designatorArr.obj = Tab.noObj;
     		return;
     	}
     	if (designatorObj.getType().getKind() != Struct.Array) {
 			report_error("Simbol " + designatorObj.getName() + " nije niz", designatorArr);
+			designatorArr.obj = Tab.noObj;
     		return;
     	}
     	if (!designatorArr.getExpr().struct.equals(Tab.intType)) {
 			report_error("Indeks niza mora biti int tipa", designatorArr);
+			designatorArr.obj = Tab.noObj;
     		return;
     	}
-    	designatorArr.obj = designatorObj;
+    	designatorArr.obj = new Obj(Obj.Elem, designatorObj.getName(), designatorObj.getType().getElemType());
+	}
+	
+	public void visit(DesignatorIncStmt designatorIncStmt) {
+		Obj designatorObj = designatorIncStmt.getDesignator().obj;
+    	if (designatorIncStmt.getDesignator().obj == null || designatorObj.equals(Tab.noObj) || designatorObj.getType().getKind() == Struct.None) {
+    		return;
+    	}
+    	if (designatorObj.getKind() != Obj.Var && designatorObj.getKind() != Obj.Elem) {
+			report_error("Nemoguce inkrementirati nepromenljivu " + designatorObj.getName(), designatorIncStmt);
+			return;
+    	}
+    	if (!designatorObj.getType().equals(Tab.intType)) {
+			report_error("Inkrementiranje je moguce samo za tip int", designatorIncStmt);
+			return;
+    	}
+	}
+	
+	public void visit(DesignatorDecStmt designatorDecStmt) {
+		Obj designatorObj = designatorDecStmt.getDesignator().obj;
+    	if (designatorDecStmt.getDesignator().obj == null || designatorObj.equals(Tab.noObj) || designatorObj.getType().getKind() == Struct.None) {
+    		return;
+    	}
+    	if (designatorObj.getKind() != Obj.Var && designatorObj.getKind() != Obj.Elem) {
+			report_error("Nemoguce dekrementirati nepromenljivu " + designatorObj.getName(), designatorDecStmt);
+			return;
+    	}
+    	if (!designatorObj.getType().equals(Tab.intType)) {
+			report_error("Dekrementiranje je moguce samo za tip int", designatorDecStmt);
+			return;
+    	}
 	}
 }
