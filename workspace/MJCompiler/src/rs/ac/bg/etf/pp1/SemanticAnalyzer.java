@@ -327,4 +327,93 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			return;
     	}
 	}
+	
+	public void visit(ReadStmt readStmt) {
+		Obj designatorObj = readStmt.getDesignator().obj;
+    	if (designatorObj.getKind() != Obj.Var && designatorObj.getKind() != Obj.Elem) {
+			report_error("Nemoguce ucitati vrednost u nepromenljivu " + designatorObj.getName(), readStmt);
+			return;
+    	}
+    	if (
+    		!designatorObj.getType().equals(Tab.intType)
+    		&& !designatorObj.getType().equals(Tab.charType)
+    		&& !designatorObj.getType().equals(Tab.boolType)
+    	) {
+			report_error("Promenljiva u koju se ucitava mora biti int, char ili bool tipa", readStmt);
+			return;
+    	}
+	}
+	
+	public void visit(PrintStmt printStmt) {
+		Struct exprType = printStmt.getExpr().struct;
+    	if (
+    		!exprType.equals(Tab.intType)
+    		&& !exprType.equals(Tab.charType)
+    		&& !exprType.equals(Tab.boolType)
+    	) {
+			report_error("Promenljiva koja se ispisuje mora biti int, char ili bool tipa", printStmt);
+			return;
+    	}
+	}
+	
+	public void visit(MultipleDesignatorAssignStmt multipleDesignatorAssignStmt) {
+    	Obj designatorObj = multipleDesignatorAssignStmt.getDesignator().obj;
+    	Obj optionalDesignator = multipleDesignatorAssignStmt.getOptionalDesignator().obj;
+    	Obj designatorList = multipleDesignatorAssignStmt.getDesignatorList().obj;
+    	if (designatorObj == null || designatorObj.equals(Tab.noObj) || designatorObj.getType().getKind() == Struct.None) {
+    		return;
+    	}
+    	if (designatorObj.getType().getKind() != Struct.Array) {
+			report_error("Promenljiva sa desne strane multi dodele mora biti niz", multipleDesignatorAssignStmt);
+			return;
+    	}
+    	Obj resultNode = checkOptionalDesignatorAndDesignatorList(optionalDesignator, designatorList, multipleDesignatorAssignStmt);
+    	if (resultNode == null) {
+			return;
+    	}
+    	if (!resultNode.getType().equals(designatorObj.getType().getElemType())) {
+			report_error("Nekompatibilni tipovi izraza sa leve i desne strane multi dodele", multipleDesignatorAssignStmt);
+			return;
+    	}
+	}
+	
+	public void visit(OptionalDesignatorExists optionalDesignatorExists) {
+		optionalDesignatorExists.obj = optionalDesignatorExists.getDesignator().obj;
+	}
+	
+	public void visit(NoEmptyDesignatorList noEmptyDesignatorList) {
+		Obj optionalDesignator = noEmptyDesignatorList.getOptionalDesignator().obj;
+		Obj designatorList = noEmptyDesignatorList.getDesignatorList().obj;
+		noEmptyDesignatorList.obj = checkOptionalDesignatorAndDesignatorList(optionalDesignator, designatorList, noEmptyDesignatorList);
+	}
+	
+	private Obj checkOptionalDesignatorAndDesignatorList(Obj optionalDesignator, Obj designatorList, SyntaxNode syntaxNode) {
+		Struct tempStruct = null;
+		if (optionalDesignator != null) {
+			if (optionalDesignator.getKind() != Obj.Var && optionalDesignator.getKind() != Obj.Elem) {
+				report_error("Nemoguca dodela vrednosti nepromenljivoj", syntaxNode);
+				return null;
+			}
+			tempStruct = optionalDesignator.getType();
+		}
+		if (designatorList != null) {
+			if (designatorList.getKind() != Obj.Var && designatorList.getKind() != Obj.Elem) {
+				report_error("Nemoguca dodela vrednosti nepromenljivoj", syntaxNode);
+				return null;
+			}
+			if (tempStruct == null) {
+				tempStruct = designatorList.getType();
+			} else {
+				if (!optionalDesignator.getType().equals(designatorList.getType())) {
+					report_error("Nekompatibilni tipovi sa leve strane multi dodele", syntaxNode);
+					return null;
+				}
+			}
+		}
+		if (tempStruct == null) {
+			return null;
+		} else {
+			return new Obj(Obj.Var, "", tempStruct);
+		}
+	}
 }

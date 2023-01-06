@@ -83,16 +83,14 @@ nonterminal Mulop Mulop; // Label
 nonterminal DesignatorStatement DesignatorStatement;
 nonterminal PrintArgs PrintArgs;
 nonterminal ActPars ActPars;
-nonterminal DesignatorList DesignatorList;
 nonterminal Condition Condition;
 nonterminal CondTerm CondTerm;
 nonterminal CondFact CondFact;
-nonterminal OptionalDesignator OptionalDesignator;
 nonterminal GlobalVarDecl GlobalVarDecl;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, SingleVarDecl, MethodName, MethodDecl;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Constant, ConstDecl, MultipleConstDecl, ConstantAssignement;
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, OptionalDesignator, DesignatorList;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Factor, Term, Expr, AddopTermList;
 

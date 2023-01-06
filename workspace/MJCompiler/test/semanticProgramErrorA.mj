@@ -32,12 +32,14 @@ program p0_
 			br1++;
 			string1--;
 			br1--;
-			//a = -a;
-			//c = 'e';
-			//arr = new int[2];
-			//[b] = a;
-			//[] = a;
-			//[b, br1,,] = a;
-			//b = 20 - 40 / 10 % 4 * 2;
+			read(ch);
+			read(bool2);
+			print(bool2, 1, 2);
+			[var1] = a;
+			[br1] = arr1;
+			[bool1, var1,,] = arr1;
+			[, bool1,,] = arr1;
+			[,,,bool1] = arr1;
+			[bool1,bool1,bool1,bool1] = arr1;
 		}
 	}

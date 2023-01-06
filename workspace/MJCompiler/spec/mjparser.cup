@@ -65,13 +65,13 @@ nonterminal VarDecl, ClassDecl, OptionalMinus;
 nonterminal MultipleVarDecl, VarDeclList, ConstructorDeclList, ConstructorDecl;
 nonterminal MethodDeclList, ClassDeclName, StatementList, Statement;
 nonterminal FormPars, MethodDeclReturn, Assignop, Relop, Addop, Mulop; // Label
-nonterminal DesignatorStatement, PrintArgs, ActPars, DesignatorList;
-nonterminal Condition, CondTerm, CondFact, OptionalDesignator;
+nonterminal DesignatorStatement, PrintArgs, ActPars;
+nonterminal Condition, CondTerm, CondFact;
 nonterminal GlobalVarDecl;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, SingleVarDecl, MethodName, MethodDecl;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Constant, ConstDecl, MultipleConstDecl, ConstantAssignement;
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, OptionalDesignator, DesignatorList;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Factor, Term, Expr, AddopTermList;
 
