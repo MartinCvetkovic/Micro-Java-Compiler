@@ -7,13 +7,13 @@ program p0_
 	bool bool1, bool2[], bool3;
 	{
 		void main() char res, string1; int arr1[], a;{
-			//arr1 = new int[2];
-			//arr1[0] = 0;
-			//arr1[1] = 2;
+			arr1 = new int[2];
+			arr1[0] = 0;
+			arr1[1] = arr1[0 / 2] * 3;
 			a = 1;
 			var1 = - a;
 			var1 = var1 + 1;
-			var1 = (2 * (a + 3));
+			var1 = (2 * arr1[1] - (a - 3 + arr1[0]));
 			bool1 = true;
 			string1 = 'c';
 			//a++;

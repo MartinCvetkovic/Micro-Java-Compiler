@@ -8,10 +8,13 @@ program p0_
 	char string1, string2[];
 	bool bool1, bool2[], bool3;
 	{
-		int main() char res, string1; int arr1[], a; int res;{
-			//arr1 = new int[2];
-			//arr1[0] = 0;
-			//arr1[1] = 2;
+		int main() char res, string1; int arr1[], arr2[], a; int res;{
+			arr1 = new int[2];
+			arr2 = new char[2];
+			arr1['a'] = 0;
+			arr1[1] = 2;
+			arr1[1] = string2[1];
+			arr1[1] = string1[1];
 			var2 = 2;
 			b = 1;
 			a = 1;

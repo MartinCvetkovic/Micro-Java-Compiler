@@ -1,210 +1,190 @@
-INFO  12:59:23,621 - Compiling source file: C:\Faks\PP1\pp1domaci\workspace\MJCompiler\test\semanticProgramErrorA.mj
-INFO  12:59:23,691 - #2 program
-INFO  12:59:23,692 - #43 p0_
-INFO  12:59:23,692 - #5 const
-INFO  12:59:23,692 - #43 int
-INFO  12:59:23,692 - #43 br1
-INFO  12:59:23,693 - #7 =
-INFO  12:59:23,693 - #46 1
-INFO  12:59:23,693 - #6 ,
-INFO  12:59:23,693 - #43 br2
-INFO  12:59:23,693 - #7 =
-INFO  12:59:23,693 - #46 2
-INFO  12:59:23,693 - #6 ,
-INFO  12:59:23,694 - #43 br1
-INFO  12:59:23,694 - #7 =
-INFO  12:59:23,695 - #46 3
-INFO  12:59:23,695 - #8 ;
-INFO  12:59:23,695 - #5 const
-INFO  12:59:23,695 - #43 char
-INFO  12:59:23,695 - #43 ch
-INFO  12:59:23,695 - #7 =
-INFO  12:59:23,695 - #44 a
-INFO  12:59:23,695 - #8 ;
-INFO  12:59:23,696 - #5 const
-INFO  12:59:23,696 - #43 int
-INFO  12:59:23,696 - #43 ch2
-INFO  12:59:23,696 - #7 =
-INFO  12:59:23,696 - #44 a
-INFO  12:59:23,696 - #8 ;
-INFO  12:59:23,697 - #5 const
-INFO  12:59:23,697 - #43 bool
-INFO  12:59:23,697 - #43 bl1
-INFO  12:59:23,697 - #7 =
-INFO  12:59:23,697 - #45 true
-INFO  12:59:23,697 - #6 ,
-INFO  12:59:23,697 - #43 bl2
-INFO  12:59:23,697 - #7 =
-INFO  12:59:23,697 - #45 false
-INFO  12:59:23,698 - #6 ,
-INFO  12:59:23,698 - #43 bl3
-INFO  12:59:23,698 - #7 =
-INFO  12:59:23,698 - #45 true
-INFO  12:59:23,698 - #8 ;
-INFO  12:59:23,699 - #43 int
-INFO  12:59:23,699 - #43 var1
-INFO  12:59:23,699 - #8 ;
-INFO  12:59:23,699 - #43 A
-INFO  12:59:23,699 - #43 var2
-INFO  12:59:23,699 - #8 ;
-INFO  12:59:23,699 - #43 char
-INFO  12:59:23,699 - #43 string1
-INFO  12:59:23,699 - #6 ,
-INFO  12:59:23,699 - #43 string2
-INFO  12:59:23,699 - #9 [
-INFO  12:59:23,700 - #10 ]
-INFO  12:59:23,701 - #8 ;
-INFO  12:59:23,701 - #43 bool
-INFO  12:59:23,701 - #43 bool1
-INFO  12:59:23,701 - #6 ,
-INFO  12:59:23,701 - #43 bool2
-INFO  12:59:23,701 - #9 [
-INFO  12:59:23,701 - #10 ]
-INFO  12:59:23,702 - #6 ,
-INFO  12:59:23,702 - #43 bool3
-INFO  12:59:23,702 - #8 ;
-INFO  12:59:23,702 - #3 {
-INFO  12:59:23,702 - #43 int
-INFO  12:59:23,702 - #43 main
-INFO  12:59:23,702 - #13 (
-INFO  12:59:23,702 - #14 )
-INFO  12:59:23,703 - #43 char
-INFO  12:59:23,704 - #43 res
-INFO  12:59:23,704 - #6 ,
-INFO  12:59:23,704 - #43 string1
-INFO  12:59:23,704 - #8 ;
-INFO  12:59:23,704 - #43 int
-INFO  12:59:23,705 - #43 arr1
-INFO  12:59:23,705 - #9 [
-INFO  12:59:23,705 - #10 ]
-INFO  12:59:23,705 - #6 ,
-INFO  12:59:23,705 - #43 arr2
-INFO  12:59:23,705 - #9 [
-INFO  12:59:23,705 - #10 ]
-INFO  12:59:23,705 - #6 ,
-INFO  12:59:23,705 - #43 a
-INFO  12:59:23,705 - #8 ;
-INFO  12:59:23,705 - #43 int
-INFO  12:59:23,706 - #43 res
-INFO  12:59:23,706 - #8 ;
-INFO  12:59:23,706 - #3 {
-INFO  12:59:23,706 - #43 arr1
-INFO  12:59:23,707 - #7 =
-INFO  12:59:23,707 - #38 new
-INFO  12:59:23,709 - #43 int
-INFO  12:59:23,709 - #9 [
-INFO  12:59:23,710 - #46 2
-INFO  12:59:23,710 - #10 ]
-INFO  12:59:23,711 - #8 ;
-INFO  12:59:23,712 - #43 arr2
-INFO  12:59:23,712 - #7 =
-INFO  12:59:23,712 - #38 new
-INFO  12:59:23,712 - #43 char
-INFO  12:59:23,713 - #9 [
-INFO  12:59:23,713 - #46 2
-INFO  12:59:23,713 - #10 ]
-INFO  12:59:23,713 - #8 ;
-INFO  12:59:23,713 - #43 arr1
-INFO  12:59:23,713 - #9 [
-INFO  12:59:23,713 - #44 a
-INFO  12:59:23,713 - #10 ]
-INFO  12:59:23,713 - #7 =
-INFO  12:59:23,713 - #46 0
-INFO  12:59:23,714 - #8 ;
-INFO  12:59:23,714 - #43 arr1
-INFO  12:59:23,714 - #9 [
-INFO  12:59:23,714 - #46 1
-INFO  12:59:23,714 - #10 ]
-INFO  12:59:23,714 - #7 =
-INFO  12:59:23,714 - #46 2
-INFO  12:59:23,714 - #8 ;
-INFO  12:59:23,714 - #43 arr1
-INFO  12:59:23,714 - #9 [
-INFO  12:59:23,714 - #46 1
-INFO  12:59:23,715 - #10 ]
-INFO  12:59:23,715 - #7 =
-INFO  12:59:23,715 - #43 string2
-INFO  12:59:23,715 - #9 [
-INFO  12:59:23,715 - #46 1
-INFO  12:59:23,715 - #10 ]
-INFO  12:59:23,715 - #8 ;
-INFO  12:59:23,716 - #43 arr1
-INFO  12:59:23,716 - #9 [
-INFO  12:59:23,716 - #46 1
-INFO  12:59:23,718 - #10 ]
-INFO  12:59:23,718 - #7 =
-INFO  12:59:23,718 - #43 string1
-INFO  12:59:23,719 - #9 [
-INFO  12:59:23,719 - #46 1
-INFO  12:59:23,719 - #10 ]
-INFO  12:59:23,719 - #8 ;
-INFO  12:59:23,719 - #43 var2
-INFO  12:59:23,719 - #7 =
-INFO  12:59:23,719 - #46 2
-INFO  12:59:23,719 - #8 ;
-INFO  12:59:23,719 - #43 b
-INFO  12:59:23,719 - #7 =
-INFO  12:59:23,719 - #46 1
-INFO  12:59:23,719 - #8 ;
-INFO  12:59:23,720 - #43 a
-INFO  12:59:23,720 - #7 =
-INFO  12:59:23,720 - #46 1
-INFO  12:59:23,720 - #8 ;
-INFO  12:59:23,720 - #43 br1
-INFO  12:59:23,720 - #7 =
-INFO  12:59:23,720 - #46 3
-INFO  12:59:23,720 - #8 ;
-INFO  12:59:23,721 - #43 string1
-INFO  12:59:23,721 - #7 =
-INFO  12:59:23,721 - #44 a
-INFO  12:59:23,721 - #22 +
-INFO  12:59:23,721 - #46 1
-INFO  12:59:23,723 - #8 ;
-INFO  12:59:23,724 - #43 var1
-INFO  12:59:23,724 - #7 =
-INFO  12:59:23,724 - #23 -
-INFO  12:59:23,724 - #43 ch
-INFO  12:59:23,724 - #8 ;
-INFO  12:59:23,724 - #43 var1
-INFO  12:59:23,724 - #7 =
-INFO  12:59:23,724 - #43 ch
-INFO  12:59:23,724 - #8 ;
-INFO  12:59:23,725 - #43 var1
-INFO  12:59:23,725 - #7 =
-INFO  12:59:23,725 - #43 var1
-INFO  12:59:23,725 - #22 +
-INFO  12:59:23,725 - #45 true
-INFO  12:59:23,725 - #8 ;
-INFO  12:59:23,725 - #43 var1
-INFO  12:59:23,725 - #7 =
-INFO  12:59:23,725 - #43 var1
-INFO  12:59:23,726 - #24 *
-INFO  12:59:23,727 - #45 true
-INFO  12:59:23,728 - #8 ;
-INFO  12:59:23,728 - #43 var1
-INFO  12:59:23,728 - #7 =
-INFO  12:59:23,728 - #13 (
-INFO  12:59:23,729 - #46 2
-INFO  12:59:23,729 - #24 *
-INFO  12:59:23,729 - #13 (
-INFO  12:59:23,729 - #43 a
-INFO  12:59:23,729 - #22 +
-INFO  12:59:23,729 - #45 false
-INFO  12:59:23,729 - #14 )
-INFO  12:59:23,730 - #14 )
-INFO  12:59:23,730 - #8 ;
-INFO  12:59:23,730 - #43 bool1
-INFO  12:59:23,730 - #7 =
-INFO  12:59:23,730 - #46 1
-INFO  12:59:23,730 - #8 ;
-INFO  12:59:23,730 - #43 string1
-INFO  12:59:23,730 - #7 =
-INFO  12:59:23,730 - #46 1
-INFO  12:59:23,731 - #8 ;
-INFO  12:59:23,731 - #4 }
-INFO  12:59:23,731 - #4 }
-INFO  12:59:23,732 - ================Ispis sintaksnog stabla================
-INFO  12:59:23,738 - 
+INFO  12:51:34,714 - Compiling source file: C:\Faks\PP1\pp1domaci\workspace\MJCompiler\test\semanticProgramErrorA.mj
+INFO  12:51:34,829 - #2 program
+INFO  12:51:34,830 - #43 p0_
+INFO  12:51:34,830 - #5 const
+INFO  12:51:34,832 - #43 int
+INFO  12:51:34,832 - #43 br1
+INFO  12:51:34,833 - #7 =
+INFO  12:51:34,833 - #46 1
+INFO  12:51:34,834 - #6 ,
+INFO  12:51:34,835 - #43 br2
+INFO  12:51:34,835 - #7 =
+INFO  12:51:34,836 - #46 2
+INFO  12:51:34,836 - #6 ,
+INFO  12:51:34,836 - #43 br1
+INFO  12:51:34,836 - #7 =
+INFO  12:51:34,836 - #46 3
+INFO  12:51:34,837 - #8 ;
+INFO  12:51:34,838 - #5 const
+INFO  12:51:34,839 - #43 char
+INFO  12:51:34,840 - #43 ch
+INFO  12:51:34,840 - #7 =
+INFO  12:51:34,840 - #44 a
+INFO  12:51:34,841 - #8 ;
+INFO  12:51:34,842 - #5 const
+INFO  12:51:34,843 - #43 int
+INFO  12:51:34,843 - #43 ch2
+INFO  12:51:34,843 - #7 =
+INFO  12:51:34,844 - #44 a
+INFO  12:51:34,844 - #8 ;
+INFO  12:51:34,844 - #5 const
+INFO  12:51:34,845 - #43 bool
+INFO  12:51:34,845 - #43 bl1
+INFO  12:51:34,845 - #7 =
+INFO  12:51:34,846 - #45 true
+INFO  12:51:34,846 - #6 ,
+INFO  12:51:34,847 - #43 bl2
+INFO  12:51:34,848 - #7 =
+INFO  12:51:34,848 - #45 false
+INFO  12:51:34,848 - #6 ,
+INFO  12:51:34,849 - #43 bl3
+INFO  12:51:34,849 - #7 =
+INFO  12:51:34,849 - #45 true
+INFO  12:51:34,850 - #8 ;
+INFO  12:51:34,851 - #43 int
+INFO  12:51:34,851 - #43 var1
+INFO  12:51:34,851 - #8 ;
+INFO  12:51:34,852 - #43 A
+INFO  12:51:34,854 - #43 var2
+INFO  12:51:34,854 - #8 ;
+INFO  12:51:34,854 - #43 char
+INFO  12:51:34,855 - #43 string1
+INFO  12:51:34,855 - #6 ,
+INFO  12:51:34,855 - #43 string2
+INFO  12:51:34,855 - #9 [
+INFO  12:51:34,856 - #10 ]
+INFO  12:51:34,856 - #8 ;
+INFO  12:51:34,857 - #43 bool
+INFO  12:51:34,858 - #43 bool1
+INFO  12:51:34,858 - #6 ,
+INFO  12:51:34,859 - #43 bool2
+INFO  12:51:34,859 - #9 [
+INFO  12:51:34,859 - #10 ]
+INFO  12:51:34,859 - #6 ,
+INFO  12:51:34,860 - #43 bool3
+INFO  12:51:34,860 - #8 ;
+INFO  12:51:34,861 - #3 {
+INFO  12:51:34,861 - #43 int
+INFO  12:51:34,862 - #43 main
+INFO  12:51:34,862 - #13 (
+INFO  12:51:34,863 - #14 )
+INFO  12:51:34,865 - #43 char
+INFO  12:51:34,866 - #43 res
+INFO  12:51:34,867 - #6 ,
+INFO  12:51:34,867 - #43 string1
+INFO  12:51:34,867 - #8 ;
+INFO  12:51:34,867 - #43 int
+INFO  12:51:34,868 - #43 arr1
+INFO  12:51:34,868 - #9 [
+INFO  12:51:34,869 - #10 ]
+INFO  12:51:34,869 - #6 ,
+INFO  12:51:34,869 - #43 arr2
+INFO  12:51:34,869 - #9 [
+INFO  12:51:34,869 - #10 ]
+INFO  12:51:34,869 - #6 ,
+INFO  12:51:34,870 - #43 a
+INFO  12:51:34,870 - #8 ;
+INFO  12:51:34,870 - #43 int
+INFO  12:51:34,871 - #43 res
+INFO  12:51:34,871 - #8 ;
+INFO  12:51:34,871 - #3 {
+INFO  12:51:34,872 - #43 arr1
+INFO  12:51:34,874 - #7 =
+INFO  12:51:34,875 - #38 new
+INFO  12:51:34,882 - #43 int
+INFO  12:51:34,882 - #9 [
+INFO  12:51:34,883 - #46 2
+INFO  12:51:34,883 - #10 ]
+INFO  12:51:34,887 - #8 ;
+INFO  12:51:34,888 - #43 arr2
+INFO  12:51:34,889 - #7 =
+INFO  12:51:34,890 - #38 new
+INFO  12:51:34,890 - #43 char
+INFO  12:51:34,891 - #9 [
+INFO  12:51:34,891 - #46 2
+INFO  12:51:34,891 - #10 ]
+INFO  12:51:34,891 - #8 ;
+INFO  12:51:34,891 - #43 arr1
+INFO  12:51:34,892 - #9 [
+INFO  12:51:34,892 - #44 a
+INFO  12:51:34,893 - #10 ]
+INFO  12:51:34,893 - #7 =
+INFO  12:51:34,893 - #46 0
+INFO  12:51:34,894 - #8 ;
+INFO  12:51:34,894 - #43 arr1
+INFO  12:51:34,894 - #9 [
+INFO  12:51:34,894 - #46 1
+INFO  12:51:34,895 - #10 ]
+INFO  12:51:34,895 - #7 =
+INFO  12:51:34,895 - #46 2
+INFO  12:51:34,895 - #8 ;
+INFO  12:51:34,895 - #43 var2
+INFO  12:51:34,896 - #7 =
+INFO  12:51:34,896 - #46 2
+INFO  12:51:34,896 - #8 ;
+INFO  12:51:34,896 - #43 b
+INFO  12:51:34,897 - #7 =
+INFO  12:51:34,897 - #46 1
+INFO  12:51:34,898 - #8 ;
+INFO  12:51:34,898 - #43 a
+INFO  12:51:34,898 - #7 =
+INFO  12:51:34,898 - #46 1
+INFO  12:51:34,898 - #8 ;
+INFO  12:51:34,898 - #43 br1
+INFO  12:51:34,902 - #7 =
+INFO  12:51:34,902 - #46 3
+INFO  12:51:34,902 - #8 ;
+INFO  12:51:34,903 - #43 string1
+INFO  12:51:34,903 - #7 =
+INFO  12:51:34,903 - #44 a
+INFO  12:51:34,903 - #22 +
+INFO  12:51:34,904 - #46 1
+INFO  12:51:34,907 - #8 ;
+INFO  12:51:34,908 - #43 var1
+INFO  12:51:34,908 - #7 =
+INFO  12:51:34,908 - #23 -
+INFO  12:51:34,909 - #43 ch
+INFO  12:51:34,910 - #8 ;
+INFO  12:51:34,911 - #43 var1
+INFO  12:51:34,911 - #7 =
+INFO  12:51:34,911 - #43 ch
+INFO  12:51:34,911 - #8 ;
+INFO  12:51:34,911 - #43 var1
+INFO  12:51:34,911 - #7 =
+INFO  12:51:34,911 - #43 var1
+INFO  12:51:34,912 - #22 +
+INFO  12:51:34,912 - #45 true
+INFO  12:51:34,912 - #8 ;
+INFO  12:51:34,913 - #43 var1
+INFO  12:51:34,913 - #7 =
+INFO  12:51:34,913 - #43 var1
+INFO  12:51:34,913 - #24 *
+INFO  12:51:34,914 - #45 true
+INFO  12:51:34,917 - #8 ;
+INFO  12:51:34,917 - #43 var1
+INFO  12:51:34,917 - #7 =
+INFO  12:51:34,918 - #13 (
+INFO  12:51:34,918 - #46 2
+INFO  12:51:34,918 - #24 *
+INFO  12:51:34,918 - #13 (
+INFO  12:51:34,918 - #43 a
+INFO  12:51:34,918 - #22 +
+INFO  12:51:34,919 - #45 false
+INFO  12:51:34,919 - #14 )
+INFO  12:51:34,919 - #14 )
+INFO  12:51:34,920 - #8 ;
+INFO  12:51:34,920 - #43 bool1
+INFO  12:51:34,921 - #7 =
+INFO  12:51:34,921 - #46 1
+INFO  12:51:34,921 - #8 ;
+INFO  12:51:34,921 - #43 string1
+INFO  12:51:34,921 - #7 =
+INFO  12:51:34,922 - #46 1
+INFO  12:51:34,923 - #8 ;
+INFO  12:51:34,923 - #4 }
+INFO  12:51:34,923 - #4 }
+INFO  12:51:34,925 - ================Ispis sintaksnog stabla================
+INFO  12:51:34,934 - 
 PProgram(
   PProgramName(
    p0_
@@ -441,105 +421,35 @@ PProgram(
                                 NoEmptyStatementList(
                                   NoEmptyStatementList(
                                     NoEmptyStatementList(
-                                      NoEmptyStatementList(
-                                        NoEmptyStatementList(
-                                          EmptyStatementList(
-                                          ) [EmptyStatementList]
-                                          DesignatorStmt(
-                                            DesignatorAssignStmt(
-                                              DesignatorIdent(
-                                               arr1
-                                              ) [DesignatorIdent]
-                                              AssignopAssign(
-                                              ) [AssignopAssign]
-                                              PosExpr(
-                                                NoMinus(
-                                                ) [NoMinus]
-                                                SingleFactor(
-                                                  FactorNewExpr(
-                                                    TypeIdent(
-                                                     int
-                                                    ) [TypeIdent]
-                                                    PosExpr(
-                                                      NoMinus(
-                                                      ) [NoMinus]
-                                                      SingleFactor(
-                                                        FactorNum(
-                                                         2
-                                                        ) [FactorNum]
-                                                      ) [SingleFactor]
-                                                      EmptyAddopTermList(
-                                                      ) [EmptyAddopTermList]
-                                                    ) [PosExpr]
-                                                  ) [FactorNewExpr]
-                                                ) [SingleFactor]
-                                                EmptyAddopTermList(
-                                                ) [EmptyAddopTermList]
-                                              ) [PosExpr]
-                                            ) [DesignatorAssignStmt]
-                                          ) [DesignatorStmt]
-                                        ) [NoEmptyStatementList]
-                                        DesignatorStmt(
-                                          DesignatorAssignStmt(
-                                            DesignatorIdent(
-                                             arr2
-                                            ) [DesignatorIdent]
-                                            AssignopAssign(
-                                            ) [AssignopAssign]
-                                            PosExpr(
-                                              NoMinus(
-                                              ) [NoMinus]
-                                              SingleFactor(
-                                                FactorNewExpr(
-                                                  TypeIdent(
-                                                   char
-                                                  ) [TypeIdent]
-                                                  PosExpr(
-                                                    NoMinus(
-                                                    ) [NoMinus]
-                                                    SingleFactor(
-                                                      FactorNum(
-                                                       2
-                                                      ) [FactorNum]
-                                                    ) [SingleFactor]
-                                                    EmptyAddopTermList(
-                                                    ) [EmptyAddopTermList]
-                                                  ) [PosExpr]
-                                                ) [FactorNewExpr]
-                                              ) [SingleFactor]
-                                              EmptyAddopTermList(
-                                              ) [EmptyAddopTermList]
-                                            ) [PosExpr]
-                                          ) [DesignatorAssignStmt]
-                                        ) [DesignatorStmt]
-                                      ) [NoEmptyStatementList]
+                                      EmptyStatementList(
+                                      ) [EmptyStatementList]
                                       DesignatorStmt(
                                         DesignatorAssignStmt(
-                                          DesignatorArr(
-                                            DesignatorIdent(
-                                             arr1
-                                            ) [DesignatorIdent]
-                                            PosExpr(
-                                              NoMinus(
-                                              ) [NoMinus]
-                                              SingleFactor(
-                                                FactorChar(
-                                                 a
-                                                ) [FactorChar]
-                                              ) [SingleFactor]
-                                              EmptyAddopTermList(
-                                              ) [EmptyAddopTermList]
-                                            ) [PosExpr]
-                                          ) [DesignatorArr]
+                                          DesignatorIdent(
+                                           arr1
+                                          ) [DesignatorIdent]
                                           AssignopAssign(
                                           ) [AssignopAssign]
                                           PosExpr(
                                             NoMinus(
                                             ) [NoMinus]
                                             SingleFactor(
-                                              FactorNum(
-                                               0
-                                              ) [FactorNum]
+                                              FactorNewExpr(
+                                                TypeIdent(
+                                                 int
+                                                ) [TypeIdent]
+                                                PosExpr(
+                                                  NoMinus(
+                                                  ) [NoMinus]
+                                                  SingleFactor(
+                                                    FactorNum(
+                                                     2
+                                                    ) [FactorNum]
+                                                  ) [SingleFactor]
+                                                  EmptyAddopTermList(
+                                                  ) [EmptyAddopTermList]
+                                                ) [PosExpr]
+                                              ) [FactorNewExpr]
                                             ) [SingleFactor]
                                             EmptyAddopTermList(
                                             ) [EmptyAddopTermList]
@@ -549,31 +459,31 @@ PProgram(
                                     ) [NoEmptyStatementList]
                                     DesignatorStmt(
                                       DesignatorAssignStmt(
-                                        DesignatorArr(
-                                          DesignatorIdent(
-                                           arr1
-                                          ) [DesignatorIdent]
-                                          PosExpr(
-                                            NoMinus(
-                                            ) [NoMinus]
-                                            SingleFactor(
-                                              FactorNum(
-                                               1
-                                              ) [FactorNum]
-                                            ) [SingleFactor]
-                                            EmptyAddopTermList(
-                                            ) [EmptyAddopTermList]
-                                          ) [PosExpr]
-                                        ) [DesignatorArr]
+                                        DesignatorIdent(
+                                         arr2
+                                        ) [DesignatorIdent]
                                         AssignopAssign(
                                         ) [AssignopAssign]
                                         PosExpr(
                                           NoMinus(
                                           ) [NoMinus]
                                           SingleFactor(
-                                            FactorNum(
-                                             2
-                                            ) [FactorNum]
+                                            FactorNewExpr(
+                                              TypeIdent(
+                                               char
+                                              ) [TypeIdent]
+                                              PosExpr(
+                                                NoMinus(
+                                                ) [NoMinus]
+                                                SingleFactor(
+                                                  FactorNum(
+                                                   2
+                                                  ) [FactorNum]
+                                                ) [SingleFactor]
+                                                EmptyAddopTermList(
+                                                ) [EmptyAddopTermList]
+                                              ) [PosExpr]
+                                            ) [FactorNewExpr]
                                           ) [SingleFactor]
                                           EmptyAddopTermList(
                                           ) [EmptyAddopTermList]
@@ -591,9 +501,9 @@ PProgram(
                                           NoMinus(
                                           ) [NoMinus]
                                           SingleFactor(
-                                            FactorNum(
-                                             1
-                                            ) [FactorNum]
+                                            FactorChar(
+                                             a
+                                            ) [FactorChar]
                                           ) [SingleFactor]
                                           EmptyAddopTermList(
                                           ) [EmptyAddopTermList]
@@ -605,24 +515,9 @@ PProgram(
                                         NoMinus(
                                         ) [NoMinus]
                                         SingleFactor(
-                                          FactorDesignatorEmpty(
-                                            DesignatorArr(
-                                              DesignatorIdent(
-                                               string2
-                                              ) [DesignatorIdent]
-                                              PosExpr(
-                                                NoMinus(
-                                                ) [NoMinus]
-                                                SingleFactor(
-                                                  FactorNum(
-                                                   1
-                                                  ) [FactorNum]
-                                                ) [SingleFactor]
-                                                EmptyAddopTermList(
-                                                ) [EmptyAddopTermList]
-                                              ) [PosExpr]
-                                            ) [DesignatorArr]
-                                          ) [FactorDesignatorEmpty]
+                                          FactorNum(
+                                           0
+                                          ) [FactorNum]
                                         ) [SingleFactor]
                                         EmptyAddopTermList(
                                         ) [EmptyAddopTermList]
@@ -654,24 +549,9 @@ PProgram(
                                       NoMinus(
                                       ) [NoMinus]
                                       SingleFactor(
-                                        FactorDesignatorEmpty(
-                                          DesignatorArr(
-                                            DesignatorIdent(
-                                             string1
-                                            ) [DesignatorIdent]
-                                            PosExpr(
-                                              NoMinus(
-                                              ) [NoMinus]
-                                              SingleFactor(
-                                                FactorNum(
-                                                 1
-                                                ) [FactorNum]
-                                              ) [SingleFactor]
-                                              EmptyAddopTermList(
-                                              ) [EmptyAddopTermList]
-                                            ) [PosExpr]
-                                          ) [DesignatorArr]
-                                        ) [FactorDesignatorEmpty]
+                                        FactorNum(
+                                         2
+                                        ) [FactorNum]
                                       ) [SingleFactor]
                                       EmptyAddopTermList(
                                       ) [EmptyAddopTermList]
@@ -1005,54 +885,29 @@ PProgram(
     ) [MethodDeclaration]
   ) [SingleMethodDeclList]
 ) [PProgram]
-INFO  12:59:23,741 - ==================SEMANTICKA OBRADA====================
-INFO  12:59:23,761 - Deklarisana konstanta br1 na liniji 2, objektni cvor: Con br1: int, 1, 0 
-INFO  12:59:23,761 - Deklarisana konstanta br2 na liniji 2, objektni cvor: Con br2: int, 2, 0 
-ERROR 12:59:23,761 - Konstanta br1 ponovo deklarisana na liniji 2
-INFO  12:59:23,761 - Deklarisana konstanta ch na liniji 3, objektni cvor: Con ch: char, 97, 0 
-ERROR 12:59:23,761 - Pogresan tip vrednosti koja se dodeljuje konstanti ch2 na liniji 4
-INFO  12:59:23,761 - Deklarisana konstanta bl1 na liniji 5, objektni cvor: Con bl1: bool, 1, 0 
-INFO  12:59:23,761 - Deklarisana konstanta bl2 na liniji 5, objektni cvor: Con bl2: bool, 0, 0 
-INFO  12:59:23,761 - Deklarisana konstanta bl3 na liniji 5, objektni cvor: Con bl3: bool, 1, 0 
-INFO  12:59:23,761 - Deklarisana promenljiva var1 na liniji 6, objektni cvor: Var var1: int, 0, 0 
-ERROR 12:59:23,762 - Nije pronadjen tip A u tabeli simbola! 
-INFO  12:59:23,762 - Deklarisana promenljiva string1 na liniji 8, objektni cvor: Var string1: char, 1, 0 
-INFO  12:59:23,762 - Deklarisana promenljiva string2 na liniji 8, objektni cvor: Var string2: Arr of char, 2, 0 
-INFO  12:59:23,762 - Deklarisana promenljiva bool1 na liniji 9, objektni cvor: Var bool1: bool, 3, 0 
-INFO  12:59:23,762 - Deklarisana promenljiva bool2 na liniji 9, objektni cvor: Var bool2: Arr of bool, 4, 0 
-INFO  12:59:23,762 - Deklarisana promenljiva bool3 na liniji 9, objektni cvor: Var bool3: bool, 5, 0 
-INFO  12:59:23,763 - Deklarisana funkcija main na liniji 11, objektni cvor: Meth main: int, 0, 0 
+INFO  12:51:34,938 - ==================SEMANTICKA OBRADA====================
+INFO  12:51:34,975 - Deklarisana konstanta br1 na liniji 2, objektni cvor: Con br1: int, 1, 0 
+INFO  12:51:34,976 - Deklarisana konstanta br2 na liniji 2, objektni cvor: Con br2: int, 2, 0 
+ERROR 12:51:34,977 - Konstanta br1 ponovo deklarisana na liniji 2
+INFO  12:51:34,977 - Deklarisana konstanta ch na liniji 3, objektni cvor: Con ch: char, 97, 0 
+ERROR 12:51:34,977 - Pogresan tip vrednosti koja se dodeljuje konstanti ch2 na liniji 4
+INFO  12:51:34,977 - Deklarisana konstanta bl1 na liniji 5, objektni cvor: Con bl1: bool, 1, 0 
+INFO  12:51:34,978 - Deklarisana konstanta bl2 na liniji 5, objektni cvor: Con bl2: bool, 0, 0 
+INFO  12:51:34,979 - Deklarisana konstanta bl3 na liniji 5, objektni cvor: Con bl3: bool, 1, 0 
+INFO  12:51:34,979 - Deklarisana promenljiva var1 na liniji 6, objektni cvor: Var var1: int, 0, 0 
+ERROR 12:51:34,979 - Nije pronadjen tip A u tabeli simbola! 
+INFO  12:51:34,979 - Deklarisana promenljiva string1 na liniji 8, objektni cvor: Var string1: char, 1, 0 
+INFO  12:51:34,979 - Deklarisana promenljiva string2 na liniji 8, objektni cvor: Var string2: Arr of char, 2, 0 
+INFO  12:51:34,979 - Deklarisana promenljiva bool1 na liniji 9, objektni cvor: Var bool1: bool, 3, 0 
+INFO  12:51:34,980 - Deklarisana promenljiva bool2 na liniji 9, objektni cvor: Var bool2: Arr of bool, 4, 0 
+INFO  12:51:34,980 - Deklarisana promenljiva bool3 na liniji 9, objektni cvor: Var bool3: bool, 5, 0 
+INFO  12:51:34,980 - Deklarisana funkcija main na liniji 11, objektni cvor: Meth main: int, 0, 0 
 
-INFO  12:59:23,763 - Deklarisana promenljiva res na liniji 11, objektni cvor: Var res: char, 0, 1 
-INFO  12:59:23,763 - Deklarisana promenljiva string1 na liniji 11, objektni cvor: Var string1: char, 1, 1 
-INFO  12:59:23,763 - Deklarisana promenljiva arr1 na liniji 11, objektni cvor: Var arr1: Arr of int, 2, 1 
-INFO  12:59:23,763 - Deklarisana promenljiva arr2 na liniji 11, objektni cvor: Var arr2: Arr of int, 3, 1 
-INFO  12:59:23,763 - Deklarisana promenljiva a na liniji 11, objektni cvor: Var a: int, 4, 1 
-ERROR 12:59:23,763 - Promenljiva res vec deklarisana u opsegu na liniji 11
-ERROR 12:59:23,763 - Nekompatibilni tipovi prilikom dodele vrednosti elementu niza na liniji 13
-ERROR 12:59:23,763 - Indeks niza mora biti int tipa na liniji 14
-ERROR 12:59:23,764 - Nekompatibilni tipovi prilikom dodele vrednosti elementu niza na liniji 16
-ERROR 12:59:23,764 - Simbol string1 nije niz na liniji 17
-ERROR 12:59:23,764 - Nekompatibilni tipovi prilikom dodele vrednosti elementu niza na liniji 17
-ERROR 12:59:23,764 - Ime var2 nije deklarisano na liniji 18
-ERROR 12:59:23,764 - Ime b nije deklarisano na liniji 19
-ERROR 12:59:23,764 - Nemoguca dodela vrednosti nepromenljivoj br1 na liniji 21
-ERROR 12:59:23,764 - Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj na liniji 22
-ERROR 12:59:23,765 - Izraz mora biti int tipa na liniji 23
-ERROR 12:59:23,765 - Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj na liniji 23
-ERROR 12:59:23,765 - Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj na liniji 24
-ERROR 12:59:23,765 - Operacije sabiranja i oduzimanja su moguce samo izmedju int tipova na liniji 25
-ERROR 12:59:23,765 - Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj na liniji 25
-ERROR 12:59:23,765 - Operacije (*, /, %) su moguce samo izmedju int tipova na liniji 26
-ERROR 12:59:23,765 - Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj na liniji 26
-ERROR 12:59:23,765 - Operacije sabiranja i oduzimanja su moguce samo izmedju int tipova na liniji 27
-ERROR 12:59:23,765 - Operacije (*, /, %) su moguce samo izmedju int tipova na liniji 27
-ERROR 12:59:23,765 - Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj na liniji 27
-ERROR 12:59:23,765 - Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj na liniji 28
-ERROR 12:59:23,766 - Nekompatibilni tipovi prilikom dodele vrednosti promenljivoj na liniji 29
-ERROR 12:59:23,766 - Metoda void main() ne postoji
-INFO  12:59:23,766 - ==================SINTAKSNA ANALIZA====================
-INFO  12:59:23,766 - 6	symbolic constants
-INFO  12:59:23,766 - 6	global variables
-INFO  12:59:23,767 - 5	local variables
-INFO  12:59:23,768 - Parsiranje nije uspesno zavrseno
+INFO  12:51:34,980 - Deklarisana promenljiva res na liniji 11, objektni cvor: Var res: char, 0, 1 
+INFO  12:51:34,980 - Deklarisana promenljiva string1 na liniji 11, objektni cvor: Var string1: char, 1, 1 
+INFO  12:51:34,981 - Deklarisana promenljiva arr1 na liniji 11, objektni cvor: Var arr1: Arr of int, 2, 1 
+INFO  12:51:34,981 - Deklarisana promenljiva arr2 na liniji 11, objektni cvor: Var arr2: Arr of int, 3, 1 
+INFO  12:51:34,981 - Deklarisana promenljiva a na liniji 11, objektni cvor: Var a: int, 4, 1 
+ERROR 12:51:34,982 - Promenljiva res vec deklarisana u opsegu na liniji 11
+ERROR 12:51:34,983 - Nekompatibilni tipovi prilikom dodele vrednosti elementu niza na liniji 13
+ERROR 12:51:34,983 - Indeks niza mora biti int tipa na liniji 14
