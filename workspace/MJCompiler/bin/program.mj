@@ -1,0 +1,12 @@
+program p0_
+	{
+		void main(){
+			// Print const factors
+			print(1, 1);
+			print('a', 1);
+			print(true, 1);
+			print(5);
+			print('e');
+			print(false);
+		}
+	}

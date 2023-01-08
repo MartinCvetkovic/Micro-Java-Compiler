@@ -16,7 +16,7 @@ program p0_
 			B(int c, int b) int d, g; bool f; {
 				read(A.a);
 				read(string1[1]);
-				print(br1, 2, 3, 4);
+				print(br1, 2);
 				d = 2;
 				print(d);
 			}

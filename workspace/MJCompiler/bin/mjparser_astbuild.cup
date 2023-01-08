@@ -81,7 +81,6 @@ nonterminal Relop Relop;
 nonterminal Addop Addop;
 nonterminal Mulop Mulop; // Label
 nonterminal DesignatorStatement DesignatorStatement;
-nonterminal PrintArgs PrintArgs;
 nonterminal ActPars ActPars;
 nonterminal Condition Condition;
 nonterminal CondTerm CondTerm;
@@ -90,7 +89,7 @@ nonterminal GlobalVarDecl GlobalVarDecl;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, SingleVarDecl, MethodName, MethodDecl;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Constant, ConstDecl, MultipleConstDecl, ConstantAssignement;
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, OptionalDesignator, DesignatorList;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, OptionalDesignator, DesignatorList, PrintArgs;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Factor, Term, Expr, AddopTermList;
 
@@ -248,7 +247,7 @@ Statement ::= 	(DesignatorStmt) DesignatorStatement:D1 SEMI {: RESULT=new Design
 				(BlockStmt) LBRACE StatementList:S1 RBRACE {: RESULT=new BlockStmt(S1); RESULT.setLine(S1left); :}
 				;
 
-PrintArgs ::= 	(PrintArgsNoEmpty) COMMA NUM:N1 PrintArgs:P2 {: RESULT=new PrintArgsNoEmpty(N1, P2); RESULT.setLine(N1left); :}
+PrintArgs ::= 	(PrintArgsNoEmpty) COMMA NUM:value {: RESULT=new PrintArgsNoEmpty(value); RESULT.setLine(valueleft); :}
 				|
 				(PrintArgsEmpty) {: RESULT=new PrintArgsEmpty(); :} /* epsilon */
 				;
@@ -322,11 +321,11 @@ Factor ::= 	(FactorDesignatorEmpty) Designator:D1 {: RESULT=new FactorDesignator
 			|
 			(FactorDesignatorNoActPars) Designator:D1 LPAREN RPAREN {: RESULT=new FactorDesignatorNoActPars(D1); RESULT.setLine(D1left); :}
 			|
-			(FactorNum) NUM:N1 {: RESULT=new FactorNum(N1); RESULT.setLine(N1left); :}
+			(FactorNum) NUM:value {: RESULT=new FactorNum(value); RESULT.setLine(valueleft); :}
 			|
-			(FactorChar) CHAR:C1 {: RESULT=new FactorChar(C1); RESULT.setLine(C1left); :}
+			(FactorChar) CHAR:value {: RESULT=new FactorChar(value); RESULT.setLine(valueleft); :}
 			|
-			(FactorBool) BOOL:B1 {: RESULT=new FactorBool(B1); RESULT.setLine(B1left); :}
+			(FactorBool) BOOL:value {: RESULT=new FactorBool(value); RESULT.setLine(valueleft); :}
 			|
 			(FactorNewExpr) NEW Type:T1 LBRACKET Expr:E2 RBRACKET {: RESULT=new FactorNewExpr(T1, E2); RESULT.setLine(T1left); :}
 			|

@@ -34,7 +34,8 @@ program p0_
 			br1--;
 			read(ch);
 			read(bool2);
-			print(bool2, 1, 2);
+			print(bool2, 1);
+			print(bool2);
 			[var1] = a;
 			[br1] = arr1;
 			[bool1, var1,,] = arr1;

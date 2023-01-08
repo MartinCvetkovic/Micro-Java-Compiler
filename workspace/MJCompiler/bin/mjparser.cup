@@ -65,13 +65,13 @@ nonterminal VarDecl, ClassDecl, OptionalMinus;
 nonterminal MultipleVarDecl, VarDeclList, ConstructorDeclList, ConstructorDecl;
 nonterminal MethodDeclList, ClassDeclName, StatementList, Statement;
 nonterminal FormPars, MethodDeclReturn, Assignop, Relop, Addop, Mulop; // Label
-nonterminal DesignatorStatement, PrintArgs, ActPars;
+nonterminal DesignatorStatement, ActPars;
 nonterminal Condition, CondTerm, CondFact;
 nonterminal GlobalVarDecl;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, SingleVarDecl, MethodName, MethodDecl;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Constant, ConstDecl, MultipleConstDecl, ConstantAssignement;
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, OptionalDesignator, DesignatorList;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, OptionalDesignator, DesignatorList, PrintArgs;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Factor, Term, Expr, AddopTermList;
 
@@ -229,7 +229,7 @@ Statement ::= 	(DesignatorStmt) DesignatorStatement SEMI
 				(BlockStmt) LBRACE StatementList RBRACE
 				;
 
-PrintArgs ::= 	(PrintArgsNoEmpty) COMMA NUM PrintArgs
+PrintArgs ::= 	(PrintArgsNoEmpty) COMMA NUM:value
 				|
 				(PrintArgsEmpty) /* epsilon */
 				;
@@ -303,11 +303,11 @@ Factor ::= 	(FactorDesignatorEmpty) Designator
 			|
 			(FactorDesignatorNoActPars) Designator LPAREN RPAREN
 			|
-			(FactorNum) NUM
+			(FactorNum) NUM:value
 			|
-			(FactorChar) CHAR
+			(FactorChar) CHAR:value
 			|
-			(FactorBool) BOOL
+			(FactorBool) BOOL:value
 			|
 			(FactorNewExpr) NEW Type LBRACKET Expr RBRACKET
 			|

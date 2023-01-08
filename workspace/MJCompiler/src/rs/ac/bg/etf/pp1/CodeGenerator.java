@@ -1,55 +1,65 @@
 package rs.ac.bg.etf.pp1;
 
-import rs.ac.bg.etf.pp1.CounterVisitor.FormParamCounter;
-import rs.ac.bg.etf.pp1.CounterVisitor.VarCounter;
-import rs.ac.bg.etf.pp1.ast.AddExpr;
-import rs.ac.bg.etf.pp1.ast.Assignment;
-import rs.ac.bg.etf.pp1.ast.Const;
-import rs.ac.bg.etf.pp1.ast.Designator;
-import rs.ac.bg.etf.pp1.ast.FormalParamDecl;
-import rs.ac.bg.etf.pp1.ast.FuncCall;
-import rs.ac.bg.etf.pp1.ast.MethodDecl;
-import rs.ac.bg.etf.pp1.ast.MethodTypeName;
-import rs.ac.bg.etf.pp1.ast.PrintStmt;
-import rs.ac.bg.etf.pp1.ast.ReturnExpr;
-import rs.ac.bg.etf.pp1.ast.ReturnNoExpr;
-import rs.ac.bg.etf.pp1.ast.SyntaxNode;
-import rs.ac.bg.etf.pp1.ast.VarDecl;
-import rs.ac.bg.etf.pp1.ast.VisitorAdaptor;
+import rs.ac.bg.etf.pp1.CounterVisitor.*;
+import rs.ac.bg.etf.pp1.ast.*;
 import rs.etf.pp1.mj.runtime.Code;
-import rs.etf.pp1.symboltable.concepts.Obj;
+import rs.ac.bg.etf.pp1.extendedsymboltable.Tab;
 
 public class CodeGenerator extends VisitorAdaptor {
-	
-	private int varCount;
-	
-	private int paramCnt;
-	
+
 	private int mainPc;
 	
 	public int getMainPc() {
 		return mainPc;
 	}
 	
-	@Override
-	public void visit(MethodTypeName MethodTypeName) {
-		if ("main".equalsIgnoreCase(MethodTypeName.getMethName())) {
+	public void visit(PrintStmt printStmt) {
+		if (printStmt.getPrintArgs() instanceof PrintArgsNoEmpty) {
+			Code.loadConst(((PrintArgsNoEmpty) printStmt.getPrintArgs()).getValue());
+		} else {
+			Code.loadConst(5);
+		}
+		if (printStmt.getExpr().struct.equals(Tab.charType)) {
+			Code.put(Code.bprint);
+		} else {
+			Code.put(Code.print);
+		}
+	}
+	
+	public void visit(FactorNum factorNum) {
+		Code.loadConst(factorNum.getValue());
+	}
+	
+	public void visit(FactorBool factorBool) {
+		Code.loadConst(factorBool.getValue() ? 1 : 0);
+	}
+	
+	public void visit(FactorChar factorChar) {
+		Code.loadConst(factorChar.getValue());
+	}
+	
+	// Works only for main method
+	public void visit(MethodNameIdent methodNameIdent) {
+		if ("main".equalsIgnoreCase(methodNameIdent.getMethName())) {
 			mainPc = Code.pc;
 		}
-		MethodTypeName.obj.setAdr(Code.pc);
+		methodNameIdent.obj.setAdr(Code.pc);
 		
-		// Collect arguments and local variables.
-		SyntaxNode methodNode = MethodTypeName.getParent();
+		SyntaxNode methodNode = methodNameIdent.getParent();
 		VarCounter varCnt = new VarCounter();
 		methodNode.traverseTopDown(varCnt);
-		FormParamCounter fpCnt = new FormParamCounter();
-		methodNode.traverseTopDown(fpCnt);
 		
-		// Generate the entry.
 		Code.put(Code.enter);
-		Code.put(fpCnt.getCount());
-		Code.put(varCnt.getCount() + fpCnt.getCount());
+		Code.put(0);
+		Code.put(varCnt.getCount());
 	}
+	
+	public void visit(MethodDeclaration methodDeclaration) {
+		Code.put(Code.exit);
+		Code.put(Code.return_);
+	}
+	
+	/*
 	
 	@Override
 	public void visit(VarDecl VarDecl) {
@@ -73,11 +83,6 @@ public class CodeGenerator extends VisitorAdaptor {
 		Code.put(Code.return_);
 	}
 	
-	@Override
-	public void visit(ReturnNoExpr ReturnNoExpr) {
-		Code.put(Code.exit);
-		Code.put(Code.return_);
-	}
 	
 	@Override
 	public void visit(Assignment Assignment) {
@@ -106,13 +111,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	@Override
-	public void visit(PrintStmt PrintStmt) {
-		Code.put(Code.const_5);
-		Code.put(Code.print);
-	}
-	
-	@Override
 	public void visit(AddExpr AddExpr) {
 		Code.put(Code.add);
-	}
+	}*/
 }

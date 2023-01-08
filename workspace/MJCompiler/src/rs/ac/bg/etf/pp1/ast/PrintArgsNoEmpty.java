@@ -1,35 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 6/0/2023 17:3:24
+// 8/0/2023 14:0:43
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class PrintArgsNoEmpty extends PrintArgs {
 
-    private Integer N1;
-    private PrintArgs PrintArgs;
+    private Integer value;
 
-    public PrintArgsNoEmpty (Integer N1, PrintArgs PrintArgs) {
-        this.N1=N1;
-        this.PrintArgs=PrintArgs;
-        if(PrintArgs!=null) PrintArgs.setParent(this);
+    public PrintArgsNoEmpty (Integer value) {
+        this.value=value;
     }
 
-    public Integer getN1() {
-        return N1;
+    public Integer getValue() {
+        return value;
     }
 
-    public void setN1(Integer N1) {
-        this.N1=N1;
-    }
-
-    public PrintArgs getPrintArgs() {
-        return PrintArgs;
-    }
-
-    public void setPrintArgs(PrintArgs PrintArgs) {
-        this.PrintArgs=PrintArgs;
+    public void setValue(Integer value) {
+        this.value=value;
     }
 
     public void accept(Visitor visitor) {
@@ -37,16 +26,13 @@ public class PrintArgsNoEmpty extends PrintArgs {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(PrintArgs!=null) PrintArgs.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(PrintArgs!=null) PrintArgs.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(PrintArgs!=null) PrintArgs.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -55,13 +41,7 @@ public class PrintArgsNoEmpty extends PrintArgs {
         buffer.append(tab);
         buffer.append("PrintArgsNoEmpty(\n");
 
-        buffer.append(" "+tab+N1);
-        buffer.append("\n");
-
-        if(PrintArgs!=null)
-            buffer.append(PrintArgs.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
+        buffer.append(" "+tab+value);
         buffer.append("\n");
 
         buffer.append(tab);

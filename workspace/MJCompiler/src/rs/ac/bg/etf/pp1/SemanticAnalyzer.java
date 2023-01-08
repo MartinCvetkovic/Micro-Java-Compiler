@@ -16,6 +16,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	boolean constantTypeError;
 	Obj currentMethod;
 	boolean mainExists = false;
+	int nVars;
 
 	Logger log = Logger.getLogger(getClass());
 
@@ -55,6 +56,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 
 	public void visit(PProgram pprogram) {
+		nVars = Tab.currentScope().getnVars();
 		Tab.chainLocalSymbols(pprogram.getProgramName().obj);
 		Tab.closeScope();
 	}

@@ -2,6 +2,7 @@ package rs.ac.bg.etf.pp1;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 
 import org.apache.log4j.Logger;
@@ -10,6 +11,7 @@ import org.apache.log4j.xml.DOMConfigurator;
 import java_cup.runtime.Symbol;
 import rs.ac.bg.etf.pp1.ast.SyntaxNode;
 import rs.ac.bg.etf.pp1.util.Log4JUtils;
+import rs.etf.pp1.mj.runtime.Code;
 import rs.ac.bg.etf.pp1.extendedsymboltable.Tab;
 
 public class Compiler {
@@ -25,8 +27,8 @@ public class Compiler {
 	
 	public static void main(String[] args) throws Exception {
 		Logger log = Logger.getLogger(MJParser.class);
-		if (args.length < 1) {
-			log.error("Not enough arguments supplied! Usage: MJCompiler <source-file> ");
+		if (args.length < 2) {
+			log.error("Not enough arguments supplied! Usage: MJCompiler <source-file> <object-file>");
 			return;
 		}
 		
@@ -63,10 +65,18 @@ public class Compiler {
 	        if (parser.errorDetected || !semanticAnalyzer.passed()) {
 	        	log.info("Parsiranje nije uspesno zavrseno");
 	        	return;
-	        } else {
-	        	log.info("Parsiranje je uspesno zavrseno");
 	        }
 	        
+	        File objFile = new File(args[1]);
+	        if (objFile.exists()) objFile.delete();
+	        
+	        CodeGenerator codeGenerator = new CodeGenerator();
+	        prog.traverseBottomUp(codeGenerator);
+	        Code.dataSize = semanticAnalyzer.nVars;
+	        Code.mainPc = codeGenerator.getMainPc();
+	        Code.write(new FileOutputStream(objFile));
+	        
+        	log.info("Parsiranje je uspesno zavrseno");
 		}
 	}
 }

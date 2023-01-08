@@ -1,0 +1,184 @@
+INFO  13:56:23,406 - Compiling source file: C:\Faks\PP1\pp1domaci\workspace\MJCompiler\test\program.mj
+INFO  13:56:23,450 - #2 program
+INFO  13:56:23,450 - #43 p0_
+INFO  13:56:23,450 - #3 {
+INFO  13:56:23,451 - #15 void
+INFO  13:56:23,451 - #43 main
+INFO  13:56:23,451 - #13 (
+INFO  13:56:23,451 - #14 )
+INFO  13:56:23,452 - #3 {
+INFO  13:56:23,452 - #33 print
+INFO  13:56:23,452 - #13 (
+INFO  13:56:23,453 - #46 1
+INFO  13:56:23,453 - #6 ,
+INFO  13:56:23,454 - #46 1
+INFO  13:56:23,454 - #14 )
+INFO  13:56:23,454 - #8 ;
+INFO  13:56:23,454 - #33 print
+INFO  13:56:23,454 - #13 (
+INFO  13:56:23,454 - #44 a
+INFO  13:56:23,454 - #6 ,
+INFO  13:56:23,455 - #46 1
+INFO  13:56:23,455 - #14 )
+INFO  13:56:23,455 - #8 ;
+INFO  13:56:23,459 - #33 print
+INFO  13:56:23,459 - #13 (
+INFO  13:56:23,459 - #45 true
+INFO  13:56:23,460 - #6 ,
+INFO  13:56:23,460 - #46 1
+INFO  13:56:23,460 - #14 )
+INFO  13:56:23,460 - #8 ;
+INFO  13:56:23,460 - #33 print
+INFO  13:56:23,460 - #13 (
+INFO  13:56:23,460 - #46 1
+INFO  13:56:23,460 - #14 )
+INFO  13:56:23,461 - #8 ;
+INFO  13:56:23,461 - #33 print
+INFO  13:56:23,461 - #13 (
+INFO  13:56:23,461 - #44 a
+INFO  13:56:23,461 - #14 )
+INFO  13:56:23,461 - #8 ;
+INFO  13:56:23,461 - #33 print
+INFO  13:56:23,462 - #13 (
+INFO  13:56:23,462 - #45 true
+INFO  13:56:23,462 - #14 )
+INFO  13:56:23,462 - #8 ;
+INFO  13:56:23,462 - #4 }
+INFO  13:56:23,462 - #4 }
+INFO  13:56:23,462 - ================Ispis sintaksnog stabla================
+INFO  13:56:23,463 - 
+PProgram(
+  PProgramName(
+   p0_
+  ) [PProgramName]
+  NoDeclaration(
+  ) [NoDeclaration]
+  SingleMethodDeclList(
+    MethodDeclaration(
+      MethodDeclReturnVoid(
+      ) [MethodDeclReturnVoid]
+      MethodNameIdent(
+       main
+      ) [MethodNameIdent]
+      NullableFormParsEmpty(
+      ) [NullableFormParsEmpty]
+      EmptyVarDeclList(
+      ) [EmptyVarDeclList]
+      NoEmptyStatementList(
+        NoEmptyStatementList(
+          NoEmptyStatementList(
+            NoEmptyStatementList(
+              NoEmptyStatementList(
+                NoEmptyStatementList(
+                  EmptyStatementList(
+                  ) [EmptyStatementList]
+                  PrintStmt(
+                    PosExpr(
+                      NoMinus(
+                      ) [NoMinus]
+                      SingleFactor(
+                        FactorNum(
+                         1
+                        ) [FactorNum]
+                      ) [SingleFactor]
+                      EmptyAddopTermList(
+                      ) [EmptyAddopTermList]
+                    ) [PosExpr]
+                    PrintArgsNoEmpty(
+                     1
+                    ) [PrintArgsNoEmpty]
+                  ) [PrintStmt]
+                ) [NoEmptyStatementList]
+                PrintStmt(
+                  PosExpr(
+                    NoMinus(
+                    ) [NoMinus]
+                    SingleFactor(
+                      FactorChar(
+                       a
+                      ) [FactorChar]
+                    ) [SingleFactor]
+                    EmptyAddopTermList(
+                    ) [EmptyAddopTermList]
+                  ) [PosExpr]
+                  PrintArgsNoEmpty(
+                   1
+                  ) [PrintArgsNoEmpty]
+                ) [PrintStmt]
+              ) [NoEmptyStatementList]
+              PrintStmt(
+                PosExpr(
+                  NoMinus(
+                  ) [NoMinus]
+                  SingleFactor(
+                    FactorBool(
+                     true
+                    ) [FactorBool]
+                  ) [SingleFactor]
+                  EmptyAddopTermList(
+                  ) [EmptyAddopTermList]
+                ) [PosExpr]
+                PrintArgsNoEmpty(
+                 1
+                ) [PrintArgsNoEmpty]
+              ) [PrintStmt]
+            ) [NoEmptyStatementList]
+            PrintStmt(
+              PosExpr(
+                NoMinus(
+                ) [NoMinus]
+                SingleFactor(
+                  FactorNum(
+                   1
+                  ) [FactorNum]
+                ) [SingleFactor]
+                EmptyAddopTermList(
+                ) [EmptyAddopTermList]
+              ) [PosExpr]
+              PrintArgsEmpty(
+              ) [PrintArgsEmpty]
+            ) [PrintStmt]
+          ) [NoEmptyStatementList]
+          PrintStmt(
+            PosExpr(
+              NoMinus(
+              ) [NoMinus]
+              SingleFactor(
+                FactorChar(
+                 a
+                ) [FactorChar]
+              ) [SingleFactor]
+              EmptyAddopTermList(
+              ) [EmptyAddopTermList]
+            ) [PosExpr]
+            PrintArgsEmpty(
+            ) [PrintArgsEmpty]
+          ) [PrintStmt]
+        ) [NoEmptyStatementList]
+        PrintStmt(
+          PosExpr(
+            NoMinus(
+            ) [NoMinus]
+            SingleFactor(
+              FactorBool(
+               true
+              ) [FactorBool]
+            ) [SingleFactor]
+            EmptyAddopTermList(
+            ) [EmptyAddopTermList]
+          ) [PosExpr]
+          PrintArgsEmpty(
+          ) [PrintArgsEmpty]
+        ) [PrintStmt]
+      ) [NoEmptyStatementList]
+    ) [MethodDeclaration]
+  ) [SingleMethodDeclList]
+) [PProgram]
+INFO  13:56:23,464 - ==================SEMANTICKA OBRADA====================
+INFO  13:56:23,472 - Deklarisana funkcija main na liniji 3, objektni cvor: Meth main: notype, 0, 0 
+
+INFO  13:56:23,472 - ==================SINTAKSNA ANALIZA====================
+INFO  13:56:23,473 - 0	symbolic constants
+INFO  13:56:23,473 - 0	global variables
+INFO  13:56:23,473 - 0	local variables
+INFO  13:56:23,477 - Parsiranje je uspesno zavrseno
