@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 8/0/2023 14:0:43
+// 9/0/2023 17:17:35
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -14,10 +14,12 @@ public interface Visitor {
     public void visit(Constant Constant);
     public void visit(Relop Relop);
     public void visit(Assignop Assignop);
+    public void visit(OptMinusTerm OptMinusTerm);
     public void visit(StatementList StatementList);
     public void visit(Addop Addop);
     public void visit(MethodDeclReturn MethodDeclReturn);
     public void visit(Factor Factor);
+    public void visit(ArrayDesignator ArrayDesignator);
     public void visit(CondTerm CondTerm);
     public void visit(GlobalVarDecl GlobalVarDecl);
     public void visit(Designator Designator);
@@ -39,9 +41,10 @@ public interface Visitor {
     public void visit(MultipleConstDecl MultipleConstDecl);
     public void visit(Statement Statement);
     public void visit(VarDecl VarDecl);
+    public void visit(AddopTerm AddopTerm);
     public void visit(Type Type);
-    public void visit(ClassDecl ClassDecl);
     public void visit(ConstDecl ConstDecl);
+    public void visit(ClassDecl ClassDecl);
     public void visit(CondFact CondFact);
     public void visit(Declaration Declaration);
     public void visit(MethodDeclList MethodDeclList);
@@ -63,6 +66,7 @@ public interface Visitor {
     public void visit(NotEquals NotEquals);
     public void visit(Equals Equals);
     public void visit(AssignopAssign AssignopAssign);
+    public void visit(ArrayDesig ArrayDesig);
     public void visit(DesignatorArr DesignatorArr);
     public void visit(DesignatorDotIdent DesignatorDotIdent);
     public void visit(DesignatorIdent DesignatorIdent);
@@ -78,8 +82,10 @@ public interface Visitor {
     public void visit(FactorDesignatorEmpty FactorDesignatorEmpty);
     public void visit(MultipleFactors MultipleFactors);
     public void visit(SingleFactor SingleFactor);
+    public void visit(AddopTermExpr AddopTermExpr);
     public void visit(EmptyAddopTermList EmptyAddopTermList);
     public void visit(NoEmptyAddopTermList NoEmptyAddopTermList);
+    public void visit(OptionalMinusTerm OptionalMinusTerm);
     public void visit(PosExpr PosExpr);
     public void visit(NoMinus NoMinus);
     public void visit(WithMinus WithMinus);

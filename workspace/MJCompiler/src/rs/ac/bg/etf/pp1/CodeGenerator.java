@@ -59,59 +59,64 @@ public class CodeGenerator extends VisitorAdaptor {
 		Code.put(Code.return_);
 	}
 	
-	/*
-	
-	@Override
-	public void visit(VarDecl VarDecl) {
-		varCount++;
+	public void visit(FactorDesignatorEmpty factorDesignatorEmpty) {
+		Code.load(factorDesignatorEmpty.getDesignator().obj);
 	}
 
-	@Override
-	public void visit(FormalParamDecl FormalParam) {
-		paramCnt++;
-	}	
-	
-	@Override
-	public void visit(MethodDecl MethodDecl) {
-		Code.put(Code.exit);
-		Code.put(Code.return_);
+	public void visit(DesignatorAssignStmt designatorAssignStmt) {
+		Code.store(designatorAssignStmt.getDesignator().obj);
 	}
 	
-	@Override
-	public void visit(ReturnExpr ReturnExpr) {
-		Code.put(Code.exit);
-		Code.put(Code.return_);
-	}
-	
-	
-	@Override
-	public void visit(Assignment Assignment) {
-		Code.store(Assignment.getDesignator().obj);
-	}
-	
-	@Override
-	public void visit(Const Const) {
-		Code.load(new Obj(Obj.Con, "$", Const.struct, Const.getN1(), 0));
-	}
-	
-	@Override
-	public void visit(Designator Designator) {
-		SyntaxNode parent = Designator.getParent();
-		if (Assignment.class != parent.getClass() && FuncCall.class != parent.getClass()) {
-			Code.load(Designator.obj);
+	public void visit(MultipleFactors multipleFactors) {
+		Mulop mulop = multipleFactors.getMulop();
+		if (mulop instanceof Mul) {
+			Code.put(Code.mul);
+		} else if (mulop instanceof Div) {
+			Code.put(Code.div);
+		} else if (mulop instanceof Mod) {
+			Code.put(Code.rem);
 		}
 	}
 	
-	@Override
-	public void visit(FuncCall FuncCall) {
-		Obj functionObj = FuncCall.getDesignator().obj;
-		int offset = functionObj.getAdr() - Code.pc; 
-		Code.put(Code.call);
-		Code.put2(offset);
+	public void visit(AddopTermExpr addopTermExpr) {
+		Addop addop = addopTermExpr.getAddop();
+		if (addop instanceof Plus) {
+			Code.put(Code.add);
+		} else if (addop instanceof Minus) {
+			Code.put(Code.sub);
+		}
 	}
 	
-	@Override
-	public void visit(AddExpr AddExpr) {
+	public void visit(OptionalMinusTerm optionalMinusTerm) {
+		if (optionalMinusTerm.getOptionalMinus() instanceof WithMinus) {
+			Code.put(Code.neg);
+		}
+	}
+	
+	public void visit(DesignatorIncStmt designatorIncStmt) {
+		Code.load(designatorIncStmt.getDesignator().obj);
+		Code.loadConst(1);
 		Code.put(Code.add);
-	}*/
+		Code.store(designatorIncStmt.getDesignator().obj);
+	}
+	
+	public void visit(DesignatorDecStmt designatorDecStmt) {
+		Code.load(designatorDecStmt.getDesignator().obj);
+		Code.loadConst(1);
+		Code.put(Code.sub);
+		Code.store(designatorDecStmt.getDesignator().obj);
+	}
+	
+	public void visit(FactorNewExpr factorNewExpr) {
+		Code.put(Code.newarray);
+		if (factorNewExpr.getExpr().struct.equals(Tab.charType)) {
+			Code.loadConst(0);
+		} else {
+			Code.loadConst(1);
+		}
+	}
+	
+	public void visit(ArrayDesig arrayDesig) {
+		Code.load(arrayDesig.getDesignator().obj);
+	}
 }

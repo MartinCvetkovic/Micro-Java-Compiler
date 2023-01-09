@@ -67,13 +67,13 @@ nonterminal MethodDeclList, ClassDeclName, StatementList, Statement;
 nonterminal FormPars, MethodDeclReturn, Assignop, Relop, Addop, Mulop; // Label
 nonterminal DesignatorStatement, ActPars;
 nonterminal Condition, CondTerm, CondFact;
-nonterminal GlobalVarDecl;
+nonterminal GlobalVarDecl, OptMinusTerm, ArrayDesignator;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, SingleVarDecl, MethodName, MethodDecl;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Constant, ConstDecl, MultipleConstDecl, ConstantAssignement;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, OptionalDesignator, DesignatorList, PrintArgs;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Factor, Term, Expr, AddopTermList;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Factor, Term, Expr, AddopTermList, AddopTerm;
 
 precedence left ELSE;
 
@@ -285,13 +285,17 @@ OptionalMinus ::=	(WithMinus) MINUS
 					(NoMinus) /* epsilon */
 					;
 				
-Expr ::= (PosExpr) OptionalMinus Term AddopTermList;
-			
-AddopTermList ::= 	(NoEmptyAddopTermList) Addop Term AddopTermList
+Expr ::= (PosExpr) OptMinusTerm AddopTermList;
+
+OptMinusTerm ::=	(OptionalMinusTerm) OptionalMinus Term;
+		
+AddopTermList ::= 	(NoEmptyAddopTermList) AddopTerm AddopTermList
 					|
 					(EmptyAddopTermList) /* epsilon */
 					;
-					
+
+AddopTerm ::= 	(AddopTermExpr) Addop Term;
+				
 Term ::=	(SingleFactor) Factor
 			|
 			(MultipleFactors) Term Mulop Factor
@@ -322,8 +326,10 @@ Designator ::= 	(DesignatorIdent) IDENT:name
 				|
 				(DesignatorDotIdent) Designator DOT IDENT
 				|
-				(DesignatorArr) Designator LBRACKET Expr RBRACKET
+				(DesignatorArr) ArrayDesignator LBRACKET Expr RBRACKET
 				;
+
+ArrayDesignator ::= (ArrayDesig) Designator;
 
 //Label ::= (LabelIdent) IDENT;
 

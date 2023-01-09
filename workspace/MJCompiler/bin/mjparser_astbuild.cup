@@ -86,12 +86,14 @@ nonterminal Condition Condition;
 nonterminal CondTerm CondTerm;
 nonterminal CondFact CondFact;
 nonterminal GlobalVarDecl GlobalVarDecl;
+nonterminal OptMinusTerm OptMinusTerm;
+nonterminal ArrayDesignator ArrayDesignator;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, SingleVarDecl, MethodName, MethodDecl;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Constant, ConstDecl, MultipleConstDecl, ConstantAssignement;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, OptionalDesignator, DesignatorList, PrintArgs;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Factor, Term, Expr, AddopTermList;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Factor, Term, Expr, AddopTermList, AddopTerm;
 
 precedence left ELSE;
 
@@ -303,13 +305,17 @@ OptionalMinus ::=	(WithMinus) MINUS {: RESULT=new WithMinus(); :}
 					(NoMinus) {: RESULT=new NoMinus(); :} /* epsilon */
 					;
 				
-Expr ::= (PosExpr) OptionalMinus:O1 Term:T2 AddopTermList:A3 {: RESULT=new PosExpr(O1, T2, A3); RESULT.setLine(O1left); :};
-			
-AddopTermList ::= 	(NoEmptyAddopTermList) Addop:A1 Term:T2 AddopTermList:A3 {: RESULT=new NoEmptyAddopTermList(A1, T2, A3); RESULT.setLine(A1left); :}
+Expr ::= (PosExpr) OptMinusTerm:O1 AddopTermList:A2 {: RESULT=new PosExpr(O1, A2); RESULT.setLine(O1left); :};
+
+OptMinusTerm ::=	(OptionalMinusTerm) OptionalMinus:O1 Term:T2 {: RESULT=new OptionalMinusTerm(O1, T2); RESULT.setLine(O1left); :};
+		
+AddopTermList ::= 	(NoEmptyAddopTermList) AddopTerm:A1 AddopTermList:A2 {: RESULT=new NoEmptyAddopTermList(A1, A2); RESULT.setLine(A1left); :}
 					|
 					(EmptyAddopTermList) {: RESULT=new EmptyAddopTermList(); :} /* epsilon */
 					;
-					
+
+AddopTerm ::= 	(AddopTermExpr) Addop:A1 Term:T2 {: RESULT=new AddopTermExpr(A1, T2); RESULT.setLine(A1left); :};
+				
 Term ::=	(SingleFactor) Factor:F1 {: RESULT=new SingleFactor(F1); RESULT.setLine(F1left); :}
 			|
 			(MultipleFactors) Term:T1 Mulop:M2 Factor:F3 {: RESULT=new MultipleFactors(T1, M2, F3); RESULT.setLine(T1left); :}
@@ -340,8 +346,10 @@ Designator ::= 	(DesignatorIdent) IDENT:name {: RESULT=new DesignatorIdent(name)
 				|
 				(DesignatorDotIdent) Designator:D1 DOT IDENT:I2 {: RESULT=new DesignatorDotIdent(D1, I2); RESULT.setLine(D1left); :}
 				|
-				(DesignatorArr) Designator:D1 LBRACKET Expr:E2 RBRACKET {: RESULT=new DesignatorArr(D1, E2); RESULT.setLine(D1left); :}
+				(DesignatorArr) ArrayDesignator:A1 LBRACKET Expr:E2 RBRACKET {: RESULT=new DesignatorArr(A1, E2); RESULT.setLine(A1left); :}
 				;
+
+ArrayDesignator ::= (ArrayDesig) Designator:D1 {: RESULT=new ArrayDesig(D1); RESULT.setLine(D1left); :};
 
 //Label ::= (LabelIdent) IDENT;
 

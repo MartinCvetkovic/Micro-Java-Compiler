@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 8/0/2023 14:0:43
+// 9/0/2023 17:17:35
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -14,10 +14,12 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Constant Constant) { }
     public void visit(Relop Relop) { }
     public void visit(Assignop Assignop) { }
+    public void visit(OptMinusTerm OptMinusTerm) { }
     public void visit(StatementList StatementList) { }
     public void visit(Addop Addop) { }
     public void visit(MethodDeclReturn MethodDeclReturn) { }
     public void visit(Factor Factor) { }
+    public void visit(ArrayDesignator ArrayDesignator) { }
     public void visit(CondTerm CondTerm) { }
     public void visit(GlobalVarDecl GlobalVarDecl) { }
     public void visit(Designator Designator) { }
@@ -39,9 +41,10 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(MultipleConstDecl MultipleConstDecl) { }
     public void visit(Statement Statement) { }
     public void visit(VarDecl VarDecl) { }
+    public void visit(AddopTerm AddopTerm) { }
     public void visit(Type Type) { }
-    public void visit(ClassDecl ClassDecl) { }
     public void visit(ConstDecl ConstDecl) { }
+    public void visit(ClassDecl ClassDecl) { }
     public void visit(CondFact CondFact) { }
     public void visit(Declaration Declaration) { }
     public void visit(MethodDeclList MethodDeclList) { }
@@ -63,6 +66,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(NotEquals NotEquals) { visit(); }
     public void visit(Equals Equals) { visit(); }
     public void visit(AssignopAssign AssignopAssign) { visit(); }
+    public void visit(ArrayDesig ArrayDesig) { visit(); }
     public void visit(DesignatorArr DesignatorArr) { visit(); }
     public void visit(DesignatorDotIdent DesignatorDotIdent) { visit(); }
     public void visit(DesignatorIdent DesignatorIdent) { visit(); }
@@ -78,8 +82,10 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(FactorDesignatorEmpty FactorDesignatorEmpty) { visit(); }
     public void visit(MultipleFactors MultipleFactors) { visit(); }
     public void visit(SingleFactor SingleFactor) { visit(); }
+    public void visit(AddopTermExpr AddopTermExpr) { visit(); }
     public void visit(EmptyAddopTermList EmptyAddopTermList) { visit(); }
     public void visit(NoEmptyAddopTermList NoEmptyAddopTermList) { visit(); }
+    public void visit(OptionalMinusTerm OptionalMinusTerm) { visit(); }
     public void visit(PosExpr PosExpr) { visit(); }
     public void visit(NoMinus NoMinus) { visit(); }
     public void visit(WithMinus WithMinus) { visit(); }

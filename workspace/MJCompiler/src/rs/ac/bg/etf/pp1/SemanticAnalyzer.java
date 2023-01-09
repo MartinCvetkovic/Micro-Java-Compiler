@@ -239,9 +239,10 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	
 	public void visit(PosExpr posExpr) {
 		Struct lstruct, rstruct;
-		lstruct = posExpr.getTerm().struct;
+		OptionalMinusTerm optionalMinusTerm = ((OptionalMinusTerm) posExpr.getOptMinusTerm());
+		lstruct = optionalMinusTerm.getTerm().struct;
 		rstruct = posExpr.getAddopTermList().struct;
-		if ((posExpr.getOptionalMinus() instanceof WithMinus) && !lstruct.equals(Tab.intType)) {
+		if ((optionalMinusTerm.getOptionalMinus() instanceof WithMinus) && !lstruct.equals(Tab.intType)) {
 			report_error("Izraz mora biti int tipa", posExpr);
 			posExpr.struct = Tab.noType;
 			return;
@@ -257,13 +258,17 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 	
 	public void visit(NoEmptyAddopTermList noEmptyAddopTermList) {
-		Struct lstruct = noEmptyAddopTermList.getTerm().struct;
+		Struct lstruct = ((AddopTermExpr) noEmptyAddopTermList.getAddopTerm()).struct;
 		if (!lstruct.equals(Tab.intType)) {
 			report_error("Operacije sabiranja i oduzimanja su moguce samo izmedju int tipova", noEmptyAddopTermList);
 			noEmptyAddopTermList.struct = Tab.noType;
 			return;
 		}
 		noEmptyAddopTermList.struct = lstruct;
+	}
+	
+	public void visit(AddopTermExpr addopTermExpr) {
+		addopTermExpr.struct = addopTermExpr.getTerm().struct;
 	}
 	
 	public void visit(DesignatorAssignStmt designatorAssignStmt) {
@@ -282,7 +287,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 	
 	public void visit(DesignatorArr designatorArr) {
-    	Obj designatorObj = Tab.find(designatorArr.getDesignator().obj.getName());
+    	Obj designatorObj = Tab.find(((ArrayDesig)designatorArr.getArrayDesignator()).getDesignator().obj.getName());
     	if (designatorObj.equals(Tab.noObj)) {
 			designatorArr.obj = Tab.noObj;
     		return;

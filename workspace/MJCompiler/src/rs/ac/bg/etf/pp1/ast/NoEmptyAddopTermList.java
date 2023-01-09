@@ -1,39 +1,28 @@
 // generated with ast extension for cup
 // version 0.8
-// 8/0/2023 14:0:43
+// 9/0/2023 17:17:35
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class NoEmptyAddopTermList extends AddopTermList {
 
-    private Addop Addop;
-    private Term Term;
+    private AddopTerm AddopTerm;
     private AddopTermList AddopTermList;
 
-    public NoEmptyAddopTermList (Addop Addop, Term Term, AddopTermList AddopTermList) {
-        this.Addop=Addop;
-        if(Addop!=null) Addop.setParent(this);
-        this.Term=Term;
-        if(Term!=null) Term.setParent(this);
+    public NoEmptyAddopTermList (AddopTerm AddopTerm, AddopTermList AddopTermList) {
+        this.AddopTerm=AddopTerm;
+        if(AddopTerm!=null) AddopTerm.setParent(this);
         this.AddopTermList=AddopTermList;
         if(AddopTermList!=null) AddopTermList.setParent(this);
     }
 
-    public Addop getAddop() {
-        return Addop;
+    public AddopTerm getAddopTerm() {
+        return AddopTerm;
     }
 
-    public void setAddop(Addop Addop) {
-        this.Addop=Addop;
-    }
-
-    public Term getTerm() {
-        return Term;
-    }
-
-    public void setTerm(Term Term) {
-        this.Term=Term;
+    public void setAddopTerm(AddopTerm AddopTerm) {
+        this.AddopTerm=AddopTerm;
     }
 
     public AddopTermList getAddopTermList() {
@@ -49,21 +38,18 @@ public class NoEmptyAddopTermList extends AddopTermList {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Addop!=null) Addop.accept(visitor);
-        if(Term!=null) Term.accept(visitor);
+        if(AddopTerm!=null) AddopTerm.accept(visitor);
         if(AddopTermList!=null) AddopTermList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Addop!=null) Addop.traverseTopDown(visitor);
-        if(Term!=null) Term.traverseTopDown(visitor);
+        if(AddopTerm!=null) AddopTerm.traverseTopDown(visitor);
         if(AddopTermList!=null) AddopTermList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Addop!=null) Addop.traverseBottomUp(visitor);
-        if(Term!=null) Term.traverseBottomUp(visitor);
+        if(AddopTerm!=null) AddopTerm.traverseBottomUp(visitor);
         if(AddopTermList!=null) AddopTermList.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -73,14 +59,8 @@ public class NoEmptyAddopTermList extends AddopTermList {
         buffer.append(tab);
         buffer.append("NoEmptyAddopTermList(\n");
 
-        if(Addop!=null)
-            buffer.append(Addop.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        if(Term!=null)
-            buffer.append(Term.toString("  "+tab));
+        if(AddopTerm!=null)
+            buffer.append(AddopTerm.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
