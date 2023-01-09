@@ -1,263 +1,252 @@
-INFO  00:14:40,843 - Compiling source file: C:\Faks\PP1\pp1domaci\workspace\MJCompiler\test\program.mj
-INFO  00:14:40,955 - #2 program
-INFO  00:14:40,955 - #43 p0_
-INFO  00:14:40,956 - #5 const
-INFO  00:14:40,957 - #43 int
-INFO  00:14:40,957 - #43 cons
-INFO  00:14:40,957 - #7 =
-INFO  00:14:40,957 - #46 100
-INFO  00:14:40,957 - #8 ;
-INFO  00:14:40,958 - #43 bool
-INFO  00:14:40,958 - #43 TR
-INFO  00:14:40,958 - #8 ;
-INFO  00:14:40,959 - #43 int
-INFO  00:14:40,959 - #43 b
-INFO  00:14:40,959 - #6 ,
-INFO  00:14:40,960 - #43 arr
-INFO  00:14:40,960 - #9 [
-INFO  00:14:40,960 - #10 ]
-INFO  00:14:40,960 - #8 ;
-INFO  00:14:40,961 - #43 char
-INFO  00:14:40,961 - #43 str
-INFO  00:14:40,961 - #9 [
-INFO  00:14:40,961 - #10 ]
-INFO  00:14:40,962 - #8 ;
-INFO  00:14:40,962 - #3 {
-INFO  00:14:40,963 - #15 void
-INFO  00:14:40,963 - #43 main
-INFO  00:14:40,964 - #13 (
-INFO  00:14:40,966 - #14 )
-INFO  00:14:40,966 - #43 int
-INFO  00:14:40,968 - #43 a
-INFO  00:14:40,969 - #8 ;
-INFO  00:14:40,969 - #43 char
-INFO  00:14:40,969 - #43 c
-INFO  00:14:40,969 - #8 ;
-INFO  00:14:40,969 - #3 {
-INFO  00:14:40,969 - #43 a
-INFO  00:14:40,970 - #7 =
-INFO  00:14:40,970 - #46 5
-INFO  00:14:40,973 - #8 ;
-INFO  00:14:40,975 - #33 print
-INFO  00:14:40,976 - #13 (
-INFO  00:14:40,976 - #43 a
-INFO  00:14:40,976 - #6 ,
-INFO  00:14:40,976 - #46 1
-INFO  00:14:40,976 - #14 )
-INFO  00:14:40,977 - #8 ;
-INFO  00:14:40,977 - #43 c
-INFO  00:14:40,977 - #7 =
-INFO  00:14:40,977 - #44 e
-INFO  00:14:40,977 - #8 ;
-INFO  00:14:40,978 - #33 print
-INFO  00:14:40,978 - #13 (
-INFO  00:14:40,978 - #43 c
-INFO  00:14:40,978 - #14 )
-INFO  00:14:40,979 - #8 ;
-INFO  00:14:40,979 - #33 print
-INFO  00:14:40,979 - #13 (
-INFO  00:14:40,980 - #45 false
-INFO  00:14:40,980 - #6 ,
-INFO  00:14:40,980 - #46 2
-INFO  00:14:40,980 - #14 )
-INFO  00:14:40,980 - #8 ;
-INFO  00:14:40,980 - #43 a
-INFO  00:14:40,981 - #7 =
-INFO  00:14:40,981 - #23 -
-INFO  00:14:40,981 - #46 1
-INFO  00:14:40,982 - #23 -
-INFO  00:14:40,982 - #13 (
-INFO  00:14:40,984 - #46 5
-INFO  00:14:40,984 - #25 %
-INFO  00:14:40,985 - #46 3
-INFO  00:14:40,986 - #14 )
-INFO  00:14:40,986 - #24 *
-INFO  00:14:40,986 - #46 2
-INFO  00:14:40,987 - #26 /
-INFO  00:14:40,988 - #46 3
-INFO  00:14:40,988 - #8 ;
-INFO  00:14:40,988 - #33 print
-INFO  00:14:40,989 - #13 (
-INFO  00:14:40,989 - #43 a
-INFO  00:14:40,989 - #14 )
-INFO  00:14:40,989 - #8 ;
-INFO  00:14:40,989 - #43 a
-INFO  00:14:40,989 - #7 =
-INFO  00:14:40,989 - #13 (
-INFO  00:14:40,990 - #43 cons
-INFO  00:14:40,990 - #23 -
-INFO  00:14:40,990 - #46 6
-INFO  00:14:40,990 - #14 )
-INFO  00:14:40,990 - #26 /
-INFO  00:14:40,990 - #43 a
-INFO  00:14:40,990 - #8 ;
-INFO  00:14:40,990 - #33 print
-INFO  00:14:40,990 - #13 (
-INFO  00:14:40,991 - #43 a
-INFO  00:14:40,991 - #14 )
-INFO  00:14:40,991 - #8 ;
-INFO  00:14:40,991 - #43 TR
-INFO  00:14:40,991 - #7 =
-INFO  00:14:40,991 - #45 true
-INFO  00:14:40,991 - #8 ;
-INFO  00:14:40,991 - #33 print
-INFO  00:14:40,991 - #13 (
-INFO  00:14:40,991 - #43 TR
-INFO  00:14:40,992 - #14 )
-INFO  00:14:40,992 - #8 ;
-INFO  00:14:40,992 - #43 a
-INFO  00:14:40,992 - #7 =
-INFO  00:14:40,992 - #46 0
-INFO  00:14:40,992 - #8 ;
-INFO  00:14:40,992 - #43 a
-INFO  00:14:40,992 - #41 ++
-INFO  00:14:40,992 - #8 ;
-INFO  00:14:40,993 - #33 print
-INFO  00:14:40,993 - #13 (
-INFO  00:14:40,993 - #43 a
-INFO  00:14:40,993 - #14 )
-INFO  00:14:40,993 - #8 ;
-INFO  00:14:40,993 - #43 a
-INFO  00:14:40,994 - #42 --
-INFO  00:14:40,994 - #8 ;
-INFO  00:14:40,994 - #33 print
-INFO  00:14:40,994 - #13 (
-INFO  00:14:40,994 - #43 a
-INFO  00:14:40,994 - #14 )
-INFO  00:14:40,995 - #8 ;
-INFO  00:14:40,995 - #43 arr
-INFO  00:14:40,995 - #7 =
-INFO  00:14:40,995 - #38 new
-INFO  00:14:40,995 - #43 int
-INFO  00:14:40,995 - #9 [
-INFO  00:14:40,995 - #46 2
-INFO  00:14:40,998 - #10 ]
-INFO  00:14:40,998 - #8 ;
-INFO  00:14:40,998 - #43 arr
-INFO  00:14:40,998 - #9 [
-INFO  00:14:40,998 - #46 0
-INFO  00:14:40,998 - #10 ]
-INFO  00:14:40,999 - #7 =
-INFO  00:14:40,999 - #46 2
-INFO  00:14:40,999 - #8 ;
-INFO  00:14:40,999 - #43 arr
-INFO  00:14:40,999 - #9 [
-INFO  00:14:40,999 - #46 1
-INFO  00:14:40,999 - #10 ]
-INFO  00:14:41,000 - #7 =
-INFO  00:14:41,000 - #43 arr
-INFO  00:14:41,000 - #9 [
-INFO  00:14:41,000 - #46 0
-INFO  00:14:41,000 - #10 ]
-INFO  00:14:41,000 - #24 *
-INFO  00:14:41,000 - #46 3
-INFO  00:14:41,000 - #8 ;
-INFO  00:14:41,000 - #33 print
-INFO  00:14:41,001 - #13 (
-INFO  00:14:41,001 - #43 arr
-INFO  00:14:41,001 - #9 [
-INFO  00:14:41,001 - #46 0
-INFO  00:14:41,001 - #10 ]
-INFO  00:14:41,001 - #14 )
-INFO  00:14:41,001 - #8 ;
-INFO  00:14:41,001 - #33 print
-INFO  00:14:41,001 - #13 (
-INFO  00:14:41,001 - #43 arr
-INFO  00:14:41,002 - #9 [
-INFO  00:14:41,002 - #46 1
-INFO  00:14:41,002 - #10 ]
-INFO  00:14:41,002 - #14 )
-INFO  00:14:41,002 - #8 ;
-INFO  00:14:41,002 - #43 str
-INFO  00:14:41,002 - #7 =
-INFO  00:14:41,002 - #38 new
-INFO  00:14:41,002 - #43 char
-INFO  00:14:41,003 - #9 [
-INFO  00:14:41,003 - #46 4
-INFO  00:14:41,003 - #10 ]
-INFO  00:14:41,003 - #8 ;
-INFO  00:14:41,003 - #43 str
-INFO  00:14:41,003 - #9 [
-INFO  00:14:41,003 - #46 0
-INFO  00:14:41,003 - #10 ]
-INFO  00:14:41,003 - #7 =
-INFO  00:14:41,003 - #44 R
-INFO  00:14:41,004 - #8 ;
-INFO  00:14:41,004 - #43 str
-INFO  00:14:41,004 - #9 [
-INFO  00:14:41,004 - #46 1
-INFO  00:14:41,004 - #10 ]
-INFO  00:14:41,004 - #7 =
-INFO  00:14:41,004 - #44 e
-INFO  00:14:41,004 - #8 ;
-INFO  00:14:41,005 - #43 str
-INFO  00:14:41,005 - #9 [
-INFO  00:14:41,005 - #46 2
-INFO  00:14:41,005 - #10 ]
-INFO  00:14:41,005 - #7 =
-INFO  00:14:41,005 - #44 c
-INFO  00:14:41,005 - #8 ;
-INFO  00:14:41,005 - #43 str
-INFO  00:14:41,006 - #9 [
-INFO  00:14:41,006 - #46 3
-INFO  00:14:41,006 - #10 ]
-INFO  00:14:41,006 - #7 =
-INFO  00:14:41,006 - #44 .
-INFO  00:14:41,006 - #8 ;
-INFO  00:14:41,007 - #33 print
-INFO  00:14:41,007 - #13 (
-INFO  00:14:41,007 - #43 str
-INFO  00:14:41,007 - #9 [
-INFO  00:14:41,007 - #46 0
-INFO  00:14:41,007 - #10 ]
-INFO  00:14:41,007 - #14 )
-INFO  00:14:41,008 - #8 ;
-INFO  00:14:41,008 - #33 print
-INFO  00:14:41,008 - #13 (
-INFO  00:14:41,009 - #43 str
-INFO  00:14:41,009 - #9 [
-INFO  00:14:41,009 - #46 1
-INFO  00:14:41,009 - #10 ]
-INFO  00:14:41,009 - #14 )
-INFO  00:14:41,009 - #8 ;
-INFO  00:14:41,009 - #33 print
-INFO  00:14:41,009 - #13 (
-INFO  00:14:41,009 - #43 str
-INFO  00:14:41,009 - #9 [
-INFO  00:14:41,009 - #46 2
-INFO  00:14:41,009 - #10 ]
-INFO  00:14:41,010 - #14 )
-INFO  00:14:41,010 - #8 ;
-INFO  00:14:41,010 - #33 print
-INFO  00:14:41,010 - #13 (
-INFO  00:14:41,010 - #43 str
-INFO  00:14:41,010 - #9 [
-INFO  00:14:41,010 - #46 3
-INFO  00:14:41,010 - #10 ]
-INFO  00:14:41,011 - #14 )
-INFO  00:14:41,011 - #8 ;
-INFO  00:14:41,011 - #9 [
-INFO  00:14:41,011 - #43 a
-INFO  00:14:41,011 - #6 ,
-INFO  00:14:41,013 - #43 b
-INFO  00:14:41,013 - #10 ]
-INFO  00:14:41,013 - #7 =
-INFO  00:14:41,013 - #43 arr
-INFO  00:14:41,014 - #8 ;
-INFO  00:14:41,014 - #33 print
-INFO  00:14:41,014 - #13 (
-INFO  00:14:41,014 - #43 a
-INFO  00:14:41,014 - #14 )
-INFO  00:14:41,019 - #8 ;
-INFO  00:14:41,019 - #33 print
-INFO  00:14:41,019 - #13 (
-INFO  00:14:41,020 - #43 b
-INFO  00:14:41,020 - #14 )
-INFO  00:14:41,020 - #8 ;
-INFO  00:14:41,020 - #4 }
-INFO  00:14:41,020 - #4 }
-INFO  00:14:41,022 - ================Ispis sintaksnog stabla================
-INFO  00:14:41,041 - 
+INFO  17:34:48,081 - Compiling source file: C:\Faks\PP1\pp1domaci\workspace\MJCompiler\test\program.mj
+INFO  17:34:48,156 - #2 program
+INFO  17:34:48,156 - #43 p0_
+INFO  17:34:48,156 - #5 const
+INFO  17:34:48,157 - #43 int
+INFO  17:34:48,157 - #43 cons
+INFO  17:34:48,157 - #7 =
+INFO  17:34:48,157 - #46 100
+INFO  17:34:48,157 - #8 ;
+INFO  17:34:48,158 - #43 bool
+INFO  17:34:48,158 - #43 TR
+INFO  17:34:48,158 - #8 ;
+INFO  17:34:48,159 - #43 int
+INFO  17:34:48,159 - #43 b
+INFO  17:34:48,159 - #6 ,
+INFO  17:34:48,159 - #43 arr
+INFO  17:34:48,159 - #9 [
+INFO  17:34:48,159 - #10 ]
+INFO  17:34:48,160 - #8 ;
+INFO  17:34:48,160 - #43 char
+INFO  17:34:48,160 - #43 str
+INFO  17:34:48,160 - #9 [
+INFO  17:34:48,161 - #10 ]
+INFO  17:34:48,161 - #8 ;
+INFO  17:34:48,161 - #3 {
+INFO  17:34:48,161 - #15 void
+INFO  17:34:48,161 - #43 main
+INFO  17:34:48,162 - #13 (
+INFO  17:34:48,162 - #14 )
+INFO  17:34:48,164 - #43 int
+INFO  17:34:48,164 - #43 a
+INFO  17:34:48,164 - #8 ;
+INFO  17:34:48,164 - #3 {
+INFO  17:34:48,165 - #33 print
+INFO  17:34:48,165 - #13 (
+INFO  17:34:48,165 - #46 5
+INFO  17:34:48,166 - #6 ,
+INFO  17:34:48,168 - #46 1
+INFO  17:34:48,168 - #14 )
+INFO  17:34:48,168 - #8 ;
+INFO  17:34:48,168 - #33 print
+INFO  17:34:48,169 - #13 (
+INFO  17:34:48,169 - #44 e
+INFO  17:34:48,169 - #6 ,
+INFO  17:34:48,169 - #46 2
+INFO  17:34:48,169 - #14 )
+INFO  17:34:48,169 - #8 ;
+INFO  17:34:48,169 - #33 print
+INFO  17:34:48,170 - #13 (
+INFO  17:34:48,170 - #45 false
+INFO  17:34:48,170 - #14 )
+INFO  17:34:48,171 - #8 ;
+INFO  17:34:48,171 - #43 a
+INFO  17:34:48,171 - #7 =
+INFO  17:34:48,172 - #23 -
+INFO  17:34:48,173 - #46 1
+INFO  17:34:48,174 - #23 -
+INFO  17:34:48,174 - #13 (
+INFO  17:34:48,175 - #46 5
+INFO  17:34:48,175 - #25 %
+INFO  17:34:48,175 - #46 3
+INFO  17:34:48,177 - #14 )
+INFO  17:34:48,177 - #24 *
+INFO  17:34:48,177 - #46 2
+INFO  17:34:48,178 - #26 /
+INFO  17:34:48,178 - #46 3
+INFO  17:34:48,178 - #8 ;
+INFO  17:34:48,179 - #33 print
+INFO  17:34:48,179 - #13 (
+INFO  17:34:48,179 - #43 a
+INFO  17:34:48,179 - #14 )
+INFO  17:34:48,180 - #8 ;
+INFO  17:34:48,180 - #43 a
+INFO  17:34:48,180 - #7 =
+INFO  17:34:48,180 - #13 (
+INFO  17:34:48,180 - #43 cons
+INFO  17:34:48,180 - #23 -
+INFO  17:34:48,180 - #46 6
+INFO  17:34:48,180 - #14 )
+INFO  17:34:48,180 - #26 /
+INFO  17:34:48,180 - #43 a
+INFO  17:34:48,181 - #8 ;
+INFO  17:34:48,181 - #33 print
+INFO  17:34:48,181 - #13 (
+INFO  17:34:48,181 - #43 a
+INFO  17:34:48,181 - #14 )
+INFO  17:34:48,181 - #8 ;
+INFO  17:34:48,181 - #43 TR
+INFO  17:34:48,181 - #7 =
+INFO  17:34:48,181 - #45 true
+INFO  17:34:48,181 - #8 ;
+INFO  17:34:48,182 - #33 print
+INFO  17:34:48,182 - #13 (
+INFO  17:34:48,182 - #43 TR
+INFO  17:34:48,182 - #14 )
+INFO  17:34:48,182 - #8 ;
+INFO  17:34:48,182 - #43 a
+INFO  17:34:48,182 - #7 =
+INFO  17:34:48,182 - #46 0
+INFO  17:34:48,182 - #8 ;
+INFO  17:34:48,182 - #43 a
+INFO  17:34:48,182 - #41 ++
+INFO  17:34:48,182 - #8 ;
+INFO  17:34:48,183 - #33 print
+INFO  17:34:48,183 - #13 (
+INFO  17:34:48,183 - #43 a
+INFO  17:34:48,183 - #14 )
+INFO  17:34:48,183 - #8 ;
+INFO  17:34:48,183 - #43 a
+INFO  17:34:48,183 - #42 --
+INFO  17:34:48,183 - #8 ;
+INFO  17:34:48,183 - #33 print
+INFO  17:34:48,184 - #13 (
+INFO  17:34:48,184 - #43 a
+INFO  17:34:48,184 - #14 )
+INFO  17:34:48,184 - #8 ;
+INFO  17:34:48,184 - #43 arr
+INFO  17:34:48,184 - #7 =
+INFO  17:34:48,184 - #38 new
+INFO  17:34:48,184 - #43 int
+INFO  17:34:48,184 - #9 [
+INFO  17:34:48,184 - #46 2
+INFO  17:34:48,184 - #10 ]
+INFO  17:34:48,184 - #8 ;
+INFO  17:34:48,185 - #43 arr
+INFO  17:34:48,185 - #9 [
+INFO  17:34:48,185 - #46 0
+INFO  17:34:48,185 - #10 ]
+INFO  17:34:48,185 - #7 =
+INFO  17:34:48,185 - #46 2
+INFO  17:34:48,185 - #8 ;
+INFO  17:34:48,186 - #43 arr
+INFO  17:34:48,186 - #9 [
+INFO  17:34:48,186 - #46 1
+INFO  17:34:48,186 - #10 ]
+INFO  17:34:48,186 - #7 =
+INFO  17:34:48,186 - #43 arr
+INFO  17:34:48,186 - #9 [
+INFO  17:34:48,186 - #46 0
+INFO  17:34:48,186 - #10 ]
+INFO  17:34:48,186 - #24 *
+INFO  17:34:48,186 - #46 3
+INFO  17:34:48,187 - #8 ;
+INFO  17:34:48,187 - #33 print
+INFO  17:34:48,187 - #13 (
+INFO  17:34:48,187 - #43 arr
+INFO  17:34:48,187 - #9 [
+INFO  17:34:48,187 - #46 0
+INFO  17:34:48,187 - #10 ]
+INFO  17:34:48,187 - #14 )
+INFO  17:34:48,188 - #8 ;
+INFO  17:34:48,188 - #33 print
+INFO  17:34:48,188 - #13 (
+INFO  17:34:48,188 - #43 arr
+INFO  17:34:48,188 - #9 [
+INFO  17:34:48,188 - #46 1
+INFO  17:34:48,188 - #10 ]
+INFO  17:34:48,188 - #14 )
+INFO  17:34:48,189 - #8 ;
+INFO  17:34:48,189 - #43 str
+INFO  17:34:48,189 - #7 =
+INFO  17:34:48,189 - #38 new
+INFO  17:34:48,189 - #43 char
+INFO  17:34:48,189 - #9 [
+INFO  17:34:48,189 - #46 4
+INFO  17:34:48,189 - #10 ]
+INFO  17:34:48,189 - #8 ;
+INFO  17:34:48,189 - #43 str
+INFO  17:34:48,189 - #9 [
+INFO  17:34:48,189 - #46 0
+INFO  17:34:48,189 - #10 ]
+INFO  17:34:48,190 - #7 =
+INFO  17:34:48,190 - #44 R
+INFO  17:34:48,190 - #8 ;
+INFO  17:34:48,190 - #43 str
+INFO  17:34:48,190 - #9 [
+INFO  17:34:48,190 - #46 1
+INFO  17:34:48,190 - #10 ]
+INFO  17:34:48,190 - #7 =
+INFO  17:34:48,190 - #44 e
+INFO  17:34:48,190 - #8 ;
+INFO  17:34:48,190 - #43 str
+INFO  17:34:48,190 - #9 [
+INFO  17:34:48,190 - #46 2
+INFO  17:34:48,190 - #10 ]
+INFO  17:34:48,191 - #7 =
+INFO  17:34:48,191 - #44 c
+INFO  17:34:48,191 - #8 ;
+INFO  17:34:48,191 - #43 str
+INFO  17:34:48,191 - #9 [
+INFO  17:34:48,191 - #46 3
+INFO  17:34:48,191 - #10 ]
+INFO  17:34:48,191 - #7 =
+INFO  17:34:48,191 - #44 .
+INFO  17:34:48,191 - #8 ;
+INFO  17:34:48,191 - #33 print
+INFO  17:34:48,192 - #13 (
+INFO  17:34:48,193 - #43 str
+INFO  17:34:48,193 - #9 [
+INFO  17:34:48,194 - #46 0
+INFO  17:34:48,194 - #10 ]
+INFO  17:34:48,194 - #14 )
+INFO  17:34:48,194 - #8 ;
+INFO  17:34:48,194 - #33 print
+INFO  17:34:48,194 - #13 (
+INFO  17:34:48,194 - #43 str
+INFO  17:34:48,194 - #9 [
+INFO  17:34:48,194 - #46 1
+INFO  17:34:48,194 - #10 ]
+INFO  17:34:48,194 - #14 )
+INFO  17:34:48,194 - #8 ;
+INFO  17:34:48,194 - #33 print
+INFO  17:34:48,194 - #13 (
+INFO  17:34:48,194 - #43 str
+INFO  17:34:48,194 - #9 [
+INFO  17:34:48,194 - #46 2
+INFO  17:34:48,194 - #10 ]
+INFO  17:34:48,194 - #14 )
+INFO  17:34:48,194 - #8 ;
+INFO  17:34:48,194 - #33 print
+INFO  17:34:48,194 - #13 (
+INFO  17:34:48,194 - #43 str
+INFO  17:34:48,195 - #9 [
+INFO  17:34:48,195 - #46 3
+INFO  17:34:48,195 - #10 ]
+INFO  17:34:48,195 - #14 )
+INFO  17:34:48,195 - #8 ;
+INFO  17:34:48,195 - #9 [
+INFO  17:34:48,195 - #43 a
+INFO  17:34:48,195 - #6 ,
+INFO  17:34:48,196 - #43 b
+INFO  17:34:48,196 - #10 ]
+INFO  17:34:48,196 - #7 =
+INFO  17:34:48,196 - #43 arr
+INFO  17:34:48,196 - #8 ;
+INFO  17:34:48,197 - #33 print
+INFO  17:34:48,197 - #13 (
+INFO  17:34:48,197 - #43 a
+INFO  17:34:48,197 - #14 )
+INFO  17:34:48,197 - #8 ;
+INFO  17:34:48,197 - #33 print
+INFO  17:34:48,197 - #13 (
+INFO  17:34:48,197 - #43 b
+INFO  17:34:48,197 - #14 )
+INFO  17:34:48,197 - #8 ;
+INFO  17:34:48,197 - #4 }
+INFO  17:34:48,197 - #4 }
+INFO  17:34:48,198 - ================Ispis sintaksnog stabla================
+INFO  17:34:48,208 - 
 PProgram(
   PProgramName(
    p0_
@@ -330,24 +319,14 @@ PProgram(
       NullableFormParsEmpty(
       ) [NullableFormParsEmpty]
       NoEmptyVarDeclList(
-        NoEmptyVarDeclList(
-          EmptyVarDeclList(
-          ) [EmptyVarDeclList]
-          SingleVarDeclarationVarDecl(
-            TypeIdent(
-             int
-            ) [TypeIdent]
-            SingleVarDeclaration(
-             a
-            ) [SingleVarDeclaration]
-          ) [SingleVarDeclarationVarDecl]
-        ) [NoEmptyVarDeclList]
+        EmptyVarDeclList(
+        ) [EmptyVarDeclList]
         SingleVarDeclarationVarDecl(
           TypeIdent(
-           char
+           int
           ) [TypeIdent]
           SingleVarDeclaration(
-           c
+           a
           ) [SingleVarDeclaration]
         ) [SingleVarDeclarationVarDecl]
       ) [NoEmptyVarDeclList]
@@ -382,76 +361,26 @@ PProgram(
                                                               NoEmptyStatementList(
                                                                 NoEmptyStatementList(
                                                                   NoEmptyStatementList(
-                                                                    NoEmptyStatementList(
-                                                                      NoEmptyStatementList(
-                                                                        EmptyStatementList(
-                                                                        ) [EmptyStatementList]
-                                                                        DesignatorStmt(
-                                                                          DesignatorAssignStmt(
-                                                                            DesignatorIdent(
-                                                                             a
-                                                                            ) [DesignatorIdent]
-                                                                            AssignopAssign(
-                                                                            ) [AssignopAssign]
-                                                                            PosExpr(
-                                                                              OptionalMinusTerm(
-                                                                                NoMinus(
-                                                                                ) [NoMinus]
-                                                                                SingleFactor(
-                                                                                  FactorNum(
-                                                                                   5
-                                                                                  ) [FactorNum]
-                                                                                ) [SingleFactor]
-                                                                              ) [OptionalMinusTerm]
-                                                                              EmptyAddopTermList(
-                                                                              ) [EmptyAddopTermList]
-                                                                            ) [PosExpr]
-                                                                          ) [DesignatorAssignStmt]
-                                                                        ) [DesignatorStmt]
-                                                                      ) [NoEmptyStatementList]
-                                                                      PrintStmt(
-                                                                        PosExpr(
-                                                                          OptionalMinusTerm(
-                                                                            NoMinus(
-                                                                            ) [NoMinus]
-                                                                            SingleFactor(
-                                                                              FactorDesignatorEmpty(
-                                                                                DesignatorIdent(
-                                                                                 a
-                                                                                ) [DesignatorIdent]
-                                                                              ) [FactorDesignatorEmpty]
-                                                                            ) [SingleFactor]
-                                                                          ) [OptionalMinusTerm]
-                                                                          EmptyAddopTermList(
-                                                                          ) [EmptyAddopTermList]
-                                                                        ) [PosExpr]
-                                                                        PrintArgsNoEmpty(
-                                                                         1
-                                                                        ) [PrintArgsNoEmpty]
-                                                                      ) [PrintStmt]
-                                                                    ) [NoEmptyStatementList]
-                                                                    DesignatorStmt(
-                                                                      DesignatorAssignStmt(
-                                                                        DesignatorIdent(
-                                                                         c
-                                                                        ) [DesignatorIdent]
-                                                                        AssignopAssign(
-                                                                        ) [AssignopAssign]
-                                                                        PosExpr(
-                                                                          OptionalMinusTerm(
-                                                                            NoMinus(
-                                                                            ) [NoMinus]
-                                                                            SingleFactor(
-                                                                              FactorChar(
-                                                                               e
-                                                                              ) [FactorChar]
-                                                                            ) [SingleFactor]
-                                                                          ) [OptionalMinusTerm]
-                                                                          EmptyAddopTermList(
-                                                                          ) [EmptyAddopTermList]
-                                                                        ) [PosExpr]
-                                                                      ) [DesignatorAssignStmt]
-                                                                    ) [DesignatorStmt]
+                                                                    EmptyStatementList(
+                                                                    ) [EmptyStatementList]
+                                                                    PrintStmt(
+                                                                      PosExpr(
+                                                                        OptionalMinusTerm(
+                                                                          NoMinus(
+                                                                          ) [NoMinus]
+                                                                          SingleFactor(
+                                                                            FactorNum(
+                                                                             5
+                                                                            ) [FactorNum]
+                                                                          ) [SingleFactor]
+                                                                        ) [OptionalMinusTerm]
+                                                                        EmptyAddopTermList(
+                                                                        ) [EmptyAddopTermList]
+                                                                      ) [PosExpr]
+                                                                      PrintArgsNoEmpty(
+                                                                       1
+                                                                      ) [PrintArgsNoEmpty]
+                                                                    ) [PrintStmt]
                                                                   ) [NoEmptyStatementList]
                                                                   PrintStmt(
                                                                     PosExpr(
@@ -459,18 +388,17 @@ PProgram(
                                                                         NoMinus(
                                                                         ) [NoMinus]
                                                                         SingleFactor(
-                                                                          FactorDesignatorEmpty(
-                                                                            DesignatorIdent(
-                                                                             c
-                                                                            ) [DesignatorIdent]
-                                                                          ) [FactorDesignatorEmpty]
+                                                                          FactorChar(
+                                                                           e
+                                                                          ) [FactorChar]
                                                                         ) [SingleFactor]
                                                                       ) [OptionalMinusTerm]
                                                                       EmptyAddopTermList(
                                                                       ) [EmptyAddopTermList]
                                                                     ) [PosExpr]
-                                                                    PrintArgsEmpty(
-                                                                    ) [PrintArgsEmpty]
+                                                                    PrintArgsNoEmpty(
+                                                                     2
+                                                                    ) [PrintArgsNoEmpty]
                                                                   ) [PrintStmt]
                                                                 ) [NoEmptyStatementList]
                                                                 PrintStmt(
@@ -487,9 +415,8 @@ PProgram(
                                                                     EmptyAddopTermList(
                                                                     ) [EmptyAddopTermList]
                                                                   ) [PosExpr]
-                                                                  PrintArgsNoEmpty(
-                                                                   2
-                                                                  ) [PrintArgsNoEmpty]
+                                                                  PrintArgsEmpty(
+                                                                  ) [PrintArgsEmpty]
                                                                 ) [PrintStmt]
                                                               ) [NoEmptyStatementList]
                                                               DesignatorStmt(
@@ -1407,18 +1334,17 @@ PProgram(
     ) [MethodDeclaration]
   ) [SingleMethodDeclList]
 ) [PProgram]
-INFO  00:14:41,046 - ==================SEMANTICKA OBRADA====================
-INFO  00:14:41,074 - Deklarisana konstanta cons na liniji 2, objektni cvor: Con cons: int, 100, 0 
-INFO  00:14:41,075 - Deklarisana promenljiva TR na liniji 3, objektni cvor: Var TR: bool, 0, 0 
-INFO  00:14:41,075 - Deklarisana promenljiva b na liniji 3, objektni cvor: Var b: int, 1, 0 
-INFO  00:14:41,075 - Deklarisana promenljiva arr na liniji 3, objektni cvor: Var arr: Arr of int, 2, 0 
-INFO  00:14:41,075 - Deklarisana promenljiva str na liniji 3, objektni cvor: Var str: Arr of char, 3, 0 
-INFO  00:14:41,075 - Deklarisana funkcija main na liniji 5, objektni cvor: Meth main: notype, 0, 0 
+INFO  17:34:48,210 - ==================SEMANTICKA OBRADA====================
+INFO  17:34:48,225 - Deklarisana konstanta cons na liniji 2, objektni cvor: Con cons: int, 100, 0 
+INFO  17:34:48,226 - Deklarisana promenljiva TR na liniji 3, objektni cvor: Var TR: bool, 0, 0 
+INFO  17:34:48,226 - Deklarisana promenljiva b na liniji 3, objektni cvor: Var b: int, 1, 0 
+INFO  17:34:48,226 - Deklarisana promenljiva arr na liniji 3, objektni cvor: Var arr: Arr of int, 2, 0 
+INFO  17:34:48,226 - Deklarisana promenljiva str na liniji 3, objektni cvor: Var str: Arr of char, 3, 0 
+INFO  17:34:48,226 - Deklarisana funkcija main na liniji 5, objektni cvor: Meth main: notype, 0, 0 
 
-INFO  00:14:41,075 - Deklarisana promenljiva a na liniji 5, objektni cvor: Var a: int, 0, 1 
-INFO  00:14:41,075 - Deklarisana promenljiva c na liniji 5, objektni cvor: Var c: char, 1, 1 
-INFO  00:14:41,077 - ==================SINTAKSNA ANALIZA====================
-INFO  00:14:41,077 - 1	symbolic constants
-INFO  00:14:41,077 - 4	global variables
-INFO  00:14:41,077 - 2	local variables
-INFO  00:14:41,092 - Parsiranje je uspesno zavrseno
+INFO  17:34:48,226 - Deklarisana promenljiva a na liniji 5, objektni cvor: Var a: int, 0, 1 
+INFO  17:34:48,227 - ==================SINTAKSNA ANALIZA====================
+INFO  17:34:48,227 - 1	symbolic constants
+INFO  17:34:48,228 - 4	global variables
+INFO  17:34:48,228 - 1	local variables
+INFO  17:34:48,235 - Parsiranje je uspesno zavrseno

@@ -119,4 +119,13 @@ public class CodeGenerator extends VisitorAdaptor {
 	public void visit(ArrayDesig arrayDesig) {
 		Code.load(arrayDesig.getDesignator().obj);
 	}
+	
+	public void visit(ReadStmt readStmt) {
+		if (readStmt.getDesignator().obj.getType().equals(Tab.charType)) {
+			Code.put(Code.bread);
+		} else {
+			Code.put(Code.read);
+		}
+		Code.store(readStmt.getDesignator().obj);
+	}
 }

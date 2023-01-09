@@ -1,12 +1,16 @@
 program p0_
 	const int cons = 100;
-	bool TR; int b, arr[];
+	bool TR; int b, arr[]; char str[];
 	{
-		void main() int a; {
+		void main() int a; char c;{
 			// Print const factors
-			print(5, 1);
-			print('e', 2);
-			print(false);
+			a = 5;
+			//read(a);
+			print(a, 1);
+			c = 'e';
+			//read(c);
+			print(c);
+			print(false, 2);
 			// Print designator
 			a = - 1 - (5 % 3) * 2 / 3;
 			print(a);
@@ -24,5 +28,17 @@ program p0_
 			arr[1] = arr[0] * 3;
 			print(arr[0]);
 			print(arr[1]);
+			str = new char[4];
+			str[0] = 'R';
+			str[1] = 'e';
+			str[2] = 'c';
+			str[3] = '.';
+			print(str[0]);
+			print(str[1]);
+			print(str[2]);
+			print(str[3]);
+			[a,b] = arr;
+			print(a);
+			print(b);
 		}
 	}
