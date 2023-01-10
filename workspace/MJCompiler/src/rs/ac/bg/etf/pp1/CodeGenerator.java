@@ -1,5 +1,8 @@
 package rs.ac.bg.etf.pp1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import rs.ac.bg.etf.pp1.CounterVisitor.*;
 import rs.ac.bg.etf.pp1.ast.*;
 import rs.etf.pp1.mj.runtime.Code;
@@ -8,6 +11,9 @@ import rs.ac.bg.etf.pp1.extendedsymboltable.Tab;
 public class CodeGenerator extends VisitorAdaptor {
 
 	private int mainPc;
+	private int optionalDesignators = 0;
+	private List<Integer> designatorIndexes = new ArrayList<>();
+	private List<Designator> designators = new ArrayList<>();
 	
 	public int getMainPc() {
 		return mainPc;
@@ -127,5 +133,31 @@ public class CodeGenerator extends VisitorAdaptor {
 			Code.put(Code.read);
 		}
 		Code.store(readStmt.getDesignator().obj);
+	}
+	
+	public void visit(OptionalDesignatorExists optionalDesignatorExists) {
+		designators.add(optionalDesignatorExists.getDesignator());
+		designatorIndexes.add(optionalDesignators);
+		optionalDesignators++;
+	}
+	
+	public void visit(OptionalDesignatorNotExists optionalDesignatorNotExists) {
+		optionalDesignators++;
+	}
+	
+	public void visit(MultipleDesignatorAssignStmt multipleDesignatorAssignStmt) {
+		Designator arr = multipleDesignatorAssignStmt.getDesignator();
+		while (!designatorIndexes.isEmpty()) {
+			Code.load(arr.obj);
+			Code.loadConst(designatorIndexes.remove(0));
+			if (arr.obj.getType().getElemType().equals(Tab.charType)) {
+				Code.put(Code.baload);
+			} else {
+				Code.put(Code.aload);
+			}
+			Code.store(designators.remove(0).obj);
+		}
+		
+		optionalDesignators = 0;
 	}
 }

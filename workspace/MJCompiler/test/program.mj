@@ -1,6 +1,8 @@
 program p0_
 	const int cons = 100;
-	bool TR; int b, arr[]; char str[];
+	bool TR;
+	int b, arr[];
+	char str[];
 	{
 		void main() int a; char c;{
 			// Print const factors
@@ -38,6 +40,17 @@ program p0_
 			print(str[2]);
 			print(str[3]);
 			[a,b] = arr;
+			print(a);
+			print(b);
+			arr[0] = 1;
+			arr[1] = 2;
+			[,] = arr;
+			print(a);
+			print(b);
+			[a,] = arr;
+			print(a);
+			print(b);
+			[,b] = arr;
 			print(a);
 			print(b);
 		}
