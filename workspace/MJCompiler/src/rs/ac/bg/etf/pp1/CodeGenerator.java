@@ -149,13 +149,13 @@ public class CodeGenerator extends VisitorAdaptor {
 		Designator arr = multipleDesignatorAssignStmt.getDesignator();
 		while (!designatorIndexes.isEmpty()) {
 			Code.load(arr.obj);
-			Code.loadConst(designatorIndexes.remove(0));
+			Code.loadConst(designatorIndexes.remove(designatorIndexes.size() - 1));
 			if (arr.obj.getType().getElemType().equals(Tab.charType)) {
 				Code.put(Code.baload);
 			} else {
 				Code.put(Code.aload);
 			}
-			Code.store(designators.remove(0).obj);
+			Code.store(designators.remove(designators.size() - 1).obj);
 		}
 		
 		optionalDesignators = 0;
