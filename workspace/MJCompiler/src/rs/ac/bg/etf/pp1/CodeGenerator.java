@@ -23,7 +23,11 @@ public class CodeGenerator extends VisitorAdaptor {
 		if (printStmt.getPrintArgs() instanceof PrintArgsNoEmpty) {
 			Code.loadConst(((PrintArgsNoEmpty) printStmt.getPrintArgs()).getValue());
 		} else {
-			Code.loadConst(5);
+			if (printStmt.getExpr().struct.equals(Tab.charType)) {
+				Code.loadConst(1);
+			} else {
+				Code.loadConst(5);
+			}
 		}
 		if (printStmt.getExpr().struct.equals(Tab.charType)) {
 			Code.put(Code.bprint);
@@ -100,6 +104,9 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(DesignatorIncStmt designatorIncStmt) {
+		if (designatorIncStmt.getDesignator() instanceof DesignatorArr) {
+			Code.put(Code.dup2);
+		}
 		Code.load(designatorIncStmt.getDesignator().obj);
 		Code.loadConst(1);
 		Code.put(Code.add);
@@ -107,6 +114,9 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(DesignatorDecStmt designatorDecStmt) {
+		if (designatorDecStmt.getDesignator() instanceof DesignatorArr) {
+			Code.put(Code.dup2);
+		}
 		Code.load(designatorDecStmt.getDesignator().obj);
 		Code.loadConst(1);
 		Code.put(Code.sub);
